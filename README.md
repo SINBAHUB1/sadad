@@ -1,5 +1,3256 @@
-_, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
+--[[
+
+██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+█░░░░░░██████████░░░░░░█░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░███░░░░░░░░░░░░░░█░░░░░░██░░░░░░█░░░░░░░░░░░░░░░░███░░░░░░░░██░░░░░░░░█
+█░░▄▀░░░░░░░░░░░░░░▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███░░▄▀▄▀░░██░░▄▀▄▀░░█
+█░░▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░░░░░░░░░█░░▄▀░░░░░░░░▄▀░░███░░▄▀░░░░░░░░░░█░░▄▀░░██░░▄▀░░█░░▄▀░░░░░░░░▄▀░░███░░░░▄▀░░██░░▄▀░░░░█
+█░░▄▀░░░░░░▄▀░░░░░░▄▀░░█░░▄▀░░█████████░░▄▀░░████░░▄▀░░███░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░▄▀░░████░░▄▀░░█████░░▄▀▄▀░░▄▀▄▀░░███
+█░░▄▀░░██░░▄▀░░██░░▄▀░░█░░▄▀░░░░░░░░░░█░░▄▀░░░░░░░░▄▀░░███░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░▄▀░░░░░░░░▄▀░░█████░░░░▄▀▄▀▄▀░░░░███
+█░░▄▀░░██░░▄▀░░██░░▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███████░░░░▄▀░░░░█████
+█░░▄▀░░██░░░░░░██░░▄▀░░█░░▄▀░░░░░░░░░░█░░▄▀░░yue<3▀░░░░███░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░▄▀░░░░░░▄▀░░░░█████████░░▄▀░░███████
+█░░▄▀░░██████████░░▄▀░░█░░▄▀░░█████████░░▄▀░░██░░▄▀░░█████░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░▄▀░░██░░▄▀░░███████████░░▄▀░░███████
+█░░▄▀░░██████████░░▄▀░░█░░▄▀░░░░░░░░░░█░░▄▀░░██░░▄▀░░░░░░█░░▄▀░░░░░░░░░░█░░▄▀░░░░░░▄▀░░█░░▄▀░░██░░▄▀░░░░░░███████░░▄▀░░███████
+█░░▄▀░░██████████░░▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀▄▀▄▀░░███████░░▄▀░░███████
+█░░░░░░██████████░░░░░░█░░░░░░░░░░░░░░█░░░░░░██░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░██░░░░░░░░░░███████░░░░░░███████
+██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+edited: 1/23
+
+developers:
+---------------------------------------------
+v3rm AbstractPoo	discord Abstract#8007
+v3rm 0xDEITY		discord Deity#0228
+
+]]
+
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Mouse = LocalPlayer:GetMouse()
+
+local Library = {
+	Themes = {
+		Legacy = {
+			Main = Color3.fromHSV(262/360, 60/255, 34/255),
+			Secondary = Color3.fromHSV(240/360, 40/255, 63/255),
+			Tertiary = Color3.fromHSV(260/360, 60/255, 148/255),
+
+			StrongText = Color3.fromHSV(0, 0, 1),		
+			WeakText = Color3.fromHSV(0, 0, 172/255)
+		},
+		Serika = {
+			Main = Color3.fromRGB(50, 52, 55),
+			Secondary = Color3.fromRGB(80, 82, 85),
+			Tertiary = Color3.fromRGB(226, 183, 20),
+
+			StrongText = Color3.fromHSV(0, 0, 1),		
+			WeakText = Color3.fromHSV(0, 0, 172/255)
+		},
+		Dark = {
+			Main = Color3.fromRGB(30, 30, 35),
+			Secondary = Color3.fromRGB(50, 50, 55),
+			Tertiary = Color3.fromRGB(70, 130, 180),
+
+			StrongText = Color3.fromHSV(0, 0, 1),		
+			WeakText = Color3.fromHSV(0, 0, 172/255)
+		},
+		Rust = {
+			Main = Color3.fromRGB(37, 35, 33),
+			Secondary = Color3.fromRGB(65, 63, 63),
+			Tertiary = Color3.fromRGB(237, 94, 38),
+
+			StrongText = Color3.fromHSV(0, 0, 1),		
+			WeakText = Color3.fromHSV(0, 0, 172/255)
+		},
+		Aqua = {
+			Main = Color3.fromRGB(19, 21, 21),
+			Secondary = Color3.fromRGB(65, 63, 63),
+			Tertiary = Color3.fromRGB(51, 153, 137),
+
+			StrongText = Color3.fromHSV(0, 0, 1),        
+			WeakText = Color3.fromHSV(0, 0, 172/255)
+		},
+		Vaporwave = {},
+		OperaGX = {},
+		VisualStudio = {}
+	},
+	ColorPickerStyles = {
+		Legacy = 0,
+		Modern = 1
+	},
+	Toggled = true,
+	ThemeObjects = {
+		Main = {},
+		Secondary = {},
+		Tertiary = {},
+
+		StrongText = {},
+		WeakText = {}
+	},
+	WelcomeText = nil,
+	DisplayName = nil,
+	DragSpeed = 0.06,
+	LockDragging = false,
+	ToggleKey = Enum.KeyCode.Home,
+	UrlLabel = nil,
+	Url = nil
+
+}
+Library.__index = Library
+
+local selectedTab
+
+Library._promptExists = false
+Library._colorPickerExists = false
+
+function Library:set_defaults(defaults, options)
+	defaults = defaults or {}
+	options = options or {}
+	for option, value in next, options do
+		defaults[option] = value
+	end
+	return defaults
+end
+
+function Library:change_theme(toTheme)
+	Library.CurrentTheme = toTheme
+	local c = self:lighten(toTheme.Tertiary, 20)
+	Library.DisplayName.Text = "Welcome, <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>"
+	for color, objects in next, Library.ThemeObjects do
+		local themeColor = Library.CurrentTheme[color]
+		for _, obj in next, objects do
+			local element, property, theme, colorAlter = obj[1], obj[2], obj[3], obj[4] or 0
+			local themeColor = Library.CurrentTheme[theme]
+			local modifiedColor = themeColor
+			if colorAlter < 0 then
+				modifiedColor = Library:darken(themeColor, -1 * colorAlter)
+			elseif colorAlter > 0 then
+				modifiedColor = Library:lighten(themeColor, colorAlter)
+			end
+			element:tween{[property] = modifiedColor}
+		end
+	end
+end
+
+function Library:object(class, properties)
+	local localObject = Instance.new(class)
+
+	local forcedProps = {
+		BorderSizePixel = 0,
+		AutoButtonColor = false,
+		Font = Enum.Font.SourceSans,
+		Text = ""
+	}
+
+	for property, value in next, forcedProps do
+		pcall(function()
+			localObject[property] = value
+		end)
+	end
+
+	local methods = {}
+
+	methods.AbsoluteObject = localObject
+
+	function methods:tween(options, callback)
+		local options = Library:set_defaults({
+			Length = 0.2,
+			Style = Enum.EasingStyle.Linear,
+			Direction = Enum.EasingDirection.InOut
+		}, options)
+		callback = callback or function() return end
 
 
-,nil,nil;(function() _msec=(function(e,l,o)local Q=l["          "];local W=o[e[(-#{1;(function()return{','}end)(),89;(function()return{','}end)();34}+643)]][e["              "]];local m=(-#[[Bong]]+(1664/0xd0))/(-#"Dick"+(0x19e/((394-(43290/0xc3))+-0x67)))local D=((-#'test123'+((144368-0x11a12)/0xda))/0xa2)-((0x51-70)+-#[[loadstring]])local z=o[e[(353-0xc1)]][e["                "]];local S=(((0xe77-(0xec6-1913))/131)+-#[[fish was here]])+(24+-0x16)local f=o[e[(0x4f5-678)]][e["         ​    "]]local d=(0xb4/90)-((-67+(-#"print"+(0xba+(-24+-0x4c))))+-#"me big peepee")local M=((0x127b/((-#{1;90;'}';90}+54535)/0xdb))+-#[[Nitro Activated]])local P=(7+-#{(function()return{','}end)(),188,'nil'})local _=(948/(0x5706/(-#{{};{};",";1;69;","}+100)))local g=(-92+(305-(-#[[Nitro Activated]]+(-0x5b+((0x318-418)+-#[[Fuck nigger wank shit dipshit cunt bullshit fuckyou hoe lol]])))))local B=(0x24-(-#"edp445 what are you doing to my 3 year old son"+(((0x18b3f100/202)/0x89)/0xc0)))local u=((145-(((-75+0xe607)/0xae)-208))+-#"free trojan")local O=((81-(202-(0x800/(2752/0xac))))+-#'Dick')local t=(7+-#{'}',96;'nil';","})local s=(0x16+(2-(63+(66+-0x6c))))local w=((((-#"Little kids"+(37-0x50))+0x15e)-0xbe)-103)local U=(((0x19d-((32818/(298-0xb0))+-#'test123'))+-#"Cock and ball torture")+-127)local N=(104-((-194-(-#"notbelugafan was here"+(-6760/0x68)))+209))local r=(((205+-#{141,(function()return#{('oobkPh'):find("\98")}>0 and 1 or 0 end),'nil';'}'})+-0x61)/0x34)local c=(-72+((-#{(function()return{','}end)(),(function()return#{('blHkKO'):find("\72")}>0 and 1 or 0 end),129}+127)+-50))local h=(-#[[test]]+((-#"print"+(0xfc-(-#{'}',1;'}';(function()return{','}end)(),",";'}',92}+188)))+-0x3c))local b=(6+-#{{};(function()return{','}end)(),",";{}})local k=((171+((-696/0xae)-39))/0x40)local i=(0xe2/(285-((394+-#{",",'nil',{},'nil'})-218)))local q=e[((2829-0x5a6)+-#'Never gonna give u up')];local H=o[e[(0x17e-222)]][e[" ​          "]];local I=o[(function(e)return type(e):sub(1,1)..'\101\116'end)('        ')..'\109\101'..('\116\97'or'      ​ ')..e[(0x273f/17)]];local T=o[e[(1274-0x2ab)]][e["    ​    ​​       "]];local v=(0x70-110)-((0xee-(-81+0xd1))+-0x6c)local y=(((0x98+((57-0x5b)+-#[[This is working now]]))+-#'test 123')-89)-((124-0x67)+-#"This is working now")local F=o[e[(166+-#{",",'nil';",",",";59;(function()return#{('KmBKhO'):find("\66")}>0 and 1 or 0 end)})]][e["​        "]];local n=function(e,o)return e..o end local j=(-#"dont use it anymore"+(0x6f-88))*(-57+(-52+(-0x7f+240)))local K=o[e["    ​       "]];local x=(160/0x50)*(((12224/0xbf)+-0x5e)+158)local A=(0x877-1143)*((((-0x269544/185)/0xc9)+82)+-#"deobfuscated")local J=(((-#[[Nitro Activated]]+(0x1320/16))-156)+-0x53)local p=((1334/(0x3da/(-103+0x78)))+-21)*(53-0x33)local C=o[e["           "]]or o[e[((0x500-657)+-#"xenny its znugget please respond")]][e["           "]];local a=((0x23f5/(((0x24db-4769)+-#"edp445 what are you doing to my 3 year old son")/132))+-#"require")local e=o[e["                "]];local L=(function(n)local r,l=3,0x10 local o={j={},v={}}local a=-d local e=l+D while true do o[n:sub(e,(function()e=r+e return e-D end)())]=(function()a=a+d return a end)()if a==(j-d)then a=""l=v break end end local a=#n while e<a+D do o.v[l]=n:sub(e,(function()e=r+e return e-D end)())l=l+d if l%m==v then l=y T(o.j,(F((o[o.v[y]]*j)+o[o.v[d]])))end end return f(o.j)end)("..:::MoonSec::..                ​                 ​                 ​           ​                                ​                    ​                                           ​          ​             ​​         ​                              ​                                     ​                                         ​                                                   ​        ​   ​                                                                                                                                                 ​            ​          ​     ​            ​            ​                    ​         ​                                  ​                              ​                                      ​​                     ​          ​                                                                         ​          ​                                      ​                  ​                      ​       ​                        ​                          ​  ​     ​                                         ​​                         ​                             ​                         ​                            ​     ​                   ​                                        ​                                    ​                    ​     ​                                                            ​                              ​      ​                            ​    ​            ​    ​ ​        ​   ​                         ​   ​                            ​            ​                           ​              ​​​                 ​  ​   ​                    ​           ​  ​          ​                                          ​​                                       ​         ​             ​               ​     ​                     ​                 ​                                                                                                          ​         ​                        ​    ​   ​             ​           ​                                           ​                ​              ​                                     ​                                                 ​                       ​              ​                                     ​                                 ​                  ​ ​     ​                                        ​                           ​                   ​​        ​      ​                        ​                     ​ ​           ​      ​                  ​                                    ​      ​                                  ​                                         ​                ​        ​                     ​     ​                ​              ​          ​                 ​              ​    ​    ​              ​​​                                        ​                    ​                                    ​​                                                                    ​                       ​                                                             ​              ​                   ​   ​                                    ​                  ​        ​        ​                            ​    ​​          ​            ​ ​                                                                                           ​        ​               ​                                                            ​                                                                ​                        ​​                           ​   ​                      ​                 ​                ​                 ​    ​  ​                ​​                                              ​           ​​     ​         ​  ​                               ​              ​  ​          ​                         ​                            ​                                       ​                                    ​                                                                ​                         ​                      ​                                          ​      ​             ​                                    ​        ​                        ​                                                                             ​       ​              ​         ​                                                                 ​             ​            ​       ​              ​                                                               ​                        ​                          ​                         ​     ​     ​                                                                                    ​             ​​        ​                         ​     ​            ​                                   ​        ​                 ​    ​                      ​                             ​                                 ​​        ​              ​​         ​                                                  ​                              ​            ​                                                                                   ​      ​             ​​     ​            ​       ​                 ​             ​            ​                                                              ​            ​​                                        ​                              ​       ​                 ​                ​    ​             ​                        ​                                        ​             ​                                                                ​           ​                                                 ​                           ​                   ​           ​           ​                                                                 ​     ​​        ​                           ​         ​    ​​         ​               ​                                    ​                                        ​               ​                       ​         ​         ​           ​  ​                                                      ​             ​                        ​         ​             ​            ​   ​                                    ​                  ​               ​                   ​           ​                                                 ​      ​                   ​  ​ ​           ​          ​                  ​           ​   ​          ​    ​                                ​         ​​                           ​   ​          ​      ​  ​                      ​                                 ​                ​             ​                  ​    ​                            ​  ​                                               ​         ​         ​           ​                ​  ​     ​        ​     ​                 ​                ​            ​                                                ​                     ​        ​              ​              ​                            ​​       ​        ​                              ​                        ​ ​                   ​                            ​    ​              ​      ​ ​             ​                                       ​            ​         ​      ​     ​                                           ​     ​      ​         ​                     ​                                     ​ ​       ​                                           ​   ​                 ​                ​                  ​                                                              ​     ​                                                           ​                        ​         ​       ​                                                    ​             ​                ​            ​​                                                                         ​                   ​   ​​                  ​                                                             ​      ​   ​            ​ ​                         ​                                ​                     ​        ​      ​     ​                     ​      ​   ​                                       ​                   ​                                  ​                           ​   ​             ​         ​       ​     ​                        ​               ​                  ​      ​                     ​    ​        ​                                                    ​                  ​        ​              ​                   ​ ​ ​          ​                 ​                            ​       ​              ​                                                                             ​                                 ​                         ​                      ​            ​            ​                                                             ​   ​           ​              ​                    ​       ​                ​        ​     ​    ​       ​               ​                 ​​                            ​  ​                                     ​        ​       ​                                                      ​           ​  ​                             ​  ​                                          ​         ​        ​     ​                                ​                          ​                                         ​                                         ​              ​    ​                                 ​                                              ​            ​         ​                         ​                        ​      ​     ​                                                             ​  ​             ​          ​                                                ​     ​    ​                      ​             ​           ​                      ​      ​                                 ​                                                  ​         ​                                               ​            ​                          ​​       ​      ​      ​                                    ​     ​​                          ​                                ​             ​                    ​                                                   ​​    ​                       ​      ​ ​            ​                                  ​      ​                                                ​                       ​                          ​      ​               ​ ​                          ​         ​                ​        ​        ​                       ​ ​                     ​                             ​                            ​             ​                   ​ ​          ​               ​                                ​                 ​      ​                     ​            ​ ​                                                           ​​                             ​     ​         ​ ​                       ​         ​    ​                   ​    ​          ​                         ​                    ​                    ​                               ​            ​              ​                          ​                    ​     ​   ​ ​                     ​               ​                ​      ​                ​                                                                          ​​                                             ​                                          ​             ​                   ​              ​                                                                                 ​​     ​     ​                                      ​                                              ​      ​ ​                              ​                       ​           ​        ​    ​     ​     ​      ​          ​                                       ​        ​          ​    ​    ​                ​                                 ​                                                   ​           ​  ​            ​ ​                            ​      ​                ​​     ​                       ​            ​      ​​          ​                                   ​         ​         ​                               ​        ​            ​         ​                  ​                                            ​                   ​                                    ​                                                                    ​         ​               ​        ​                  ​          ​ ​                    ​    ​                   ​       ​                     ​                              ​     ​      ​      ​        ​                               ​                                                                                                                   ​                                            ​            ​                               ​             ​                                                 ​                ​                  ​            ​        ​                                    ​                            ​     ​    ​           ​              ​          ​              ​  ​                             ​                                          ​                 ​            ​                  ​                     ​      ​               ​            ​                                     ​                                                     ​                                          ​         ​​        ​    ​                      ​           ​          ​        ​                  ​                                                                    ​    ​                        ​          ​           ​                                     ​             ​                                       ​​                                      ​             ​ ​                                                    ​                                              ​​         ​   ​                     ​                  ​                          ​         ​                     ​                    ​               ​            ​         ​                ​         ​       ​              ​                    ​   ​           ​                                       ​                                                     ​                 ​                                                          ​                  ​​   ​               ​                   ​          ​ ​                     ​                                  ​    ​                                                                                                ​         ​               ​           ​                      ​                                ​  ​   ​                                     ​                    ​                ​​                             ​         ​                        ​                 ​               ​   ​           ​            ​                          ​                        ​        ​                           ​        ​​​      ​                                               ​                    ​   ​​    ​        ​  ​            ​       ​       ​           ​            ​                           ​  ​          ​                 ​      ​          ​                      ​           ​                                        ​   ​                   ​                                     ​ ​    ​           ​                                                      ​       ​               ​                                 ​                              ​             ​  ​                            ​                                                ​                    ​          ​                                      ​        ​         ​  ​     ​                                             ​                         ​        ​                                                                ​        ​    ​​                ​​                         ​ ​                       ​      ​                      ​                                       ​           ​                                       ​                              ​  ​               ​                    ​                          ​                                ​                              ​                               ​            ​                    ​      ​                           ​  ​ ​                                        ​            ​                              ​                ​                          ​                   ​       ​   ​                                                                                     ​  ​    ​                ​              ​           ​        ​                                    ​                ​                    ​    ​      ​            ​          ​               ​         ​​                                                                ​                             ​       ​              ​         ​               ​         ​​ ​      ​               ​                     ​   ​                           ​      ​               ​                                               ​​      ​                      ​      ​                                            ​      ​         ​       ​                  ​ ​                                    ​                                 ​                             ​         ​              ​                         ​                          ​                        ​                                                       ​      ​     ​                     ​                             ​    ​                                                                                            ​         ​                           ​         ​          ​   ​   ​                               ​   ​                               ​     ​         ​ ​​      ​                  ​                        ​           ​                                            ​                               ​            ​ ​                                                   ​          ​                                   ​​                                      ​              ​                         ​                            ​          ​ ​                                                                                    ​      ​ ​                          ​                  ​        ​    ​                                  ​   ​                                   ​                   ​  ​             ​                                    ​                                         ​                  ​                         ​           ​                                         ​          ​                       ​           ​​       ​                                             ​                                              ​        ​                                           ​​                                                                           ​                                                            ​     ​ ​  ​                                   ​                   ​ ​    ​             ​                                                               ​          ​      ​ ​                                  ​                                      ​                                  ​             ​                         ​        ​                                                                                         ​                                ​                  ​                                                                       ​ ​                      ​        ​    ​                                                                                                                                      ​             ​           ​                                  ​     ​ ​                        ​                                      ​                       ​  ​              ​                                   ​​       ​                                  ​      ​                         ​                  ​ ​     ​      ​                                           ​                                   ​         ​      ​          ​              ​                      ​ ​      ​   ​                                                     ​                        ​         ​        ​   ​         ​  ​                              ​                                 ​          ​     ​                       ​             ​           ​             ​                                         ​                                             ​​       ​                 ​          ​             ​                         ​                               ​ ​                                         ​                      ​    ​   ​  ​         ​      ​   ​​                    ​                                    ​                                          ​                            ​         ​        ​      ​​               ​                             ​​        ​​                        ​           ​                                                  ​ ​                                               ​    ​        ​                        ​        ​​                                                      ​                      ​                    ​                                                       ​               ​                                     ​ ​       ​        ​               ​                ​​ ​                                       ​  ​                                ​            ​        ​                                                   ​                                   ​      ​ ​                                ​                         ​            ​      ​                     ​​                                             ​​​      ​  ​                ​           ​   ​                     ​             ​                   ​         ​                                             ​                                     ​                  ​                         ​                ​ ​​     ​    ​                          ​           ​   ​ ​                                ​                   ​                                    ​     ​ ​                               ​          ​                                   ​            ​                         ​                         ​                                              ​​       ​               ​                   ​     ​                  ​         ​                              ​      ​                                   ​                                  ​                ​                                               ​       ​   ​   ​                                  ​                                   ​        ​         ​                  ​       ​                           ​                                     ​     ​     ​               ​           ​           ​                           ​                       ​               ​                                ​​             ​    ​                ​             ​                                         ​        ​ ​  ​                           ​          ​                                       ​                ​            ​                                           ​                     ​                    ​                                 ​        ​ ​     ​                                             ​ ​​       ​                                   ​                           ​            ​             ​                          ​                         ​                                                              ​                                         ​                          ​                  ​       ​      ​                                 ​​                ​                ​                                              ​                      ​          ​    ​                            ​                                                          ​                   ​                                   ​        ​   ​                               ​     ​ ​                          ​                           ​           ​                            ​   ​          ​                                        ​      ​                           ​               ​                                         ​         ​                       ​                          ​​                                    ​               ​                      ​                       ​  ​                                                   ​  ​                         ​             ​                                                           ​                                                     ​    ​ ​               ​        ​  ​                                    ​            ​             ​                                                             ​                                            ​                                        ​        ​                            ​               ​​              ​                 ​           ​                        ​                       ​           ​                                                   ​                                ​          ​        ​                                    ​    ​            ​                   ​                 ​     ​                                 ​       ​                         ​                          ​   ​ ​        ​                                           ​             ​                        ​                             ​                   ​ ​​     ​ ​  ​                                   ​​                                  ​               ​                      ​                     ​ ​      ​                                              ​                                  ​         ​          ​    ​           ​                         ​        ​                                      ​                                      ​           ​                           ​                         ​ ​                                                    ​                           ​   ​  ​     ​                         ​                    ​       ​ ​  ​                                       ​                                       ​               ​                      ​                     ​​​     ​  ​                                         ​           ​                                  ​                              ​   ​                    ​ ​           ​                                   ​     ​                                         ​                         ​                    ​     ​           ​                                 ​​       ​                                             ​                        ​                          ​    ​                                     ​          ​                        ​         ​      ​          ​             ​                     ​ ​      ​   ​                                       ​              ​       ​             ​         ​        ​    ​           ​                       ​ ​         ​​                                                                           ​            ​                                                                      ​                         ​​       ​                 ​         ​             ​ ​                      ​                                      ​                                   ​​                                                     ​                                             ​        ​   ​                                                                  ​     ​          ​       ​                  ​                 ​       ​        ​​                                   ​                    ​         ​           ​     ​      ​                                             ​          ​ ​                     ​       ​                ​        ​                       ​               ​                       ​                          ​    ​                                   ​                                     ​               ​                                            ​        ​    ​                                             ​                  ​                               ​  ​                       ​                        ​ ​       ​                                   ​                                    ​             ​             ​             ​       ​                    ​​ ​      ​                               ​      ​​      ​  ​                    ​                                                                    ​          ​                                             ​                                       ​                ​                                           ​        ​    ​​                                                  ​                               ​         ​                               ​   ​                    ​        ​                                     ​     ​                      ​                     ​                          ​                        ​   ​ ​          ​   ​              ​                 ​​       ​                                         ​                         ​                   ​ ​​     ​ ​  ​                                    ​            ​             ​      ​  ​                  ​          ​             ​                                 ​                              ​               ​                                ​          ​        ​                      ​                     ​             ​​                       ​           ​                                                        ​ ​​                                                          ​                                ​​                                   ​                  ​          ​             ​            ​                 ​    ​       ​                                ​​         ​   ​     ​                    ​                ​                                            ​        ​   ​                                 ​                                     ​          ​         ​                  ​                                     ​                        ​             ​                 ​                    ​           ​                           ​                       ​​ ​                 ​                                  ​                             ​   ​  ​     ​                         ​                  ​       ​ ​  ​                                       ​                     ​     ​         ​                                         ​                       ​ ​     ​                    ​                       ​                                            ​                          ​                      ​           ​                                      ​                            ​         ​            ​        ​                  ​       ​                     ​ ​      ​                                    ​​       ​  ​                                         ​                           ​  ​    ​      ​         ​      ​                                     ​                               ​                                     ​                     ​       ​    ​                           ​         ​  ​ ​                   ​                ​           ​    ​                   ​                       ​                      ​                            ​    ​ ​    ​                     ​                                                                ​ ​        ​                                       ​​       ​  ​                                                                                          ​       ​      ​                                          ​​          ​                      ​                ​        ​ ​      ​                       ​          ​              ​  ​                     ​  ​                   ​        ​                         ​         ​      ​                      ​​                                                      ​    ​                 ​         ​                      ​                                           ​          ​                              ​           ​​      ​                          ​              ​                     ​                   ​        ​                ​                            ​                                 ​                ​    ​             ​                         ​        ​                                            ​​             ​        ​                      ​                                 ​                         ​ ​         ​                                    ​                      ​                 ​            ​                          ​                           ​                                                       ​                              ​         ​                     ​  ​                  ​       ​      ​                                    ​              ​             ​           ​                                          ​       ​                 ​       ​    ​                                         ​                                                  ​                   ​                               ​        ​                                   ​     ​ ​                         ​                                         ​                                ​     ​          ​                                    ​​      ​  ​                                                       ​                                 ​        ​                                              ​​ ​​                              ​               ​                  ​                         ​            ​                     ​                   ​  ​                                    ​                                                           ​           ​                                          ​ ​                        ​      ​    ​          ​            ​                                      ​                                     ​​       ​                               ​                ​                                        ​    ​        ​                                              ​​             ​                                        ​      ​          ​                     ​            ​         ​                          ​    ​ ​                                                          ​    ​                                                                                                  ​ ​     ​      ​                            ​​        ​              ​                                  ​   ​       ​                         ​​      ​     ​                                      ​        ​                                  ​        ​                                           ​​ ​                                                 ​  ​                ​                      ​        ​    ​                                       ​                                    ​                  ​ ​    ​             ​                                   ​                                    ​    ​                                         ​           ​         ​ ​                                     ​                                    ​        ​                                              ​                     ​             ​     ​ ​      ​      ​                                                                           ​                    ​         ​        ​                     ​          ​    ​                                        ​  ​ ​​              ​       ​          ​            ​   ​                   ​                       ​                       ​                            ​    ​ ​                                                            ​    ​                        ​ ​            ​                               ​   ​     ​                ​                                                    ​   ​                        ​                                           ​          ​                                            ​                         ​                                ​        ​                                  ​            ​                             ​         ​                 ​ ​                       ​ ​         ​                                        ​                                             ​                                                       ​ ​       ​  ​                                                                            ​             ​            ​           ​                  ​       ​      ​                                   ​                                    ​                ​          ​             ​                       ​ ​      ​                                        ​                                                   ​                               ​                      ​​        ​                                     ​     ​                                ​           ​              ​             ​                        ​                                                             ​    ​     ​                         ​            ​           ​                  ​       ​      ​                                     ​                                         ​                ​                ​      ​   ​                  ​     ​ ​    ​              ​                                                                 ​        ​                  ​                         ​          ​                ​                                                        ​                    ​             ​                                                   ​                                 ​​                         ​        ​              ​                      ​                        ​             ​                                        ​                                                     ​        ​             ​            ​  ​       ​                     ​       ​                ​  ​                                     ​         ​  ​    ​                  ​                                       ​​         ​                                                    ​          ​           ​ ​         ​                                                        ​                                  ​​                                         ​             ​                    ​                                        ​      ​                               ​                                                       ​                                                       ​    ​           ​                       ​                           ​         ​        ​       ​                        ​                              ​                          ​           ​                                                 ​                         ​                          ​           ​                                 ​​                        ​         ​            ​                                    ​             ​          ​      ​                        ​            ​​                                             ​      ​ ​                   ​                                                                          ​                                         ​     ​   ​ ​      ​ ​                                                    ​                          ​           ​                                                   ​                         ​                ​            ​        ​                               ​     ​   ​          ​                      ​              ​                                ​             ​         ​      ​                        ​            ​​                                                   ​                                                          ​                        ​      ​  ​   ​                                ​ ​               ​                   ​                         ​​           ​          ​                              ​                                                         ​           ​                       ​   ​        ​                                ​​        ​                                 ​    ​     ​             ​            ​                     ​                  ​                                     ​                           ​                        ​ ​                ​                         ​            ​                                   ​   ​                                   ​                  ​ ​                                                      ​                                            ​                          ​                  ​  ​                                                             ​                                   ​                  ​               ​             ​ ​                    ​                                         ​                                ​                                                         ​ ​                 ​                                  ​                                       ​   ​                                              ​        ​ ​              ​                                                                         ​      ​                                                        ​                ​                     ​                 ​               ​                ​​       ​                                 ​               ​                                ​         ​               ​                    ​         ​      ​                                                      ​ ​                  ​                           ​       ​      ​                           ​    ​ ​​                                ​          ​        ​ ​              ​     ​                              ​                                            ​                    ​                       ​         ​             ​             ​               ​       ​                                    ​​       ​                                  ​              ​         ​                                                                            ​          ​                                         ​      ​ ​               ​                           ​       ​                                      ​   ​                                  ​                       ​                    ​                                      ​                                  ​                            ​                       ​            ​                ​                                     ​                                    ​​       ​                             ​                ​                         ​                                                                   ​         ​                                                        ​                   ​                               ​    ​                                     ​   ​                                  ​           ​       ​ ​              ​                               ​      ​                   ​                     ​                           ​                 ​                       ​                         ​        ​​                              ​        ​                              ​              ​                       ​                            ​           ​                                      ​​               ​                                    ​        ​                                             ​   ​                                 ​  ​                                   ​                    ​                  ​                                        ​               ​                          ​           ​        ​          ​             ​         ​            ​                                     ​                             ​  ​​      ​           ​               ​                 ​                     ​                                     ​    ​                                         ​​                           ​                         ​         ​                                      ​        ​    ​                                    ​   ​                ​                   ​                    ​                    ​                                       ​                                            ​                     ​                       ​                                     ​               ​           ​                ​               ​​                   ​                 ​                ​       ​                ​                            ​             ​                                 ​​                                                         ​                                       ​       ​                                              ​              ​                       ​        ​       ​                                                       ​            ​                             ​                                            ​       ​                                              ​        ​  ​                           ​​         ​                           ​             ​                         ​                          ​ ​            ​     ​                                                                                    ​ ​      ​                                                ​    ​            ​            ​        ​  ​                              ​ ​         ​       ​              ​                                  ​​                       ​           ​                                                    ​         ​                          ​             ​   ​        ​  ​                           ​​                                   ​ ​           ​                       ​ ​                 ​        ​      ​                                     ​​                                         ​              ​                                                             ​                                   ​                                 ​         ​ ​      ​                                                         ​                                       ​                              ​             ​           ​                                         ​          ​  ​                                ​​                                                    ​ ​                      ​                             ​      ​                      ​             ​                                                      ​                                     ​                   ​    ​                                 ​  ​                                    ​        ​       ​                                                         ​                              ​           ​                                             ​                                        ​          ​    ​          ​  ​    ​                      ​​                                                   ​                        ​                              ​    ​                        ​    ​       ​​                                     ​                ​ ​                                ​            ​          ​                               ​  ​                   ​            ​         ​       ​ ​               ​​                                      ​                                    ​     ​                                   ​           ​                       ​                                     ​  ​                             ​                                      ​             ​                 ​                         ​       ​      ​      ​                                 ​           ​                                         ​                                                        ​    ​      ​           ​​              ​   ​                                     ​                   ​                  ​                      ​   ​          ​                                   ​     ​                                             ​      ​                                  ​            ​          ​                      ​           ​​                                  ​            ​                                                       ​             ​                              ​                                                    ​                                         ​                        ​                                 ​                         ​  ​         ​  ​        ​       ​                ​                           ​        ​​                        ​           ​                                                   ​      ​  ​                          ​            ​   ​        ​  ​                               ​​                                    ​             ​                      ​ ​                                 ​                                     ​                                                 ​      ​  ​           ​                    ​                    ​    ​                               ​  ​                     ​                        ​       ​ ​             ​                                    ​​                                                                                       ​                                                      ​        ​  ​                                ​​                                                      ​ ​                      ​                              ​      ​                      ​             ​                                                       ​                                     ​                  ​    ​      ​                             ​  ​                                   ​        ​        ​                  ​                            ​​        ​​                                                                                     ​          ​                                                   ​  ​           ​                      ​​                                     ​             ​                         ​                            ​    ​                        ​              ​​                                   ​                ​ ​                                ​          ​          ​                                ​  ​                    ​          ​ ​ ​       ​       ​                     ​                                       ​                                     ​     ​                                 ​           ​                                                              ​  ​                   ​        ​                                      ​             ​                 ​                                 ​      ​      ​                                ​                                                     ​      ​               ​                                  ​    ​      ​          ​​              ​   ​                                 ​ ​                   ​                  ​              ​             ​          ​                                   ​     ​     ​                                       ​          ​                             ​           ​          ​                                 ​​                                  ​            ​                                                        ​             ​                              ​           ​                                        ​                                      ​                         ​                                ​                  ​                         ​         ​       ​ ​                ​                      ​               ​                           ​      ​    ​             ​                               ​      ​                       ​              ​               ​                                    ​​                                               ​    ​                         ​                     ​        ​      ​    ​                                  ​​                                      ​              ​                                                 ​          ​                              ​      ​                                   ​        ​  ​    ​                ​                            ​        ​​                         ​                                                               ​     ​                                               ​        ​  ​                                 ​​                                     ​              ​​                       ​                                     ​                                                                               ​             ​        ​            ​               ​                     ​                           ​       ​   ​                    ​              ​         ​  ​    ​                  ​                          ​           ​​                        ​                                                 ​           ​                          ​                                                                                      ​     ​    ​ ​                ​            ​                         ​ ​         ​        ​       ​    ​                                                          ​                               ​                                                ​​       ​   ​                                    ​                                       ​        ​        ​                 ​   ​         ​             ​                                            ​                                    ​          ​​                                                  ​​         ​     ​                       ​         ​                             ​                                          ​                   ​        ​      ​                        ​             ​                                     ​                  ​                                            ​        ​                                              ​         ​              ​      ​        ​        ​                   ​                         ​           ​                                    ​     ​                                 ​            ​​                                        ​               ​                                     ​          ​​       ​                            ​             ​      ​                                 ​        ​     ​                                       ​​            ​                          ​        ​   ​                    ​                       ​           ​                                    ​  ​                  ​  ​                       ​        ​                                         ​                             ​       ​         ​  ​​​                             ​           ​        ​               ​            ​               ​    ​                                        ​​       ​           ​                    ​     ​      ​                       ​                    ​                                                  ​                                ​      ​           ​                            ​​           ​​         ​                   ​                         ​                     ​  ​         ​     ​         ​     ​                ​    ​                                    ​               ​                 ​     ​                             ​ ​          ​        ​                 ​                          ​                                                       ​                                          ​         ​             ​                  ​         ​    ​                                         ​                                                        ​                                             ​​      ​                                           ​    ​                    ​  ​             ​        ​         ​                  ​                                  ​  ​                                    ​                                                   ​  ​                                                 ​          ​   ​                              ​​       ​                            ​             ​                      ​                     ​                               ​            ​        ​        ​                                            ​                          ​        ​                  ​    ​                             ​     ​   ​                                   ​                   ​ ​              ​                         ​           ​                                      ​    ​                                             ​                                                 ​          ​                                  ​​       ​                          ​             ​                      ​ ​                                   ​      ​                             ​​         ​                            ​                ​                                               ​        ​                                         ​                                        ​        ​        ​                ​           ​                     ​  ​                                   ​ ​   ​                               ​           ​             ​                                       ​ ​                                                              ​                 ​            ​                      ​                   ​        ​    ​   ​                                 ​     ​                 ​               ​                ​                            ​​                 ​     ​ ​    ​                                     ​                          ​     ​   ​     ​        ​                ​                         ​                                              ​     ​          ​                                    ​               ​                                       ​ ​                                                              ​                 ​            ​                      ​                   ​        ​    ​   ​                                 ​     ​                 ​               ​                ​                            ​​                 ​     ​ ​    ​                                     ​                          ​     ​   ​     ​        ​                ​                      ​   ​        ​                                    ​     ​                     ​           ​    ​      ​                                                      ​          ​                              ​            ​                  ​         ​              ​                           ​           ​    ​               ​                       ​          ​                                   ​                           ​           ​ ​                    ​             ​ ​                                  ​ ​​                                                         ​                                           ​                             ​                ​    ​                             ​    ​      ​                         ​ ​   ​         ​                        ​                               ​        ​​ ​     ​                             ​              ​                                                 ​           ​                                                ​                                                   ​            ​            ​                      ​   ​     ​  ​                                     ​   ​                          ​                            ​                                            ​          ​                     ​                         ​        ​             ​           ​           ​​                       ​                         ​​          ​                                   ​​        ​                  ​                         ​                          ​       ​           ​        ​                              ​          ​  ​                                        ​           ​   ​                    ​                     ​        ​    ​                   ​               ​                                     ​        ​        ​                  ​                         ​​       ​            ​    ​  ​                   ​                                                   ​                         ​   ​                                        ​                                                  ​                      ​                                ​                         ​                                           ​​         ​         ​                ​                  ​                                             ​        ​                                        ​   ​                                ​        ​  ​     ​                ​                        ​           ​                           ​               ​                                              ​          ​                            ​           ​                                    ​        ​​       ​                             ​             ​ ​                     ​       ​                  ​   ​                ​​               ​             ​​       ​                               ​​              ​                  ​                ​               ​    ​              ​                 ​   ​                                ​         ​       ​                                       ​                          ​                 ​              ​                     ​​           ​                                       ​                         ​                                                      ​            ​               ​              ​                       ​                  ​        ​      ​                                                  ​​                         ​   ​          ​                       ​                              ​                                        ​             ​                       ​        ​        ​                ​                        ​        ​                                       ​     ​                                 ​              ​            ​                                                                 ​​       ​        ​​    ​   ​                            ​              ​                      ​                   ​        ​      ​                               ​          ​         ​                ​         ​                  ​                    ​                     ​​       ​                                     ​             ​           ​            ​           ​        ​                ​                        ​           ​                                      ​     ​           ​                      ​           ​  ​                                                                                              ​​       ​                              ​            ​                     ​                    ​        ​    ​                          ​          ​      ​    ​                             ​                ​          ​​             ​                     ​        ​                                              ​                                              ​        ​                  ​             ​    ​                                                       ​     ​    ​                             ​            ​        ​                                                 ​                              ​              ​​  ​    ​                          ​             ​                          ​                   ​        ​      ​                                      ​         ​                                       ​      ​                      ​           ​         ​        ​   ​                                  ​   ​                                                                     ​                                   ​                                 ​ ​     ​                               ​                     ​                  ​                                                          ​                      ​                             ​               ​         ​                                   ​                                                      ​​            ​                       ​                ​                     ​                      ​        ​                                 ​           ​   ​                                             ​        ​                  ​    ​          ​                          ​                         ​           ​     ​                  ​           ​           ​       ​                                         ​                                           ​​       ​                                ​         ​                                                ​  ​     ​      ​                                    ​​                                   ​                ​                      ​            ​         ​        ​   ​                               ​      ​                                              ​    ​   ​                                         ​           ​                                                         ​                   ​                    ​              ​ ​                      ​   ​             ​          ​ ​                    ​​        ​                                 ​           ​​         ​           ​                  ​        ​                                             ​            ​                     ​            ​   ​                    ​                       ​        ​    ​                                                                               ​         ​        ​                  ​              ​           ​          ​ ​                                     ​                                                ​                                                     ​          ​       ​                          ​​       ​                              ​               ​                                            ​          ​                                             ​                 ​​   ​           ​                  ​                        ​ ​                    ​        ​    ​                            ​             ​                                            ​    ​   ​                                          ​​           ​                               ​   ​                ​               ​  ​           ​                                                    ​        ​   ​                               ​​                                                     ​                         ​                            ​                              ​              ​​                                    ​                             ​           ​                              ​    ​         ​                           ​   ​                                                       ​                                            ​           ​                                       ​     ​                                            ​                                 ​               ​           ​                                 ​​       ​                  ​         ​              ​                        ​                   ​        ​      ​                                                                                                ​        ​             ​                     ​        ​    ​                                      ​   ​                                                   ​                                            ​           ​                                  ​     ​                                ​ ​          ​        ​                ​                            ​                                                ​        ​                               ​          ​                               ​                   ​        ​                                             ​​                                                       ​                      ​                      ​        ​                                         ​                                    ​    ​    ​        ​                                         ​           ​                               ​          ​       ​                           ​           ​                       ​                          ​         ​             ​                   ​   ​           ​             ​         ​                                      ​                             ​        ​                 ​                    ​                                                        ​        ​     ​                               ​          ​   ​   ​                              ​   ​                                  ​         ​        ​                  ​                                     ​                                               ​                                           ​           ​                                         ​        ​​                          ​        ​​       ​                   ​                         ​                         ​                            ​      ​                                       ​                                          ​           ​        ​             ​                 ​   ​                ​​     ​             ​                         ​                                       ​ ​               ​            ​                                                              ​  ​​​                  ​           ​      ​    ​                      ​            ​             ​                                                ​​       ​                                               ​                                  ​      ​          ​                    ​                        ​​     ​                   ​         ​            ​    ​                      ​                       ​        ​    ​                                      ​   ​                                     ​                  ​   ​                                     ​          ​             ​         ​          ​                                  ​                                                                           ​              ​                                 ​​       ​                                        ​                        ​                            ​            ​                        ​   ​​                                    ​                ​                      ​   ​                              ​  ​                 ​                        ​                                        ​               ​                 ​                         ​​                          ​                ​    ​        ​                     ​                     ​              ​                          ​                                                       ​  ​                            ​             ​                                                      ​      ​                                    ​​         ​                       ​         ​            ​    ​     ​             ​                              ​   ​                                    ​      ​                   ​          ​                     ​                  ​                       ​          ​                                             ​                                 ​                                      ​   ​                 ​    ​         ​                                ​​       ​                                 ​              ​                                                      ​      ​                                            ​                          ​                     ​                      ​                      ​        ​    ​                                        ​                      ​                  ​                          ​                       ​         ​             ​                   ​     ​                                  ​            ​        ​                                          ​                                             ​​       ​                        ​              ​                  ​  ​                              ​    ​                                     ​​                                  ​                ​          ​             ​                                ​                                             ​   ​                                   ​           ​        ​                                           ​           ​                        ​           ​     ​                                ​                ​                                               ​                                              ​​       ​    ​           ​   ​      ​             ​                         ​                             ​    ​                                      ​​         ​                            ​                 ​                     ​                     ​        ​                                           ​              ​                     ​        ​        ​                  ​                       ​           ​             ​                   ​     ​                               ​            ​        ​    ​                       ​                  ​                                     ​          ​​       ​                            ​       ​     ​                            ​           ​​  ​     ​      ​                                  ​​                                      ​              ​                                               ​        ​   ​    ​                      ​         ​   ​                              ​​ ​         ​        ​                   ​                       ​​                                                    ​                    ​                     ​     ​                ​                         ​         ​       ​   ​                    ​​       ​                           ​             ​   ​                      ​                          ​      ​                                       ​​         ​                                            ​        ​                                              ​          ​                              ​             ​                         ​         ​ ​      ​                                                      ​                            ​           ​    ​           ​                    ​            ​            ​                 ​                         ​          ​​                            ​        ​​         ​                           ​                ​                                           ​          ​                                           ​                                   ​                ​                     ​                       ​        ​    ​                                    ​  ​                                ​         ​       ​                    ​​                       ​           ​                      ​                       ​                              ​             ​                           ​        ​        ​         ​                ​  ​                              ​​         ​    ​                      ​             ​                                                          ​      ​                        ​             ​                                    ​   ​                                   ​                                                              ​​         ​       ​        ​                             ​         ​                                    ​ ​                        ​                                                            ​             ​          ​        ​   ​    ​            ​          ​               ​  ​      ​    ​                             ​                           ​              ​       ​                    ​  ​       ​             ​      ​     ​         ​             ​                                             ​                                           ​                                                        ​                     ​ ​                                                                           ​                                      ​                     ​                                                         ​          ​                           ​                                    ​                                           ​​                                      ​             ​                  ​  ​          ​        ​        ​      ​               ​                      ​                               ​    ​               ​                     ​   ​                           ​  ​                                      ​  ​                                                           ​                    ​                                                                    ​    ​    ​                               ​                                       ​            ​             ​        ​​                                    ​​       ​                               ​                                                       ​    ​        ​                                                ​             ​          ​                                               ​                                   ​      ​ ​                           ​    ​                                ​ ​       ​       ​                    ​         ​       ​      ​                                                         ​                                              ​            ​                                                  ​              ​                  ​​                                        ​               ​                                                                            ​                     ​                                                   ​​                                            ​        ​  ​                                ​   ​                                    ​         ​        ​                    ​          ​                           ​                                    ​    ​                                           ​                                        ​       ​                    ​         ​              ​​  ​    ​                             ​             ​                          ​                              ​      ​                                     ​          ​              ​    ​                      ​        ​               ​   ​                                                                        ​                                     ​        ​        ​       ​        ​            ​      ​    ​          ​                                  ​     ​                                    ​            ​                                           ​       ​          ​​                               ​​       ​                  ​          ​                ​                         ​     ​                        ​      ​                                           ​                                      ​                 ​        ​             ​              ​       ​        ​           ​                            ​                                      ​                  ​                                            ​    ​           ​                         ​                ​                                          ​                      ​                                ​           ​                         ​        ​​       ​                              ​                ​                         ​                    ​        ​                                            ​                    ​               ​                ​                    ​             ​        ​        ​  ​                                       ​  ​​                                   ​                  ​                                                       ​         ​                                ​                          ​           ​                       ​                         ​        ​                               ​​       ​                              ​                                               ​         ​           ​      ​                       ​             ​​                                                     ​    ​                    ​                                   ​                                    ​  ​                                 ​         ​        ​                  ​                          ​                                                      ​                       ​                     ​      ​                 ​                          ​   ​        ​       ​                         ​​       ​                               ​               ​          ​               ​                   ​        ​                                ​             ​                   ​               ​                 ​     ​   ​       ​         ​              ​   ​     ​  ​                  ​               ​  ​                                                      ​                                             ​         ​                                               ​        ​                     ​           ​        ​      ​         ​                ​         ​         ​                                  ​​       ​                             ​                        ​        ​                        ​        ​                         ​                ​                                    ​               ​                     ​                       ​          ​               ​                        ​                                                        ​                                    ​        ​        ​                                ​  ​                                   ​            ​                                                        ​          ​                                       ​​       ​  ​                                          ​        ​                                          ​                                            ​​​                                      ​                ​         ​           ​​                          ​        ​    ​            ​   ​                       ​                                               ​                           ​                      ​          ​         ​                        ​     ​                        ​         ​                      ​                                         ​    ​​          ​                                        ​​      ​                              ​                                                             ​       ​      ​         ​   ​                 ​  ​​                                  ​                                       ​                       ​          ​    ​      ​                             ​   ​ ​                                        ​             ​                              ​          ​           ​                                  ​    ​  ​                         ​                           ​     ​                             ​        ​​             ​                        ​​    ​ ​                                      ​                                                ​        ​      ​    ​    ​  ​                        ​​                                    ​                ​                   ​                     ​        ​    ​                          ​         ​   ​                             ​     ​                  ​                                         ​     ​         ​         ​​                                   ​                               ​                       ​           ​       ​                  ​           ​  ​                                ​         ​                                               ​         ​                                        ​            ​    ​        ​  ​                    ​​                                   ​                ​​                   ​                        ​        ​    ​                                     ​   ​                                   ​                    ​                  ​                       ​                              ​   ​  ​ ​               ​        ​            ​  ​                      ​                        ​                         ​         ​                                  ​​ ​     ​                                               ​     ​                                     ​        ​                                           ​                   ​                 ​               ​                  ​                         ​        ​  ​                                     ​   ​                                  ​                  ​                                                                                                        ​                                          ​                         ​                  ​                          ​           ​                  ​​       ​                   ​         ​              ​                      ​                      ​        ​                                         ​                               ​                ​                    ​                                ​   ​    ​                           ​                                                    ​         ​        ​    ​                                    ​​            ​   ​                                       ​                               ​           ​        ​                 ​                            ​        ​                                     ​​        ​                                            ​                                            ​  ​     ​               ​           ​                ​                                  ​               ​                        ​                      ​        ​    ​                                          ​                                             ​        ​                                         ​         ​                                   ​     ​                            ​ ​            ​                                           ​          ​  ​          ​                                   ​​                                                  ​                    ​                 ​              ​                                     ​​        ​                             ​ ​                                ​                        ​         ​    ​                                      ​             ​​           ​        ​          ​        ​    ​           ​       ​                  ​           ​                                          ​                         ​                      ​                                                  ​          ​                                      ​​                          ​           ​                        ​             ​                  ​                                        ​            ​​                                  ​               ​                      ​                      ​        ​                                 ​             ​                                                 ​                                                               ​                                        ​     ​                              ​   ​                 ​               ​                                    ​                                     ​​       ​                      ​        ​  ​ ​        ​                        ​    ​       ​                 ​    ​                                     ​​                                                     ​                                             ​       ​                   ​        ​           ​   ​                               ​​               ​         ​                                                           ​                                            ​                  ​           ​            ​           ​            ​           ​             ​         ​                                  ​​ ​     ​                             ​              ​                       ​                    ​        ​      ​                        ​            ​                                   ​                  ​                                   ​           ​  ​  ​                                         ​                                          ​        ​                ​                                    ​                          ​               ​                               ​             ​                       ​       ​                         ​​            ​                          ​​       ​                                            ​                                          ​        ​​                                                ​                                                   ​                   ​                               ​  ​                                     ​  ​                                  ​     ​           ​                   ​                       ​​                                                      ​                                  ​            ​        ​                                                         ​                           ​​               ​​                        ​               ​                ​                                               ​        ​      ​                        ​             ​                                    ​           ​   ​                      ​                                                               ​ ​         ​  ​                  ​                        ​        ​                                         ​          ​        ​       ​        ​          ​  ​                   ​           ​            ​           ​             ​                         ​        ​ ​                                    ​​       ​                             ​              ​                                          ​          ​                                              ​  ​        ​                      ​               ​                   ​                     ​        ​                                ​        ​   ​                                    ​         ​         ​               ​ ​                        ​           ​                                      ​     ​                                       ​                                ​                          ​            ​                          ​                                                ​             ​                        ​                   ​        ​     ​                                      ​​                        ​ ​        ​                                         ​                          ​     ​    ​                                 ​   ​                                  ​                    ​                                                ​                 ​                      ​           ​    ​                                             ​                       ​                           ​        ​                                ​ ​​       ​                               ​              ​​       ​             ​    ​               ​  ​     ​    ​                      ​   ​          ​​  ​   ​                                              ​                                            ​​       ​    ​                                   ​   ​                                                ​       ​                    ​                   ​    ​           ​                                        ​                                           ​                         ​                     ​   ​         ​             ​                  ​​      ​                              ​             ​                                           ​        ​      ​                                                                             ​​                        ​                     ​            ​        ​    ​                    ​    ​         ​   ​                                                        ​                  ​                                       ​           ​                  ​         ​                                ​           ​                          ​                                  ​​            ​                                 ​   ​                         ​              ​                        ​                     ​               ​                                     ​                                      ​           ​   ​                      ​                        ​        ​  ​                                          ​  ​                            ​                         ​                                            ​          ​                                    ​    ​                 ​     ​       ​                                    ​   ​                                    ​ ​                                   ​​       ​                    ​         ​               ​                       ​   ​         ​     ​  ​            ​                                  ​                                       ​           ​         ​          ​                    ​    ​      ​                            ​            ​                                                           ​                     ​                  ​            ​                                 ​     ​        ​                   ​                                      ​                            ​          ​                                      ​​      ​                   ​         ​                                                              ​        ​                                           ​​  ​        ​                        ​                                   ​                         ​               ​    ​                                    ​            ​                                          ​                                  ​        ​                  ​                        ​     ​ ​                  ​        ​             ​        ​                ​                             ​  ​       ​                                      ​​       ​                                                                                    ​​        ​      ​                                  ​​                    ​                 ​                 ​                      ​ ​                   ​        ​    ​                          ​             ​                                                         ​                                             ​                                ​               ​    ​                               ​            ​                         ​                          ​                                        ​​      ​                  ​                         ​                        ​                  ​             ​      ​                                       ​                                     ​              ​                    ​         ​                           ​    ​                        ​           ​   ​                                              ​         ​                                   ​    ​​           ​                                 ​     ​                             ​                     ​                                          ​                                                ​                                                                ​                               ​​  ​     ​      ​                                 ​​                                     ​                 ​​                                    ​                ​  ​                                     ​   ​                                ​                     ​                                                ​                                                         ​              ​   ​                     ​     ​               ​                         ​        ​                                 ​​ ​     ​                              ​              ​     ​                                   ​        ​                                             ​​             ​                                    ​     ​           ​                      ​        ​  ​ ​                                      ​                                               ​        ​  ​ ​   ​         ​                        ​                                    ​           ​     ​                     ​                                                                       ​   ​          ​                                   ​​       ​                                 ​              ​                        ​                   ​        ​                                                ​​                ​                 ​                                        ​                      ​        ​    ​               ​                    ​ ​                              ​   ​  ​     ​    ​                       ​                         ​​​          ​                                           ​                                        ​      ​                 ​                         ​    ​   ​                                  ​​ ​     ​                             ​              ​                        ​                   ​        ​                                            ​                                     ​                ​     ​         ​ ​                      ​          ​  ​                                          ​                ​  ​ ​                           ​                                             ​          ​                                        ​     ​                              ​                                     ​                         ​          ​     ​    ​                ​              ​                            ​​                ​                        ​                   ​        ​                                              ​​                               ​                                                                  ​        ​    ​    ​                                               ​      ​                         ​        ​                        ​                        ​    ​    ​                           ​              ​                              ​              ​        ​   ​          ​                          ​          ​                                             ​                                            ​                                                     ​      ​                          ​          ​​                                  ​ ​              ​                        ​                     ​        ​                                                  ​                                         ​         ​                                         ​        ​                ​                  ​ ​   ​                                                ​                  ​                               ​​                                                 ​   ​                             ​               ​       ​   ​             ​                              ​ ​                                        ​            ​                                              ​                                               ​       ​                   ​                                                              ​  ​     ​        ​         ​        ​                         ​         ​                      ​                                                               ​                                                     ​                                               ​​       ​                      ​       ​            ​​                    ​                   ​        ​    ​   ​              ​                  ​                                                         ​                                                ​​      ​                                        ​                                         ​        ​        ​                ​                        ​           ​                                        ​     ​                         ​     ​             ​                                                    ​ ​                        ​   ​                    ​   ​                            ​               ​           ​             ​                     ​             ​                                                                       ​                       ​                                                ​        ​                                        ​                                      ​          ​        ​         ​      ​                         ​         ​                                    ​     ​                                                     ​                  ​      ​  ​                         ​                                                        ​                             ​   ​         ​                       ​                            ​​ ​      ​                                                                          ​                ​         ​                                     ​        ​                                               ​                                ​         ​       ​​                 ​                         ​         ​                    ​                ​     ​          ​ ​                                 ​                         ​                          ​                                                          ​                            ​             ​         ​              ​                  ​       ​      ​                                   ​                                     ​                 ​                       ​                      ​         ​                                  ​         ​                                             ​        ​                      ​                   ​           ​ ​                                        ​                                ​            ​                                                  ​​                                              ​        ​                             ​             ​          ​            ​                  ​        ​    ​                                    ​​                                    ​                ​                      ​                 ​   ​        ​    ​                                   ​   ​                                  ​        ​  ​     ​                  ​                        ​         ​                                    ​     ​                                   ​             ​                         ​                            ​          ​                                   ​​       ​                           ​              ​                                                     ​      ​                                            ​                       ​                         ​                     ​                             ​  ​ ​                                ​   ​                            ​      ​         ​        ​                                                          ​                        ​           ​    ​                  ​                       ​      ​                 ​                          ​        ​ ​                               ​​       ​                               ​             ​                     ​                                        ​                   ​   ​                                             ​     ​             ​      ​     ​     ​                       ​​           ​                                    ​   ​                                   ​                  ​    ​       ​    ​                       ​          ​     ​                               ​     ​ ​                           ​            ​        ​                 ​                            ​          ​                   ​                    ​  ​                             ​                                                         ​  ​     ​      ​                                ​​                                       ​                   ​                  ​                       ​        ​                                               ​   ​                         ​                                                                 ​       ​       ​                    ​        ​    ​         ​                             ​            ​                         ​           ​              ​        ​                                  ​​       ​                              ​ ​            ​                       ​                   ​        ​      ​    ​                                    ​                                                    ​                                                      ​  ​           ​                ​     ​   ​         ​                       ​                 ​        ​         ​                         ​​           ​                        ​               ​                                ​            ​ ​                       ​                                      ​                                ​​         ​                             ​               ​                                                         ​      ​                                         ​                                    ​                ​    ​ ​                                                                                             ​          ​                  ​             ​                                  ​              ​         ​                             ​                   ​  ​​​                               ​      ​    ​                     ​                           ​          ​ ​                                 ​​       ​                   ​                        ​                                       ​    ​        ​                                            ​                     ​         ​                ​                                                                         ​   ​           ​                                    ​         ​        ​                 ​             ​  ​           ​        ​                                        ​     ​                               ​            ​                                ​  ​                     ​                      ​               ​        ​                 ​           ​             ​          ​             ​           ​      ​        ​    ​   ​                                  ​​                                    ​                                         ​​                     ​         ​                                         ​   ​                                              ​                           ​                      ​​         ​                                 ​     ​                                  ​             ​        ​                ​                          ​                                  ​    ​     ​        ​               ​                         ​                        ​                                 ​         ​    ​   ​   ​                     ​                        ​                                         ​     ​         ​              ​    ​                                         ​   ​                     ​                  ​         ​   ​             ​                       ​         ​                                ​ ​   ​                               ​             ​        ​    ​           ​                          ​          ​                                            ​                                                        ​             ​                  ​                 ​                        ​          ​                            ​ ​               ​                        ​                      ​        ​                                             ​                                            ​        ​                  ​                       ​           ​                                  ​     ​                               ​ ​     ​   ​                           ​                                      ​                                     ​​       ​                 ​​                                                     ​      ​      ​        ​              ​              ​​       ​            ​       ​                 ​              ​                      ​ ​           ​                              ​  ​             ​                     ​   ​  ​                                   ​                    ​                  ​                        ​                                   ​               ​  ​                            ​           ​           ​           ​       ​                          ​​                                              ​                                                                       ​                     ​                                                      ​                   ​               ​               ​                    ​                        ​        ​  ​                                    ​  ​​                                    ​         ​        ​                  ​                        ​                   ​                                      ​     ​                                ​            ​                                 ​          ​            ​                                     ​                   ​                            ​                           ​           ​                           ​     ​                                     ​                          ​         ​           ​   ​                    ​                        ​        ​                             ​ ​             ​     ​              ​                      ​        ​                                 ​        ​         ​                            ​         ​     ​                            ​ ​            ​                          ​               ​​          ​                                              ​              ​                                                                       ​           ​                 ​          ​​        ​        ​                                                          ​     ​            ​                      ​        ​    ​              ​                          ​                                             ​        ​                ​                        ​                                                        ​                                   ​           ​                       ​            ​             ​        ​                                        ​ ​     ​                               ​              ​         ​  ​                              ​        ​                                   ​       ​​     ​                          ​                                            ​                       ​​       ​    ​                ​                       ​                ​   ​                  ​                             ​                                      ​                  ​                          ​                                ​            ​                                                       ​   ​     ​                         ​​     ​​  ​    ​    ​           ​         ​             ​                      ​                               ​        ​                            ​        ​         ​                                             ​                                               ​​       ​    ​                                                    ​         ​       ​           ​             ​              ​ ​​        ​​                   ​                                 ​                   ​              ​            ​            ​                         ​               ​                      ​                                ​   ​​       ​                            ​           ​                                                   ​                       ​                     ​                                                       ​                     ​   ​                           ​   ​                                  ​   ​                                  ​          ​       ​                  ​              ​    ​    ​​          ​                                         ​                                                                                                    ​        ​​                                ​​                                   ​ ​           ​                ​  ​                            ​      ​                                      ​   ​                                                   ​                      ​                                                    ​         ​             ​  ​    ​  ​                       ​      ​                                     ​ ​                                     ​                            ​           ​                       ​         ​            ​         ​                            ​​        ​           ​          ​         ​      ​    ​                           ​                   ​                                ​           ​              ​      ​                         ​             ​        ​                                                                   ​​                     ​        ​            ​                                ​   ​                                            ​                        ​                       ​        ​                                   ​     ​                                 ​           ​                         ​     ​                    ​                                  ​          ​​  ​    ​       ​                                  ​  ​               ​  ​                              ​    ​              ​                                                                    ​          ​                      ​                      ​​      ​                     ​                 ​    ​                                ​        ​        ​       ​      ​                         ​                                               ​                               ​                 ​                             ​          ​           ​                       ​             ​​​                                     ​              ​                                                                                                     ​                              ​                    ​            ​        ​                                ​​ ​                                     ​   ​ ​                                    ​                                      ​                                                               ​                  ​                                ​           ​        ​               ​                             ​        ​​                                  ​       ​         ​                               ​                                                    ​         ​    ​     ​        ​                     ​​                                ​ ​                            ​        ​                      ​​        ​    ​      ​                 ​               ​​ ​                                   ​        ​        ​                                       ​        ​                                    ​            ​​                                    ​                         ​  ​      ​               ​                              ​                       ​                              ​   ​          ​                     ​                  ​         ​    ​                                                                              ​                ​                                                     ​                                           ​   ​         ​                        ​         ​        ​                ​                                     ​ ​                                       ​                                ​            ​                                                                    ​                         ​        ​​        ​     ​    ​                                ​ ​                       ​                        ​                                    ​            ​                                        ​           ​                       ​                      ​        ​    ​                                    ​   ​                             ​                      ​                    ​                                                                           ​                                 ​              ​          ​                                     ​   ​        ​   ​                              ​​                                                    ​ ​          ​           ​                              ​      ​                                       ​​                       ​                         ​          ​             ​                              ​   ​                                                                                                ​                ​                         ​          ​                            ​                                                   ​           ​                           ​                        ​        ​   ​                              ​​       ​                               ​                                       ​                   ​        ​                                             ​​                                         ​​            ​                      ​                      ​        ​    ​                                        ​                       ​           ​        ​        ​                                                         ​                    ​  ​                     ​                                               ​       ​   ​                              ​           ​        ​                                  ​​       ​                            ​              ​                        ​                                ​      ​                            ​                                     ​          ​        ​     ​​               ​                       ​      ​​   ​                                  ​    ​                                  ​        ​        ​                    ​                                   ​                                        ​                                                ​          ​                                          ​                                           ​​         ​                    ​         ​               ​                      ​                    ​        ​        ​                                    ​​                                          ​     ​       ​                                ​       ​                                            ​            ​                                 ​         ​       ​                    ​         ​            ​                                                                                                                                                      ​                             ​                    ​        ​                                                            ​             ​   ​                        ​    ​             ​                    ​​                                 ​ ​                ​                                                ​          ​                                             ​                                             ​                            ​  ​                   ​         ​                                   ​ ​   ​                                   ​     ​      ​        ​                ​                           ​                                                                                                        ​​                      ​                           ​    ​                   ​                ​​​        ​                        ​                         ​            ​                       ​        ​​            ​                                  ​                                           ​        ​                    ​                      ​  ​        ​                                   ​     ​                            ​ ​          ​        ​                ​                          ​          ​                                                               ​                                ​                                    ​                               ​                ​              ​              ​                  ​  ​                  ​ ​                     ​        ​  ​              ​             ​                   ​   ​                             ​                           ​                                                        ​                              ​         ​                                ​   ​                                    ​           ​            ​           ​​                                ​​ ​     ​                                                                     ​                     ​                            ​  ​                  ​                ​              ​               ​                  ​                      ​          ​                                     ​   ​                                     ​                  ​                                               ​                                             ​     ​                        ​         ​                                    ​ ​                       ​          ​                                     ​        ​                                                ​        ​                                 ​​        ​      ​                                   ​​                                  ​                ​                                               ​       ​                                             ​                            ​        ​         ​        ​     ​                        ​​          ​​      ​                                    ​     ​       ​                ​           ​                                                          ​                          ​             ​                                                                      ​                                           ​                                           ​             ​​                                                  ​                  ​​                ​         ​ ​        ​    ​                                        ​                       ​                        ​                          ​                      ​         ​                                    ​     ​                               ​              ​   ​      ​    ​                                       ​ ​         ​                          ​                   ​                          ​   ​         ​                       ​    ​          ​          ​    ​                   ​                   ​                 ​                                      ​                                                      ​                                        ​              ​           ​          ​        ​       ​                    ​                          ​           ​       ​                ​                  ​                   ​               ​        ​ ​     ​                                                            ​                                 ​​       ​                                              ​     ​                                  ​        ​                                             ​                                  ​   ​            ​                   ​                    ​          ​  ​                                          ​                                    ​                  ​                                       ​                              ​               ​    ​  ​        ​               ​                                    ​                          ​                                                  ​       ​   ​                                                       ​                         ​       ​     ​     ​                                    ​​                                  ​                           ​                                              ​                                   ​                                              ​        ​        ​         ​    ​ ​​      ​                 ​        ​                                     ​                                        ​           ​                                               ​   ​ ​                                                     ​                            ​              ​        ​                                                                                         ​                      ​          ​           ​   ​                     ​            ​         ​        ​  ​                                    ​   ​                       ​                  ​   ​      ​               ​              ​                          ​​                ​  ​             ​     ​       ​                                       ​ ​        ​   ​    ​                                   ​          ​                     ​     ​                                  ​               ​          ​                              ​        ​      ​                      ​            ​​                                   ​                                           ​                     ​​       ​    ​                          ​             ​                                              ​    ​   ​                                       ​      ​           ​                                 ​     ​                              ​           ​        ​    ​    ​    ​ ​                        ​          ​                                    ​​       ​                                              ​                        ​                   ​                                                   ​                  ​                ​                ​                                        ​​       ​    ​                                     ​   ​                                               ​        ​                  ​                        ​          ​                                   ​                         ​​      ​​        ​​     ​                           ​                                    ​                                   ​​                                                     ​            ​             ​                    ​        ​    ​                                     ​       ​                             ​               ​         ​           ​           ​          ​        ​    ​                            ​           ​   ​ ​                                                   ​    ​               ​                       ​          ​     ​                              ​     ​      ​                    ​ ​            ​                  ​​                                ​                                   ​                                               ​              ​​                      ​                             ​    ​                                     ​                             ​         ​                 ​                                            ​          ​    ​                                    ​   ​                                               ​        ​                  ​                       ​​           ​                                   ​    ​                   ​           ​          ​                 ​      ​         ​                          ​  ​         ​         ​                      ​                           ​             ​                        ​                            ​      ​                ​                                   ​                                            ​                                               ​       ​                      ​                   ​   ​​                               ​        ​  ​     ​                 ​                           ​     ​  ​                                              ​                                             ​                                                     ​          ​                        ​        ​​                                   ​                ​  ​                    ​                                 ​              ​                               ​​         ​                          ​                ​                                            ​           ​                                  ​    ​                             ​     ​                  ​                    ​                         ​           ​                                        ​                                 ​            ​ ​         ​                                        ​          ​                                   ​​       ​                           ​              ​                        ​                            ​                                                ​                          ​    ​                     ​                     ​       ​                   ​   ​  ​                                   ​   ​                                   ​         ​       ​                                                                                                          ​        ​                               ​                        ​                    ​    ​          ​      ​​                        ​​       ​                            ​              ​                          ​                        ​     ​      ​                   ​                      ​​                                    ​                ​                      ​          ​                     ​  ​                                   ​   ​                                       ​         ​        ​                  ​                       ​                                                        ​                             ​            ​           ​             ​                         ​         ​                                     ​​​​ ​                                                                             ​    ​               ​     ​     ​      ​              ​ ​                    ​                                                ​              ​                  ​                       ​                                      ​​            ​      ​        ​  ​                                                     ​                        ​                                                       ​                  ​   ​                 ​     ​                ​           ​             ​         ​                                   ​​       ​                             ​ ​              ​                                                ​                                      ​               ​             ​          ​           ​                ​                    ​                     ​        ​  ​                          ​         ​​ ​                                                         ​                    ​                        ​                                                      ​                               ​   ​       ​​                        ​                         ​        ​                                 ​​        ​                             ​                ​                       ​                   ​        ​      ​                                        ​                                    ​                ​                  ​   ​                           ​  ​      ​                          ​   ​                                     ​         ​        ​                  ​                        ​​         ​                                            ​                                            ​                         ​   ​                     ​          ​                                 ​​       ​                           ​              ​                       ​               ​             ​      ​               ​         ​           ​​                                                      ​                      ​                     ​        ​   ​                                      ​   ​                                   ​                      ​                  ​              ​                      ​                ​             ​           ​                              ​            ​                                                 ​        ​                                  ​​       ​                             ​                                                                         ​      ​                                ​       ​                                                     ​                      ​                               ​    ​                                     ​   ​          ​                      ​         ​        ​                   ​ ​                                 ​                           ​              ​          ​                                    ​  ​                                                   ​        ​                            ​     ​​                                     ​             ​                      ​                            ​      ​                        ​          ​​         ​                                            ​​                        ​                                                                     ​   ​                                   ​                    ​                ​                                   ​                                        ​                               ​                  ​                                                    ​          ​                                   ​​       ​                            ​             ​                      ​                             ​      ​   ​                                   ​          ​                ​                          ​                                       ​       ​        ​                                         ​   ​                                     ​        ​       ​                   ​ ​                         ​           ​ ​                                    ​     ​                                ​           ​                         ​                            ​                                                      ​     ​                           ​            ​                      ​                   ​        ​    ​                               ​    ​                                                                           ​                       ​        ​    ​                                     ​   ​                                              ​        ​                                           ​                                                ​     ​                              ​           ​                         ​                          ​          ​                                                   ​          ​                          ​                      ​                    ​          ​                                 ​          ​                                  ​               ​                  ​                      ​        ​  ​                                      ​   ​                                                       ​                                           ​​            ​                       ​          ​      ​              ​               ​            ​                        ​ ​                                   ​                                     ​​       ​                              ​               ​                        ​                            ​      ​                                        ​​                                              ​​  ​                           ​      ​       ​                                  ​         ​   ​                              ​       ​      ​​            ​                                                                                                      ​ ​      ​                 ​            ​        ​                                            ​ ​                                 ​          ​        ​               ​                          ​   ​      ​            ​                            ​     ​                                    ​​                                    ​                ​   ​                                             ​         ​    ​                                         ​        ​                       ​        ​        ​                 ​                                   ​                                    ​     ​                                                ​                                                          ​                                            ​​    ​   ​                               ​              ​​                      ​                                ​  ​ ​                             ​        ​         ​                                              ​        ​                  ​              ​        ​   ​                                ​   ​                                            ​        ​                   ​        ​                        ​   ​ ​     ​                              ​                          ​       ​    ​                          ​     ​​​       ​                     ​          ​                        ​​       ​                                ​            ​                    ​                          ​      ​                                            ​                                     ​                ​                                               ​        ​                                              ​                    ​                  ​                  ​       ​            ​          ​         ​                                     ​     ​                               ​             ​                         ​  ​                         ​                                             ​        ​                               ​             ​                       ​                  ​       ​     ​                                        ​​                                       ​                 ​                                             ​        ​                      ​                        ​          ​                        ​   ​    ​       ​         ​      ​                       ​         ​                                      ​     ​                                   ​             ​        ​                ​                             ​                                                      ​                                              ​          ​             ​                      ​        ​    ​                                  ​​                                 ​                ​                      ​                       ​  ​     ​    ​       ​                                  ​                                            ​        ​                                           ​          ​        ​                          ​     ​                              ​                     ​               ​                  ​   ​    ​    ​   ​                                    ​​        ​  ​​            ​              ​              ​      ​ ​         ​        ​            ​                   ​                 ​             ​                              ​                                 ​                          ​              ​                                               ​   ​                                                ​                    ​        ​                               ​                           ​      ​            ​                                     ​                          ​                    ​                ​                   ​     ​             ​​                              ​      ​           ​            ​                        ​          ​​​           ​                    ​                          ​                                ​         ​ ​                                                                                                                                  ​             ​      ​                                            ​        ​                                    ​                            ​               ​               ​        ​      ​         ​                           ​    ​   ​                                          ​ ​                                                        ​                               ​        ​                                             ​​     ​                            ​                ​​        ​                               ​        ​    ​                                      ​                           ​                   ​         ​                    ​                    ​        ​                ​                   ​     ​            ​                               ​        ​                ​                       ​    ​                             ​    ​          ​​       ​              ​                         ​          ​              ​                                ​    ​                   ​                                                        ​                 ​         ​             ​                             ​​                                                                                    ​         ​        ​         ​        ​                       ​           ​                                  ​                                             ​  ​            ​                                                    ​                                         ​            ​                           ​   ​         ​                       ​                              ​    ​                                      ​            ​                                             ​             ​      ​                   ​   ​        ​                                       ​    ​                                     ​        ​        ​                ​                                     ​                           ​                 ​                                                ​                                                    ​          ​   ​         ​                    ​​                ​         ​         ​​            ​      ​                                                                                                ​                       ​                         ​    ​                  ​                                ​                   ​​                 ​   ​                                     ​           ​                               ​                  ​            ​                       ​                  ​  ​        ​                ​        ​   ​                      ​                           ​        ​           ​                          ​​      ​                             ​                                                             ​        ​                                            ​       ​               ​           ​               ​                    ​                      ​  ​      ​    ​​                                     ​  ​                                             ​   ​    ​                                              ​          ​                                       ​    ​                          ​             ​​                     ​                         ​         ​​                                      ​​       ​                                 ​                                                             ​               ​    ​                                   ​                               ​  ​               ​                    ​                     ​​        ​                    ​                                                                                   ​                                            ​​                          ​                 ​      ​     ​                        ​         ​​                    ​                                               ​          ​                                    ​​      ​                                                                   ​             ​      ​        ​      ​    ​                               ​​                                   ​       ​                    ​                         ​​   ​​       ​    ​                                ​   ​                                       ​                                                                 ​​          ​                                 ​     ​                               ​            ​                         ​                ​         ​                                 ​             ​                        ​                  ​    ​          ​                           ​  ​            ​         ​      ​     ​                      ​    ​                                 ​       ​    ​                                                          ​                                                        ​   ​                                    ​                                                 ​​ ​        ​​      ​                                    ​             ​                   ​           ​        ​                        ​​   ​                           ​                         ​                                                       ​                ​                      ​   ​​               ​  ​            ​    ​                  ​            ​                                   ​                 ​​           ​           ​                      ​                 ​                                   ​                                                          ​             ​    ​                       ​          ​     ​                              ​     ​                             ​            ​        ​                ​                           ​                           ​                           ​                  ​                 ​     ​                        ​                            ​    ​                        ​              ​​                                        ​                ​        ​             ​                      ​        ​                                         ​   ​                                    ​   ​     ​        ​                ​                       ​          ​                                      ​     ​                                                ​                                                        ​                ​                                         ​    ​           ​   ​      ​               ​ ​                       ​                               ​        ​                                    ​​                   ​                             ​ ​                                          ​    ​   ​   ​                                     ​   ​                                   ​ ​       ​        ​                                 ​                                                                     ​                              ​           ​                       ​             ​             ​         ​                                 ​​       ​                               ​ ​                                       ​                    ​        ​      ​                                        ​                           ​                           ​                     ​                     ​    ​   ​    ​                                   ​   ​                                      ​                      ​                                                  ​                                                        ​                  ​                     ​      ​                 ​            ​        ​    ​        ​       ​   ​                     ​​   ​     ​                             ​              ​                           ​                 ​               ​                      ​             ​                                     ​​             ​    ​          ​           ​                       ​           ​ ​             ​                       ​                                                         ​                               ​          ​           ​                ​                   ​     ​                             ​                                      ​                           ​                                                 ​​       ​                                                                              ​          ​  ​     ​      ​                         ​          ​          ​                          ​ ​                                                                        ​                               ​                 ​                                   ​        ​       ​          ​        ​                         ​        ​                                     ​     ​                                                 ​                                                                                                         ​​       ​                             ​            ​​                       ​    ​                         ​    ​                                     ​​                                       ​                ​                      ​              ​                ​                     ​                       ​          ​                        ​        ​          ​           ​       ​                      ​         ​                                       ​ ​   ​                              ​           ​        ​                 ​                            ​                                                ​                                                    ​                   ​                  ​      ​  ​     ​    ​                                   ​                                    ​                  ​          ​        ​                             ​        ​    ​                                    ​   ​​            ​                     ​        ​   ​    ​                                           ​​         ​             ​                    ​     ​                                   ​            ​                  ​​    ​                                                                                                               ​    ​                                                 ​        ​                            ​               ​                               ​      ​​              ​        ​           ​             ​      ​    ​               ​    ​                ​                      ​ ​     ​                 ​                         ​                     ​                 ​                ​                                           ​                               ​           ​        ​                ​                             ​  ​                                             ​       ​                                                                                      ​     ​        ​                                       ​​                                 ​                ​                     ​               ​     ​        ​                                               ​                                            ​        ​    ​                               ​     ​           ​                                    ​                                       ​            ​        ​                ​              ​          ​                    ​                                  ​                                             ​    ​    ​              ​                               ​​    ​                                  ​   ​                                            ​   ​       ​                                                 ​       ​                        ​   ​                                                  ​   ​     ​ ​      ​                ​                         ​     ​  ​                                      ​     ​​         ​                                ​      ​   ​             ​                         ​                                             ​​                                ​         ​             ​                  ​  ​                            ​      ​               ​               ​       ​                                                    ​                   ​                              ​  ​                           ​         ​  ​                              ​    ​               ​ ​                                                                                     ​                 ​        ​​                ​               ​        ​           ​  ​                                 ​​                     ​            ​           ​                                                                   ​                         ​                                                   ​​                                   ​                                    ​                    ​        ​    ​      ​                                   ​                                 ​          ​         ​                      ​                    ​          ​        ​                            ​            ​                     ​              ​                                                     ​                    ​                        ​       ​                                            ​                        ​         ​          ​        ​      ​            ​                     ​​                 ​               ​                 ​                      ​                       ​        ​    ​      ​                                    ​                                         ​                                                      ​                    ​                          ​     ​                            ​                                    ​                             ​          ​​                                     ​      ​                  ​           ​              ​                 ​                         ​        ​                    ​                         ​​                         ​      ​                                     ​                    ​           ​                                        ​  ​                    ​                ​                                                              ​                                     ​                  ​                              ​             ​                         ​                                     ​                                     ​​       ​                             ​                  ​      ​              ​    ​                 ​                                                    ​                           ​                            ​                    ​      ​                   ​   ​  ​                                   ​  ​                                  ​           ​        ​                ​​                                       ​                        ​           ​               ​       ​                         ​  ​                        ​                                                                 ​​                                   ​             ​  ​                   ​                         ​          ​                      ​                 ​​                        ​  ​                          ​                                                ​        ​                                         ​             ​                 ​       ​          ​       ​                ​                    ​   ​        ​                 ​                  ​                                       ​           ​  ​                      ​                           ​                                                                                                  ​                         ​                   ​       ​    ​                ​                  ​                   ​                 ​​         ​    ​                       ​                       ​        ​    ​            ​                                              ​                           ​         ​        ​        ​         ​              ​         ​                                 ​                               ​  ​                      ​                         ​         ​    ​          ​                                      ​​       ​                                                                                                   ​         ​      ​                                   ​​                                    ​                                  ​               ​     ​        ​    ​                                      ​   ​                       ​         ​                    ​                                           ​                                                ​     ​                                     ​                                 ​           ​              ​         ​​                                 ​  ​    ​                    ​          ​​              ​                                          ​                                                         ​                                                    ​                   ​                      ​            ​              ​                ​  ​  ​                                           ​   ​       ​                ​                         ​               ​                                         ​                                              ​                         ​                     ​              ​                        ​     ​​       ​                           ​              ​                      ​                               ​      ​                                     ​​                ​                                     ​        ​             ​                                 ​    ​                      ​             ​   ​                                ​         ​       ​                    ​                          ​           ​                         ​           ​                                       ​           ​  ​                                                 ​                                            ​​                                     ​      ​        ​                      ​                    ​        ​    ​                   ​               ​                                         ​         ​      ​                      ​                      ​       ​​                                                                                    ​   ​     ​          ​                                           ​           ​                      ​                           ​                                ​                    ​                  ​                          ​                                     ​​                                      ​            ​                        ​                              ​    ​              ​                      ​                       ​             ​                 ​         ​            ​                      ​       ​​                                             ​                                 ​        ​        ​                  ​​                        ​        ​                                ​      ​                                ​             ​                          ​                             ​          ​           ​                                          ​                                  ​​         ​              ​             ​      ​         ​    ​                                ​ ​                                 ​                                        ​             ​          ​          ​    ​      ​     ​                        ​                                               ​                                  ​                  ​           ​   ​                         ​       ​     ​                            ​                                    ​                                 ​          ​                                      ​      ​                                                                     ​                     ​          ​                                              ​​                               ​               ​                      ​                      ​           ​      ​                               ​  ​  ​                 ​              ​                   ​                                           ​            ​                                             ​                   ​           ​             ​                      ​       ​                          ​                                   ​​       ​                             ​     ​        ​                      ​    ​                ​        ​      ​                                      ​                   ​         ​                          ​      ​             ​                              ​    ​                                  ​   ​                                  ​         ​        ​                    ​                          ​           ​                                                                               ​   ​         ​                         ​             ​           ​                                             ​​           ​                            ​             ​                                                        ​                                            ​                ​                                    ​                     ​                      ​        ​                                        ​   ​                                      ​                     ​                                ​                     ​                          ​                   ​        ​                      ​              ​                       ​                     ​   ​                                       ​     ​        ​               ​                          ​​                        ​                         ​​ ​      ​             ​                   ​   ​​                                   ​                ​                      ​                       ​         ​                             ​                 ​          ​                       ​         ​        ​                    ​                       ​          ​                                      ​     ​             ​               ​                                          ​   ​                      ​        ​                                 ​​       ​                             ​              ​                         ​                   ​        ​      ​                                      ​​                                     ​                  ​                                                         ​   ​   ​                            ​   ​                                  ​         ​        ​                   ​ ​                        ​           ​                                             ​                  ​                          ​                                                         ​          ​                                   ​​       ​                          ​              ​                     ​                            ​      ​                             ​          ​​                                    ​                            ​       ​                        ​          ​                            ​             ​                               ​          ​  ​     ​                ​                                 ​                                      ​     ​                                   ​        ​                         ​             ​                  ​                                             ​             ​                      ​ ​                     ​               ​             ​                                             ​                                                   ​        ​             ​                     ​        ​  ​                             ​         ​    ​                                              ​        ​                                                         ​                                     ​    ​                                          ​       ​                  ​   ​                 ​    ​        ​           ​            ​     ​​       ​                             ​              ​                       ​                   ​        ​      ​                                          ​                                    ​     ​         ​                        ​                       ​         ​ ​                        ​ ​             ​                              ​              ​               ​         ​           ​                          ​                                          ​       ​                     ​           ​           ​           ​                     ​    ​          ​                               ​​       ​                               ​               ​                                             ​      ​   ​                                             ​​                                                     ​ ​                      ​                      ​        ​  ​                                     ​   ​                                    ​         ​       ​                                                         ​                                           ​                  ​          ​            ​           ​                                                       ​  ​              ​     ​  ​    ​                                             ​  ​          ​          ​      ​             ​   ​    ​      ​                           ​          ​                   ​   ​           ​               ​                    ​                      ​        ​  ​ ​                                  ​   ​                          ​         ​                  ​                  ​                                   ​                              ​            ​                  ​           ​          ​       ​                      ​​                      ​                                          ​​       ​          ​                               ​                              ​                     ​      ​      ​                                    ​​  ​      ​    ​                     ​            ​ ​                                                   ​  ​                                    ​   ​                                   ​          ​        ​                   ​              ​              ​      ​                                    ​     ​          ​                                ​  ​                                              ​        ​                                 ​​       ​                            ​              ​                          ​                   ​        ​                         ​                    ​                                                   ​                      ​                               ​  ​                                    ​    ​         ​                         ​ ​       ​         ​                   ​                                    ​                                            ​                                 ​            ​ ​                                                    ​          ​                      ​          ​​       ​                             ​               ​ ​                           ​             ​           ​                                            ​                    ​                             ​   ​ ​           ​         ​                               ​    ​                                         ​                            ​     ​                                      ​                                  ​                                           ​              ​   ​           ​            ​                         ​                          ​        ​                                               ​                             ​              ​                                              ​                                                     ​           ​             ​          ​                            ​           ​                         ​            ​                                       ​  ​                                 ​        ​                           ​           ​              ​                                      ​         ​    ​                  ​         ​       ​   ​        ​               ​                               ​                        ​                       ​​       ​                                                        ​                              ​​        ​      ​                                    ​​                                    ​                ​                                               ​  ​     ​    ​       ​                               ​     ​              ​                      ​         ​                 ​   ​                   ​        ​      ​                        ​     ​                           ​ ​            ​          ​                ​                           ​          ​                                            ​                             ​ ​         ​  ​​                     ​                  ​            ​                      ​                             ​            ​        ​              ​                                     ​​           ​  ​                  ​    ​             ​                     ​  ​                                    ​         ​        ​    ​                                       ​                                                       ​                               ​   ​                                   ​                                  ​                                                  ​                                                 ​         ​                                    ​                                                      ​                                    ​           ​   ​                   ​                       ​        ​  ​ ​                                    ​   ​                                   ​         ​        ​                  ​            ​           ​           ​       ​                          ​     ​                 ​                ​           ​                                               ​                    ​                    ​                         ​                                        ​​                   ​  ​                  ​        ​      ​   ​                    ​          ​          ​                         ​                                      ​​                      ​         ​                                         ​   ​                                     ​         ​        ​    ​             ​                       ​           ​                                    ​     ​                               ​            ​        ​                 ​                           ​          ​                            ​                    ​                                         ​          ​             ​           ​      ​        ​      ​                 ​                ​​                                                   ​         ​         ​                    ​          ​                                    ​   ​                           ​               ​       ​                   ​                         ​                                                         ​                                              ​           ​             ​                                 ​                                ​​​       ​                                              ​                                            ​  ​              ​                                       ​          ​                                    ​            ​      ​              ​        ​       ​                                               ​          ​                      ​ ​      ​        ​          ​         ​​                         ​      ​ ​ ​               ​                                   ​                                  ​                                                      ​          ​                                  ​​         ​                    ​         ​ ​            ​                    ​                            ​      ​                                    ​         ​                                         ​ ​                         ​                            ​  ​           ​                   ​   ​                                  ​         ​        ​                  ​                        ​           ​                                    ​     ​                                           ​                                             ​            ​          ​                   ​                          ​                                            ​                                           ​  ​     ​      ​                                    ​                  ​ ​               ​                                      ​​                            ​  ​                 ​         ​            ​                                     ​     ​                                              ​               ​                              ​                         ​             ​         ​                 ​                    ​        ​                ​​            ​ ​                                         ​        ​                     ​         ​                                       ​                        ​   ​                                              ​                                                   ​​                                                 ​  ​                                   ​  ​                                       ​         ​       ​                                                       ​                        ​                 ​        ​                                ​                        ​                    ​    ​         ​                                 ​​       ​                   ​                         ​         ​                                     ​                  ​                ​   ​            ​                                     ​​                  ​          ​           ​                      ​           ​               ​                    ​  ​                    ​              ​                  ​                                       ​                             ​               ​    ​                   ​         ​                                      ​                           ​          ​                                     ​​      ​                                                                                        ​        ​      ​    ​                                ​​                                  ​                 ​                  ​                       ​  ​     ​    ​                                        ​​          ​                        ​        ​   ​    ​​                                           ​         ​                                   ​     ​      ​                  ​                ​                                                      ​                               ​                       ​            ​                  ​            ​​         ​            ​                            ​    ​                                    ​                                   ​                  ​         ​                ​                  ​​    ​ ​    ​                      ​          ​                                       ​        ​  ​     ​         ​      ​                        ​         ​                                              ​                               ​             ​                                                       ​   ​     ​                  ​              ​​       ​​                              ​                ​                    ​                            ​        ​                    ​  ​              ​                       ​           ​  ​           ​        ​          ​        ​                  ​      ​   ​                                    ​   ​                                   ​                 ​                 ​​                       ​           ​                    ​                  ​   ​                                    ​       ​ ​  ​    ​         ​  ​  ​            ​          ​         ​           ​                                       ​                       ​              ​​                       ​                     ​        ​      ​                      ​             ​         ​                                            ​                                              ​        ​   ​   ​                              ​   ​                                ​                      ​                                                   ​                                                        ​                                              ​                                                      ​          ​               ​                   ​​      ​                           ​ ​            ​                         ​                            ​      ​                                     ​​            ​           ​                             ​                      ​   ​                              ​                                                  ​                                            ​   ​    ​    ​                 ​                     ​           ​                                     ​     ​      ​                     ​            ​                                                  ​                                                           ​                           ​   ​         ​                     ​                             ​    ​                                     ​          ​                        ​                     ​                                               ​​    ​ ​    ​                                                                         ​       ​​        ​         ​        ​                       ​           ​                                     ​     ​                                     ​           ​                         ​                          ​                                 ​                  ​                              ​              ​         ​    ​         ​                  ​        ​     ​                                      ​ ​        ​                                              ​ ​             ​                               ​                                     ​        ​​                              ​          ​        ​                 ​                       ​         ​                                    ​     ​                                   ​             ​                                                    ​          ​              ​                           ​                               ​             ​                        ​   ​             ​                  ​      ​       ​  ​  ​                                      ​                                                  ​                 ​          ​                 ​                                     ​  ​                                                         ​                                      ​           ​                                     ​     ​        ​                   ​                                    ​ ​                        ​          ​                     ​                ​        ​                ​           ​             ​                                        ​        ​      ​                                    ​​     ​         ​                 ​           ​    ​                     ​                     ​        ​    ​                                     ​   ​                                  ​         ​        ​    ​             ​                         ");local f=(-#[[Bong]]+(0x2ab6/154))local l=82 local o=d;local e={}e={[(-#"Dick"+(970/0xc2))]=function()local r,n,d,e=z(L,o,o+S);o=o+p;l=(l+(f*p))%a;return(((e+l-(f)+x*(p*m))%x)*((m*A)^m))+(((d+l-(f*m)+x*(m^S))%a)*(x*a))+(((n+l-(f*S)+A)%a)*x)+((r+l-(f*p)+A)%a);end,[(232/0x74)]=function(e,e,e)local e=z(L,o,o);o=o+D;l=(l+(f))%a;return((e+l-(f)+A)%x);end,[(-#'test'+(0x5b/13))]=function()local e,d=z(L,o,o+m);l=(l+(f*m))%a;o=o+m;return(((d+l-(f)+x*(m*p))%x)*a)+((e+l-(f*m)+a*(m^S))%x);end,[(95+-0x5b)]=function(l,e,o)if o then local e=(l/m^(e-d))%m^((o-D)-(e-d)+D);return e-e%d;else local e=m^(e-D);return(l%(e+e)>=e)and d or y;end;end,[(50-0x2d)]=function()local o=e[((108-0x63)+-#'cum fuck')]();local l=e[(0x77/119)]();local r=d;local n=(e[(0x1c/7)](l,D,j+p)*(m^(j*m)))+o;local o=e[(59-0x37)](l,21,31);local e=((-d)^e[(0x15+-17)](l,32));if(o==y)then if(n==v)then return e*y;else o=D;r=v;end;elseif(o==(x*(m^S))-D)then return(n==y)and(e*(D/v))or(e*(y/v));end;return W(e,o-((a*(p))-d))*(r+(n/(m^J)));end,[(1512/0xfc)]=function(n,r,r)local r;if(not n)then n=e[(-0x7f+128)]();if(n==y)then return'';end;end;r=H(L,o,o+n-d);o=o+n;local e=''for o=D,#r do e=q(e,F((z(H(r,o,o))+l)%a))l=(l+f)%x end return e;end}local function y(...)return{...},K('#',...)end local function H()local r={};local n={};local o={};local i={r,n,nil,o};local l={}local h=(-#[[Little kids]]+(0xba+-80))local o={[(0x21c/135)]=(function(o)return not(#o==e[(0x1a4/210)]())end),[(30-0x1d)]=(function(o)return e[(0x55/17)]()end),[((48-0x27)+-#"no thanks")]=(function(o)return e[(79-(0x106-189))]()end),[(0x42-63)]=(function(o)local l=e[(-#[[Little kids]]+(112+-0x5f))]()local o=''local e=1 for d=1,#l do e=(e+h)%a o=q(o,F((z(l:sub(d,d))+e)%x))end return o end)};local a=e[(0x89/137)]()for d=1,a do local e=e[(((156975/0x73)/0x41)+-#'dont use it anymore')]();local a;local e=o[e%(-25+0x33)];l[d]=e and e({});end;for i=1,e[((-0x68+(-#'edp445 what are you doing to my 3 year old son'+(0x1ba-280)))+-#'Little kids')]()do local o=e[((1965/0x83)+-#"fish was here")]();if(e[(91-0x57)](o,d,D)==v)then local n=e[(0x23-31)](o,m,S);local a=e[(29-0x19)](o,p,m+p);local o={e[(114+-0x6f)](),e[(40-0x25)](),nil,nil};local h={[(0x0/83)]=function()o[s]=e[(255/0x55)]();o[_]=e[(0xe7/77)]();end,[((156-0x87)-20)]=function()o[O]=e[(0x67/103)]();end,[(0x5b-89)]=function()o[w]=e[(-0x3a+59)]()-(m^j)end,[(-#"free trojan"+((-#'print'+(0x66b1/207))-108))]=function()o[N]=e[(-80+0x51)]()-(m^j)o[M]=e[(0x2f4/252)]();end};h[n]();if(e[(((10550/0xd3)+-#"notbelugafan was here")-0x19)](a,D,d)==D)then o[b]=l[o[c]]end if(e[(106+-0x66)](a,m,m)==d)then o[U]=l[o[s]]end if(e[(-37+0x29)](a,S,S)==D)then o[_]=l[o[M]]end r[i]=o;end end;for e=D,e[(-#"no thanks"+(0x80-118))]()do n[e-D]=H();end;i[3]=e[(0x75-115)]();return i;end;local function z(e,f,p)local l=e[m];local o=e[S];local a=e[d];return(function(...)local x=o;local o=d;local L=l;local v={};local A=K('#',...)-D;local F={...};local j={};local l={};local y=y local e=d e*=-1 local S=e;local a=a;for e=0,A do if(e>=x)then j[e-x]=F[e+D];else l[e]=F[e+d];end;end;local A=A-x+d local e;local x;while true do e=a[o];x=e[(-#[[187 ist die gang]]+(136/0x8))];n=(86258)while x<=(15714/(0x19f2/82))do n-= n n=(803712)while x<=((44-0x54)+136)do n-= n n=(152388)while x<=(-#"187 ist die gang"+(0xe2-163))do n-= n n=(3321420)while(4646/0xca)>=x do n-= n n=(908516)while(68-0x39)>=x do n-= n n=(1191762)while x<=(0x72-109)do n-= n n=(4896674)while(88-0x56)>=x do n-= n n=(5440736)while((0xc6+-105)-93)>=x do n-= n local e=e[k]local a,o=y(l[e]())S=o+e-d local o=0;for e=e,S do o=o+D;l[e]=a[o];end;break;end while 1498==(n)/(((-18+0xe4b)+-#[[no thanks]]))do n=(8253952)while(0xb6/182)<x do n-= n local n;l[e[h]]=f[e[s]];o=o+d;e=a[o];l[e[b]]=f[e[N]];o=o+d;e=a[o];l[e[k]]=l[e[s]][e[P]];o=o+d;e=a[o];n=e[r]l[n]=l[n](l[n+D])o=o+d;e=a[o];if l[e[r]]then o=o+d;else o=e[s];end;break end while(n)/((749056/0xd1))==2303 do local n;l[e[i]][e[w]]=l[e[_]];o=o+d;e=a[o];l[e[r]]=l[e[t]][e[P]];o=o+d;e=a[o];l[e[h]]=l[e[O]][e[B]];o=o+d;e=a[o];n=e[k]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[r]]=l[e[w]][e[B]];o=o+d;e=a[o];l[e[i]]=l[e[t]][e[_]];o=o+d;e=a[o];n=e[h]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[h]]=l[e[U]][e[g]];o=o+d;e=a[o];l[e[r]]=l[e[N]][e[M]];o=o+d;e=a[o];n=e[b]l[n]=l[n](l[n+D])break end;break;end break;end while 1303==(n)/((0x151a2/23))do n=(1396108)while(27-0x18)>=x do n-= n l[e[b]]=l[e[s]]-l[e[B]];break;end while 1666==(n)/((-#'test 123'+(186120/(0x3390/60))))do n=(1549800)while(106-0x66)<x do n-= n local o=e[c]l[o]=l[o](C(l,o+d,e[w]))break end while 525==(n)/((129888/0x2c))do local x;local n;l[e[r]][e[t]]=l[e[u]];o=o+d;e=a[o];n=e[h]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];l[e[i]]=p[e[w]];o=o+d;e=a[o];l[e[r]][e[U]]=l[e[M]];o=o+d;e=a[o];l[e[r]]=e[U];o=o+d;e=a[o];n=e[r];x=l[e[t]];l[n+1]=x;l[n]=x[l[e[P]]];o=o+d;e=a[o];l[e[c]]=e[O];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[b]]=l[e[U]][e[M]];o=o+d;e=a[o];l[e[b]]=l[e[N]];break end;break;end break;end break;end while(n)/((0x38c-479))==2778 do n=(7091280)while(1376/0xac)>=x do n-= n n=(524566)while x<=(46-0x28)do n-= n local c;local h,x;local n;l[e[i]]=l[e[N]][e[M]];o=o+d;e=a[o];l[e[r]]=p[e[s]];o=o+d;e=a[o];l[e[i]]=l[e[U]];o=o+d;e=a[o];n=e[i]h,x=y(l[n](l[n+D]))S=x+n-d c=0;for e=n,S do c=c+d;l[e]=h[c];end;o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[k]]=l[e[s]];o=o+d;e=a[o];o=e[O];break;end while 178==(n)/(((0x97c89/105)-0xb9e))do n=(12599216)while x>(-#'print'+(3024/0xfc))do n-= n l[e[i]]=l[e[O]][e[M]];o=o+d;e=a[o];l[e[b]]={};o=o+d;e=a[o];l[e[i]]=f[e[t]];o=o+d;e=a[o];l[e[r]]=l[e[s]][e[B]];o=o+d;e=a[o];l[e[r]][e[w]]=l[e[P]];o=o+d;e=a[o];l[e[i]]=f[e[w]];o=o+d;e=a[o];l[e[c]]=l[e[w]][e[M]];o=o+d;e=a[o];l[e[c]][e[s]]=l[e[P]];o=o+d;e=a[o];l[e[b]]=f[e[w]];o=o+d;e=a[o];l[e[h]]=l[e[t]][e[P]];break end while(n)/((-#[[Hi skid]]+(4149+-0x36)))==3082 do l[e[i]]=(e[t]~=0);o=o+D;break end;break;end break;end while 1890==(n)/(((3827+-0x44)+-#'Hi skid'))do n=(9112032)while x<=(48-0x27)do n-= n local h;local s,x;local n;l[e[c]]=f[e[t]];o=o+d;e=a[o];l[e[k]]=e[t];o=o+d;e=a[o];n=e[k]s,x=y(l[n](l[n+D]))S=x+n-d h=0;for e=n,S do h=h+d;l[e]=s[h];end;o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[r]]=f[e[O]];o=o+d;e=a[o];l[e[r]]=f[e[w]];o=o+d;e=a[o];l[e[i]]=l[e[U]];o=o+d;e=a[o];n=e[r]s,x=y(l[n](l[n+D]))S=x+n-d h=0;for e=n,S do h=h+d;l[e]=s[h];end;o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[c]]=f[e[N]];o=o+d;e=a[o];l[e[b]]=l[e[N]];o=o+d;e=a[o];n=e[k]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[r]][l[e[N]]]=l[e[P]];break;end while(n)/((-0x17+2807))==3273 do n=(2476968)while x>(460/0x2e)do n-= n p[e[s]]=l[e[i]];break end while 2802==(n)/((-#"I like gargling cum"+(1905-0x3ea)))do local n;n=e[i]l[n]=l[n]()o=o+d;e=a[o];l[e[r]]=p[e[U]];o=o+d;e=a[o];l[e[r]]=p[e[N]];o=o+d;e=a[o];l[e[c]]=p[e[O]];o=o+d;e=a[o];l[e[c]]=p[e[O]];o=o+d;e=a[o];l[e[i]]=p[e[t]];o=o+d;e=a[o];l[e[i]]=p[e[w]];o=o+d;e=a[o];if not l[e[c]]then o=o+D;else o=e[O];end;break end;break;end break;end break;end break;end while(n)/((0x13a+-30))==3199 do n=(2654897)while x<=(0x84d/125)do n-= n n=(2438559)while(-20+0x22)>=x do n-= n n=(5213754)while(80-0x44)>=x do n-= n local x;local n;l[e[r]]=l[e[U]][e[B]];o=o+d;e=a[o];l[e[h]][l[e[O]]]=l[e[g]];o=o+d;e=a[o];l[e[b]]={};o=o+d;e=a[o];l[e[k]]=e[t];o=o+d;e=a[o];l[e[i]]=e[w];o=o+d;e=a[o];l[e[b]]=e[t];o=o+d;e=a[o];n=e[c];x=l[n];for e=n+1,e[s]do T(x,l[e])end;break;end while 1638==(n)/((-0x21+3216))do n=(9020767)while x>(103+-0x5a)do n-= n local n;l[e[i]]=l[e[w]][e[P]];o=o+d;e=a[o];l[e[i]]=l[e[s]];o=o+d;e=a[o];n=e[h]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[h]]=l[e[N]];o=o+d;e=a[o];o=e[s];break end while 3061==(n)/((-63+0xbc2))do if(l[e[b]]==l[e[u]])then o=o+D;else o=e[s];end;break end;break;end break;end while(n)/(((2055-0x413)+-#"amena jumping"))==2441 do n=(10108208)while x<=((0x102c/180)+-#'cum fuck')do n-= n local x;local n;l[e[h]]=e[w];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[b]][e[t]]=l[e[u]];o=o+d;e=a[o];n=e[r];x=l[e[t]];l[n+1]=x;l[n]=x[e[B]];o=o+d;e=a[o];l[e[i]]=e[O];o=o+d;e=a[o];l[e[c]]=(e[t]~=0);o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[i]][e[s]]=l[e[g]];o=o+d;e=a[o];n=e[r];x=l[e[U]];l[n+1]=x;l[n]=x[e[P]];o=o+d;e=a[o];l[e[k]]=e[w];break;end while 2908==(n)/((650012/0xbb))do n=(8422592)while x>(87-0x47)do n-= n local r;local n;n=e[i]l[n](C(l,n+D,e[N]))o=o+d;e=a[o];l[e[i]]=e[s];o=o+d;e=a[o];n=e[i];r=l[e[s]];l[n+1]=r;l[n]=r[l[e[P]]];o=o+d;e=a[o];l[e[b]]={};o=o+d;e=a[o];l[e[i]]=e[t];o=o+d;e=a[o];l[e[c]]=e[s];o=o+d;e=a[o];l[e[k]][l[e[U]]]=l[e[_]];o=o+d;e=a[o];l[e[c]]=e[U];o=o+d;e=a[o];l[e[h]]=l[e[w]][e[_]];o=o+d;e=a[o];l[e[c]][l[e[N]]]=l[e[u]];break end while(n)/((0x146f-((2721+-0x51)+-#'Nitro Activated')))==3232 do local n;local h;local i;l[e[r]]=f[e[O]];o=o+d;e=a[o];l[e[c]]=f[e[U]];o=o+d;e=a[o];l[e[c]]=l[e[U]];o=o+d;e=a[o];i=e[c]h={l[i](C(l,i+1,e[t]))};n=0;for e=i,e[B]do n=n+d;l[e]=h[n];end o=o+d;e=a[o];if not l[e[r]]then o=o+D;else o=e[w];end;break end;break;end break;end break;end while(n)/((0x1336-2489))==1093 do n=(863784)while((-#[[Little kids]]+(0xc2-111))-52)>=x do n-= n n=(3902714)while(3168/0xb0)>=x do n-= n if(e[r]<l[e[P]])then o=e[t];else o=o+D;end;break;end while(n)/((0xd2b+-58))==1178 do n=(3178248)while(0x43-48)<x do n-= n if(l[e[c]]~=e[g])then o=o+D;else o=e[U];end;break end while 906==(n)/((0xe15+-97))do local x;local b;local n;n=e[c]b={l[n](C(l,n+1,e[w]))};x=0;for e=n,e[B]do x=x+d;l[e]=b[x];end o=o+d;e=a[o];l[e[r]]=f[e[t]];o=o+d;e=a[o];l[e[k]]=f[e[N]];o=o+d;e=a[o];l[e[r]]=f[e[O]];o=o+d;e=a[o];l[e[h]]=l[e[w]][e[B]];o=o+d;e=a[o];l[e[c]]=l[e[t]][e[u]];o=o+d;e=a[o];l[e[i]]=l[e[U]][e[u]];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[s]))o=o+d;e=a[o];l[e[k]]=l[e[t]]*l[e[B]];o=o+d;e=a[o];l[e[i]]=l[e[N]][e[_]];break end;break;end break;end while 258==(n)/((0x25998/(172+-0x7e)))do n=(4325452)while x<=((0x1ae0/215)+-#"dick cheese")do n-= n l[e[r]]=l[e[O]][e[P]];break;end while 2441==(n)/((0x13090/44))do n=(2190810)while(0x9c-134)<x do n-= n local o=e[i];do return l[o](C(l,o+1,e[N]))end;break end while 1545==(n)/((-#"I like gargling cum"+((0x11418/24)-0x5e4)))do local n;n=e[i]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[i]][e[O]]=l[e[u]];o=o+d;e=a[o];l[e[c]]=l[e[s]][e[P]];o=o+d;e=a[o];l[e[c]]=e[N];o=o+d;e=a[o];l[e[r]]=e[O];o=o+d;e=a[o];l[e[c]]=e[s];o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];l[e[r]][e[O]]=l[e[M]];o=o+d;e=a[o];l[e[c]]=l[e[w]][e[u]];o=o+d;e=a[o];l[e[r]]=e[U];break end;break;end break;end break;end break;end break;end while 3372==(n)/((1104+-0x77))do n=(7410270)while x<=(4060/((347-0xe3)+-#[[Bong]]))do n-= n n=(12245184)while(-61+0x5a)>=x do n-= n n=(1016400)while(2002/0x4d)>=x do n-= n n=(415405)while(0xac-148)>=x do n-= n if(l[e[b]]<l[e[u]])then o=e[s];else o=o+D;end;break;end while(n)/((-43+0x126))==1655 do n=(4526960)while(0x80-103)<x do n-= n local n;l[e[k]]=f[e[O]];o=o+d;e=a[o];l[e[c]]=l[e[N]];o=o+d;e=a[o];n=e[h]l[n](C(l,n+D,e[U]))o=o+d;e=a[o];do return l[e[i]]end o=o+d;e=a[o];do return end;break end while(n)/((-100+0xcd8))==1420 do local n;n=e[k]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];l[e[k]]=l[e[N]];o=o+d;e=a[o];l[e[h]]=e[U];o=o+d;e=a[o];n=e[i]l[n](l[n+D])o=o+d;e=a[o];do return end;break end;break;end break;end while(n)/((-0x1c+908))==1155 do n=(932722)while x<=(-0x31+76)do n-= n l[e[k]]=p[e[s]];break;end while 238==(n)/(((-72+0xfa4)+-#"me big peepee"))do n=(893623)while x>(0x74-88)do n-= n do return end;break end while 317==(n)/((0xe73f/21))do l[e[h]]=l[e[t]]%e[B];break end;break;end break;end break;end while 4032==(n)/((-26+0xbf7))do n=(7020756)while x<=(131-0x63)do n-= n n=(510489)while x<=(-0x1b+57)do n-= n local n;l[e[c]][e[w]]=l[e[_]];o=o+d;e=a[o];n=e[h]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];for e=e[i],e[t]do l[e]=nil;end;o=o+d;e=a[o];l[e[i]]=l[e[O]][e[_]];o=o+d;e=a[o];l[e[i]]=(e[s]~=0);break;end while 2331==(n)/((46866/0xd6))do n=(8132746)while x>(0xb43/93)do n-= n l[e[r]]=-l[e[O]];break end while 3226==(n)/((5128-(0x1498-2665)))do local i;local n;l[e[b]][e[t]]=l[e[B]];o=o+d;e=a[o];n=e[k];i=l[e[N]];l[n+1]=i;l[n]=i[e[B]];o=o+d;e=a[o];l[e[k]]=e[w];o=o+d;e=a[o];l[e[k]]=(e[O]~=0);o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[r]][e[t]]=l[e[M]];o=o+d;e=a[o];n=e[k];i=l[e[O]];l[n+1]=i;l[n]=i[e[_]];o=o+d;e=a[o];l[e[h]]=e[s];o=o+d;e=a[o];l[e[k]]=e[s];o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,e[w]))break end;break;end break;end while 2796==(n)/((183303/0x49))do n=(10514882)while(((0x25e-345)-169)+-#[[Fuck nigger wank shit dipshit cunt bullshit fuckyou hoe lol]])>=x do n-= n local n;l[e[r]]=e[O];o=o+d;e=a[o];n=e[h]l[n](l[n+D])o=o+d;e=a[o];l[e[k]]=f[e[N]];o=o+d;e=a[o];l[e[i]]=l[e[t]][e[P]];o=o+d;e=a[o];if not l[e[b]]then o=o+D;else o=e[O];end;break;end while(n)/((7884-0xf7a))==2681 do n=(9792319)while(0x1ed0/232)<x do n-= n local r;local n;n=e[h]l[n](l[n+D])o=o+d;e=a[o];for e=e[k],e[N]do l[e]=nil;end;o=o+d;e=a[o];f[e[U]]=l[e[i]];o=o+d;e=a[o];l[e[i]]=p[e[w]];o=o+d;e=a[o];l[e[c]][e[U]]=e[g];o=o+d;e=a[o];l[e[i]]=f[e[N]];o=o+d;e=a[o];n=e[c];r=l[e[t]];l[n+1]=r;l[n]=r[e[_]];o=o+d;e=a[o];n=e[i]l[n](l[n+D])o=o+d;e=a[o];do return end;break end while 3979==(n)/((((19337208/0x59)/0x58)+-#"cum fuck"))do local n;l[e[i]]=l[e[w]][e[B]];o=o+d;e=a[o];l[e[i]][e[t]]=l[e[u]];o=o+d;e=a[o];l[e[b]]=f[e[t]];o=o+d;e=a[o];l[e[k]]=l[e[N]][e[M]];o=o+d;e=a[o];l[e[r]]=l[e[w]][e[g]];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[r]][e[s]]=l[e[_]];o=o+d;e=a[o];for e=e[h],e[t]do l[e]=nil;end;o=o+d;e=a[o];if(l[e[h]]==e[M])then o=o+D;else o=e[O];end;break end;break;end break;end break;end break;end while 3479==(n)/((-0x23+2165))do n=(1176240)while((-0x41+121)+-#"Nitro Activated")>=x do n-= n n=(1435855)while(-72+0x6e)>=x do n-= n n=(412720)while(-45+0x51)>=x do n-= n local x;local b;local n;l[e[i]]=l[e[O]];o=o+d;e=a[o];n=e[h]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[r]]=l[e[s]];o=o+d;e=a[o];l[e[c]]=f[e[t]];o=o+d;e=a[o];l[e[h]]=#l[e[U]];o=o+d;e=a[o];l[e[r]]=e[w];o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[r]]=l[e[t]];o=o+d;e=a[o];b=e[t];x=l[b]for e=b+1,e[g]do x=x..l[e];end;l[e[h]]=x;break;end while 268==(n)/((0x404ac/((19320/0x69)+-#'amena jumping')))do n=(2339019)while x>(-#'Dick'+((335-0xc2)-100))do n-= n local n;l[e[i]]=f[e[U]];o=o+d;e=a[o];l[e[k]]=f[e[t]];o=o+d;e=a[o];l[e[r]]=l[e[t]][e[B]];o=o+d;e=a[o];n=e[i]l[n]=l[n](l[n+D])o=o+d;e=a[o];if not l[e[r]]then o=o+D;else o=e[U];end;break end while(n)/((-#"Nitro Activated"+(0x16b30/104)))==2661 do local x;local n;n=e[b]l[n](C(l,n+D,e[O]))o=o+d;e=a[o];l[e[k]]=e[t];o=o+d;e=a[o];n=e[k];x=l[e[U]];l[n+1]=x;l[n]=x[l[e[M]]];o=o+d;e=a[o];l[e[i]]={};o=o+d;e=a[o];l[e[h]]=e[s];o=o+d;e=a[o];l[e[r]]=e[N];o=o+d;e=a[o];l[e[c]][l[e[N]]]=l[e[M]];o=o+d;e=a[o];l[e[b]]=e[O];o=o+d;e=a[o];l[e[i]]=l[e[U]][e[P]];o=o+d;e=a[o];l[e[k]][l[e[O]]]=l[e[P]];break end;break;end break;end while 1361==(n)/((1086+-0x1f))do n=(7155138)while(5421/0x8b)>=x do n-= n local h;local x;local n;l[e[c]]=(e[N]~=0);o=o+d;e=a[o];f[e[w]]=l[e[r]];o=o+d;e=a[o];l[e[i]]=p[e[t]];o=o+d;e=a[o];l[e[k]]=f[e[U]];o=o+d;e=a[o];n=e[r]x={l[n](l[n+1])};h=0;for e=n,e[M]do h=h+d;l[e]=x[h];end o=o+d;e=a[o];o=e[t];break;end while 4022==(n)/((-#"dont use it anymore"+(0x5448/12)))do n=(3340656)while(0xa3-123)<x do n-= n if(l[e[h]]<l[e[u]])then o=e[O];else o=o+D;end;break end while(n)/(((0x9d6a6+-86)/0xc6))==1026 do local h;local n;n=e[k]l[n](C(l,n+D,e[N]))o=o+d;e=a[o];l[e[b]]=e[N];o=o+d;e=a[o];n=e[b];h=l[e[O]];l[n+1]=h;l[n]=h[l[e[P]]];o=o+d;e=a[o];l[e[r]]={};o=o+d;e=a[o];l[e[c]]=e[N];o=o+d;e=a[o];l[e[r]]=e[w];o=o+d;e=a[o];l[e[i]][l[e[w]]]=l[e[u]];o=o+d;e=a[o];l[e[b]]=e[O];o=o+d;e=a[o];l[e[b]]=l[e[N]][e[P]];o=o+d;e=a[o];l[e[k]][l[e[t]]]=l[e[u]];break end;break;end break;end break;end while 1160==(n)/((0x803-1037))do n=(3544702)while(-#"Two trucks having sex"+((0xccd5/227)-166))>=x do n-= n n=(2822010)while(6090/0x91)>=x do n-= n local e=e[i]local a,o=y(l[e](l[e+D]))S=o+e-d local o=0;for e=e,S do o=o+d;l[e]=a[o];end;break;end while(n)/((0x7229a/143))==863 do n=(2183512)while(127+-0x54)<x do n-= n local n;local x;local r;r=e[i];x=l[e[N]];l[r+1]=x;l[r]=x[e[P]];o=o+d;e=a[o];l[e[h]]=f[e[O]];o=o+d;e=a[o];n={e,l};n[m][n[D][c]]=n[m][n[d][U]]+n[D][_];o=o+d;e=a[o];l[e[i]]=f[e[t]];o=o+d;e=a[o];n={e,l};n[m][n[D][k]]=n[m][n[d][s]]+n[D][g];o=o+d;e=a[o];r=e[c]l[r]=l[r](C(l,r+d,e[O]))o=o+d;e=a[o];if(l[e[c]]~=l[e[M]])then o=o+D;else o=e[N];end;break end while 2858==(n)/((168080/0xdc))do local e=e[b]l[e]=l[e]()break end;break;end break;end while 3779==(n)/((0x79d-1011))do n=(7546488)while(315/0x7)>=x do n-= n local x;local n;l[e[i]]=f[e[w]];o=o+d;e=a[o];n=e[k];x=l[e[N]];l[n+1]=x;l[n]=x[e[B]];o=o+d;e=a[o];l[e[b]]=l[e[w]];o=o+d;e=a[o];n=e[r]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];l[e[b]]=f[e[N]];o=o+d;e=a[o];n=e[i];x=l[e[O]];l[n+1]=x;l[n]=x[e[M]];o=o+d;e=a[o];l[e[i]]=l[e[s]];o=o+d;e=a[o];n=e[r]l[n](C(l,n+D,e[U]))o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];n=e[r];x=l[e[t]];l[n+1]=x;l[n]=x[e[g]];o=o+d;e=a[o];l[e[c]]=l[e[w]];o=o+d;e=a[o];n=e[h]l[n](C(l,n+D,e[N]))o=o+d;e=a[o];do return end;break;end while 3533==(n)/((-#'dont use it anymore'+(0x2c31c/84)))do n=(10540440)while x>((204-0x71)+-#'guys Please proceed to translate D to Sinhala')do n-= n local e=e[h];do return C(l,e,S)end;break end while 3420==(n)/((-82+0xc5c))do local n;local i;local c,h;local n;l[e[k]]=f[e[O]];o=o+d;e=a[o];l[e[b]]=f[e[s]];o=o+d;e=a[o];n=e[k]c,h=y(l[n](l[n+D]))S=h+n-d i=0;for e=n,S do i=i+d;l[e]=c[i];end;o=o+d;e=a[o];n=e[r]c={l[n](C(l,n+1,S))};i=0;for e=n,e[g]do i=i+d;l[e]=c[i];end o=o+d;e=a[o];o=e[t];break end;break;end break;end break;end break;end break;end break;end while 68==(n)/((0x8d5+-20))do n=(1135862)while x<=((-#"free trojan"+(0xfce4/249))-178)do n-= n n=(2107480)while(0x8c+-81)>=x do n-= n n=(3877920)while x<=(-0x35+106)do n-= n n=(32130)while(((-#'dick cheese'+(230-0x8e))+-23)+-#"Bong")>=x do n-= n n=(3252870)while((188+-0x73)+-25)>=x do n-= n local i;local x;local n;l[e[k]]=l[e[s]];o=o+d;e=a[o];n=e[h]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[c]]=l[e[N]];o=o+d;e=a[o];l[e[r]]=f[e[U]];o=o+d;e=a[o];l[e[k]]=#l[e[U]];o=o+d;e=a[o];l[e[r]]=e[U];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[c]]=l[e[U]];o=o+d;e=a[o];x=e[w];i=l[x]for e=x+1,e[B]do i=i..l[e];end;l[e[c]]=i;break;end while(n)/(((0xbece/21)+-#"dont use it anymore"))==1410 do n=(2524560)while x>((0x2887-5230)/0x69)do n-= n local a=e[b]local n={l[a](l[a+1])};local o=0;for e=a,e[M]do o=o+d;l[e]=n[o];end break end while 1884==(n)/(((63309/0x2f)+-#[[Hi skid]]))do local n;l[e[i]]=f[e[U]];o=o+d;e=a[o];l[e[r]]=l[e[t]];o=o+d;e=a[o];n=e[k]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[r]]=l[e[s]];o=o+d;e=a[o];o=e[s];break end;break;end break;end while(n)/((0x96a-1220))==27 do n=(2873940)while x<=(0x2ba1/219)do n-= n local n;l[e[h]]=l[e[w]];o=o+d;e=a[o];l[e[i]]=l[e[U]];o=o+d;e=a[o];l[e[k]]=l[e[t]];o=o+d;e=a[o];n=e[r];do return C(l,n,n+e[w])end;o=o+d;e=a[o];do return end;break;end while 2521==(n)/((0x125e8/66))do n=(1537380)while x>(((237+-0x23)+-#'Never gonna give u up')-129)do n-= n l[e[k]]=f[e[N]];o=o+d;e=a[o];l[e[i]]=#l[e[N]];o=o+d;e=a[o];f[e[N]]=l[e[b]];o=o+d;e=a[o];l[e[k]]=f[e[w]];o=o+d;e=a[o];l[e[h]]=#l[e[U]];o=o+d;e=a[o];f[e[O]]=l[e[c]];o=o+d;e=a[o];do return end;break end while(n)/(((0x691c2/254)+-75))==949 do local n;l[e[h]]=l[e[t]];o=o+d;e=a[o];l[e[c]]=l[e[O]];o=o+d;e=a[o];l[e[k]]=l[e[N]];o=o+d;e=a[o];n=e[b]l[n](C(l,n+D,e[U]))o=o+d;e=a[o];do return end;break end;break;end break;end break;end while 2693==(n)/((-#"cum fuck"+(0xb9c-1524)))do n=(11266484)while(4032/0x48)>=x do n-= n n=(6588312)while x<=(216-0xa2)do n-= n local n;l[e[k]]=f[e[w]];o=o+d;e=a[o];l[e[k]]=l[e[s]][e[M]];o=o+d;e=a[o];l[e[i]]=f[e[O]];o=o+d;e=a[o];n=e[c]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[i]][e[s]]=l[e[_]];o=o+d;e=a[o];l[e[b]]=f[e[O]];o=o+d;e=a[o];l[e[h]]=l[e[w]][e[u]];o=o+d;e=a[o];if(l[e[r]]==e[B])then o=o+D;else o=e[s];end;break;end while 1784==(n)/((-#[[cum fuck]]+(7434-0xe95)))do n=(11657880)while x>((-21+0x53)+-#'test123')do n-= n local n;l[e[c]]=f[e[s]];o=o+d;e=a[o];l[e[b]]=l[e[U]];o=o+d;e=a[o];l[e[b]]=e[t];o=o+d;e=a[o];n=e[b];do return l[n](C(l,n+1,e[t]))end;o=o+d;e=a[o];n=e[h];do return C(l,n,S)end;o=o+d;e=a[o];do return end;break end while 3384==(n)/((7009-0xdec))do local e=e[r];do return C(l,e,S)end;break end;break;end break;end while(n)/(((0x1df5-3879)+-#[[xenny its znugget please respond]]))==2998 do n=(741771)while x<=(0x32fd/229)do n-= n local n;l[e[i]]=f[e[w]];o=o+d;e=a[o];l[e[b]]=l[e[w]][e[_]];o=o+d;e=a[o];n=e[r]l[n]=l[n](l[n+D])o=o+d;e=a[o];for e=e[h],e[O]do l[e]=nil;end;o=o+d;e=a[o];l[e[r]]=p[e[O]];break;end while(n)/((-#"Nitro Activated"+(2305+-0x31)))==331 do n=(8293194)while(160-0x66)<x do n-= n local n;l[e[k]]=f[e[w]];o=o+d;e=a[o];l[e[c]]=p[e[U]];o=o+d;e=a[o];l[e[b]]=l[e[O]][e[B]];o=o+d;e=a[o];l[e[b]]=l[e[t]]/e[P];o=o+d;e=a[o];l[e[k]]=p[e[N]];o=o+d;e=a[o];l[e[b]]=l[e[t]][e[M]];o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];l[e[i]][e[O]]=l[e[g]];break end while 2379==(n)/((0x1b67-(-#'notbelugafan was here'+(0xe00+-34))))do l[e[b]]=l[e[w]][e[M]];o=o+d;e=a[o];l[e[c]]={};o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];l[e[c]]=l[e[U]][e[_]];o=o+d;e=a[o];l[e[h]][e[w]]=l[e[g]];o=o+d;e=a[o];l[e[k]]=f[e[t]];o=o+d;e=a[o];l[e[c]]=l[e[U]][e[u]];o=o+d;e=a[o];l[e[h]][e[t]]=l[e[P]];o=o+d;e=a[o];l[e[c]]=f[e[U]];o=o+d;e=a[o];l[e[h]]=l[e[O]][e[u]];break end;break;end break;end break;end break;end while 1786==(n)/((2472-0x50c))do n=(1077967)while x<=(0xbb-122)do n-= n n=(5995815)while(0x8e-80)>=x do n-= n n=(413835)while(0x474/19)>=x do n-= n local x;local O;local i;local b;local U;local n;n=e[r]l[n](l[n+D])o=o+d;e=a[o];n=e[h];U={};for e=1,#v do b=v[e];for e=0,#b do i=b[e];O=i[1];x=i[2];if O==l and x>=n then U[x]=O[x];i[1]=U;end;end;end;o=o+d;e=a[o];l[e[h]]=p[e[w]];o=o+d;e=a[o];l[e[c]]=l[e[w]];o=o+d;e=a[o];l[e[k]]=l[e[t]];o=o+d;e=a[o];l[e[r]]=p[e[s]];o=o+d;e=a[o];if l[e[c]]then o=o+d;else o=e[N];end;break;end while 235==(n)/(((0x6ce4b/251)+-#[[187 ist die gang]]))do n=(1252602)while(-#[[black mess more like white mesa]]+((338+-0x6c)-0x8a))<x do n-= n if(e[i]<l[e[P]])then o=o+D;else o=e[N];end;break end while 954==(n)/(((11889/0x9)+-#[[cum fuck]]))do l[e[r]]=#l[e[U]];break end;break;end break;end while(n)/((-#"amena jumping"+(0xd55+(-#'print'+(-0x1908/178)))))==1785 do n=(6020448)while(174+(-11322/0x66))>=x do n-= n do return end;break;end while(n)/((0x201b-4173))==1488 do n=(5722167)while x>(-#"cum fuck"+(258-(0x12e+-116)))do n-= n if(e[b]<l[e[g]])then o=e[N];else o=o+D;end;break end while(n)/((-35+0x68c))==3487 do local c;local n;l[e[r]]=e[U];o=o+d;e=a[o];n=e[r]l[n](l[n+D])o=o+d;e=a[o];l[e[i]]=f[e[O]];o=o+d;e=a[o];n=e[b];c=l[e[s]];l[n+1]=c;l[n]=c[e[M]];o=o+d;e=a[o];l[e[i]]=l[e[s]];o=o+d;e=a[o];l[e[b]]=l[e[w]];o=o+d;e=a[o];l[e[b]]=l[e[t]];o=o+d;e=a[o];l[e[b]]=l[e[w]];o=o+d;e=a[o];l[e[h]]=l[e[O]];o=o+d;e=a[o];l[e[i]]=l[e[t]];break end;break;end break;end break;end while 473==(n)/((0x61ed0/176))do n=(2355004)while x<=(-#'free trojan'+(0xb7-104))do n-= n n=(10892570)while(-#'dick cheese'+(-0x5d+170))>=x do n-= n l[e[i]]=(e[N]~=0);break;end while(n)/((-#"Dick"+(-74+0xbfc)))==3643 do n=(496228)while x>(234-0xa7)do n-= n local x;local n;n=e[r]l[n](C(l,n+D,e[U]))o=o+d;e=a[o];l[e[h]]=e[t];o=o+d;e=a[o];n=e[r];x=l[e[N]];l[n+1]=x;l[n]=x[l[e[_]]];o=o+d;e=a[o];l[e[h]]={};o=o+d;e=a[o];l[e[r]]=e[w];o=o+d;e=a[o];l[e[h]]=e[s];o=o+d;e=a[o];l[e[h]][l[e[t]]]=l[e[P]];o=o+d;e=a[o];l[e[c]]=e[U];o=o+d;e=a[o];l[e[r]]=l[e[U]][e[g]];o=o+d;e=a[o];l[e[i]][l[e[s]]]=l[e[_]];break end while(n)/((221598/0xea))==524 do local n;l[e[i]]=f[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[U]][e[B]];o=o+d;e=a[o];n=e[h]l[n]=l[n](l[n+D])o=o+d;e=a[o];for e=e[c],e[O]do l[e]=nil;end;o=o+d;e=a[o];l[e[h]]=p[e[U]];break end;break;end break;end while(n)/((1644+-0x38))==1483 do n=(743223)while x<=(-0x20+101)do n-= n local o=e[h];do return C(l,o,o+e[N])end;break;end while 3009==(n)/((-75+0x142))do n=(250020)while(0x10b-197)<x do n-= n local o=e[i];do return l[o](C(l,o+1,e[t]))end;break end while(n)/((0x46f-595))==463 do local n;l[e[b]]=f[e[U]];o=o+d;e=a[o];l[e[c]]=l[e[s]][e[u]];o=o+d;e=a[o];l[e[h]]=f[e[s]];o=o+d;e=a[o];n=e[r]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[h]][e[U]]=l[e[P]];break end;break;end break;end break;end break;end break;end while(n)/((-#"mee6 what are you doing to my wife"+(-106+0x892)))==553 do n=(13381896)while x<=(-0x34+135)do n-= n n=(1220408)while x<=(-#"Dick"+((-0x86+49)+0xa6))do n-= n n=(13903786)while x<=(-62+(33864/0xf9))do n-= n n=(1763598)while x<=(154+-0x52)do n-= n local n;l[e[h]]=l[e[s]][e[u]];o=o+d;e=a[o];l[e[k]]=f[e[t]];o=o+d;e=a[o];n=e[b]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[r]]=f[e[t]];o=o+d;e=a[o];if(l[e[i]]==e[_])then o=o+D;else o=e[U];end;break;end while(n)/((-#'Never gonna give u up'+(-104+0x530)))==1466 do n=(3613956)while(172+-0x63)<x do n-= n local a=e[k]local n={l[a](l[a+1])};local o=0;for e=a,e[M]do o=o+d;l[e]=n[o];end break end while 1828==(n)/((466572/0xec))do local r;local i;local n;l[e[k]]=l[e[O]][e[B]];o=o+d;e=a[o];n=e[k]i={l[n](C(l,n+1,e[t]))};r=0;for e=n,e[B]do r=r+d;l[e]=i[r];end o=o+d;e=a[o];l[e[b]]=f[e[s]];o=o+d;e=a[o];l[e[k]]=f[e[O]];o=o+d;e=a[o];l[e[b]]=f[e[t]];o=o+d;e=a[o];l[e[h]]=l[e[U]][e[g]];o=o+d;e=a[o];l[e[h]]=l[e[O]][e[M]];o=o+d;e=a[o];l[e[h]]=l[e[U]][e[P]];o=o+d;e=a[o];l[e[k]]=-l[e[U]];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[t]))break end;break;end break;end while 3874==(n)/((7218-0xe2d))do n=(449228)while x<=(202+-0x7f)do n-= n local c;local n;l[e[b]][e[t]]=l[e[B]];o=o+d;e=a[o];n=e[k];c=l[e[t]];l[n+1]=c;l[n]=c[e[B]];o=o+d;e=a[o];l[e[i]]=e[O];o=o+d;e=a[o];l[e[k]]=e[O];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[r]][e[t]]=l[e[P]];o=o+d;e=a[o];l[e[k]]=l[e[t]][e[M]];o=o+d;e=a[o];l[e[b]]=e[s];o=o+d;e=a[o];l[e[i]]=e[O];o=o+d;e=a[o];l[e[r]]=e[t];break;end while(n)/((-#[[Little kids]]+(-43+0xd9)))==2756 do n=(2625895)while x>(-#"Little kids"+(0x1308/56))do n-= n local n;local U;local x;l[e[i]][e[N]]=e[B];o=o+d;e=a[o];l[e[h]]=f[e[O]];o=o+d;e=a[o];l[e[r]]=l[e[s]][e[_]];o=o+d;e=a[o];l[e[r]][e[O]]=l[e[g]];o=o+d;e=a[o];l[e[c]]=f[e[w]];o=o+d;e=a[o];l[e[r]]=l[e[w]][e[B]];o=o+d;e=a[o];l[e[k]][e[s]]=l[e[u]];o=o+d;e=a[o];x=e[r]U={l[x](l[x+1])};n=0;for e=x,e[g]do n=n+d;l[e]=U[n];end o=o+d;e=a[o];f[e[s]]=l[e[b]];o=o+d;e=a[o];f[e[O]]=l[e[i]];break end while 655==(n)/((0x1fcc-4131))do l[e[c]]=(e[U]~=0);o=o+D;break end;break;end break;end break;end while 1406==(n)/((217868/(539-0x120)))do n=(6718140)while(0x12c0/60)>=x do n-= n n=(300916)while x<=(2652/0x22)do n-= n local e=e[b]l[e]=l[e]()break;end while(n)/((367352/0x5e))==77 do n=(5331514)while x>(-43+0x7a)do n-= n l[e[c]]=l[e[U]][e[u]];o=o+d;e=a[o];l[e[r]]=l[e[t]];o=o+d;e=a[o];l[e[b]]=l[e[N]];o=o+d;e=a[o];l[e[i]]=l[e[t]][e[M]];o=o+d;e=a[o];if l[e[k]]then o=o+d;else o=e[t];end;break end while(n)/((-#[[loadstring]]+(363936/(0x149+-106))))==3287 do local c;local n;l[e[i]][e[U]]=e[B];o=o+d;e=a[o];l[e[k]][e[t]]=e[g];o=o+d;e=a[o];n=e[i];c=l[e[U]];l[n+1]=c;l[n]=c[e[M]];o=o+d;e=a[o];l[e[h]]=e[w];o=o+d;e=a[o];l[e[r]]=(e[w]~=0);o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];l[e[i]][e[s]]=l[e[M]];o=o+d;e=a[o];n=e[h];c=l[e[O]];l[n+1]=c;l[n]=c[e[M]];o=o+d;e=a[o];l[e[r]]=e[N];o=o+d;e=a[o];l[e[h]]=e[w];break end;break;end break;end while 2610==(n)/((-#[[test 123]]+(5229-0xa57)))do n=(118566)while(0x366c/172)>=x do n-= n l[e[r]]={};break;end while(n)/((1554/0x25))==2823 do n=(1176290)while(265-(463-0x118))<x do n-= n if(l[e[r]]<=l[e[B]])then o=o+D;else o=e[t];end;break end while(n)/((-103+0x64d))==779 do local n;l[e[k]]=f[e[U]];o=o+d;e=a[o];l[e[c]]=f[e[O]];o=o+d;e=a[o];n=e[b]l[n]=l[n](l[n+D])o=o+d;e=a[o];f[e[s]]=l[e[r]];o=o+d;e=a[o];do return end;break end;break;end break;end break;end break;end while(n)/(((-#'mee6 what are you doing to my wife'+(3693+-0x2b))+-100))==3806 do n=(1091640)while x<=(115+-0x1a)do n-= n n=(105064)while(-123+0xd1)>=x do n-= n n=(1157364)while((0x138-217)+-#'Little kids')>=x do n-= n l[e[i]]=e[t];break;end while 468==(n)/((0x9fd+-84))do n=(1791420)while x>((0xe7-125)+-#"Two trucks having sex")do n-= n o=e[s];break end while 438==(n)/((0xdaade/219))do local d=e[t];local o=l[d]for e=d+1,e[_]do o=o..l[e];end;l[e[c]]=o;break end;break;end break;end while 46==(n)/((4610-0x916))do n=(10323308)while(-#"guys Please proceed to translate D to Sinhala"+(0xf9+-117))>=x do n-= n local i;local x;local n;l[e[k]]=-l[e[N]];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[c]]=l[e[U]]*l[e[B]];o=o+d;e=a[o];l[e[b]]=l[e[N]][e[P]];o=o+d;e=a[o];n=e[r]x={l[n](C(l,n+1,e[N]))};i=0;for e=n,e[B]do i=i+d;l[e]=x[i];end o=o+d;e=a[o];l[e[k]]=f[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[U]][e[u]];o=o+d;e=a[o];l[e[h]]=l[e[w]][e[u]];o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,e[s]))o=o+d;e=a[o];l[e[c]]=f[e[w]];break;end while(n)/((-#"zNugget is dad"+(0x1a56-3415)))==3116 do n=(2940888)while(-#[[guys Please proceed to translate D to Sinhala]]+(0xae+(-0x25f5/237)))<x do n-= n if(l[e[b]]<=l[e[B]])then o=o+D;else o=e[t];end;break end while 2708==(n)/((-#"187 ist die gang"+(2222-0x460)))do local n;l[e[k]]=f[e[w]];o=o+d;e=a[o];l[e[h]]=l[e[w]];o=o+d;e=a[o];n=e[c];do return l[n](C(l,n+1,e[s]))end;o=o+d;e=a[o];n=e[r];do return C(l,n,S)end;o=o+d;e=a[o];do return end;break end;break;end break;end break;end while 827==(n)/((-#'Bong'+(2729-0x57d)))do n=(1579977)while x<=(-#"Hi skid"+(0x10c-169))do n-= n n=(310816)while(-#'me big peepee'+(0xbc+-85))>=x do n-= n local n;l[e[h]]=l[e[O]][e[B]];o=o+d;e=a[o];l[e[r]]=l[e[w]];o=o+d;e=a[o];l[e[k]]=l[e[w]];o=o+d;e=a[o];l[e[h]]=e[w];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];if l[e[h]]then o=o+d;else o=e[U];end;break;end while 883==(n)/((0xdec0/162))do n=(7707598)while x>(-0x33+142)do n-= n l[e[k]]=l[e[O]]/e[M];break end while 3061==(n)/((-#'test'+(-0x3c+2582)))do local n;l[e[b]]=f[e[O]];o=o+d;e=a[o];l[e[h]]=l[e[O]];o=o+d;e=a[o];n=e[k]l[n]=l[n]()o=o+d;e=a[o];l[e[h]]=l[e[U]][l[e[_]]];o=o+d;e=a[o];for e=e[r],e[N]do l[e]=nil;end;o=o+d;e=a[o];if(l[e[c]]==e[_])then o=o+D;else o=e[N];end;break end;break;end break;end while 1953==(n)/((-#"no thanks"+((337077-0x29279)/0xce)))do n=(2674840)while x<=(-71+0xa5)do n-= n n=(12971155)while(-75+0xa8)<x do n-= n l[e[k]][l[e[N]]]=l[e[u]];break end while(n)/((428103/0x75))==3545 do local i;local x;local n;n=e[r]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[c]]=l[e[w]]*l[e[P]];o=o+d;e=a[o];l[e[c]]=l[e[w]][e[_]];o=o+d;e=a[o];n=e[r]x={l[n](C(l,n+1,e[s]))};i=0;for e=n,e[M]do i=i+d;l[e]=x[i];end o=o+d;e=a[o];l[e[c]]=f[e[O]];o=o+d;e=a[o];l[e[k]]=f[e[O]];o=o+d;e=a[o];l[e[h]]=f[e[O]];o=o+d;e=a[o];l[e[k]]=l[e[U]][e[_]];o=o+d;e=a[o];l[e[r]]=l[e[N]][e[_]];o=o+d;e=a[o];l[e[b]]=-l[e[s]];break end;break;end while 1631==(n)/((-#[[This is working now]]+(0xd72-1783)))do n=(3576902)while x>(0xff5/43)do n-= n local o=e[k];local e=e[O];for e=o,e do l[e]=j[e-o];end;break end while 1666==(n)/(((4387-0x8bc)+-#"Dick"))do local n;l[e[k]]=e[w];o=o+d;e=a[o];n=e[b]l[n](l[n+D])o=o+d;e=a[o];l[e[k]]=f[e[N]];o=o+d;e=a[o];l[e[k]]=l[e[O]][e[u]];o=o+d;e=a[o];if not l[e[c]]then o=o+D;else o=e[w];end;break end;break;end break;end break;end break;end break;end break;end break;end while(n)/((0x39d+-29))==897 do n=(1867500)while(0xe6+-85)>=x do n-= n n=(6323160)while((0x4dfd/121)+-#'guys Please proceed to translate D to Sinhala')>=x do n-= n n=(647530)while x<=(215+-0x6b)do n-= n n=(5278086)while(0x2a3c/106)>=x do n-= n n=(850836)while(0x2f2e/122)>=x do n-= n n=(5280626)while(-#"dont use it anymore"+(178+-0x3e))>=x do n-= n l[e[c]]=(not l[e[O]]);break;end while 2447==(n)/((-#'test 123'+(0x71b1a/215)))do n=(321308)while x>(0xb9+-87)do n-= n local n;l[e[c]][e[O]]=l[e[B]];o=o+d;e=a[o];n=e[i]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];l[e[b]]=p[e[O]];o=o+d;e=a[o];l[e[h]]=l[e[O]][e[g]];o=o+d;e=a[o];l[e[i]]=e[U];o=o+d;e=a[o];n=e[h]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[k]]=l[e[t]][e[B]];o=o+d;e=a[o];l[e[h]]=l[e[N]][e[M]];o=o+d;e=a[o];l[e[r]]=l[e[O]][e[g]];o=o+d;e=a[o];l[e[b]]=e[N];break end while 148==(n)/((275717/0x7f))do local x;local S;local i;local n;l[e[h]]=f[e[w]];o=o+d;e=a[o];l[e[h]]=l[e[U]][e[_]];o=o+d;e=a[o];l[e[b]]=l[e[w]]/l[e[B]];o=o+d;e=a[o];n=e[k]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[h]]=l[e[U]]%l[e[u]];o=o+d;e=a[o];i={e,l};i[m][i[D][c]]=i[m][i[d][U]]+i[D][P];o=o+d;e=a[o];l[e[k]]=l[e[t]];o=o+d;e=a[o];l[e[b]]=f[e[t]];o=o+d;e=a[o];l[e[c]]=l[e[s]][e[g]];o=o+d;e=a[o];l[e[h]]=l[e[U]];o=o+d;e=a[o];l[e[b]]=l[e[O]];o=o+d;e=a[o];l[e[h]]=l[e[t]];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[b]]=l[e[t]];o=o+d;e=a[o];S=e[s];x=l[S]for e=S+1,e[B]do x=x..l[e];end;l[e[h]]=x;o=o+d;e=a[o];o=e[N];break end;break;end break;end while(n)/(((-330/0x6)+643))==1447 do n=(295829)while x<=(0x3e1c/159)do n-= n local x;local S;local n;l[e[i]]=l[e[w]][e[_]];o=o+d;e=a[o];l[e[h]]=f[e[N]];o=o+d;e=a[o];l[e[b]]=f[e[U]];o=o+d;e=a[o];l[e[c]]=f[e[N]];o=o+d;e=a[o];l[e[i]]=l[e[s]][e[u]];o=o+d;e=a[o];l[e[c]]=-l[e[w]];o=o+d;e=a[o];l[e[k]]=l[e[s]][e[u]];o=o+d;e=a[o];l[e[k]]=e[O];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[h]]=l[e[w]]*l[e[M]];o=o+d;e=a[o];l[e[i]]=l[e[w]][e[g]];o=o+d;e=a[o];n=e[h]S={l[n](C(l,n+1,e[U]))};x=0;for e=n,e[P]do x=x+d;l[e]=S[x];end o=o+d;e=a[o];l[e[k]]=f[e[O]];o=o+d;e=a[o];l[e[r]]=f[e[N]];o=o+d;e=a[o];l[e[k]]=f[e[O]];o=o+d;e=a[o];l[e[r]]=l[e[w]][e[u]];o=o+d;e=a[o];l[e[k]]=l[e[O]][e[M]];o=o+d;e=a[o];l[e[i]]=e[O];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[i]]=l[e[O]]*l[e[B]];o=o+d;e=a[o];l[e[c]]=l[e[O]][e[u]];o=o+d;e=a[o];n=e[i]S={l[n](C(l,n+1,e[t]))};x=0;for e=n,e[M]do x=x+d;l[e]=S[x];end o=o+d;e=a[o];l[e[i]]=f[e[w]];o=o+d;e=a[o];l[e[k]]=f[e[w]];o=o+d;e=a[o];l[e[k]]=f[e[w]];o=o+d;e=a[o];l[e[c]]=l[e[N]][e[g]];o=o+d;e=a[o];l[e[c]]=-l[e[O]];o=o+d;e=a[o];l[e[r]]=l[e[s]][e[P]];o=o+d;e=a[o];l[e[b]]=-l[e[U]];o=o+d;e=a[o];l[e[i]]=e[N];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[k]]=l[e[N]]*l[e[B]];o=o+d;e=a[o];l[e[b]]=l[e[w]][e[g]];o=o+d;e=a[o];n=e[r]S={l[n](C(l,n+1,e[t]))};x=0;for e=n,e[P]do x=x+d;l[e]=S[x];end o=o+d;e=a[o];l[e[k]]=f[e[w]];o=o+d;e=a[o];l[e[h]]=f[e[O]];o=o+d;e=a[o];l[e[i]]=f[e[w]];o=o+d;e=a[o];l[e[i]]=l[e[N]][e[_]];o=o+d;e=a[o];l[e[k]]=l[e[t]][e[g]];o=o+d;e=a[o];l[e[c]]=-l[e[s]];o=o+d;e=a[o];l[e[b]]=e[N];o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,e[s]))o=o+d;e=a[o];l[e[k]]=l[e[t]]*l[e[_]];o=o+d;e=a[o];l[e[r]]=l[e[s]][e[B]];o=o+d;e=a[o];n=e[h]S={l[n](C(l,n+1,e[O]))};x=0;for e=n,e[M]do x=x+d;l[e]=S[x];end o=o+d;e=a[o];l[e[c]]=f[e[U]];o=o+d;e=a[o];l[e[k]]=l[e[t]][e[_]];o=o+d;e=a[o];l[e[i]]=l[e[t]][e[B]];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[s]))o=o+d;e=a[o];l[e[b]]=f[e[U]];o=o+d;e=a[o];l[e[i]]=l[e[U]][e[_]];o=o+d;e=a[o];l[e[i]]=l[e[w]][e[_]];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[r]]=f[e[t]];o=o+d;e=a[o];l[e[h]]=l[e[s]][e[B]];o=o+d;e=a[o];l[e[b]]=l[e[s]][e[_]];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[h]]=f[e[s]];o=o+d;e=a[o];l[e[h]]=l[e[N]][e[B]];o=o+d;e=a[o];l[e[i]]=l[e[t]][e[_]];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[s]))o=o+d;e=a[o];l[e[b]]=f[e[t]];o=o+d;e=a[o];l[e[c]]=l[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[U]];o=o+d;e=a[o];l[e[b]]=l[e[s]];o=o+d;e=a[o];l[e[h]]=l[e[t]];o=o+d;e=a[o];l[e[h]]=l[e[t]];o=o+d;e=a[o];n=e[r]l[n](C(l,n+D,e[w]))o=o+d;e=a[o];l[e[k]]=f[e[w]];o=o+d;e=a[o];l[e[c]]=l[e[U]];o=o+d;e=a[o];l[e[r]]=l[e[w]];o=o+d;e=a[o];l[e[k]]=l[e[N]];o=o+d;e=a[o];l[e[c]]=l[e[w]];o=o+d;e=a[o];l[e[c]]=l[e[s]];o=o+d;e=a[o];n=e[b]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];l[e[r]]=f[e[w]];o=o+d;e=a[o];l[e[r]]=l[e[t]];o=o+d;e=a[o];l[e[c]]=l[e[w]];o=o+d;e=a[o];l[e[b]]=l[e[U]];o=o+d;e=a[o];l[e[c]]=l[e[s]];break;end while 101==(n)/((0x1702-2961))do n=(10540188)while((8205-0x1045)/40)<x do n-= n local o=e[r]local n={l[o](C(l,o+1,S))};local a=0;for e=o,e[P]do a=a+d;l[e]=n[a];end break end while(n)/((-#'Fuck nigger wank shit dipshit cunt bullshit fuckyou hoe lol'+((0x2a46-5460)-0xa98)))==4068 do local h;local n;n=e[b]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[c]]=e[O];o=o+d;e=a[o];n=e[k];h=l[e[t]];l[n+1]=h;l[n]=h[l[e[u]]];o=o+d;e=a[o];l[e[k]]={};o=o+d;e=a[o];l[e[r]]=e[N];o=o+d;e=a[o];l[e[r]]=e[U];o=o+d;e=a[o];l[e[i]][l[e[U]]]=l[e[g]];o=o+d;e=a[o];l[e[b]]=e[U];o=o+d;e=a[o];l[e[i]]=l[e[U]][e[u]];o=o+d;e=a[o];l[e[b]][l[e[t]]]=l[e[g]];break end;break;end break;end break;end while 4026==(n)/((0xa94-1397))do n=(8982435)while x<=((-0x15+139)+-#[[big hard cock]])do n-= n n=(1556220)while(0x9a8/24)>=x do n-= n local x;local w;local n;l[e[i]]=f[e[O]];o=o+d;e=a[o];l[e[c]]=f[e[s]];o=o+d;e=a[o];n=e[h]l[n](l[n+D])o=o+d;e=a[o];l[e[b]]=p[e[U]];o=o+d;e=a[o];l[e[k]]=f[e[N]];o=o+d;e=a[o];n=e[r]w={l[n](l[n+1])};x=0;for e=n,e[P]do x=x+d;l[e]=w[x];end o=o+d;e=a[o];o=e[O];break;end while(n)/((0x914-1214))==1402 do n=(6442128)while x>(-0x7d+229)do n-= n local n;l[e[h]]=f[e[s]];o=o+d;e=a[o];l[e[c]]=l[e[s]];o=o+d;e=a[o];l[e[b]]=l[e[U]];o=o+d;e=a[o];l[e[i]]=l[e[t]];o=o+d;e=a[o];l[e[k]]=l[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[t]];o=o+d;e=a[o];n=e[h]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];l[e[k]]=f[e[O]];o=o+d;e=a[o];l[e[c]]=l[e[t]];o=o+d;e=a[o];l[e[k]]=l[e[N]];break end while 4067==(n)/(((3289-0x676)+-0x33))do local n;l[e[i]]=e[O];o=o+d;e=a[o];l[e[c]]=l[e[N]];o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[i]]=f[e[t]];o=o+d;e=a[o];l[e[c]]=e[O];o=o+d;e=a[o];l[e[h]]=l[e[U]];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[b]]=l[e[w]][e[M]];o=o+d;e=a[o];if not l[e[b]]then o=o+D;else o=e[t];end;break end;break;end break;end while 3535==(n)/((0x9ff+-18))do n=(5349825)while x<=(309-0xcb)do n-= n local x;local n;l[e[b]]=f[e[O]];o=o+d;e=a[o];l[e[r]]=l[e[U]][e[g]];o=o+d;e=a[o];l[e[b]][e[O]]=l[e[_]];o=o+d;e=a[o];l[e[k]]=f[e[O]];o=o+d;e=a[o];l[e[k]]=l[e[t]][e[g]];o=o+d;e=a[o];l[e[i]][e[w]]=l[e[M]];o=o+d;e=a[o];l[e[k]]=f[e[O]];o=o+d;e=a[o];l[e[h]]=l[e[s]][e[M]];o=o+d;e=a[o];l[e[k]][e[s]]=l[e[P]];o=o+d;e=a[o];l[e[c]]=f[e[w]];o=o+d;e=a[o];l[e[b]]=l[e[w]][e[P]];o=o+d;e=a[o];l[e[c]]=e[N]-l[e[u]];o=o+d;e=a[o];l[e[b]][e[U]]=l[e[P]];o=o+d;e=a[o];l[e[r]]={};o=o+d;e=a[o];l[e[c]]=l[e[t]][e[u]];o=o+d;e=a[o];n=e[h];x=l[n];for e=n+1,e[U]do T(x,l[e])end;break;end while(n)/((2977-0x5de))==3627 do n=(1613360)while x>(0xa8+-61)do n-= n local c;local x;local n;l[e[i]]=f[e[N]];o=o+d;e=a[o];l[e[h]]=l[e[s]];o=o+d;e=a[o];l[e[h]]=l[e[s]];o=o+d;e=a[o];n=e[h]x={l[n](C(l,n+1,e[t]))};c=0;for e=n,e[u]do c=c+d;l[e]=x[c];end o=o+d;e=a[o];l[e[r]]=l[e[N]];o=o+d;e=a[o];l[e[r]]=l[e[N]];o=o+d;e=a[o];l[e[i]]=l[e[w]];o=o+d;e=a[o];l[e[b]]=l[e[t]];o=o+d;e=a[o];o=e[w];break end while 430==(n)/((7572-0xeec))do local r;local B,s;local x;local n;l[e[k]]=f[e[N]];o=o+d;e=a[o];l[e[k]]=l[e[t]];o=o+d;e=a[o];l[e[i]]=e[N];o=o+d;e=a[o];n=e[c]l[n]=l[n](l[n+D])o=o+d;e=a[o];n=e[b];x=l[e[t]];l[n+1]=x;l[n]=x[e[u]];o=o+d;e=a[o];l[e[c]]=e[U];o=o+d;e=a[o];l[e[b]]=e[O];o=o+d;e=a[o];n=e[h]B,s=y(l[n](C(l,n+1,e[w])))S=s+n-1 r=0;for e=n,S do r=r+d;l[e]=B[r];end;o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[i]]=l[e[t]];o=o+d;e=a[o];l[e[c]]();o=o+d;e=a[o];l[e[h]]={};o=o+d;e=a[o];l[e[i]]=e[O];break end;break;end break;end break;end break;end while(n)/(((2394+-0x7d)+-#'Fuck nigger wank shit dipshit cunt bullshit fuckyou hoe lol'))==293 do n=(5790848)while((-#[[deobfuscated]]+(32-0x41))+159)>=x do n-= n n=(369750)while(0x13d-206)>=x do n-= n n=(9074099)while(0x10d-160)>=x do n-= n l[e[k]]=l[e[U]][l[e[u]]];break;end while(n)/((0x21330/48))==3203 do n=(10586788)while(152+-0x2a)<x do n-= n local n;l[e[i]]=e[t];o=o+d;e=a[o];n=e[i]l[n](l[n+D])o=o+d;e=a[o];l[e[k]]=f[e[U]];o=o+d;e=a[o];l[e[h]]=l[e[O]][e[B]];o=o+d;e=a[o];l[e[c]]();o=o+d;e=a[o];l[e[h]]=f[e[w]];o=o+d;e=a[o];l[e[i]]=e[t];o=o+d;e=a[o];n=e[k]l[n](l[n+D])o=o+d;e=a[o];o=e[N];break end while(n)/((89592/0x18))==2836 do local x;local w,s;local n;l[e[k]]=l[e[U]];o=o+d;e=a[o];l[e[h]]=e[N];o=o+d;e=a[o];n=e[h]w,s=y(l[n](l[n+D]))S=s+n-d x=0;for e=n,S do x=x+d;l[e]=w[x];end;o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[k]]=l[e[N]];o=o+d;e=a[o];l[e[i]]=f[e[U]];o=o+d;e=a[o];l[e[r]]=l[e[U]];o=o+d;e=a[o];n=e[c]w,s=y(l[n](l[n+D]))S=s+n-d x=0;for e=n,S do x=x+d;l[e]=w[x];end;o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[i]]=f[e[O]];o=o+d;e=a[o];l[e[b]]=l[e[t]];o=o+d;e=a[o];n=e[k]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[i]][l[e[U]]]=l[e[u]];break end;break;end break;end while 170==(n)/(((-0x49+2280)+-#[[xenny its znugget please respond]]))do n=(522110)while x<=(-#'looadstring'+(23616/0xc0))do n-= n local i;local n;n=e[r];i=l[e[U]];l[n+1]=i;l[n]=i[e[u]];o=o+d;e=a[o];l[e[h]]=e[O];o=o+d;e=a[o];l[e[k]]=e[t];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[b]]=l[e[w]][l[e[u]]];o=o+d;e=a[o];if(l[e[h]]~=e[_])then o=o+D;else o=e[s];end;break;end while 958==(n)/((1110-0x235))do n=(4605012)while x>(-#[[Never gonna give u up]]+(25996/0xc2))do n-= n local x;local D;local S;local f;local m;local p;local n;l[e[h]][e[t]]=l[e[B]];o=o+d;e=a[o];n=e[h];p={};for e=1,#v do m=v[e];for e=0,#m do f=m[e];S=f[1];D=f[2];if S==l and D>=n then p[D]=S[D];f[1]=p;end;end;end;o=o+d;e=a[o];l[e[b]]={};o=o+d;e=a[o];n=e[i];x=l[e[s]];l[n+1]=x;l[n]=x[e[g]];o=o+d;e=a[o];l[e[c]]=e[s];o=o+d;e=a[o];l[e[b]]=(e[s]~=0);o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[b]][e[N]]=l[e[P]];o=o+d;e=a[o];n=e[b];x=l[e[t]];l[n+1]=x;l[n]=x[e[B]];o=o+d;e=a[o];l[e[c]]=e[w];o=o+d;e=a[o];l[e[i]]=e[w];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[h]][e[s]]=l[e[_]];o=o+d;e=a[o];n=e[h];x=l[e[t]];l[n+1]=x;l[n]=x[e[g]];o=o+d;e=a[o];l[e[i]]=e[t];o=o+d;e=a[o];l[e[k]]=e[t];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];l[e[h]][e[O]]=l[e[M]];o=o+d;e=a[o];n=e[i];x=l[e[w]];l[n+1]=x;l[n]=x[e[u]];o=o+d;e=a[o];l[e[k]]=e[t];o=o+d;e=a[o];l[e[c]]=(e[t]~=0);o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[h]][e[t]]=l[e[P]];o=o+d;e=a[o];l[e[i]]=l[e[U]][e[B]];o=o+d;e=a[o];l[e[b]]=e[U];o=o+d;e=a[o];l[e[r]]=e[s];o=o+d;e=a[o];l[e[i]]=e[N];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];l[e[c]][e[t]]=l[e[P]];o=o+d;e=a[o];l[e[r]]=l[e[U]][e[M]];o=o+d;e=a[o];l[e[b]]=e[O];o=o+d;e=a[o];l[e[i]]=e[w];o=o+d;e=a[o];l[e[k]]=e[O];o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[h]][e[U]]=l[e[u]];o=o+d;e=a[o];l[e[i]]=l[e[U]][e[B]];o=o+d;e=a[o];l[e[h]]=e[O];o=o+d;e=a[o];l[e[h]]=e[t];o=o+d;e=a[o];l[e[r]]=e[w];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[k]][e[w]]=l[e[_]];o=o+d;e=a[o];n=e[i];x=l[e[s]];l[n+1]=x;l[n]=x[e[u]];o=o+d;e=a[o];l[e[b]]=e[t];o=o+d;e=a[o];l[e[r]]=(e[t]~=0);o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[k]][e[O]]=l[e[M]];o=o+d;e=a[o];n=e[i];x=l[e[w]];l[n+1]=x;l[n]=x[e[u]];o=o+d;e=a[o];l[e[r]]=e[s];o=o+d;e=a[o];l[e[r]]=(e[s]~=0);o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];l[e[k]][e[s]]=l[e[_]];o=o+d;e=a[o];n=e[h];x=l[e[t]];l[n+1]=x;l[n]=x[e[g]];o=o+d;e=a[o];l[e[h]]=e[s];o=o+d;e=a[o];l[e[r]]=e[O];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];l[e[b]][e[O]]=l[e[_]];o=o+d;e=a[o];n=e[k];x=l[e[w]];l[n+1]=x;l[n]=x[e[B]];o=o+d;e=a[o];l[e[r]]=e[U];o=o+d;e=a[o];l[e[b]]=e[U];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[c]][e[U]]=l[e[_]];o=o+d;e=a[o];l[e[c]]=l[e[N]][e[_]];o=o+d;e=a[o];l[e[r]]=e[w];o=o+d;e=a[o];l[e[c]]=e[t];o=o+d;e=a[o];l[e[k]]=e[w];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[r]][e[t]]=l[e[B]];o=o+d;e=a[o];l[e[k]]=l[e[s]];o=o+d;e=a[o];l[e[i]]=l[e[t]];o=o+d;e=a[o];l[e[r]]={};break end while(n)/((3413-0x6e6))==2796 do p[e[N]]=l[e[h]];break end;break;end break;end break;end while(n)/((7946-0xfac))==1472 do n=(3911817)while(5382/0x2e)>=x do n-= n n=(7939000)while((310-0xbb)+-#[[test 123]])>=x do n-= n local _;local g,M;local x;local B;local n;l[e[r]]=e[s];o=o+d;e=a[o];n=e[h]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[k]]=l[e[w]];o=o+d;e=a[o];l[e[k]]=l[e[s]];o=o+d;e=a[o];l[e[b]]=f[e[w]];o=o+d;e=a[o];n=e[i]l[n]=l[n]()o=o+d;e=a[o];B=e[s];x=l[B]for e=B+1,e[u]do x=x..l[e];end;l[e[i]]=x;o=o+d;e=a[o];l[e[r]]=f[e[O]];o=o+d;e=a[o];l[e[r]]=f[e[U]];o=o+d;e=a[o];l[e[b]]=l[e[t]];o=o+d;e=a[o];n=e[i]g,M=y(l[n](l[n+D]))S=M+n-d _=0;for e=n,S do _=_+d;l[e]=g[_];end;o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[i]]=l[e[O]];o=o+d;e=a[o];l[e[r]]=l[e[s]];o=o+d;e=a[o];B=e[N];x=l[B]for e=B+1,e[P]do x=x..l[e];end;l[e[r]]=x;o=o+d;e=a[o];l[e[r]]=f[e[N]];o=o+d;e=a[o];l[e[c]]=l[e[t]];o=o+d;e=a[o];n=e[b]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[r]]=l[e[U]];o=o+d;e=a[o];o=e[N];break;end while 3736==(n)/((-87+0x8a4))do n=(3287116)while x>(-#'Cock and ball torture'+(0x371f/103))do n-= n local e=e[h]l[e]=l[e](C(l,e+d,S))break end while 3038==(n)/((((-99+0x303a0)/179)+-#"notbelugafan was here"))do local e=e[h]l[e](C(l,e+D,S))break end;break;end break;end while(n)/((2377-0x4c4))==3381 do n=(1035360)while((0x9b+-24)+-#"me big peepee")>=x do n-= n l[e[i]]=l[e[N]]*l[e[B]];break;end while 2876==(n)/((61920/(-#'zNugget is dad'+(274+-0x58))))do n=(7316631)while x>(-37+0x9c)do n-= n local n;l[e[r]]=l[e[s]];o=o+d;e=a[o];n=e[r]l[n]=l[n]()o=o+d;e=a[o];l[e[r]]=l[e[t]];o=o+d;e=a[o];n=e[c]l[n]=l[n]()o=o+d;e=a[o];l[e[k]]=l[e[t]];o=o+d;e=a[o];n=e[c]l[n]=l[n]()o=o+d;e=a[o];l[e[b]]=p[e[w]];o=o+d;e=a[o];l[e[h]]=l[e[N]][e[u]];o=o+d;e=a[o];l[e[h]]=l[e[w]];o=o+d;e=a[o];l[e[b]]=l[e[s]];break end while 3177==(n)/(((-0x43+((0x132d-2516)+-#"test"))+-#[[This is working now]]))do l[e[b]]={};o=o+d;e=a[o];l[e[i]]=f[e[N]];o=o+d;e=a[o];l[e[c]]=l[e[U]][e[u]];o=o+d;e=a[o];l[e[b]]=l[e[t]][l[e[u]]];o=o+d;e=a[o];if(l[e[h]]~=e[P])then o=o+D;else o=e[w];end;break end;break;end break;end break;end break;end break;end while(n)/((2809+-0x31))==2291 do n=(1993486)while x<=(0xef+-107)do n-= n n=(3717542)while x<=(0x15e-224)do n-= n n=(2528316)while x<=(0x503d/167)do n-= n n=(5892660)while x<=((-0x7b+263)+-#'This is working now')do n-= n local x;local n;l[e[r]]=e[s];o=o+d;e=a[o];n=e[h]l[n](l[n+D])o=o+d;e=a[o];l[e[c]]=f[e[N]];o=o+d;e=a[o];n=e[i];x=l[e[w]];l[n+1]=x;l[n]=x[e[g]];o=o+d;e=a[o];l[e[c]]=l[e[t]];o=o+d;e=a[o];l[e[h]]=l[e[N]];o=o+d;e=a[o];l[e[c]]=l[e[N]];o=o+d;e=a[o];l[e[h]]=l[e[w]];o=o+d;e=a[o];l[e[c]]=l[e[U]];o=o+d;e=a[o];l[e[r]]=l[e[N]];o=o+d;e=a[o];l[e[i]]=l[e[N]];o=o+d;e=a[o];n=e[h]l[n](C(l,n+D,e[O]))o=o+d;e=a[o];l[e[i]]=f[e[s]];o=o+d;e=a[o];l[e[b]]=e[O];o=o+d;e=a[o];n=e[h]l[n](l[n+D])o=o+d;e=a[o];o=e[w];break;end while(n)/((6968-0xdc2))==1710 do n=(7296234)while(-0x36+176)<x do n-= n l[e[k]]=f[e[N]];break end while 2922==(n)/((-#"187 ist die gang"+((-#[[test123]]+(5195+-0x3a))-0xa39)))do l[e[b]]=l[e[O]][e[g]];break end;break;end break;end while(n)/((0x930-1209))==2212 do n=(6829680)while x<=(0x10b-143)do n-= n local e=e[i]l[e](l[e+D])break;end while(n)/((0x120c0/28))==2587 do n=(2570435)while(25125/0xc9)<x do n-= n if(e[b]<l[e[g]])then o=o+D;else o=e[N];end;break end while(n)/((1372+-0x11))==1897 do for e=e[r],e[N]do l[e]=nil;end;break end;break;end break;end break;end while(n)/((1810+-0x15))==2078 do n=(5280962)while x<=(-#"black mess more like white mesa"+(-0x16+182))do n-= n n=(2783340)while((53350/0xc2)-148)>=x do n-= n local n;local i;local r;l[e[h]]={};o=o+d;e=a[o];l[e[h]]=p[e[U]];o=o+d;e=a[o];l[e[b]]=f[e[O]];o=o+d;e=a[o];r=e[k]i={l[r](l[r+1])};n=0;for e=r,e[M]do n=n+d;l[e]=i[n];end o=o+d;e=a[o];o=e[N];break;end while 987==(n)/((-#'notbelugafan was here'+(2951+-0x6e)))do n=(6089472)while((302-0xa3)+-#'free trojan')<x do n-= n local n;l[e[h]]=l[e[N]];o=o+d;e=a[o];n=e[c]l[n]=l[n]()o=o+d;e=a[o];l[e[r]]=l[e[N]];o=o+d;e=a[o];n=e[c]l[n]=l[n]()o=o+d;e=a[o];l[e[b]]=l[e[U]];o=o+d;e=a[o];n=e[i]l[n]=l[n]()o=o+d;e=a[o];l[e[c]]=p[e[t]];o=o+d;e=a[o];l[e[c]]=l[e[U]][e[u]];o=o+d;e=a[o];l[e[r]]=l[e[w]];o=o+d;e=a[o];l[e[i]]=l[e[N]];break end while 1728==(n)/((0x32c2c/59))do local x;local C;local n;l[e[k]]=f[e[w]];o=o+d;e=a[o];l[e[i]]=f[e[t]];o=o+d;e=a[o];n=e[i]l[n](l[n+D])o=o+d;e=a[o];l[e[k]]=p[e[N]];o=o+d;e=a[o];n=e[k]l[n]=l[n]()o=o+d;e=a[o];l[e[r]]=f[e[t]];o=o+d;e=a[o];l[e[i]]=f[e[w]];o=o+d;e=a[o];l[e[h]]=l[e[U]][e[u]];o=o+d;e=a[o];l[e[r]]=l[e[U]]-l[e[B]];o=o+d;e=a[o];l[e[c]][e[w]]=l[e[_]];o=o+d;e=a[o];l[e[b]]=f[e[O]];o=o+d;e=a[o];l[e[r]][e[U]]=l[e[_]];o=o+d;e=a[o];l[e[c]]=p[e[s]];o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];n=e[c]C={l[n](l[n+1])};x=0;for e=n,e[B]do x=x+d;l[e]=C[x];end o=o+d;e=a[o];o=e[U];break end;break;end break;end while 1637==(n)/((0xa3086/207))do n=(3481984)while(-#"Dick"+(0x12b-165))>=x do n-= n local e=e[k]local a,o=y(l[e](C(l,e+d,S)))S=o+e-D local o=0;for e=e,S do o=o+d;l[e]=a[o];end;break;end while 2473==(n)/((0x2100/6))do n=(1012220)while x>(0xc6+-67)do n-= n local i;local h;local n;l[e[r]]=f[e[O]];o=o+d;e=a[o];l[e[b]]=l[e[N]];o=o+d;e=a[o];n=e[c]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[b]]=p[e[O]];o=o+d;e=a[o];l[e[r]]=l[e[s]];o=o+d;e=a[o];n=e[c]h={l[n](l[n+1])};i=0;for e=n,e[B]do i=i+d;l[e]=h[i];end o=o+d;e=a[o];o=e[t];break end while(n)/((0x24f+-56))==1892 do l[e[b]]=l[e[U]]/l[e[_]];break end;break;end break;end break;end break;end while 2449==(n)/((831+(-0x781/113)))do n=(9421839)while x<=((0x31c3-6391)/0x2e)do n-= n n=(9403164)while(0x1950/48)>=x do n-= n n=(3345408)while x<=(-#[[Fuck nigger wank shit dipshit cunt bullshit fuckyou hoe lol]]+(17088/0x59))do n-= n l[e[i]][e[s]]=e[_];break;end while(n)/(((11966-0x1792)-0xbd4))==1152 do n=(3466878)while x>(246+-0x70)do n-= n local e={e,l};e[m][e[D][b]]=e[m][e[d][w]]+e[D][P];break end while(n)/((102459/0x31))==1658 do local e=e[r]l[e](C(l,e+D,S))break end;break;end break;end while(n)/((0x65a9c/129))==2913 do n=(2278090)while(-#"test123"+(34320/0xf0))>=x do n-= n l[e[h]]=l[e[N]]%e[P];break;end while(n)/((0xf082/94))==3478 do n=(3787776)while(-#[[This is working now]]+(364-0xd0))<x do n-= n local d=l[e[u]];if not d then o=o+D;else l[e[r]]=d;o=e[N];end;break end while 1024==(n)/((3802+(-86+-0x11)))do local n;l[e[i]]=f[e[U]];o=o+d;e=a[o];l[e[c]]=l[e[w]];o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[k]]=f[e[s]];o=o+d;e=a[o];l[e[h]]=l[e[t]][e[M]];o=o+d;e=a[o];l[e[h]]=f[e[w]];o=o+d;e=a[o];l[e[c]]=l[e[O]][e[M]];o=o+d;e=a[o];l[e[i]]=l[e[t]]-l[e[u]];o=o+d;e=a[o];l[e[h]]=f[e[s]];o=o+d;e=a[o];l[e[i]]=l[e[t]][e[u]];o=o+d;e=a[o];l[e[k]]=l[e[w]]*l[e[_]];o=o+d;e=a[o];l[e[r]]=l[e[U]][e[g]];o=o+d;e=a[o];l[e[i]]=f[e[w]];o=o+d;e=a[o];l[e[r]]=l[e[w]][e[g]];o=o+d;e=a[o];l[e[h]]=l[e[O]]-l[e[P]];o=o+d;e=a[o];l[e[r]]=f[e[w]];o=o+d;e=a[o];l[e[i]]=l[e[s]][e[P]];o=o+d;e=a[o];l[e[c]]=l[e[N]]*l[e[_]];o=o+d;e=a[o];n=e[r]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];do return end;break end;break;end break;end break;end while 4011==(n)/((0x64ef/(0x7d-114)))do n=(695652)while(409-0x10c)>=x do n-= n n=(6792480)while x<=(-#'dont use it anymore'+(0x152-180))do n-= n local e=e[i];do return l[e],l[e+1]end break;end while(n)/((5158-0xa36))==2670 do n=(2027668)while(0x3020/88)<x do n-= n local i;local n;n=e[r]l[n](C(l,n+D,e[w]))o=o+d;e=a[o];l[e[c]]=e[U];o=o+d;e=a[o];n=e[r];i=l[e[s]];l[n+1]=i;l[n]=i[l[e[_]]];o=o+d;e=a[o];l[e[c]]={};o=o+d;e=a[o];l[e[b]]=e[w];o=o+d;e=a[o];l[e[r]]=e[U];o=o+d;e=a[o];l[e[h]][l[e[O]]]=l[e[P]];o=o+d;e=a[o];l[e[k]]=e[s];o=o+d;e=a[o];l[e[r]]=l[e[O]][e[B]];o=o+d;e=a[o];l[e[h]][l[e[N]]]=l[e[_]];break end while 2164==(n)/(((-105+0x481)+-0x6f))do local r;local n;n=e[c]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];l[e[c]]=e[w];o=o+d;e=a[o];n=e[k];r=l[e[O]];l[n+1]=r;l[n]=r[l[e[u]]];o=o+d;e=a[o];l[e[c]]={};o=o+d;e=a[o];l[e[b]]=e[t];o=o+d;e=a[o];l[e[b]]=e[N];o=o+d;e=a[o];l[e[c]][l[e[s]]]=l[e[B]];o=o+d;e=a[o];l[e[c]]=e[s];o=o+d;e=a[o];l[e[k]]=l[e[N]][e[g]];o=o+d;e=a[o];l[e[i]][l[e[U]]]=l[e[g]];break end;break;end break;end while 3998==(n)/(((18135/0x5d)+-#[[notbelugafan was here]]))do n=(506630)while((-0x11+173)+-#[[fish was here]])>=x do n-= n n=(7405400)while((419-0x110)+-#'print')<x do n-= n local x;local b;local n;l[e[c]]=l[e[t]];o=o+d;e=a[o];l[e[c]]=f[e[N]];o=o+d;e=a[o];n=e[r]l[n]=l[n]()o=o+d;e=a[o];b=e[t];x=l[b]for e=b+1,e[u]do x=x..l[e];end;l[e[i]]=x;o=o+d;e=a[o];n=e[k]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[h]]=l[e[w]];o=o+d;e=a[o];o=e[O];break end while 2428==(n)/((-#[[fish was here]]+(6148-0xc0d)))do l[e[r]][e[t]]=l[e[P]];break end;break;end while(n)/((0xe5+-84))==3494 do n=(288525)while x>(0xbf+-47)do n-= n l[e[r]]=l[e[w]][e[_]];o=o+d;e=a[o];l[e[k]]=f[e[t]];o=o+d;e=a[o];l[e[h]][e[w]]=l[e[u]];o=o+d;e=a[o];l[e[i]]=f[e[O]];o=o+d;e=a[o];l[e[h]][e[t]]=l[e[_]];o=o+d;e=a[o];if l[e[r]]then o=o+d;else o=e[U];end;break end while 3847==(n)/((-#"me big peepee"+(((-9196/0xf2)+-#"Fuck nigger wank shit dipshit cunt bullshit fuckyou hoe lol")+185)))do local e=e[c];do return l[e](C(l,e+1,S))end;break end;break;end break;end break;end break;end break;end break;end while 830==(n)/((-#[[big hard cock]]+(0x1213-2364)))do n=(5344420)while(0x19a-241)>=x do n-= n n=(2056923)while x<=(429-0x110)do n-= n n=(5508711)while x<=(19026/0x7e)do n-= n n=(64476)while((0x182-(-#[[Bong]]+(0x43de/73)))+-#'test')>=x do n-= n n=(43757)while x<=(-#'187 ist die gang'+(0x798/12))do n-= n local n;l[e[k]]=f[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[N]][e[_]];o=o+d;e=a[o];l[e[r]]=e[w];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];if l[e[h]]then o=o+d;else o=e[N];end;break;end while(n)/((-#'Bong'+(322/0xe)))==2303 do n=(9400717)while(184+-0x25)<x do n-= n l[e[r]]=f[e[O]];o=o+d;e=a[o];l[e[k]][e[O]]=e[B];o=o+d;e=a[o];l[e[r]]=f[e[N]];o=o+d;e=a[o];l[e[b]][e[N]]=e[_];o=o+d;e=a[o];do return end;break end while(n)/((0x1be62/34))==2797 do local i;local n;l[e[b]][e[s]]=e[M];o=o+d;e=a[o];l[e[r]]=p[e[U]];o=o+d;e=a[o];n=e[r]l[n]=l[n]()o=o+d;e=a[o];l[e[c]][e[s]]=l[e[g]];o=o+d;e=a[o];l[e[r]]={};o=o+d;e=a[o];l[e[b]]={};o=o+d;e=a[o];l[e[c]][e[w]]=e[B];o=o+d;e=a[o];l[e[r]]=l[e[w]][e[g]];o=o+d;e=a[o];l[e[c]][e[s]]=l[e[u]];o=o+d;e=a[o];n=e[k];i=l[n];for e=n+1,e[N]do T(i,l[e])end;break end;break;end break;end while 27==(n)/((341484/0x8f))do n=(4067888)while(0x165-208)>=x do n-= n local n;l[e[r]]=l[e[w]][e[P]];o=o+d;e=a[o];l[e[h]]=l[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[U]];o=o+d;e=a[o];l[e[b]]=e[N];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];if l[e[i]]then o=o+d;else o=e[t];end;break;end while 1276==(n)/(((6492-0xcc8)+-#'xenny its znugget please respond'))do n=(489552)while x>(((0x3b+-118)+-#[[black mess more like white mesa]])+0xf0)do n-= n local x;local D;local n;local f;local U;local C;l[e[c]][e[N]]=l[e[_]];o=o+d;e=a[o];C=e[h];U={};for e=1,#v do f=v[e];for e=0,#f do n=f[e];D=n[1];x=n[2];if D==l and x>=C then U[x]=D[x];n[1]=U;end;end;end;o=o+d;e=a[o];l[e[r]]=l[e[O]][e[u]];o=o+d;e=a[o];l[e[i]]=l[e[s]][e[P]];o=o+d;e=a[o];l[e[k]]=l[e[t]][e[P]];o=o+d;e=a[o];l[e[b]]=l[e[N]][e[_]];o=o+d;e=a[o];l[e[i]]=p[e[O]];o=o+d;e=a[o];l[e[i]]=l[e[N]][e[M]];o=o+d;e=a[o];l[e[i]]=l[e[t]][e[M]];o=o+d;e=a[o];l[e[k]]=l[e[w]][e[P]];break end while 651==(n)/((158672/(25742/0x7a)))do local r;local n;l[e[i]]=f[e[U]];o=o+d;e=a[o];l[e[b]]=f[e[O]];o=o+d;e=a[o];l[e[k]]={};o=o+d;e=a[o];l[e[b]]=l[e[N]];o=o+d;e=a[o];n=e[h];r=l[n];for e=n+1,e[t]do T(r,l[e])end;break end;break;end break;end break;end while(n)/(((0xe21-1840)+-#[[Dick]]))==3107 do n=(6040848)while(0x888e/227)>=x do n-= n n=(916912)while x<=(33440/0xdc)do n-= n local i;local n;l[e[h]]=f[e[w]];o=o+d;e=a[o];n=e[h];i=l[e[U]];l[n+1]=i;l[n]=i[e[g]];o=o+d;e=a[o];l[e[b]]=e[U];o=o+d;e=a[o];l[e[r]]=l[e[t]][e[P]];o=o+d;e=a[o];n=e[k]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];l[e[r]]=f[e[U]];o=o+d;e=a[o];l[e[b]]=l[e[O]][e[P]];o=o+d;e=a[o];l[e[b]][e[s]]=l[e[B]];o=o+d;e=a[o];do return end;break;end while 3371==(n)/((-0x52+354))do n=(2283831)while(0x142-169)<x do n-= n local h;local n;local r;l[e[k]]=#l[e[w]];o=o+d;e=a[o];l[e[b]]=e[t];o=o+d;e=a[o];l[e[b]]=l[e[N]];o=o+d;e=a[o];r=e[N];n=l[r]for e=r+1,e[_]do n=n..l[e];end;l[e[i]]=n;o=o+d;e=a[o];l[e[c]]=l[e[N]];o=o+d;e=a[o];h=e[i];do return l[h],l[h+1]end o=o+d;e=a[o];o=e[t];break end while(n)/(((0x2092-4208)+-#"Fuck nigger wank shit dipshit cunt bullshit fuckyou hoe lol"))==561 do local o=e[b]l[o](C(l,o+D,e[U]))break end;break;end break;end while(n)/((0x90a+-70))==2692 do n=(2366364)while x<=(0x160-197)do n-= n local h;local n;n=e[r];h=l[e[s]];l[n+1]=h;l[n]=h[e[B]];o=o+d;e=a[o];l[e[k]]=l[e[w]];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[b]]=f[e[N]];o=o+d;e=a[o];l[e[c]]=l[e[s]][e[B]];o=o+d;e=a[o];l[e[c]]=f[e[U]];o=o+d;e=a[o];l[e[k]]=l[e[O]];o=o+d;e=a[o];n=e[i]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];do return l[e[b]]end o=o+d;e=a[o];do return end;break;end while(n)/(((-#[[Bong]]+(222329-0x1b26e))/111))==2364 do n=(1120000)while x>(337-0xb5)do n-= n local c;local n;l[e[i]]=f[e[N]];o=o+d;e=a[o];n=e[r];c=l[e[U]];l[n+1]=c;l[n]=c[e[g]];o=o+d;e=a[o];l[e[i]]=l[e[N]];o=o+d;e=a[o];n=e[k];do return l[n](C(l,n+1,e[N]))end;o=o+d;e=a[o];n=e[b];do return C(l,n,S)end;o=o+d;e=a[o];do return end;break end while(n)/((0x30d40/160))==896 do local o=e[h];local d=l[o];for e=o+1,e[w]do T(d,l[e])end;break end;break;end break;end break;end break;end while 2367==(n)/((1797-0x3a0))do n=(5275032)while(0x55f5/135)>=x do n-= n n=(13167354)while((0x19a-229)+-#'Cock and ball torture')>=x do n-= n n=(3183519)while(0x3024/78)>=x do n-= n l[e[r]]=(not l[e[w]]);break;end while 1461==(n)/((0x114b-2248))do n=(11574807)while x>(15582/0x62)do n-= n local c;local n;l[e[h]]=f[e[t]];o=o+d;e=a[o];l[e[i]]=f[e[U]];o=o+d;e=a[o];l[e[k]]=l[e[w]];o=o+d;e=a[o];n=e[k]l[n]=l[n](l[n+D])o=o+d;e=a[o];n=e[r];S=n+A-1;for e=n,S do c=j[e-n];l[e]=c;end;o=o+d;e=a[o];n=e[k]l[n](C(l,n+D,S))o=o+d;e=a[o];do return end;break end while 3723==(n)/((6241-(-#"This is working now"+(365516/0x74))))do local e=e[h]local a,o=y(l[e](C(l,e+d,S)))S=o+e-D local o=0;for e=e,S do o=o+d;l[e]=a[o];end;break end;break;end break;end while 3858==(n)/((843011/0xf7))do n=(1749558)while(-#"Two trucks having sex"+(0x7604/166))>=x do n-= n if(l[e[b]]==l[e[B]])then o=o+D;else o=e[s];end;break;end while 894==(n)/((-#[[test 123]]+((0x404cb-131716)/0x43)))do n=(483039)while(0x6216/155)<x do n-= n l[e[k]]=(not l[e[O]]);o=o+d;e=a[o];f[e[U]]=l[e[b]];o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];l[e[b]]=f[e[w]];o=o+d;e=a[o];if(l[e[b]]==e[P])then o=o+D;else o=e[O];end;break end while(n)/((318+-0x7f))==2529 do local n;local r;local h,x;local n;l[e[k]]=f[e[U]];o=o+d;e=a[o];l[e[c]]=f[e[N]];o=o+d;e=a[o];n=e[k]h,x=y(l[n](l[n+D]))S=x+n-d r=0;for e=n,S do r=r+d;l[e]=h[r];end;o=o+d;e=a[o];n=e[i]h={l[n](C(l,n+1,S))};r=0;for e=n,e[u]do r=r+d;l[e]=h[r];end o=o+d;e=a[o];o=e[t];break end;break;end break;end break;end while(n)/((-#[[Cock and ball torture]]+(0x1d30-(0x93acd/161))))==1428 do n=(2398050)while(0x810a/199)>=x do n-= n n=(282898)while x<=(6068/0x25)do n-= n local i;local n;n=e[h]l[n](C(l,n+D,e[w]))o=o+d;e=a[o];l[e[h]]=e[s];o=o+d;e=a[o];n=e[r];i=l[e[U]];l[n+1]=i;l[n]=i[l[e[M]]];o=o+d;e=a[o];l[e[h]]={};o=o+d;e=a[o];l[e[h]]=e[w];o=o+d;e=a[o];l[e[k]]=e[U];o=o+d;e=a[o];l[e[h]][l[e[O]]]=l[e[B]];break;end while(n)/((1718-0x367))==334 do n=(2506288)while x>(406-0xf1)do n-= n local w;local r;local x,i;local n;l[e[k]]={};o=o+d;e=a[o];l[e[h]]=f[e[t]];o=o+d;e=a[o];l[e[k]]=l[e[O]];o=o+d;e=a[o];n=e[b]x,i=y(l[n](l[n+D]))S=i+n-d r=0;for e=n,S do r=r+d;l[e]=x[r];end;o=o+d;e=a[o];n=e[c];w=l[n];for e=n+1,S do T(w,l[e])end;break end while(n)/((0x27e2a/170))==2608 do if(l[e[i]]~=e[g])then o=o+D;else o=e[s];end;break end;break;end break;end while 3285==(n)/((-#"I like gargling cum"+(0x655-872)))do n=(5489549)while(0x1a4-253)>=x do n-= n local o=e[b];do return C(l,o,o+e[O])end;break;end while(n)/(((4777-0x981)+-#"looadstring"))==2353 do n=(768420)while(0x19e-246)<x do n-= n local n;l[e[i]]=f[e[U]];o=o+d;e=a[o];l[e[b]]=l[e[U]];o=o+d;e=a[o];n=e[i]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[c]]=f[e[U]];o=o+d;e=a[o];l[e[h]]=l[e[O]][l[e[B]]];o=o+d;e=a[o];l[e[h]]=e[t];o=o+d;e=a[o];if(l[e[c]]==e[B])then o=o+D;else o=e[N];end;break end while 2846==(n)/(((0x2a6-391)+-17))do local x;local s,t;local i;local O;local n;n=e[k];O=l[e[U]];l[n+1]=O;l[n]=O[e[P]];o=o+d;e=a[o];l[e[c]]=f[e[U]];o=o+d;e=a[o];l[e[r]]=l[e[U]][e[g]];o=o+d;e=a[o];i={e,l};i[m][i[D][k]]=i[m][i[d][w]]+i[D][_];o=o+d;e=a[o];n=e[h]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[h]]=f[e[w]];o=o+d;e=a[o];l[e[b]]=l[e[N]][e[B]];o=o+d;e=a[o];i={e,l};i[m][i[D][c]]=i[m][i[d][N]]+i[D][M];o=o+d;e=a[o];n=e[h]s,t=y(l[n](l[n+D]))S=t+n-d x=0;for e=n,S do x=x+d;l[e]=s[x];end;o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,S))break end;break;end break;end break;end break;end break;end while(n)/(((-#"zNugget is dad"+(0x1ce8-3750))+-0x6a))==1514 do n=(12732471)while x<=(-#'test123'+(0x198-220))do n-= n n=(1736111)while(-#"looadstring"+((986-0x212)-270))>=x do n-= n n=(2365200)while(-#"test 123"+(0x5190/116))>=x do n-= n n=(8799072)while x<=(424-0xfe)do n-= n local n;local x;local c;l[e[i]]=f[e[t]];o=o+d;e=a[o];l[e[h]]=l[e[w]];o=o+d;e=a[o];l[e[i]]=e[O];o=o+d;e=a[o];c=e[r]l[c]=l[c](C(l,c+d,e[s]))o=o+d;e=a[o];l[e[k]]=e[t];o=o+d;e=a[o];x=e[w];n=l[x]for e=x+1,e[_]do n=n..l[e];end;l[e[h]]=n;o=o+d;e=a[o];l[e[h]][e[O]]=l[e[u]];break;end while 3624==(n)/((-0x7a+2550))do n=(7378930)while(-#'187 ist die gang'+(-0x76+305))<x do n-= n local o=e[h]local a,e=y(l[o](C(l,o+1,e[w])))S=e+o-1 local e=0;for o=o,S do e=e+d;l[o]=a[e];end;break end while 1831==(n)/(((0x1fd0-(299519/0x49))+-#"Little kids"))do local r=L[e[U]];local n;local d={};n=I({},{__index=function(o,e)local e=d[e];return e[1][e[2]];end,__newindex=function(l,e,o)local e=d[e]e[1][e[2]]=o;end;});for n=1,e[_]do o=o+D;local e=a[o];if e[(-0x24+37)]==321 then d[n-1]={l,e[s]};else d[n-1]={f,e[O]};end;v[#v+1]=d;end;l[e[h]]=z(r,n,p);break end;break;end break;end while 1080==(n)/((2310+(-0x62+-22)))do n=(647460)while(0x124+-119)>=x do n-= n local n;l[e[c]]=f[e[O]];o=o+d;e=a[o];l[e[h]]=f[e[w]];o=o+d;e=a[o];n=e[h]l[n]=l[n](l[n+D])o=o+d;e=a[o];f[e[N]]=l[e[c]];o=o+d;e=a[o];do return end;break;end while 2180==(n)/((-78+0x177))do n=(126806)while(0x185-215)<x do n-= n local n=e[i];local a={};for e=1,#v do local e=v[e];for o=0,#e do local o=e[o];local d=o[1];local e=o[2];if d==l and e>=n then a[e]=d[e];o[1]=a;end;end;end;break end while(n)/((1019+-0x7e))==142 do local n;l[e[c]]=l[e[U]];o=o+d;e=a[o];l[e[h]]=f[e[w]];o=o+d;e=a[o];l[e[c]]=l[e[U]][e[_]];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[c]]=f[e[U]];o=o+d;e=a[o];l[e[i]]=l[e[t]];o=o+d;e=a[o];n=e[i]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[i]]=f[e[s]];o=o+d;e=a[o];l[e[i]]=f[e[O]];o=o+d;e=a[o];l[e[h]]=l[e[w]][e[B]];o=o+d;e=a[o];l[e[b]]=l[e[t]];o=o+d;e=a[o];n=e[k]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];do return end;break end;break;end break;end break;end while 1609==(n)/((-#"fish was here"+(0x8d9-1173)))do n=(1064525)while(-#[[187 ist die gang]]+(4656/0x18))>=x do n-= n n=(8037020)while(-#[[deobfuscated]]+(441-0xfd))>=x do n-= n local n;local x;local i;l[e[r]]=l[e[w]];o=o+d;e=a[o];i=e[b]l[i]=l[i](l[i+D])o=o+d;e=a[o];l[e[h]]=#l[e[s]];o=o+d;e=a[o];l[e[h]]=l[e[s]];o=o+d;e=a[o];l[e[h]]=l[e[U]];o=o+d;e=a[o];l[e[k]]=e[s];o=o+d;e=a[o];l[e[b]]=l[e[t]];o=o+d;e=a[o];x=e[N];n=l[x]for e=x+1,e[P]do n=n..l[e];end;l[e[c]]=n;o=o+d;e=a[o];o=e[s];break;end while(n)/((5134-0xa40))==3202 do n=(1282848)while(440-0x107)<x do n-= n for e=e[h],e[w]do l[e]=nil;end;break end while 322==(n)/((0xfb7+-39))do do return l[e[b]]end break end;break;end break;end while 1925==(n)/(((0x2ee2c/164)-618))do n=(12131232)while x<=(0x858d/191)do n-= n local x;local n;n=e[h]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];l[e[c]]=e[w];o=o+d;e=a[o];n=e[h];x=l[e[N]];l[n+1]=x;l[n]=x[l[e[M]]];o=o+d;e=a[o];l[e[b]]={};o=o+d;e=a[o];l[e[r]]=e[N];o=o+d;e=a[o];l[e[r]]=e[U];o=o+d;e=a[o];l[e[k]][l[e[N]]]=l[e[M]];o=o+d;e=a[o];l[e[b]]=e[O];o=o+d;e=a[o];l[e[h]]=l[e[w]][e[P]];o=o+d;e=a[o];l[e[i]][l[e[O]]]=l[e[u]];break;end while 3543==(n)/((0x1ae1-3457))do n=(1366188)while(0xfd+-73)<x do n-= n local w;local h;local _;local x;local s;local f;local n;n=e[c]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];n=e[b];f={};for e=1,#v do s=v[e];for e=0,#s do x=s[e];_=x[1];h=x[2];if _==l and h>=n then f[h]=_[h];x[1]=f;end;end;end;o=o+d;e=a[o];l[e[b]]=e[U];o=o+d;e=a[o];n=e[k];w=l[e[U]];l[n+1]=w;l[n]=w[l[e[P]]];o=o+d;e=a[o];l[e[r]]={};o=o+d;e=a[o];l[e[k]]=e[O];o=o+d;e=a[o];l[e[k]]=e[N];o=o+d;e=a[o];l[e[i]][l[e[N]]]=l[e[B]];o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[i]]=e[O];break end while 724==(n)/(((1978+-0x4c)+-#'Nitro Activated'))do l[e[h]]=f[e[O]];break end;break;end break;end break;end break;end while 4077==(n)/((0x189f-3180))do n=(5573852)while x<=(0x187-204)do n-= n n=(934268)while(-#[[I like gargling cum]]+(514-(732-0x1a5)))>=x do n-= n n=(4041460)while(-0x3b+((54998/0xd6)+-#'187 ist die gang'))>=x do n-= n l[e[i]]=l[e[w]][e[u]];o=o+d;e=a[o];l[e[h]]=f[e[w]];o=o+d;e=a[o];l[e[h]]=l[e[U]][e[B]];o=o+d;e=a[o];l[e[k]]=f[e[s]];o=o+d;e=a[o];l[e[c]]=f[e[N]];o=o+d;e=a[o];l[e[i]]=l[e[U]][e[g]];o=o+d;e=a[o];if l[e[r]]then o=o+d;else o=e[w];end;break;end while 1985==(n)/(((4259-0x88d)+-#"mee6 what are you doing to my wife"))do n=(2121938)while x>((325+-0x7b)+-#[[dont use it anymore]])do n-= n l[e[b]][l[e[O]]]=e[P];break end while 917==(n)/((-#'This is working now'+(4733-0x960)))do local o=e[h];local d=l[o];for e=o+1,e[s]do T(d,l[e])end;break end;break;end break;end while(n)/((-#[[mee6 what are you doing to my wife]]+(850+-0x5e)))==1294 do n=(2925669)while(0xad7/15)>=x do n-= n if l[e[r]]then o=o+d;else o=e[s];end;break;end while(n)/((-#[[Two trucks having sex]]+(0x9a1-1277)))==2507 do n=(1698950)while x>(497-0x137)do n-= n l[e[h]]=f[e[w]];o=o+d;e=a[o];l[e[k]]=l[e[t]][e[P]];o=o+d;e=a[o];l[e[h]]=f[e[w]];o=o+d;e=a[o];l[e[k]]=l[e[O]][e[u]];o=o+d;e=a[o];if l[e[i]]then o=o+d;else o=e[s];end;break end while 550==(n)/((-94+0xc6f))do local n;n={e,l};n[m][n[D][c]]=n[m][n[d][U]]+n[D][u];o=o+d;e=a[o];f[e[w]]=l[e[i]];o=o+d;e=a[o];l[e[b]]=f[e[O]];o=o+d;e=a[o];l[e[b]]=f[e[t]];o=o+d;e=a[o];if(l[e[i]]<l[e[g]])then o=e[s];else o=o+D;end;break end;break;end break;end break;end while(n)/(((-0xbc+72)+0xdc3))==1636 do n=(2747200)while(44080/0xe8)>=x do n-= n n=(2382016)while(0x1dc-288)>=x do n-= n l[e[b]]=e[s]-l[e[_]];break;end while(n)/((2982-0x5f6))==1636 do n=(4956336)while x>(0x19a-221)do n-= n local n;l[e[c]]=l[e[N]][e[B]];o=o+d;e=a[o];l[e[h]]=l[e[w]][e[P]];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[i]][e[t]]=l[e[P]];o=o+d;e=a[o];for e=e[h],e[t]do l[e]=nil;end;o=o+d;e=a[o];if(l[e[b]]~=e[B])then o=o+D;else o=e[O];end;break end while 2086==(n)/((0x8e1e8/245))do local o=e[k]local n={l[o](C(l,o+1,e[N]))};local a=0;for e=o,e[u]do a=a+d;l[e]=n[a];end break end;break;end break;end while 1717==(n)/((-#[[zNugget is dad]]+(106524/0x42)))do n=(5515118)while(-#'fish was here'+((0x2f5c+-29)/0x3b))>=x do n-= n n=(3193344)while(245+-0x36)<x do n-= n local N;local x;local n;n={l,e};n[D][n[m][i]]=n[d][n[m][u]]+n[D][n[m][O]];o=o+d;e=a[o];f[e[O]]=l[e[b]];o=o+d;e=a[o];l[e[b]]=f[e[w]];o=o+d;e=a[o];x=e[r];N=l[e[U]];l[x+1]=N;l[x]=N[e[B]];o=o+d;e=a[o];l[e[k]]=f[e[s]];o=o+d;e=a[o];l[e[h]]=l[e[w]]-l[e[g]];o=o+d;e=a[o];n={e,l};n[m][n[D][h]]=n[m][n[d][O]]+n[D][P];o=o+d;e=a[o];l[e[i]]=f[e[t]];o=o+d;e=a[o];x=e[c];do return l[x](C(l,x+1,e[s]))end;o=o+d;e=a[o];x=e[i];do return C(l,x,S)end;o=o+d;e=a[o];do return end;break end while(n)/((0xd1b2c/241))==896 do l[e[r]]=z(L[e[N]],nil,p);break end;break;end while 1477==(n)/((0x8518c/146))do n=(7221780)while x>((0x2574/47)+-#[[free trojan]])do n-= n local i;local h,c;local x;local n;l[e[k]]=e[N];o=o+d;e=a[o];n=e[r];x=l[e[t]];l[n+1]=x;l[n]=x[e[P]];o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[U]];o=o+d;e=a[o];n=e[b]h,c=y(l[n](l[n+D]))S=c+n-d i=0;for e=n,S do i=i+d;l[e]=h[i];end;o=o+d;e=a[o];n=e[r]h,c=y(l[n](C(l,n+d,S)))S=c+n-D i=0;for e=n,S do i=i+d;l[e]=h[i];end;o=o+d;e=a[o];n=e[k]l[n](C(l,n+D,S))o=o+d;e=a[o];do return end;break end while(n)/((3929-0x7e5))==3785 do local x;local f;local B;local U;local D;local N;local n;l[e[r]][e[O]]=l[e[_]];o=o+d;e=a[o];n=e[c];N={};for e=1,#v do D=v[e];for e=0,#D do U=D[e];B=U[1];f=U[2];if B==l and f>=n then N[f]=B[f];U[1]=N;end;end;end;o=o+d;e=a[o];l[e[k]]={};o=o+d;e=a[o];n=e[h];x=l[e[O]];l[n+1]=x;l[n]=x[e[_]];o=o+d;e=a[o];l[e[b]]=e[s];o=o+d;e=a[o];l[e[h]]=(e[O]~=0);o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[s]))o=o+d;e=a[o];l[e[i]][e[t]]=l[e[_]];o=o+d;e=a[o];n=e[r];x=l[e[w]];l[n+1]=x;l[n]=x[e[u]];o=o+d;e=a[o];l[e[b]]=e[t];break end;break;end break;end break;end break;end break;end break;end break;end break;end while 86==(n)/((-#"guys Please proceed to translate D to Sinhala"+(0x25de0/148)))do n=(3110800)while x<=(-50+0x155)do n-= n n=(12317984)while(-#"zNugget is dad"+(607-(-107+0x1ca)))>=x do n-= n n=(8745710)while((4604160/0x84)/160)>=x do n-= n n=(5409534)while x<=((555-0x154)+-#"no thanks")do n-= n n=(9570851)while x<=((-0x13+224)+-#'print')do n-= n n=(3529396)while x<=(323+-0x7e)do n-= n n=(8383)while x<=(-#"test 123"+(0x1a6-219))do n-= n local d=e[w];local o=l[d]for e=d+1,e[P]do o=o..l[e];end;l[e[i]]=o;break;end while 101==(n)/((15521/0xbb))do n=(5494610)while((580-0x15e)+-#'mee6 what are you doing to my wife')<x do n-= n local e={e,l};e[m][e[D][h]]=e[m][e[d][s]]+e[D][P];break end while 2629==(n)/((4293-0x89b))do local x;local n;n=e[i]l[n](C(l,n+D,e[w]))o=o+d;e=a[o];l[e[c]]=e[t];o=o+d;e=a[o];n=e[k];x=l[e[t]];l[n+1]=x;l[n]=x[l[e[_]]];o=o+d;e=a[o];l[e[k]]={};o=o+d;e=a[o];l[e[r]]=e[N];o=o+d;e=a[o];l[e[i]]=e[w];o=o+d;e=a[o];l[e[h]][l[e[s]]]=l[e[B]];o=o+d;e=a[o];l[e[c]]=e[O];o=o+d;e=a[o];l[e[b]]=l[e[O]][e[g]];o=o+d;e=a[o];l[e[c]][l[e[w]]]=l[e[B]];break end;break;end break;end while 3887==(n)/((((0x433+-86)+-73)+-#"test 123"))do n=(1607400)while((8440/0x28)+-#[[fish was here]])>=x do n-= n o=e[U];break;end while(n)/((-#"xenny its znugget please respond"+(0x67a10/222)))==855 do n=(672546)while(483-(-#[[big hard cock]]+(671-0x176)))<x do n-= n local n;l[e[r]]=f[e[t]];o=o+d;e=a[o];l[e[k]]=l[e[U]][e[_]];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];for e=e[c],e[N]do l[e]=nil;end;o=o+d;e=a[o];l[e[b]]=f[e[w]];o=o+d;e=a[o];l[e[b]]=l[e[s]][l[e[u]]];o=o+d;e=a[o];if(l[e[c]]==e[M])then o=o+D;else o=e[N];end;break end while 239==(n)/((5654-0xb18))do local b;local x;local n;l[e[k]]=l[e[t]];o=o+d;e=a[o];l[e[k]]={};o=o+d;e=a[o];l[e[i]]=f[e[w]];o=o+d;e=a[o];l[e[i]]=l[e[U]][e[_]];o=o+d;e=a[o];n=e[c];x=e[U];for e=n,x do l[e]=j[e-n];end;o=o+d;e=a[o];l[e[r]]=f[e[w]];o=o+d;e=a[o];l[e[h]]=l[e[O]];o=o+d;e=a[o];l[e[h]]=l[e[O]];o=o+d;e=a[o];n=e[r];b=l[n];for e=n+1,e[w]do T(b,l[e])end;break end;break;end break;end break;end while 3743==(n)/(((-0x6a+539633)/211))do n=(617780)while(30450/0x96)>=x do n-= n n=(123050)while(250+-0x31)>=x do n-= n local d=e[c];local a=l[d]local n=l[d+2];if(n>0)then if(a>l[d+1])then o=e[t];else l[d+3]=a;end elseif(a<l[d+1])then o=e[w];else l[d+3]=a;end break;end while 230==(n)/((116095/0xd9))do n=(8218772)while x>(-#"no thanks"+(15825/(-0x15+96)))do n-= n local x;local s,N;local n;l[e[r]]=f[e[w]];o=o+d;e=a[o];l[e[c]]=e[w];o=o+d;e=a[o];n=e[i]s,N=y(l[n](l[n+D]))S=N+n-d x=0;for e=n,S do x=x+d;l[e]=s[x];end;o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[b]]=f[e[O]];o=o+d;e=a[o];l[e[i]]=f[e[U]];o=o+d;e=a[o];l[e[i]]=l[e[w]];o=o+d;e=a[o];n=e[b]s,N=y(l[n](l[n+D]))S=N+n-d x=0;for e=n,S do x=x+d;l[e]=s[x];end;o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[k]]=f[e[w]];o=o+d;e=a[o];l[e[k]]=l[e[U]];o=o+d;e=a[o];n=e[b]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[c]][l[e[t]]]=l[e[M]];break end while(n)/((6480-0xcbe))==2554 do local n;l[e[c]]=f[e[O]];o=o+d;e=a[o];l[e[k]]=f[e[s]];o=o+d;e=a[o];l[e[h]]=f[e[t]];o=o+d;e=a[o];l[e[h]]=l[e[w]][e[u]];o=o+d;e=a[o];l[e[r]]=-l[e[O]];o=o+d;e=a[o];l[e[r]]=l[e[w]][e[u]];o=o+d;e=a[o];l[e[k]]=-l[e[t]];o=o+d;e=a[o];l[e[h]]=l[e[s]][e[u]];o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,e[s]))o=o+d;e=a[o];l[e[c]]=l[e[U]]*l[e[_]];break end;break;end break;end while 790==(n)/((-#"Hi skid"+(0x1439d/105)))do n=(7953723)while x<=(-105+0x135)do n-= n local h;local n;n=e[b]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[c]][e[s]]=l[e[P]];o=o+d;e=a[o];n=e[r];h=l[e[O]];l[n+1]=h;l[n]=h[e[_]];o=o+d;e=a[o];l[e[i]]=e[U];o=o+d;e=a[o];l[e[b]]=e[N];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[c]][e[N]]=l[e[P]];o=o+d;e=a[o];n=e[r];h=l[e[U]];l[n+1]=h;l[n]=h[e[u]];o=o+d;e=a[o];l[e[c]]=e[t];o=o+d;e=a[o];l[e[r]]=e[w];break;end while 2169==(n)/((0x5ee5e/106))do n=(3851995)while x>((-0x32+267)+-#'deobfuscated')do n-= n local r;local i;local n;l[e[k]]=l[e[s]];o=o+d;e=a[o];l[e[c]]=l[e[t]];o=o+d;e=a[o];n=e[c]i={l[n](C(l,n+1,e[O]))};r=0;for e=n,e[P]do r=r+d;l[e]=i[r];end o=o+d;e=a[o];l[e[b]]=l[e[U]];o=o+d;e=a[o];l[e[k]]=l[e[N]];o=o+d;e=a[o];if not l[e[h]]then o=o+D;else o=e[O];end;break end while 1099==(n)/(((419594/0x77)+-#[[Never gonna give u up]]))do if(l[e[i]]~=l[e[_]])then o=o+D;else o=e[N];end;break end;break;end break;end break;end break;end while(n)/(((-154+0x1d)+0xbd0))==1866 do n=(4662552)while x<=(-#[[test 123]]+(20680/0x5e))do n-= n n=(2415793)while(0x724c/140)>=x do n-= n n=(1366110)while(-#"187 ist die gang"+((0x405-535)-271))>=x do n-= n local n;l[e[i]]=l[e[s]][l[e[P]]];o=o+d;e=a[o];l[e[h]]=f[e[U]];o=o+d;e=a[o];l[e[k]]=l[e[s]];o=o+d;e=a[o];n=e[h]l[n]=l[n](l[n+D])o=o+d;e=a[o];if(l[e[c]]==e[_])then o=o+D;else o=e[U];end;break;end while 430==(n)/((-#'test 123'+(6486-0xce5)))do n=(1652040)while x>((-#[[Cock and ball torture]]+(855033/0x25))/0x6f)do n-= n local x;local t;local r;local b;local k;local n;l[e[c]]=l[e[U]];o=o+d;e=a[o];n=e[h]l[n](C(l,n+D,e[O]))o=o+d;e=a[o];l[e[c]]=f[e[w]];o=o+d;e=a[o];l[e[i]]=l[e[w]][e[u]];o=o+d;e=a[o];n=e[h]l[n](l[n+D])o=o+d;e=a[o];n=e[h];k={};for e=1,#v do b=v[e];for e=0,#b do r=b[e];t=r[1];x=r[2];if t==l and x>=n then k[x]=t[x];r[1]=k;end;end;end;break end while 1412==(n)/((0x1647c/78))do local i;local h,x;local n;l[e[b]]=l[e[t]][e[_]];o=o+d;e=a[o];l[e[k]]=p[e[U]];o=o+d;e=a[o];l[e[b]]=l[e[s]];o=o+d;e=a[o];n=e[b]h,x=y(l[n](l[n+D]))S=x+n-d i=0;for e=n,S do i=i+d;l[e]=h[i];end;o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[r]]=l[e[w]];break end;break;end break;end while(n)/(((196992/0xc0)+-#'I like gargling cum'))==2399 do n=(4433300)while(0x221-335)>=x do n-= n if l[e[h]]then o=o+d;else o=e[N];end;break;end while(n)/((-#'dick cheese'+(-74+0x863)))==2150 do n=(3919856)while(0x225-338)<x do n-= n local r;local w;local n;local x;local c;local O;l[e[h]][e[N]]=l[e[P]];o=o+d;e=a[o];O=e[b];c={};for e=1,#v do x=v[e];for e=0,#x do n=x[e];w=n[1];r=n[2];if w==l and r>=O then c[r]=w[r];n[1]=c;end;end;end;o=o+d;e=a[o];for e=e[k],e[t]do l[e]=nil;end;o=o+d;e=a[o];l[e[k]]=l[e[U]][e[u]];o=o+d;e=a[o];l[e[i]]=l[e[N]][e[P]];o=o+d;e=a[o];l[e[k]]={};break end while(n)/((-41+0x4d7))==3272 do local c;local i;local n;n=e[h]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[b]]={};o=o+d;e=a[o];l[e[h]]=f[e[N]];o=o+d;e=a[o];l[e[k]]=l[e[t]][e[g]];o=o+d;e=a[o];n=e[b];i=e[w];for e=n,i do l[e]=j[e-n];end;o=o+d;e=a[o];l[e[k]]=f[e[O]];o=o+d;e=a[o];n=e[r];c=l[n];for e=n+1,e[N]do T(c,l[e])end;break end;break;end break;end break;end while 3144==(n)/(((-71+(373079/0xef))+-#"test123"))do n=(4524366)while(0x145+-110)>=x do n-= n n=(677690)while x<=(463-(-#[[print]]+(315+-0x3c)))do n-= n local e=e[b];S=e+A-1;for o=e,S do local e=j[o-e];l[o]=e;end;break;end while(n)/((-#'Hi skid'+(464772/0xe7)))==338 do n=(1102185)while x>(513-0x12b)do n-= n local n;l[e[i]]=l[e[w]][e[u]];o=o+d;e=a[o];l[e[r]]=p[e[O]];o=o+d;e=a[o];l[e[c]]=p[e[O]];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];if not l[e[b]]then o=o+D;else o=e[w];end;break end while 315==(n)/((3550+-0x33))do local h;local c;local n;l[e[r]]=e[s];o=o+d;e=a[o];l[e[b]]=e[U];o=o+d;e=a[o];l[e[b]]=#l[e[N]];o=o+d;e=a[o];l[e[i]]=e[s];o=o+d;e=a[o];n=e[k];c=l[n]h=l[n+2];if(h>0)then if(c>l[n+1])then o=e[w];else l[n+3]=c;end elseif(c<l[n+1])then o=e[t];else l[n+3]=c;end break end;break;end break;end while 1399==(n)/(((6711-0xd5a)+-#[[Fuck nigger wank shit dipshit cunt bullshit fuckyou hoe lol]]))do n=(10528362)while x<=((0x3c28/70)+-#[[Bong]])do n-= n local x;local n;n=e[h]l[n](C(l,n+D,e[w]))o=o+d;e=a[o];l[e[h]]=e[s];o=o+d;e=a[o];n=e[b];x=l[e[t]];l[n+1]=x;l[n]=x[l[e[B]]];o=o+d;e=a[o];l[e[r]]={};o=o+d;e=a[o];l[e[b]]=e[O];o=o+d;e=a[o];l[e[b]]=e[w];o=o+d;e=a[o];l[e[c]][l[e[t]]]=l[e[_]];o=o+d;e=a[o];l[e[k]]=e[O];o=o+d;e=a[o];l[e[k]]=l[e[t]][e[_]];o=o+d;e=a[o];l[e[i]][l[e[s]]]=l[e[g]];break;end while(n)/((6164-0xc32))==3461 do n=(8143340)while((-0x68+333)+-#[[deobfuscated]])<x do n-= n l[e[h]]=l[e[N]][e[u]];o=o+d;e=a[o];l[e[c]]=l[e[N]][e[M]];o=o+d;e=a[o];l[e[r]]=l[e[w]][e[u]];o=o+d;e=a[o];l[e[h]]=l[e[s]]-l[e[_]];o=o+d;e=a[o];l[e[b]]=l[e[O]][e[B]];o=o+d;e=a[o];if(l[e[i]]<l[e[M]])then o=e[w];else o=o+D;end;break end while 2785==(n)/(((-#'edp445 what are you doing to my 3 year old son'+(12071-0x17b7))-0xbd6))do local n;l[e[c]][e[N]]=l[e[P]];o=o+d;e=a[o];l[e[k]][e[w]]=e[g];o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];l[e[i]]=f[e[w]];o=o+d;e=a[o];l[e[r]][l[e[s]]]=l[e[P]];o=o+d;e=a[o];do return l[e[c]]end o=o+d;e=a[o];do return end;break end;break;end break;end break;end break;end break;end while 2570==(n)/((6865-0xd86))do n=(104748)while(586-0x164)>=x do n-= n n=(8813259)while x<=(0x20b-299)do n-= n n=(283328)while x<=(-#"Bong"+(0x10f+-46))do n-= n n=(3516332)while(-88+0x133)>=x do n-= n local x;local n;n=e[r]l[n](C(l,n+D,e[O]))o=o+d;e=a[o];l[e[i]]=e[O];o=o+d;e=a[o];n=e[c];x=l[e[s]];l[n+1]=x;l[n]=x[l[e[_]]];o=o+d;e=a[o];l[e[i]]={};o=o+d;e=a[o];l[e[h]]=e[N];o=o+d;e=a[o];l[e[k]]=e[O];o=o+d;e=a[o];l[e[r]][l[e[N]]]=l[e[u]];o=o+d;e=a[o];l[e[c]]=e[t];o=o+d;e=a[o];l[e[h]]=l[e[U]][e[B]];o=o+d;e=a[o];l[e[c]][l[e[N]]]=l[e[B]];break;end while 2066==(n)/((0x702+-92))do n=(6092328)while x>(-65+0x11d)do n-= n l[e[k]]=l[e[s]]-l[e[P]];break end while 2946==(n)/((4172-0x838))do local e=e[b]l[e]=l[e](C(l,e+d,S))break end;break;end break;end while(n)/((((0x2e888/200)+-#'Dick')+-17))==304 do n=(967782)while(0x4560/80)>=x do n-= n local _;local u,P;local x;local b;local n;l[e[r]]=e[w];o=o+d;e=a[o];n=e[h]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[k]]=l[e[w]];o=o+d;e=a[o];l[e[h]]=l[e[O]];o=o+d;e=a[o];l[e[c]]=f[e[w]];o=o+d;e=a[o];n=e[c]l[n]=l[n]()o=o+d;e=a[o];b=e[t];x=l[b]for e=b+1,e[g]do x=x..l[e];end;l[e[k]]=x;o=o+d;e=a[o];l[e[k]]=f[e[U]];o=o+d;e=a[o];l[e[i]]=f[e[N]];o=o+d;e=a[o];l[e[i]]=l[e[s]];o=o+d;e=a[o];n=e[r]u,P=y(l[n](l[n+D]))S=P+n-d _=0;for e=n,S do _=_+d;l[e]=u[_];end;o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[h]]=l[e[t]];o=o+d;e=a[o];l[e[k]]=l[e[w]];o=o+d;e=a[o];b=e[O];x=l[b]for e=b+1,e[B]do x=x..l[e];end;l[e[c]]=x;o=o+d;e=a[o];l[e[h]]=f[e[U]];o=o+d;e=a[o];l[e[i]]=l[e[U]];o=o+d;e=a[o];n=e[i]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[r]]=l[e[U]];o=o+d;e=a[o];o=e[t];break;end while(n)/((1333-0x2d7))==1597 do n=(4096694)while(558-0x14f)<x do n-= n local x;local n;n=e[r]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[h]]=e[U];o=o+d;e=a[o];n=e[c];x=l[e[U]];l[n+1]=x;l[n]=x[l[e[g]]];o=o+d;e=a[o];l[e[h]]={};o=o+d;e=a[o];l[e[h]]=e[s];o=o+d;e=a[o];l[e[c]][l[e[U]]]=e[B];o=o+d;e=a[o];l[e[i]]=e[w];o=o+d;e=a[o];l[e[r]]=l[e[N]][e[g]];o=o+d;e=a[o];l[e[c]][l[e[s]]]=l[e[u]];break end while(n)/((-#"Hi skid"+(0x1379-2519)))==1666 do local x;local n;l[e[c]]=l[e[O]][e[P]];o=o+d;e=a[o];n=e[k];x=l[e[w]];l[n+1]=x;l[n]=x[e[B]];o=o+d;e=a[o];n=e[c]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[r]]=l[e[U]][e[B]];o=o+d;e=a[o];n=e[i];x=l[e[N]];l[n+1]=x;l[n]=x[e[u]];o=o+d;e=a[o];l[e[k]]=e[O];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];n=e[h];x=l[e[U]];l[n+1]=x;l[n]=x[e[P]];break end;break;end break;end break;end while 2743==(n)/((6456-0xcab))do n=(10235048)while(44265/0xc3)>=x do n-= n n=(1631422)while(559-0x14e)>=x do n-= n local c;local n;l[e[r]][e[U]]=l[e[g]];o=o+d;e=a[o];n=e[b];c=l[e[U]];l[n+1]=c;l[n]=c[e[B]];o=o+d;e=a[o];l[e[r]]=e[O];o=o+d;e=a[o];l[e[i]]=(e[U]~=0);o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[i]][e[w]]=l[e[g]];o=o+d;e=a[o];l[e[i]]=l[e[O]][e[g]];o=o+d;e=a[o];l[e[k]]=e[U];o=o+d;e=a[o];l[e[k]]=e[t];o=o+d;e=a[o];l[e[h]]=e[N];break;end while(n)/((((-#[[looadstring]]+(-17+-0x24))+3762)+-#[[test123]]))==442 do n=(2809800)while x>(-#"Dick"+(0x212-300))do n-= n l[e[b]]={};o=o+d;e=a[o];l[e[r]][e[s]]=e[B];o=o+d;e=a[o];l[e[i]][e[O]]=e[M];o=o+d;e=a[o];l[e[b]][e[N]]=e[_];o=o+d;e=a[o];l[e[k]][e[N]]=e[P];o=o+d;e=a[o];l[e[i]][e[N]]=e[P];o=o+d;e=a[o];l[e[b]][e[t]]=e[B];o=o+d;e=a[o];l[e[h]][e[O]]=e[B];o=o+d;e=a[o];l[e[c]][e[w]]=e[u];o=o+d;e=a[o];l[e[r]][e[w]]=e[M];break end while(n)/((0x11af-2297))==1260 do local n;l[e[h]][e[U]]=e[u];o=o+d;e=a[o];l[e[c]]=f[e[w]];o=o+d;e=a[o];l[e[c]]=l[e[s]][e[g]];o=o+d;e=a[o];l[e[r]]=e[U]-l[e[B]];o=o+d;e=a[o];l[e[c]][e[N]]=l[e[P]];o=o+d;e=a[o];l[e[h]]=f[e[N]];o=o+d;e=a[o];l[e[r]]=l[e[t]][e[B]];o=o+d;e=a[o];l[e[b]][e[t]]=l[e[M]];o=o+d;e=a[o];l[e[r]]=f[e[O]];o=o+d;e=a[o];l[e[k]]=l[e[O]][e[_]];o=o+d;e=a[o];l[e[h]][e[U]]=l[e[B]];o=o+d;e=a[o];l[e[b]]={};o=o+d;e=a[o];l[e[b]]=e[t];o=o+d;e=a[o];n=l[e[u]];if not n then o=o+D;else l[e[i]]=n;o=e[O];end;break end;break;end break;end while 2582==(n)/(((-0x31-12)+4025))do n=(3585450)while x<=(-0x23+263)do n-= n local b;local t;local x;local s;local N;local n;l[e[r]]=l[e[O]];o=o+d;e=a[o];n=e[h]l[n](C(l,n+D,e[w]))o=o+d;e=a[o];l[e[k]]=f[e[O]];o=o+d;e=a[o];l[e[r]]=l[e[U]][e[u]];o=o+d;e=a[o];n=e[c]l[n](l[n+D])o=o+d;e=a[o];n=e[i];N={};for e=1,#v do s=v[e];for e=0,#s do x=s[e];t=x[1];b=x[2];if t==l and b>=n then N[b]=t[b];x[1]=N;end;end;end;break;end while(n)/(((0x336d5/155)+-#'mee6 what are you doing to my wife'))==2706 do n=(5159232)while x>(0x9ba6/174)do n-= n local x;local n;l[e[b]]=f[e[w]];o=o+d;e=a[o];n=e[c];x=l[e[w]];l[n+1]=x;l[n]=x[e[_]];o=o+d;e=a[o];n=e[r]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[i]]=l[e[s]][e[P]];o=o+d;e=a[o];n=e[h]l[n](l[n+D])break end while(n)/((0x107b-2152))==2496 do local c;local n;n=e[i];c=l[e[O]];l[n+1]=c;l[n]=c[e[u]];o=o+d;e=a[o];n=e[h]l[n](l[n+D])o=o+d;e=a[o];l[e[r]]=f[e[O]];o=o+d;e=a[o];n=e[b];c=l[e[w]];l[n+1]=c;l[n]=c[e[B]];o=o+d;e=a[o];n=e[r]l[n](l[n+D])o=o+d;e=a[o];l[e[h]]=f[e[s]];o=o+d;e=a[o];n=e[r];c=l[e[s]];l[n+1]=c;l[n]=c[e[P]];o=o+d;e=a[o];n=e[i]l[n](l[n+D])o=o+d;e=a[o];l[e[r]]=f[e[t]];o=o+d;e=a[o];n=e[i];c=l[e[N]];l[n+1]=c;l[n]=c[e[M]];break end;break;end break;end break;end break;end while 58==(n)/((101136/0x38))do n=(1477728)while x<=(0x127+-59)do n-= n n=(42296)while x<=(-#'notbelugafan was here'+(0xb88c/186))do n-= n n=(3568824)while x<=(0x111+-42)do n-= n local a=e[i];local r=e[g];local n=a+2 local a={l[a](l[a+1],l[n])};for e=1,r do l[n+e]=a[e];end;local a=a[1]if a then l[n]=a o=e[O];else o=o+d;end;break;end while 1358==(n)/(((0xaad+-94)+-#'Little kids'))do n=(2515590)while(0x1de8/33)<x do n-= n local o=e[r]l[o]=l[o](C(l,o+d,e[U]))break end while(n)/((-#[[Little kids]]+(646866/0xf2)))==945 do local d=e[h];local o=l[e[w]];l[d+1]=o;l[d]=o[l[e[P]]];break end;break;end break;end while(n)/(((23667/0xa1)+-#"dick cheese"))==311 do n=(10899516)while x<=(0x220-310)do n-= n local o=e[c];local d=l[e[U]];l[o+1]=d;l[o]=d[l[e[u]]];break;end while(n)/((215832/0x44))==3434 do n=(1173731)while(544-0x135)<x do n-= n local d=l[e[g]];if d then o=o+D;else l[e[b]]=d;o=e[N];end;break end while(n)/((0x359+-58))==1469 do if(l[e[r]]==e[B])then o=o+D;else o=e[O];end;break end;break;end break;end break;end while(n)/((0x1197-(4725-0x975)))==672 do n=(7496115)while x<=((0x218-286)+-#"looadstring")do n-= n n=(16067962)while x<=(254+-0x11)do n-= n local e=e[k];do return l[e],l[e+1]end break;end while(n)/((0x1fa2-4100))==4019 do n=(12991860)while x>((0x81b10/31)/72)do n-= n local x;local w,b;local n;l[e[k]]=e[U];o=o+d;e=a[o];l[e[h]]=f[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[s]][e[P]];o=o+d;e=a[o];l[e[r]]=f[e[t]];o=o+d;e=a[o];l[e[h]]=l[e[U]];o=o+d;e=a[o];n=e[i]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[h]]=f[e[s]];o=o+d;e=a[o];l[e[c]]=l[e[t]][e[P]];o=o+d;e=a[o];n=e[c]w,b=y(l[n]())S=b+n-d x=0;for e=n,S do x=x+D;l[e]=w[x];end;o=o+d;e=a[o];n=e[k]l[n](C(l,n+D,S))break end while 3780==(n)/(((37950/0xb)+-#[[me big peepee]]))do local n;local h;local r;l[e[i]]=l[e[t]];o=o+d;e=a[o];l[e[c]]=e[s];o=o+d;e=a[o];r=e[i]h={l[r](C(l,r+1,e[t]))};n=0;for e=r,e[P]do n=n+d;l[e]=h[n];end o=o+d;e=a[o];l[e[c]]=l[e[w]];o=o+d;e=a[o];l[e[b]]=l[e[t]];o=o+d;e=a[o];l[e[c]]=l[e[w]];o=o+d;e=a[o];l[e[b]]=l[e[s]];o=o+d;e=a[o];o=e[U];break end;break;end break;end while 2715==(n)/(((0x3576c/79)+-#'Little kids'))do n=(1455612)while(0x1f2-258)>=x do n-= n local r;local n;l[e[b]]=e[w];o=o+d;e=a[o];n=e[b]l[n](l[n+D])o=o+d;e=a[o];l[e[i]]=f[e[U]];o=o+d;e=a[o];n=e[i];r=l[e[O]];l[n+1]=r;l[n]=r[e[u]];o=o+d;e=a[o];l[e[i]]=l[e[O]];o=o+d;e=a[o];l[e[i]]=l[e[N]];o=o+d;e=a[o];l[e[i]]=l[e[O]];o=o+d;e=a[o];l[e[b]]=l[e[N]];o=o+d;e=a[o];l[e[c]]=l[e[N]];o=o+d;e=a[o];l[e[i]]=l[e[w]];o=o+d;e=a[o];l[e[b]]=l[e[O]];o=o+d;e=a[o];n=e[h]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];l[e[h]]=f[e[s]];o=o+d;e=a[o];l[e[i]]=e[s];o=o+d;e=a[o];n=e[k]l[n](l[n+D])o=o+d;e=a[o];o=e[U];break;end while(n)/((1317+-0x74))==1212 do n=(2131126)while x>(538-0x129)do n-= n local e=e[b]l[e](l[e+D])break end while(n)/((-#"big hard cock"+(-93+0x7ac)))==1147 do local n;l[e[i]]=l[e[O]][e[_]];o=o+d;e=a[o];l[e[r]]=f[e[w]];o=o+d;e=a[o];l[e[r]]=f[e[U]];o=o+d;e=a[o];l[e[i]]=f[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[t]][e[_]];o=o+d;e=a[o];l[e[b]]=-l[e[t]];o=o+d;e=a[o];l[e[r]]=l[e[t]][e[P]];o=o+d;e=a[o];l[e[i]]=l[e[N]][e[P]];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[c]]=l[e[O]]*l[e[g]];break end;break;end break;end break;end break;end break;end break;end while(n)/((7018-0xde2))==3556 do n=(3553506)while x<=(-#[[test 123]]+(0x29c-394))do n-= n n=(8859552)while((0xaa3a/162)+-#"Nitro Activated")>=x do n-= n n=(9515640)while x<=((0x4cc8/78)+-#[[test]])do n-= n n=(1150166)while(0x9178/152)>=x do n-= n n=(1580592)while(0x207-276)>=x do n-= n local n;l[e[i]]=l[e[N]];o=o+d;e=a[o];n=e[b]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[h]]=l[e[U]];o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];l[e[c]][l[e[N]]]=l[e[P]];break;end while(n)/((-#"me big peepee"+(0x1e7f-3920)))==408 do n=(3255006)while x>(33916/0x8b)do n-= n local x;local f;local B;local t;local N;local D;local n;n=e[k];D={};for e=1,#v do N=v[e];for e=0,#N do t=N[e];B=t[1];f=t[2];if B==l and f>=n then D[f]=B[f];t[1]=D;end;end;end;o=o+d;e=a[o];l[e[h]]={};o=o+d;e=a[o];n=e[b];x=l[e[U]];l[n+1]=x;l[n]=x[e[u]];o=o+d;e=a[o];l[e[h]]=e[s];o=o+d;e=a[o];l[e[b]]=(e[w]~=0);o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[r]][e[O]]=l[e[_]];o=o+d;e=a[o];n=e[c];x=l[e[U]];l[n+1]=x;l[n]=x[e[_]];o=o+d;e=a[o];l[e[i]]=e[w];o=o+d;e=a[o];l[e[b]]=e[U];break end while 1374==(n)/((0x25981/65))do local n;l[e[k]]=l[e[t]];o=o+d;e=a[o];l[e[b]]=l[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[t]];o=o+d;e=a[o];n=e[h]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];do return end;break end;break;end break;end while 1082==(n)/((2205-0x476))do n=(3708972)while x<=(289+-0x2b)do n-= n local x;local s,N;local n;l[e[h]]=e[O];o=o+d;e=a[o];n=e[c]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[r]]=l[e[U]];o=o+d;e=a[o];l[e[i]]=l[e[O]];o=o+d;e=a[o];l[e[k]]=f[e[t]];o=o+d;e=a[o];n=e[i]l[n]=l[n]()o=o+d;e=a[o];l[e[k]]=f[e[w]];o=o+d;e=a[o];l[e[b]]=f[e[U]];o=o+d;e=a[o];l[e[h]]=l[e[U]];o=o+d;e=a[o];n=e[k]s,N=y(l[n](l[n+D]))S=N+n-d x=0;for e=n,S do x=x+d;l[e]=s[x];end;break;end while(n)/((3334+-0x6a))==1149 do n=(3191900)while x>(6916/0x1c)do n-= n local o=e[r];local e=e[w];for e=o,e do l[e]=j[e-o];end;break end while 1180==(n)/((-#[[guys Please proceed to translate D to Sinhala]]+(0x15b4-2806)))do l[e[c]]=#l[e[O]];break end;break;end break;end break;end while 3580==(n)/((-93+0xabf))do n=(275710)while(0x33f7/53)>=x do n-= n n=(113148)while x<=((0x24c-(0x87c3/105))+-#[[test 123]])do n-= n l[e[r]]=l[e[U]];o=o+d;e=a[o];l[e[r]]=l[e[O]];o=o+d;e=a[o];l[e[c]]=l[e[N]];o=o+d;e=a[o];l[e[h]]=l[e[t]];o=o+d;e=a[o];l[e[i]]=l[e[s]];o=o+d;e=a[o];l[e[k]]=l[e[N]];o=o+d;e=a[o];l[e[c]]=l[e[U]];o=o+d;e=a[o];l[e[b]]=l[e[N]];break;end while 63==(n)/((3651-(1951+-0x60)))do n=(1009538)while(24000/(266-0xaa))<x do n-= n local d=l[e[_]];if d then o=o+D;else l[e[h]]=d;o=e[O];end;break end while 1306==(n)/((1632-0x35b))do local r;local x,w;local n;l[e[b]]=e[U];o=o+d;e=a[o];l[e[b]]=f[e[U]];o=o+d;e=a[o];l[e[b]]=l[e[N]][e[_]];o=o+d;e=a[o];l[e[h]]=f[e[s]];o=o+d;e=a[o];l[e[i]]=l[e[s]];o=o+d;e=a[o];n=e[c]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[b]]=f[e[O]];o=o+d;e=a[o];l[e[i]]=l[e[N]][e[g]];o=o+d;e=a[o];n=e[c]x,w=y(l[n]())S=w+n-d r=0;for e=n,S do r=r+D;l[e]=x[r];end;o=o+d;e=a[o];n=e[k]l[n](C(l,n+D,S))break end;break;end break;end while(n)/((-#'187 ist die gang'+(37076/0x2e)))==349 do n=(2637250)while x<=((-#'looadstring'+(-0x43+37))+293)do n-= n f[e[N]]=l[e[c]];break;end while 3014==(n)/((1829-0x3ba))do n=(8369690)while x>(0x3f4/(-0x6b+111))do n-= n local i;local n;l[e[h]]=l[e[w]][l[e[B]]];o=o+d;e=a[o];n=e[c];i=l[e[w]];l[n+1]=i;l[n]=i[e[g]];o=o+d;e=a[o];n=e[r]l[n](l[n+D])o=o+d;e=a[o];l[e[r]]=f[e[U]];o=o+d;e=a[o];l[e[h]][l[e[O]]]=e[P];break end while 2755==(n)/((-#[[no thanks]]+(0x17e9-3074)))do if(l[e[h]]<l[e[g]])then o=o+D;else o=e[t];end;break end;break;end break;end break;end break;end while 2976==(n)/((-#[[print]]+((-#[[looadstring]]+(-0x57+3139))+-59)))do n=(2824380)while x<=(0xe484/225)do n-= n n=(2142595)while((-40+0x13e)+-#[[notbelugafan was here]])>=x do n-= n n=(1717716)while x<=(-#"dick cheese"+(0x28b-385))do n-= n local x;local n;n=e[c]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];l[e[b]]=e[O];o=o+d;e=a[o];n=e[r];x=l[e[w]];l[n+1]=x;l[n]=x[l[e[B]]];o=o+d;e=a[o];l[e[h]]={};o=o+d;e=a[o];l[e[k]]=e[w];o=o+d;e=a[o];l[e[h]]=e[s];o=o+d;e=a[o];l[e[r]][l[e[O]]]=l[e[g]];o=o+d;e=a[o];l[e[r]]=e[t];o=o+d;e=a[o];l[e[i]]=l[e[t]][e[g]];o=o+d;e=a[o];l[e[b]][l[e[O]]]=l[e[_]];break;end while 1694==(n)/((-#[[deobfuscated]]+(2163-0x471)))do n=(12235700)while(592-0x150)<x do n-= n l[e[c]]=e[t]-l[e[B]];break end while 3100==(n)/(((0x1f49-4049)+-#"big hard cock"))do local n;l[e[c]]=l[e[t]][l[e[B]]];o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[O]];o=o+d;e=a[o];n=e[c]l[n]=l[n](l[n+D])o=o+d;e=a[o];if(l[e[i]]~=e[M])then o=o+D;else o=e[w];end;break end;break;end break;end while 1547==(n)/((1489+-0x68))do n=(3435920)while x<=(0x8f1c/142)do n-= n local i;local x;local n;l[e[b]]=f[e[N]];o=o+d;e=a[o];l[e[c]]=l[e[N]][l[e[B]]];o=o+d;e=a[o];n=e[b]x={l[n](l[n+1])};i=0;for e=n,e[M]do i=i+d;l[e]=x[i];end o=o+d;e=a[o];l[e[h]]=l[e[U]];o=o+d;e=a[o];l[e[r]]=l[e[N]];o=o+d;e=a[o];l[e[k]]=l[e[O]];o=o+d;e=a[o];l[e[k]]=l[e[w]];break;end while(n)/((-#[[print]]+(492522/(-#'I like gargling cum'+(489-0x130)))))==1160 do n=(1469232)while(-#"zNugget is dad"+(0x1998/24))<x do n-= n local x;local n;l[e[c]][e[N]]=l[e[B]];o=o+d;e=a[o];n=e[r];x=l[e[U]];l[n+1]=x;l[n]=x[e[B]];o=o+d;e=a[o];l[e[k]]=e[w];o=o+d;e=a[o];l[e[b]]=e[s];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[c]][e[t]]=l[e[g]];o=o+d;e=a[o];l[e[i]]=l[e[w]];o=o+d;e=a[o];l[e[k]]=l[e[w]];o=o+d;e=a[o];l[e[r]]={};break end while(n)/(((47700/0x64)+-#"Cock and ball torture"))==3222 do local n;l[e[b]]=l[e[t]];o=o+d;e=a[o];l[e[c]]=l[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[O]];o=o+d;e=a[o];n=e[b]l[n](C(l,n+D,e[N]))o=o+d;e=a[o];do return end;break end;break;end break;end break;end while 765==(n)/(((0xa102e/177)+-#"mee6 what are you doing to my wife"))do n=(543375)while x<=(629-0x16e)do n-= n n=(14809760)while x<=((603-0x146)+-#"187 ist die gang")do n-= n local n;l[e[k]]=f[e[U]];o=o+d;e=a[o];l[e[k]]=l[e[t]][e[M]];o=o+d;e=a[o];l[e[i]]=f[e[N]];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];if(l[e[i]]==e[M])then o=o+D;else o=e[N];end;break;end while(n)/((-#[[mee6 what are you doing to my wife]]+(99112/0x1a)))==3920 do n=(6149198)while x>(0x156+-80)do n-= n local r;local n;n=e[i]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[b]]=e[U];o=o+d;e=a[o];n=e[c];r=l[e[w]];l[n+1]=r;l[n]=r[l[e[u]]];o=o+d;e=a[o];l[e[h]]={};o=o+d;e=a[o];l[e[b]]=e[w];o=o+d;e=a[o];l[e[i]]=e[t];o=o+d;e=a[o];l[e[k]][l[e[s]]]=l[e[g]];o=o+d;e=a[o];l[e[h]]=e[N];o=o+d;e=a[o];l[e[h]]=l[e[N]][e[P]];o=o+d;e=a[o];l[e[i]][l[e[U]]]=l[e[M]];break end while(n)/((-#'Fuck nigger wank shit dipshit cunt bullshit fuckyou hoe lol'+(0xece-1945)))==3443 do local d=e[b];local n=l[d+2];local a=l[d]+n;l[d]=a;if(n>0)then if(a<=l[d+1])then o=e[N];l[d+3]=a;end elseif(a>=l[d+1])then o=e[s];l[d+3]=a;end break end;break;end break;end while 1125==(n)/((0xf18/8))do n=(5543508)while(0x8e50/138)>=x do n-= n local e=e[c];do return l[e](C(l,e+1,S))end;break;end while 1977==(n)/((5675-0xb37))do n=(10205720)while(0x5b18/(0x10d8/49))<x do n-= n local e=e[b]l[e]=l[e](l[e+D])break end while 4018==(n)/(((0x22c80/56)+-#'Bong'))do local e=e[i]local a,o=y(l[e](l[e+D]))S=o+e-d local o=0;for e=e,S do o=o+d;l[e]=a[o];end;break end;break;end break;end break;end break;end break;end while 3014==(n)/((((112365/0x2d)-0x511)+-#[[Never gonna give u up]]))do n=(3030698)while x<=(0xbe0a/(-#'free trojan'+(-0x21+219)))do n-= n n=(8115016)while x<=(53312/0xc4)do n-= n n=(8125977)while x<=(0x155+-72)do n-= n n=(4218687)while x<=(619-((-53+0x19e)+-#"no thanks"))do n-= n l[e[c]]=l[e[U]][e[B]];o=o+d;e=a[o];l[e[r]]=l[e[N]]/e[B];o=o+d;e=a[o];l[e[c]]=f[e[s]];o=o+d;e=a[o];l[e[h]]=l[e[s]][e[M]];o=o+d;e=a[o];l[e[i]]=l[e[s]]/e[g];o=o+d;e=a[o];l[e[b]]=l[e[O]][e[g]];o=o+d;e=a[o];l[e[i]]=l[e[w]][e[g]];o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];l[e[c]]=l[e[s]]-l[e[_]];o=o+d;e=a[o];l[e[i]]=l[e[w]];break;end while(n)/((-#"dont use it anymore"+((0x2ced3b0/67)/0xeb)))==1419 do n=(1844672)while x>(0x3240/48)do n-= n local o=e[i]local n={l[o](C(l,o+1,e[N]))};local a=0;for e=o,e[_]do a=a+d;l[e]=n[a];end break end while(n)/((0x32b+-108))==2624 do local x;local n;n=e[r]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];l[e[c]]=e[s];o=o+d;e=a[o];n=e[i];x=l[e[w]];l[n+1]=x;l[n]=x[l[e[_]]];o=o+d;e=a[o];l[e[r]]={};o=o+d;e=a[o];l[e[h]]=e[w];o=o+d;e=a[o];l[e[h]]=e[s];o=o+d;e=a[o];l[e[c]][l[e[U]]]=l[e[_]];o=o+d;e=a[o];l[e[b]]=e[O];o=o+d;e=a[o];l[e[i]]=l[e[t]][e[B]];o=o+d;e=a[o];l[e[c]][l[e[t]]]=l[e[M]];break end;break;end break;end while(n)/((((0x67ce40c/173)/0xa3)+-#'test123'))==2109 do n=(8945061)while(63450/0xeb)>=x do n-= n local c;local x,h;local n;l[e[r]]=l[e[O]];o=o+d;e=a[o];l[e[r]]=e[O];o=o+d;e=a[o];n=e[b]x,h=y(l[n](l[n+D]))S=h+n-d c=0;for e=n,S do c=c+d;l[e]=x[c];end;o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[k]]=f[e[O]];o=o+d;e=a[o];l[e[i]]=l[e[s]];o=o+d;e=a[o];n=e[b]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[b]]=l[e[s]][l[e[P]]];o=o+d;e=a[o];o=e[w];break;end while(n)/(((0x66891-210047)/74))==3153 do n=(1103568)while((0x24b-303)+-#'big hard cock')<x do n-= n local i;local n;n=e[c];i=l[e[w]];l[n+1]=i;l[n]=i[e[u]];o=o+d;e=a[o];l[e[c]]=e[N];o=o+d;e=a[o];l[e[k]]=(e[O]~=0);o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[c]][e[w]]=l[e[M]];o=o+d;e=a[o];n=e[r];i=l[e[t]];l[n+1]=i;l[n]=i[e[B]];o=o+d;e=a[o];l[e[k]]=e[O];o=o+d;e=a[o];l[e[k]]=(e[U]~=0);o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[b]][e[O]]=l[e[g]];break end while(n)/((0xfb7-2031))==554 do local x;local n;n=e[b]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];l[e[r]]=e[s];o=o+d;e=a[o];n=e[h];x=l[e[O]];l[n+1]=x;l[n]=x[l[e[M]]];o=o+d;e=a[o];l[e[c]]={};o=o+d;e=a[o];l[e[i]]=e[N];o=o+d;e=a[o];l[e[h]]=e[s];o=o+d;e=a[o];l[e[k]][l[e[U]]]=l[e[P]];o=o+d;e=a[o];l[e[r]]=e[t];o=o+d;e=a[o];l[e[k]]=l[e[s]][e[P]];o=o+d;e=a[o];l[e[c]][l[e[N]]]=l[e[_]];break end;break;end break;end break;end while(n)/(((90733/0x29)+-#'Nitro Activated'))==3692 do n=(11317943)while x<=(654-0x17b)do n-= n n=(1614072)while x<=(-#[[187 ist die gang]]+(59534/0xce))do n-= n if(l[e[r]]<l[e[B]])then o=o+D;else o=e[N];end;break;end while 2616==(n)/((1286-0x29d))do n=(1350216)while(43566/(-#[[big hard cock]]+(423-0xfb)))<x do n-= n local d=e[k];local o=l[e[U]];l[d+1]=o;l[d]=o[e[B]];break end while 504==(n)/(((-#'black mess more like white mesa'+(10933-0x157d))-2722))do local a=e[r]local n={l[a](C(l,a+1,S))};local o=0;for e=a,e[B]do o=o+d;l[e]=n[o];end break end;break;end break;end while 3601==(n)/((0xa7476/218))do n=(8420895)while x<=(-#"This is working now"+(0x28f-360))do n-= n local n=e[c];local r=e[P];local a=n+2 local n={l[n](l[n+1],l[a])};for e=1,r do l[a+e]=n[e];end;local n=n[1]if n then l[a]=n o=e[N];else o=o+d;end;break;end while 3819==(n)/(((0x117f-2269)+-#"print"))do n=(6261918)while x>(-#[[zNugget is dad]]+(0x28a-359))do n-= n local x;local t,O;local n;l[e[r]]=f[e[w]];o=o+d;e=a[o];l[e[h]]=f[e[s]];o=o+d;e=a[o];l[e[k]]=e[N];o=o+d;e=a[o];n=e[c]t,O=y(l[n](l[n+D]))S=O+n-d x=0;for e=n,S do x=x+d;l[e]=t[x];end;o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[i]]=f[e[N]];o=o+d;e=a[o];l[e[r]]=f[e[N]];o=o+d;e=a[o];l[e[r]]=l[e[N]];o=o+d;e=a[o];n=e[r]t,O=y(l[n](l[n+D]))S=O+n-d x=0;for e=n,S do x=x+d;l[e]=t[x];end;o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[b]]=f[e[U]];o=o+d;e=a[o];l[e[b]]=l[e[N]];o=o+d;e=a[o];n=e[i];do return l[n](C(l,n+1,e[U]))end;o=o+d;e=a[o];n=e[h];do return C(l,n,S)end;o=o+d;e=a[o];do return end;break end while 1677==(n)/((0x68d62/115))do l[e[i]]=(e[s]~=0);break end;break;end break;end break;end break;end while 3817==(n)/((0x14ef8/108))do n=(6146550)while((0x2bb-407)+-#"test 123")>=x do n-= n n=(9060020)while x<=(-#'dick cheese'+(0x3fe0/56))do n-= n n=(235330)while x<=((-0x3c+384)+-#"guys Please proceed to translate D to Sinhala")do n-= n local e={l,e};e[D][e[m][b]]=e[d][e[m][M]]+e[D][e[m][U]];break;end while 101==(n)/((-#'no thanks'+(0x950+-45)))do n=(797562)while x>(53480/0xbf)do n-= n local n;local x;l[e[i]][e[t]]=l[e[g]];o=o+d;e=a[o];l[e[c]]=f[e[O]];o=o+d;e=a[o];x={l,e};x[D][x[m][c]]=x[d][x[m][B]]+x[D][x[m][O]];o=o+d;e=a[o];l[e[b]]=l[e[N]];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[c]][e[N]]=l[e[u]];o=o+d;e=a[o];l[e[i]]=f[e[w]];o=o+d;e=a[o];l[e[r]]=l[e[N]];o=o+d;e=a[o];l[e[r]]=l[e[O]]-l[e[u]];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[w]))break end while 2253==(n)/((-0x22+388))do local n;l[e[c]]=l[e[w]];o=o+d;e=a[o];l[e[r]]=l[e[s]];o=o+d;e=a[o];l[e[k]]=l[e[N]];o=o+d;e=a[o];l[e[i]]=l[e[t]];o=o+d;e=a[o];l[e[b]]=l[e[s]];o=o+d;e=a[o];n=e[i]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];l[e[r]]=f[e[N]];o=o+d;e=a[o];l[e[h]]=l[e[U]];break end;break;end break;end while 2780==(n)/(((0x19a6-3294)+-#"fish was here"))do n=(13209273)while x<=(-0x37+337)do n-= n local r;local n;n=e[h]l[n](C(l,n+D,e[N]))o=o+d;e=a[o];l[e[k]]=e[t];o=o+d;e=a[o];n=e[c];r=l[e[O]];l[n+1]=r;l[n]=r[l[e[B]]];o=o+d;e=a[o];l[e[c]]={};o=o+d;e=a[o];l[e[i]]=e[w];o=o+d;e=a[o];l[e[b]]=e[O];o=o+d;e=a[o];l[e[i]][l[e[N]]]=l[e[u]];o=o+d;e=a[o];l[e[b]]=e[w];o=o+d;e=a[o];l[e[k]]=l[e[t]][e[u]];o=o+d;e=a[o];l[e[i]][l[e[N]]]=l[e[_]];break;end while(n)/((0x1deb-3886))==3501 do n=(970123)while x>(389+-0x6a)do n-= n local n;l[e[h]]=p[e[s]];o=o+d;e=a[o];l[e[h]]=p[e[s]];o=o+d;e=a[o];l[e[b]]=p[e[U]];o=o+d;e=a[o];l[e[h]]=l[e[w]][e[P]];o=o+d;e=a[o];l[e[c]]=l[e[N]];o=o+d;e=a[o];n=e[c]l[n]=l[n]()o=o+d;e=a[o];l[e[i]]=l[e[U]][e[g]];o=o+d;e=a[o];l[e[r]]=l[e[O]];o=o+d;e=a[o];n=e[r]l[n]=l[n]()o=o+d;e=a[o];l[e[h]]=l[e[s]][e[M]];break end while(n)/((659-0x16e))==3311 do local n;local x;l[e[c]]=#l[e[O]];o=o+d;e=a[o];l[e[h]]=l[e[U]];o=o+d;e=a[o];l[e[c]]=l[e[s]];o=o+d;e=a[o];l[e[i]]=e[U];o=o+d;e=a[o];l[e[h]]=l[e[s]];o=o+d;e=a[o];x=e[s];n=l[x]for e=x+1,e[u]do n=n..l[e];end;l[e[r]]=n;o=o+d;e=a[o];o=e[w];break end;break;end break;end break;end while 3915==(n)/(((-64+0x682)+-#[[xenny its znugget please respond]]))do n=(204222)while x<=(327+-0x28)do n-= n n=(1342370)while x<=(18525/0x41)do n-= n local e=e[c];local o=l[e];for e=e+1,S do T(o,l[e])end;break;end while(n)/((4868-0x99a))==557 do n=(834679)while((0x4a65/65)+-#'require')<x do n-= n l[e[r]]=p[e[O]];break end while(n)/((0xeca+-109))==227 do local n;l[e[k]]=l[e[O]];o=o+d;e=a[o];l[e[k]]=l[e[s]];o=o+d;e=a[o];l[e[h]]=l[e[O]];o=o+d;e=a[o];n=e[i]l[n](C(l,n+D,e[w]))o=o+d;e=a[o];do return end;break end;break;end break;end while(n)/((0x17604/158))==337 do n=(655686)while(48841/0xa9)>=x do n-= n n=(5674992)while x>(0x25b-315)do n-= n local x;local r;local i;local n;l[e[k]]=l[e[N]][l[e[P]]];o=o+d;e=a[o];l[e[h]]=f[e[s]];o=o+d;e=a[o];l[e[h]]=e[U];o=o+d;e=a[o];l[e[c]]=e[N];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];i=e[w];r=l[i]for e=i+1,e[_]do r=r..l[e];end;l[e[c]]=r;o=o+d;e=a[o];l[e[h]]={};o=o+d;e=a[o];l[e[c]]=l[e[t]];o=o+d;e=a[o];n=e[b];x=l[n];for e=n+1,e[N]do T(x,l[e])end;break end while 2476==(n)/((4709-0x971))do local U;local x;local f;local r;local N;local D;local n;l[e[k]][e[O]]=l[e[M]];o=o+d;e=a[o];l[e[b]][e[O]]=l[e[P]];o=o+d;e=a[o];n=e[h];D={};for e=1,#v do N=v[e];for e=0,#N do r=N[e];f=r[1];x=r[2];if f==l and x>=n then D[x]=f[x];r[1]=D;end;end;end;o=o+d;e=a[o];l[e[c]]={};o=o+d;e=a[o];n=e[i];U=l[e[w]];l[n+1]=U;l[n]=U[e[g]];o=o+d;e=a[o];l[e[b]]=e[s];o=o+d;e=a[o];l[e[b]]=(e[t]~=0);o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[h]][e[s]]=l[e[_]];o=o+d;e=a[o];l[e[b]]=l[e[t]];break end;break;end while(n)/((-#"deobfuscated"+(-127+0x5ad)))==499 do n=(980930)while(67280/0xe8)<x do n-= n local o=e[r]local a,e=y(l[o](C(l,o+1,e[O])))S=e+o-1 local e=0;for o=o,S do e=e+d;l[o]=a[e];end;break end while(n)/((-#'looadstring'+(-0x2d+898)))==1165 do local i;local n;l[e[k]]=l[e[w]][e[B]];o=o+d;e=a[o];l[e[c]]=l[e[t]]/e[B];o=o+d;e=a[o];l[e[c]]=l[e[w]][e[_]];o=o+d;e=a[o];l[e[c]]=l[e[w]][e[B]];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[b]][e[w]]=l[e[u]];o=o+d;e=a[o];n=e[r];i=l[e[t]];l[n+1]=i;l[n]=i[e[_]];o=o+d;e=a[o];l[e[b]]=e[w];o=o+d;e=a[o];l[e[r]]=(e[s]~=0);o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,e[N]))break end;break;end break;end break;end break;end break;end break;end break;end while(n)/((-40+0x47f))==2800 do n=(3136716)while(0x14ab4/249)>=x do n-= n n=(868194)while(687-0x174)>=x do n-= n n=(10284849)while(-124+0x1ab)>=x do n-= n n=(8084040)while(0x26b-322)>=x do n-= n n=(96255)while x<=((0x177+-60)+-#"Two trucks having sex")do n-= n n=(4073812)while(0x16c+-72)>=x do n-= n local n;l[e[b]]=l[e[s]][e[g]];o=o+d;e=a[o];l[e[b]]=l[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[t]];o=o+d;e=a[o];l[e[i]]=e[N];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];if l[e[i]]then o=o+d;else o=e[w];end;break;end while(n)/((((0xc01b3/219)-0x741)+-#[[deobfuscated]]))==2363 do n=(9569160)while x>(-#"Dick"+(56727/0xbf))do n-= n l[e[b]]=l[e[N]]%l[e[P]];break end while(n)/((6960-0xdd4))==2798 do if not l[e[k]]then o=o+D;else o=e[w];end;break end;break;end break;end while 115==(n)/((-#"notbelugafan was here"+(0x723-969)))do n=(1670834)while x<=(-0x19+320)do n-= n local n;l[e[i]]=l[e[N]];o=o+d;e=a[o];l[e[c]]=l[e[t]];o=o+d;e=a[o];l[e[r]]=l[e[O]];o=o+d;e=a[o];l[e[k]]=l[e[U]];o=o+d;e=a[o];n=e[i]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];l[e[b]]=f[e[w]];o=o+d;e=a[o];l[e[i]]=l[e[U]];o=o+d;e=a[o];l[e[i]]=l[e[U]];o=o+d;e=a[o];l[e[h]]=l[e[t]];o=o+d;e=a[o];l[e[r]]=l[e[N]];o=o+d;e=a[o];l[e[i]]=l[e[w]];o=o+d;e=a[o];n=e[b]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];l[e[b]]=f[e[w]];o=o+d;e=a[o];l[e[c]]=l[e[t]];o=o+d;e=a[o];l[e[r]]=l[e[U]];o=o+d;e=a[o];l[e[c]]=l[e[w]];o=o+d;e=a[o];l[e[r]]=l[e[N]];o=o+d;e=a[o];l[e[k]]=l[e[U]];o=o+d;e=a[o];n=e[i]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];l[e[b]]=f[e[U]];o=o+d;e=a[o];l[e[c]]=l[e[w]];o=o+d;e=a[o];l[e[i]]=l[e[U]];o=o+d;e=a[o];l[e[h]]=l[e[N]];o=o+d;e=a[o];l[e[b]]=l[e[U]];o=o+d;e=a[o];l[e[i]]=l[e[U]];o=o+d;e=a[o];n=e[c]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];l[e[h]]=f[e[s]];o=o+d;e=a[o];l[e[k]]=l[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[N]];o=o+d;e=a[o];l[e[k]]=l[e[t]];o=o+d;e=a[o];l[e[b]]=l[e[s]];o=o+d;e=a[o];l[e[b]]=l[e[N]];o=o+d;e=a[o];n=e[b]l[n](C(l,n+D,e[U]))o=o+d;e=a[o];l[e[h]]=f[e[U]];o=o+d;e=a[o];l[e[k]]=l[e[N]];o=o+d;e=a[o];l[e[h]]=l[e[O]];o=o+d;e=a[o];l[e[k]]=l[e[s]];o=o+d;e=a[o];l[e[k]]=l[e[O]];o=o+d;e=a[o];l[e[c]]=l[e[O]];o=o+d;e=a[o];n=e[b]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];l[e[k]]=f[e[t]];o=o+d;e=a[o];l[e[i]]=l[e[s]];o=o+d;e=a[o];l[e[h]]=l[e[w]];o=o+d;e=a[o];l[e[r]]=l[e[U]];o=o+d;e=a[o];l[e[c]]=l[e[t]];o=o+d;e=a[o];l[e[b]]=l[e[N]];o=o+d;e=a[o];n=e[b]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];do return end;o=o+d;e=a[o];o=e[w];break;end while(n)/(((134390/0x97)+-#'deobfuscated'))==1903 do n=(4785393)while x>(17464/0x3b)do n-= n local i;local n;l[e[k]]=f[e[N]];o=o+d;e=a[o];n=e[c];i=l[e[O]];l[n+1]=i;l[n]=i[e[_]];o=o+d;e=a[o];n=e[r]l[n](l[n+D])o=o+d;e=a[o];l[e[c]]=f[e[O]];o=o+d;e=a[o];l[e[r]]=f[e[N]];o=o+d;e=a[o];l[e[c]][l[e[O]]]=e[B];o=o+d;e=a[o];do return end;break end while 3701==(n)/((((-80+0xaea)-0x586)+-#"Hi skid"))do local n;l[e[h]]=l[e[N]][e[M]];o=o+d;e=a[o];l[e[c]]=l[e[O]];o=o+d;e=a[o];l[e[r]]=l[e[N]];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];if l[e[i]]then o=o+d;else o=e[O];end;break end;break;end break;end break;end while 2424==(n)/((6738-0xd4b))do n=(9079332)while((0x1a7+-104)+-#"dont use it anymore")>=x do n-= n n=(3584427)while(49170/0xa5)>=x do n-= n if not l[e[i]]then o=o+D;else o=e[t];end;break;end while(n)/(((-#"I like gargling cum"+(44381090/0x82))/0x76))==1239 do n=(1606518)while x>(0x1add/23)do n-= n local c;local x,h;local k;local n;l[e[i]]=e[t];o=o+d;e=a[o];n=e[r];k=l[e[w]];l[n+1]=k;l[n]=k[e[g]];o=o+d;e=a[o];l[e[b]]=f[e[w]];o=o+d;e=a[o];l[e[r]]=l[e[O]];o=o+d;e=a[o];n=e[b]x,h=y(l[n](l[n+D]))S=h+n-d c=0;for e=n,S do c=c+d;l[e]=x[c];end;o=o+d;e=a[o];n=e[b]x,h=y(l[n](C(l,n+d,S)))S=h+n-D c=0;for e=n,S do c=c+d;l[e]=x[c];end;o=o+d;e=a[o];n=e[i]l[n](C(l,n+D,S))o=o+d;e=a[o];do return end;break end while 2682==(n)/(((1288-0x28f)+-#[[mee6 what are you doing to my wife]]))do local x;local n;n=e[c]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];l[e[r]]=e[O];o=o+d;e=a[o];n=e[i];x=l[e[U]];l[n+1]=x;l[n]=x[l[e[_]]];o=o+d;e=a[o];l[e[h]]={};o=o+d;e=a[o];l[e[h]]=e[w];o=o+d;e=a[o];l[e[i]]=e[O];o=o+d;e=a[o];l[e[b]][l[e[U]]]=l[e[B]];o=o+d;e=a[o];l[e[h]]=e[O];o=o+d;e=a[o];l[e[k]]=l[e[s]][e[u]];o=o+d;e=a[o];l[e[i]][l[e[U]]]=l[e[u]];break end;break;end break;end while 3548==(n)/((-#"looadstring"+(0x3c3c0/96)))do n=(4758488)while(43645/0x91)>=x do n-= n local i;local n;l[e[k]]=f[e[O]];o=o+d;e=a[o];n=e[b];i=l[e[N]];l[n+1]=i;l[n]=i[e[g]];o=o+d;e=a[o];n=e[c]l[n](l[n+D])o=o+d;e=a[o];l[e[r]]=f[e[O]];o=o+d;e=a[o];l[e[k]]=f[e[U]];o=o+d;e=a[o];l[e[r]]=l[e[w]][e[P]];o=o+d;e=a[o];l[e[h]][e[O]]=l[e[g]];o=o+d;e=a[o];do return end;break;end while 1708==(n)/((-0x46+2856))do n=(746739)while(0x283-341)<x do n-= n local h;local n;l[e[c]]=(e[t]~=0);o=o+d;e=a[o];f[e[N]]=l[e[b]];o=o+d;e=a[o];l[e[r]]=f[e[U]];o=o+d;e=a[o];n=e[i];h=l[e[O]];l[n+1]=h;l[n]=h[e[M]];o=o+d;e=a[o];n=e[c]l[n](l[n+D])o=o+d;e=a[o];do return end;break end while(n)/((0x1841-3136))==243 do local x;local _;local n;l[e[k]]=l[e[s]][e[B]];o=o+d;e=a[o];n=e[r]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[i]]=f[e[w]];o=o+d;e=a[o];l[e[k]]=l[e[s]][e[u]];o=o+d;e=a[o];n=e[b]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[r]]=f[e[O]];o=o+d;e=a[o];l[e[i]]=l[e[s]][e[B]];o=o+d;e=a[o];n=e[k]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[c]]=f[e[w]];o=o+d;e=a[o];l[e[k]]=#l[e[U]];o=o+d;e=a[o];l[e[k]]=e[s];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[c]]=l[e[N]];o=o+d;e=a[o];l[e[r]]=f[e[U]];o=o+d;e=a[o];l[e[b]]=#l[e[s]];o=o+d;e=a[o];l[e[k]]=e[w];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];l[e[i]]=l[e[w]];o=o+d;e=a[o];l[e[k]]=f[e[N]];o=o+d;e=a[o];l[e[i]]=#l[e[s]];o=o+d;e=a[o];l[e[r]]=e[t];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[c]]=l[e[U]];o=o+d;e=a[o];_=e[O];x=l[_]for e=_+1,e[P]do x=x..l[e];end;l[e[r]]=x;o=o+d;e=a[o];l[e[i]]=l[e[N]];o=o+d;e=a[o];l[e[h]]=l[e[t]];o=o+d;e=a[o];_=e[w];x=l[_]for e=_+1,e[P]do x=x..l[e];end;l[e[r]]=x;o=o+d;e=a[o];o=e[t];break end;break;end break;end break;end break;end while 3207==(n)/(((0x323be/63)+-#[[Fuck nigger wank shit dipshit cunt bullshit fuckyou hoe lol]]))do n=(2218212)while x<=(-#"no thanks"+(0x1b7+-121))do n-= n n=(3072560)while(728-0x1a6)>=x do n-= n n=(3015495)while(647-(755-0x19c))>=x do n-= n l[e[c]]=f[e[O]];o=o+d;e=a[o];l[e[b]]=l[e[U]][e[M]];o=o+d;e=a[o];l[e[i]]=l[e[N]][l[e[M]]];o=o+d;e=a[o];l[e[i]]=f[e[O]];o=o+d;e=a[o];l[e[r]]=l[e[s]][e[P]];o=o+d;e=a[o];l[e[k]][l[e[w]]]=l[e[M]];o=o+d;e=a[o];do return l[e[i]]end o=o+d;e=a[o];do return end;break;end while(n)/((-#'187 ist die gang'+(0x1969-3298)))==945 do n=(8791335)while(686-0x17d)<x do n-= n local n;local x;local i;l[e[r]][l[e[s]]]=l[e[M]];o=o+d;e=a[o];l[e[r]]=f[e[U]];o=o+d;e=a[o];l[e[r]]=l[e[O]][l[e[B]]];o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];l[e[k]]=l[e[U]];o=o+d;e=a[o];l[e[h]]=e[U];o=o+d;e=a[o];i=e[k]l[i]=l[i](C(l,i+d,e[U]))o=o+d;e=a[o];x=e[t];n=l[x]for e=x+1,e[B]do n=n..l[e];end;l[e[c]]=n;o=o+d;e=a[o];o=e[U];break end while(n)/((-#'deobfuscated'+((-5640/0x5e)+4041)))==2215 do local r;local n;n=e[h];r=l[e[N]];l[n+1]=r;l[n]=r[e[_]];o=o+d;e=a[o];n=e[b]l[n](l[n+D])o=o+d;e=a[o];l[e[i]]=p[e[w]];o=o+d;e=a[o];l[e[i]]=e[N];o=o+d;e=a[o];n=e[b]l[n](l[n+D])o=o+d;e=a[o];o=e[O];break end;break;end break;end while 3860==(n)/((-#"zNugget is dad"+(-120+0x3a2)))do n=(442582)while x<=(0x158+-37)do n-= n local D;local x;local f;local c;local O;local s;local n;l[e[k]][e[w]]=l[e[_]];o=o+d;e=a[o];n=e[r];s={};for e=1,#v do O=v[e];for e=0,#O do c=O[e];f=c[1];x=c[2];if f==l and x>=n then s[x]=f[x];c[1]=s;end;end;end;o=o+d;e=a[o];n=e[i];D=l[e[U]];l[n+1]=D;l[n]=D[e[B]];o=o+d;e=a[o];l[e[b]]=e[N];o=o+d;e=a[o];l[e[h]]=(e[N]~=0);o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[b]][e[w]]=l[e[M]];o=o+d;e=a[o];l[e[b]]=l[e[N]][e[B]];o=o+d;e=a[o];for e=e[k],e[N]do l[e]=nil;end;o=o+d;e=a[o];l[e[k]]=(e[t]~=0);break;end while(n)/(((0x7cd60/232)+-#"amena jumping"))==202 do n=(1350140)while(((0x54+-121)+0x164)+-#[[free trojan]])<x do n-= n local n;local h;local i;l[e[b]]=l[e[w]][e[B]];o=o+d;e=a[o];i=e[k]h={l[i](C(l,i+1,e[N]))};n=0;for e=i,e[u]do n=n+d;l[e]=h[n];end o=o+d;e=a[o];l[e[c]]=f[e[O]];o=o+d;e=a[o];l[e[b]]=f[e[N]];o=o+d;e=a[o];l[e[c]]=f[e[t]];o=o+d;e=a[o];l[e[c]]=l[e[w]][e[P]];o=o+d;e=a[o];l[e[k]]=-l[e[s]];o=o+d;e=a[o];l[e[c]]=l[e[w]][e[g]];o=o+d;e=a[o];l[e[r]]=-l[e[w]];o=o+d;e=a[o];l[e[c]]=l[e[U]][e[_]];break end while(n)/(((1448+-0x1d)+-127))==1045 do l[e[i]]=l[e[w]][e[P]];o=o+d;e=a[o];l[e[c]]=l[e[U]];o=o+d;e=a[o];l[e[b]]=l[e[U]];o=o+d;e=a[o];l[e[k]]=l[e[s]][e[_]];o=o+d;e=a[o];if not l[e[h]]then o=o+D;else o=e[w];end;break end;break;end break;end break;end while 2622==(n)/((-#'Little kids'+(0x374+-27)))do n=(7350800)while x<=((0x2a8-356)+-#'deobfuscated')do n-= n n=(982770)while((-42+0x2f0)-400)>=x do n-= n local n;l[e[c]]=l[e[N]][e[_]];o=o+d;e=a[o];l[e[b]]=l[e[U]][e[B]];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[r]]=f[e[U]];o=o+d;e=a[o];l[e[h]]=l[e[U]][e[M]];o=o+d;e=a[o];l[e[k]]=l[e[s]][e[P]];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[O]][e[M]];o=o+d;e=a[o];l[e[c]]=l[e[U]][e[M]];break;end while(n)/((0xb4a80/(-0x3c+252)))==255 do n=(1421321)while(-#[[print]]+(0x2bd-385))<x do n-= n local r;local x,O;local n;l[e[i]]=l[e[w]][e[_]];o=o+d;e=a[o];l[e[b]]=p[e[s]];o=o+d;e=a[o];l[e[k]]=l[e[w]];o=o+d;e=a[o];n=e[h]x,O=y(l[n](l[n+D]))S=O+n-d r=0;for e=n,S do r=r+d;l[e]=x[r];end;o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[c]]=l[e[U]];o=o+d;e=a[o];o=e[w];break end while(n)/((0xda0-1761))==823 do l[e[h]]=l[e[t]]*l[e[u]];break end;break;end break;end while 3910==(n)/((-#'me big peepee'+(0x7e1+-124)))do n=(3561180)while x<=((0x7c80/96)+-#'dont use it anymore')do n-= n l[e[i]][l[e[O]]]=l[e[_]];break;end while(n)/(((0x1add8/56)+-#"dont use it anymore"))==1830 do n=(6496968)while((0x15b7/17)+-#[[fish was here]])<x do n-= n local x;local n;n=e[h]l[n](C(l,n+D,e[O]))o=o+d;e=a[o];l[e[r]]=e[N];o=o+d;e=a[o];n=e[k];x=l[e[s]];l[n+1]=x;l[n]=x[l[e[M]]];o=o+d;e=a[o];l[e[r]]={};o=o+d;e=a[o];l[e[i]]=e[O];o=o+d;e=a[o];l[e[r]]=e[U];o=o+d;e=a[o];l[e[i]][l[e[N]]]=l[e[_]];o=o+d;e=a[o];l[e[b]]=e[t];o=o+d;e=a[o];l[e[c]]=l[e[U]][e[P]];o=o+d;e=a[o];l[e[k]][l[e[N]]]=l[e[g]];break end while(n)/((-46+0x683))==4008 do local c;local x;local r;local h;local U;local n;l[e[b]]=f[e[O]];o=o+d;e=a[o];l[e[i]]=l[e[s]][e[g]];o=o+d;e=a[o];n=e[i]l[n](C(l,n+D,e[N]))o=o+d;e=a[o];l[e[i]]=f[e[w]];o=o+d;e=a[o];l[e[b]]=l[e[t]][e[u]];o=o+d;e=a[o];n=e[k]l[n](l[n+D])o=o+d;e=a[o];n=e[k];U={};for e=1,#v do h=v[e];for e=0,#h do r=h[e];x=r[1];c=r[2];if x==l and c>=n then U[c]=x[c];r[1]=U;end;end;end;break end;break;end break;end break;end break;end break;end while 2502==(n)/((36435/0x69))do n=(470255)while(741-((930-0x1f9)+-#'dick cheese'))>=x do n-= n n=(1736199)while(0x2ec-427)>=x do n-= n n=(167710)while x<=(53424/0xa8)do n-= n n=(1649552)while x<=(0x3db8/50)do n-= n local n;local r;local i;i=e[s];r=l[i]for e=i+1,e[P]do r=r..l[e];end;l[e[k]]=r;o=o+d;e=a[o];l[e[c]]=f[e[U]];o=o+d;e=a[o];l[e[k]]=l[e[w]];o=o+d;e=a[o];l[e[h]]=f[e[N]];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[k]]=l[e[t]];break;end while 524==(n)/((0x18c1-3189))do n=(127865)while x>(-#'me big peepee'+(15510/0x2f))do n-= n local n;l[e[h]]=l[e[N]];o=o+d;e=a[o];n=e[k]l[n]=l[n]()o=o+d;e=a[o];l[e[i]]=l[e[s]];o=o+d;e=a[o];n=e[c]l[n]=l[n]()o=o+d;e=a[o];l[e[i]]=f[e[N]];o=o+d;e=a[o];l[e[b]]=l[e[s]];o=o+d;e=a[o];n=e[b]l[n]=l[n](l[n+D])o=o+d;e=a[o];if(l[e[r]]==e[_])then o=o+D;else o=e[O];end;break end while 107==(n)/((-0x3b+1254))do local n;l[e[k]]=l[e[O]][l[e[g]]];o=o+d;e=a[o];l[e[i]]=f[e[O]];o=o+d;e=a[o];l[e[h]]=l[e[U]];o=o+d;e=a[o];n=e[r]l[n]=l[n](l[n+D])o=o+d;e=a[o];if(l[e[r]]~=e[g])then o=o+D;else o=e[w];end;break end;break;end break;end while(n)/((-#[[Nitro Activated]]+(0x2d8-403)))==541 do n=(8715776)while(-#[[cum fuck]]+(0x2cf-392))>=x do n-= n l[e[b]]=e[U];o=o+d;e=a[o];l[e[k]]=e[N];o=o+d;e=a[o];l[e[k]]=e[N];o=o+d;e=a[o];l[e[k]]=e[w];o=o+d;e=a[o];for e=e[h],e[N]do l[e]=nil;end;break;end while(n)/((((0x1e27-3883)+-0x78)+-#[[Dick]]))==2348 do n=(66930)while x>(6720/0x15)do n-= n l[e[r]]=l[e[O]];break end while 582==(n)/((312-0xc5))do local n=e[b];local a={};for e=1,#v do local e=v[e];for o=0,#e do local e=e[o];local d=e[1];local o=e[2];if d==l and o>=n then a[o]=d[o];e[1]=a;end;end;end;break end;break;end break;end break;end while(n)/((0x4bc+-75))==1527 do n=(4030692)while(736-((9482/0x16)+-#'This is working now'))>=x do n-= n n=(13397570)while(54418/0xa9)>=x do n-= n do return l[e[h]]();end;break;end while 3362==(n)/((0x1f66-4053))do n=(3728522)while x>(0x2f7-436)do n-= n l[e[k]]=l[e[t]]/e[u];break end while 4066==(n)/(((1939-(0x3d748/248))+-#[[require]]))do local n;l[e[r]]=l[e[t]][l[e[u]]];o=o+d;e=a[o];l[e[c]]=f[e[N]];o=o+d;e=a[o];l[e[c]]=l[e[s]];o=o+d;e=a[o];n=e[b]l[n]=l[n](l[n+D])o=o+d;e=a[o];if(l[e[k]]==e[g])then o=o+D;else o=e[w];end;break end;break;end break;end while(n)/((4675-0x949))==1754 do n=(4921725)while(699-0x176)>=x do n-= n local x;local r;local n;n=e[c];r=l[e[O]];l[n+1]=r;l[n]=r[e[B]];o=o+d;e=a[o];l[e[i]]=#l[e[N]];o=o+d;e=a[o];l[e[h]]=l[e[s]]-l[e[u]];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[b]]=l[e[N]];o=o+d;e=a[o];r=e[s];x=l[r]for e=r+1,e[_]do x=x..l[e];end;l[e[h]]=x;break;end while 2395==(n)/((0x1083-2172))do n=(2926922)while x>(-#'loadstring'+(0x5940/68))do n-= n local o=e[h]local a,e=y(l[o]())S=e+o-d local e=0;for o=o,S do e=e+D;l[o]=a[e];end;break end while(n)/(((112709/0x29)+-#[[free trojan]]))==1069 do l[e[k]]=(e[U]~=0);o=o+d;e=a[o];f[e[O]]=l[e[b]];o=o+d;e=a[o];for e=e[h],e[U]do l[e]=nil;end;o=o+d;e=a[o];f[e[w]]=l[e[h]];o=o+d;e=a[o];do return end;break end;break;end break;end break;end break;end while 815==(n)/((0x4ec-(78545/0x73)))do n=(825058)while(-61+0x18a)>=x do n-= n n=(3380884)while x<=(-#"Nitro Activated"+(0x2058/24))do n-= n n=(11273126)while(-#[[Dick]]+(-0x37+387))>=x do n-= n local c;local t,x;local n;l[e[h]]=l[e[w]];o=o+d;e=a[o];l[e[k]]=e[U];o=o+d;e=a[o];n=e[i]t,x=y(l[n](l[n+D]))S=x+n-d c=0;for e=n,S do c=c+d;l[e]=t[c];end;o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[b]]=l[e[U]];o=o+d;e=a[o];l[e[b]]=f[e[U]];o=o+d;e=a[o];l[e[r]]=l[e[w]];o=o+d;e=a[o];n=e[r]t,x=y(l[n](l[n+D]))S=x+n-d c=0;for e=n,S do c=c+d;l[e]=t[c];end;o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[b]]=f[e[w]];o=o+d;e=a[o];l[e[r]]=l[e[s]];o=o+d;e=a[o];n=e[b]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[b]][l[e[O]]]=l[e[B]];break;end while(n)/((0x8364a/187))==3917 do n=(1311518)while x>(-#[[no thanks]]+(0x2ed-411))do n-= n l[e[i]]=l[e[w]][e[M]];o=o+d;e=a[o];l[e[i]]=l[e[s]][e[B]];o=o+d;e=a[o];l[e[i]]=l[e[U]]-l[e[P]];o=o+d;e=a[o];l[e[h]]=l[e[N]][e[B]];o=o+d;e=a[o];l[e[r]]=e[s];o=o+d;e=a[o];l[e[c]]=f[e[t]];o=o+d;e=a[o];l[e[k]]=f[e[s]];o=o+d;e=a[o];l[e[h]]=l[e[t]];o=o+d;e=a[o];l[e[k]]=l[e[O]]-l[e[B]];o=o+d;e=a[o];l[e[r]]=l[e[w]][e[P]];break end while 691==(n)/((-#[[Cock and ball torture]]+(0xf5d-2014)))do local h;local n;n=e[k]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];l[e[k]]=e[s];o=o+d;e=a[o];n=e[r];h=l[e[s]];l[n+1]=h;l[n]=h[l[e[P]]];o=o+d;e=a[o];l[e[r]]={};o=o+d;e=a[o];l[e[c]]=e[O];o=o+d;e=a[o];l[e[k]]=e[t];o=o+d;e=a[o];l[e[r]][l[e[t]]]=l[e[M]];o=o+d;e=a[o];l[e[i]]=e[U];o=o+d;e=a[o];l[e[k]]=l[e[U]][e[M]];o=o+d;e=a[o];l[e[i]][l[e[O]]]=l[e[B]];break end;break;end break;end while 1027==(n)/((6604-0xcf0))do n=(10751986)while x<=(754-0x1a7)do n-= n local n;l[e[c]]=l[e[O]][l[e[_]]];o=o+d;e=a[o];l[e[c]]=f[e[w]];o=o+d;e=a[o];l[e[r]]=l[e[w]];o=o+d;e=a[o];n=e[c]l[n]=l[n](l[n+D])o=o+d;e=a[o];if(l[e[h]]~=e[B])then o=o+D;else o=e[w];end;break;end while(n)/((0x1b0b-3514))==3154 do n=(956340)while x>((0x4a98/56)+-#"no thanks")do n-= n local f;local x;local U;local B,N;local n;l[e[b]]=l[e[O]];o=o+d;e=a[o];l[e[c]]=e[w];o=o+d;e=a[o];n=e[b]B,N=y(l[n](l[n+D]))S=N+n-d U=0;for e=n,S do U=U+d;l[e]=B[U];end;o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];l[e[b]]=l[e[s]];o=o+d;e=a[o];x={e,l};x[m][x[D][i]]=x[m][x[d][s]]+x[D][_];o=o+d;e=a[o];n=e[k]l[n]=l[n](l[n+D])o=o+d;e=a[o];n=e[r];f=l[e[t]];l[n+1]=f;l[n]=f[e[g]];o=o+d;e=a[o];l[e[r]]=e[O];o=o+d;e=a[o];l[e[i]]=e[t];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[s]))o=o+d;e=a[o];l[e[c]]=l[e[t]];o=o+d;e=a[o];o=e[O];break end while 540==(n)/(((0xf500/35)+-#'Cock and ball torture'))do local d=e[b];local o=l[e[O]];l[d+1]=o;l[d]=o[e[B]];break end;break;end break;end break;end while(n)/((780-0x1ba))==2441 do n=(4337340)while(691-((0x332-431)+-#'xenny its znugget please respond'))>=x do n-= n n=(20995)while(48430/0x91)>=x do n-= n local n;l[e[k]]=l[e[N]];o=o+d;e=a[o];n=e[c]l[n](C(l,n+D,e[w]))o=o+d;e=a[o];l[e[c]]=f[e[N]];o=o+d;e=a[o];l[e[i]]=e[N];o=o+d;e=a[o];n=e[b]l[n](l[n+D])o=o+d;e=a[o];o=e[t];break;end while 247==(n)/((0x76+-33))do n=(1456581)while x>(778-(0x3d0-533))do n-= n f[e[w]]=l[e[r]];o=o+d;e=a[o];l[e[h]]=f[e[N]];o=o+d;e=a[o];l[e[b]]=f[e[U]];o=o+d;e=a[o];l[e[c]][l[e[O]]]=e[M];o=o+d;e=a[o];do return end;break end while 1497==(n)/((2073-0x44c))do l[e[b]][e[O]]=l[e[_]];break end;break;end break;end while(n)/((5426-0xaac))==1610 do n=(6463053)while(440+-0x66)>=x do n-= n n=(60648)while(-#"Cock and ball torture"+(7876/0x16))<x do n-= n local h;local n;l[e[i]]={};o=o+d;e=a[o];l[e[r]][e[N]]=e[M];o=o+d;e=a[o];l[e[c]]=l[e[w]][e[g]];o=o+d;e=a[o];l[e[k]][e[s]]=l[e[u]];o=o+d;e=a[o];n=e[k];h=l[n];for e=n+1,e[U]do T(h,l[e])end;break end while(n)/((-#[[black mess more like white mesa]]+(0xcf5-1690)))==38 do local n;n=e[i]l[n](C(l,n+D,e[w]))o=o+d;e=a[o];l[e[c]]=l[e[t]][e[_]];o=o+d;e=a[o];l[e[c]]=l[e[t]][e[P]];o=o+d;e=a[o];l[e[b]]=l[e[s]][e[B]];o=o+d;e=a[o];l[e[k]]=p[e[U]];o=o+d;e=a[o];n=e[h]l[n]=l[n]()o=o+d;e=a[o];l[e[c]]=l[e[U]][e[B]];o=o+d;e=a[o];l[e[i]]=e[O];o=o+d;e=a[o];l[e[c]]=e[O];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[t]))break end;break;end while 2787==(n)/((-#[[test]]+(236946/0x66)))do n=(7766624)while(0x2e9-406)<x do n-= n l[e[r]]=-l[e[t]];break end while(n)/((0x17aa-3080))==2608 do local x;local N,U;local w;local k;local n;l[e[i]]=f[e[s]];o=o+d;e=a[o];l[e[b]]=f[e[s]];o=o+d;e=a[o];l[e[i]]=l[e[t]];o=o+d;e=a[o];n=e[r]l[n]=l[n](l[n+D])o=o+d;e=a[o];n=e[h];k=l[e[O]];l[n+1]=k;l[n]=k[e[_]];o=o+d;e=a[o];n=e[i];S=n+A-1;for e=n,S do w=j[e-n];l[e]=w;end;o=o+d;e=a[o];n=e[b]N,U=y(l[n](C(l,n+d,S)))S=U+n-D x=0;for e=n,S do x=x+d;l[e]=N[x];end;o=o+d;e=a[o];n=e[c]l[n](C(l,n+D,S))o=o+d;e=a[o];do return end;break end;break;end break;end break;end break;end break;end break;end while(n)/((3289+-0x55))==979 do n=(1413720)while(-#'xenny its znugget please respond'+(31284/0x4f))>=x do n-= n n=(5539091)while x<=(-#'Nitro Activated'+(-44+0x19b))do n-= n n=(1658735)while x<=(1730/0x5)do n-= n n=(6405175)while x<=(0x1317c/228)do n-= n n=(2768858)while x<=(-0x69+(-#"test"+(967-0x205)))do n-= n local i;local n;n=e[h];i=l[e[O]];l[n+1]=i;l[n]=i[e[P]];o=o+d;e=a[o];l[e[b]]=e[s];o=o+d;e=a[o];l[e[b]]=l[e[w]];o=o+d;e=a[o];n=e[r]l[n](C(l,n+D,e[N]))o=o+d;e=a[o];l[e[b]]=f[e[w]];o=o+d;e=a[o];l[e[c]][e[s]]=l[e[P]];o=o+d;e=a[o];do return end;break;end while(n)/((0x93b-1216))==2414 do n=(5333680)while(776-0x1b2)<x do n-= n local e=e[i];local o=l[e];for e=e+1,S do T(o,l[e])end;break end while 2090==(n)/((0x1437-2623))do local r;local n;n=e[h];r=l[e[w]];l[n+1]=r;l[n]=r[e[_]];o=o+d;e=a[o];l[e[h]]=l[e[O]];o=o+d;e=a[o];n=e[k]l[n](C(l,n+D,e[w]))o=o+d;e=a[o];l[e[k]]=f[e[N]];o=o+d;e=a[o];n=e[b];r=l[e[s]];l[n+1]=r;l[n]=r[e[P]];o=o+d;e=a[o];l[e[k]]=l[e[w]];o=o+d;e=a[o];n=e[i]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];l[e[b]]=f[e[t]];o=o+d;e=a[o];n=e[c];r=l[e[U]];l[n+1]=r;l[n]=r[e[B]];o=o+d;e=a[o];l[e[i]]=l[e[U]];o=o+d;e=a[o];n=e[i]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];do return end;break end;break;end break;end while(n)/((538250/((0x267-346)+-#[[I like gargling cum]])))==2975 do n=(2699166)while x<=(58136/0xa9)do n-= n local x;local n;l[e[b]]=l[e[O]][e[M]];o=o+d;e=a[o];l[e[r]]=l[e[N]]/e[M];o=o+d;e=a[o];l[e[k]]=f[e[w]];o=o+d;e=a[o];l[e[i]]=l[e[w]][e[P]];o=o+d;e=a[o];l[e[i]]=l[e[s]]/e[_];o=o+d;e=a[o];l[e[h]]=l[e[w]][e[u]];o=o+d;e=a[o];l[e[r]]=l[e[s]][e[_]];o=o+d;e=a[o];l[e[r]]=f[e[O]];o=o+d;e=a[o];l[e[c]]=l[e[w]][e[B]];o=o+d;e=a[o];l[e[k]]=f[e[s]];o=o+d;e=a[o];l[e[b]][e[w]]=l[e[M]];o=o+d;e=a[o];l[e[b]]=f[e[O]];o=o+d;e=a[o];l[e[i]][e[N]]=l[e[g]];o=o+d;e=a[o];l[e[c]]=f[e[O]];o=o+d;e=a[o];l[e[i]]=l[e[w]][e[P]];o=o+d;e=a[o];l[e[i]]=e[t]-l[e[M]];o=o+d;e=a[o];l[e[b]]=f[e[N]];o=o+d;e=a[o];l[e[r]][e[w]]=l[e[P]];o=o+d;e=a[o];l[e[k]]=f[e[U]];o=o+d;e=a[o];l[e[k]][e[w]]=l[e[M]];o=o+d;e=a[o];l[e[c]]=f[e[N]];o=o+d;e=a[o];l[e[k]]=l[e[s]][e[u]];o=o+d;e=a[o];l[e[i]]=f[e[O]];o=o+d;e=a[o];l[e[h]][e[O]]=l[e[_]];o=o+d;e=a[o];l[e[c]]=f[e[w]];o=o+d;e=a[o];l[e[i]][e[s]]=l[e[B]];o=o+d;e=a[o];l[e[r]]=f[e[N]];o=o+d;e=a[o];l[e[k]]=f[e[N]];o=o+d;e=a[o];l[e[c]]=l[e[w]]-l[e[M]];o=o+d;e=a[o];l[e[b]]=l[e[s]];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[i]][e[O]]=l[e[u]];o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];l[e[c]]=f[e[t]];o=o+d;e=a[o];x={l,e};x[D][x[m][h]]=x[d][x[m][u]]+x[D][x[m][U]];o=o+d;e=a[o];l[e[k]]=l[e[O]];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[h]][e[s]]=l[e[M]];o=o+d;e=a[o];l[e[k]]=f[e[O]];o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];l[e[b]]=l[e[w]];o=o+d;e=a[o];l[e[b]]=l[e[U]]-l[e[M]];o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[c]][e[U]]=l[e[B]];o=o+d;e=a[o];l[e[k]]=f[e[t]];o=o+d;e=a[o];l[e[b]]=f[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[U]];o=o+d;e=a[o];x={l,e};x[D][x[m][b]]=x[d][x[m][P]]+x[D][x[m][s]];o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[i]][e[O]]=l[e[P]];break;end while(n)/((-#"Never gonna give u up"+(0x10ea-2215)))==1289 do n=(11465626)while(-#"Two trucks having sex"+(29646/0x51))<x do n-= n l[e[r]][e[s]]=l[e[_]];o=o+d;e=a[o];l[e[c]]=f[e[N]];o=o+d;e=a[o];l[e[c]]=l[e[O]][e[g]];o=o+d;e=a[o];l[e[b]]=f[e[t]];o=o+d;e=a[o];l[e[c]][l[e[O]]]=l[e[g]];o=o+d;e=a[o];do return end;break end while(n)/((0xa53c2/203))==3439 do l[e[i]]=z(L[e[N]],nil,p);break end;break;end break;end break;end while(n)/((0xf79-1998))==845 do n=(1500870)while x<=(-#'Cock and ball torture'+(761-0x187))do n-= n n=(3093335)while x<=((-77+0x1c7)+-#"black mess more like white mesa")do n-= n local d=e[i];local a=l[d]local n=l[d+2];if(n>0)then if(a>l[d+1])then o=e[t];else l[d+3]=a;end elseif(a<l[d+1])then o=e[s];else l[d+3]=a;end break;end while 1085==(n)/((5769-0xb66))do n=(5150584)while(-#"fish was here"+(742-0x17d))<x do n-= n local d=e[c];local n=l[d+2];local a=l[d]+n;l[d]=a;if(n>0)then if(a<=l[d+1])then o=e[t];l[d+3]=a;end elseif(a>=l[d+1])then o=e[t];l[d+3]=a;end break end while(n)/(((0x1693b0/216)-3488))==1532 do local e=e[i]l[e]=l[e](l[e+D])break end;break;end break;end while(n)/((2151+-0x6d))==735 do n=(13074432)while x<=(765-0x19f)do n-= n local x;local n;l[e[k]]=e[s];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[h]][e[t]]=l[e[B]];o=o+d;e=a[o];l[e[r]]=l[e[O]][e[_]];o=o+d;e=a[o];l[e[b]]=e[s];o=o+d;e=a[o];l[e[k]]=e[N];o=o+d;e=a[o];l[e[i]]=e[U];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[r]][e[s]]=l[e[u]];o=o+d;e=a[o];n=e[c];x=l[e[U]];l[n+1]=x;l[n]=x[e[_]];break;end while(n)/((3672+-0x58))==3648 do n=(4631480)while x>(-#'I like gargling cum'+(0xa636/115))do n-= n p[e[U]]=l[e[h]];o=o+d;e=a[o];l[e[r]]=(e[t]~=0);o=o+d;e=a[o];l[e[b]]=p[e[w]];o=o+d;e=a[o];l[e[b]]=p[e[N]];o=o+d;e=a[o];l[e[r]]=p[e[N]];o=o+d;e=a[o];l[e[i]]=p[e[t]];o=o+d;e=a[o];l[e[i]]=p[e[U]];o=o+d;e=a[o];l[e[b]]=p[e[t]];o=o+d;e=a[o];l[e[c]]=p[e[w]];o=o+d;e=a[o];l[e[r]]=p[e[O]];break end while(n)/((151510/0x6d))==3332 do if(l[e[r]]~=l[e[u]])then o=o+D;else o=e[t];end;break end;break;end break;end break;end break;end while(n)/(((-83+0xca8)+-#[[cum fuck]]))==1759 do n=(347200)while x<=(-#"zNugget is dad"+(-0x42+438))do n-= n n=(6739920)while((0x1fd+-120)+-#"mee6 what are you doing to my wife")>=x do n-= n n=(3167916)while(0x85c1/97)>=x do n-= n local i;local n;n=e[c]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];l[e[k]]=e[N];o=o+d;e=a[o];n=e[c];i=l[e[s]];l[n+1]=i;l[n]=i[l[e[g]]];o=o+d;e=a[o];l[e[r]]={};o=o+d;e=a[o];l[e[h]]=e[U];o=o+d;e=a[o];l[e[k]]=e[U];o=o+d;e=a[o];l[e[k]][l[e[s]]]=l[e[M]];o=o+d;e=a[o];l[e[k]]=e[N];o=o+d;e=a[o];l[e[h]]=l[e[N]][e[B]];o=o+d;e=a[o];l[e[h]][l[e[O]]]=l[e[g]];break;end while 879==(n)/((3721+-0x75))do n=(5276344)while x>((0x368-497)+-#"Never gonna give u up")do n-= n local x;local n;l[e[r]]=f[e[U]];o=o+d;e=a[o];l[e[h]]=f[e[O]];o=o+d;e=a[o];l[e[k]]=l[e[t]][e[g]];o=o+d;e=a[o];l[e[i]]=f[e[t]];o=o+d;e=a[o];l[e[k]]=l[e[O]][e[g]];o=o+d;e=a[o];n={e,l};n[m][n[D][h]]=n[m][n[d][U]]+n[D][B];o=o+d;e=a[o];x=e[c]l[x]=l[x](C(l,x+d,e[N]))o=o+d;e=a[o];l[e[i]][e[O]]=l[e[_]];o=o+d;e=a[o];o=e[w];break end while 2251==(n)/((-#"test123"+(0x1296-2407)))do local n;local h;local r;r=e[i];h=l[e[O]];l[r+1]=h;l[r]=h[e[u]];o=o+d;e=a[o];l[e[b]]=f[e[U]];o=o+d;e=a[o];n={e,l};n[m][n[D][b]]=n[m][n[d][t]]+n[D][_];o=o+d;e=a[o];l[e[b]]=f[e[N]];o=o+d;e=a[o];n={e,l};n[m][n[D][c]]=n[m][n[d][s]]+n[D][u];o=o+d;e=a[o];r=e[b]l[r]=l[r](C(l,r+d,e[U]))o=o+d;e=a[o];if(l[e[b]]~=l[e[_]])then o=o+D;else o=e[t];end;break end;break;end break;end while(n)/((-0x53+3746))==1840 do n=(6826452)while x<=(764-0x198)do n-= n local d=l[e[g]];if not d then o=o+D;else l[e[i]]=d;o=e[O];end;break;end while 3684==(n)/(((-122+0x7cc)+-#'Two trucks having sex'))do n=(5806350)while((0x315-421)+-#"dick cheese")<x do n-= n local e={l,e};e[D][e[m][i]]=e[d][e[m][_]]+e[D][e[m][w]];break end while 2475==(n)/((-57+(-#"Never gonna give u up"+(4868-0x98c))))do l[e[k]]={};break end;break;end break;end break;end while 320==(n)/((-#[[Fuck nigger wank shit dipshit cunt bullshit fuckyou hoe lol]]+(0x921-(0x96c-1219))))do n=(8631414)while x<=(-0x13+380)do n-= n n=(770950)while x<=(403+-0x2c)do n-= n local n;l[e[r]][e[O]]=l[e[B]];o=o+d;e=a[o];n=e[b]l[n](C(l,n+D,e[U]))o=o+d;e=a[o];l[e[r]]=l[e[U]][e[_]];o=o+d;e=a[o];l[e[r]]=(e[U]~=0);o=o+d;e=a[o];l[e[r]]={};break;end while 850==(n)/((0x2a4b5/191))do n=(2109933)while x>(0x1be+-86)do n-= n local i;local c;local n;l[e[h]]=f[e[O]];o=o+d;e=a[o];l[e[b]]=l[e[t]][e[g]];o=o+d;e=a[o];n=e[k]c={l[n](C(l,n+1,e[w]))};i=0;for e=n,e[u]do i=i+d;l[e]=c[i];end o=o+d;e=a[o];l[e[k]]=f[e[t]];o=o+d;e=a[o];l[e[k]]=l[e[t]][e[B]];o=o+d;e=a[o];if not l[e[r]]then o=o+D;else o=e[t];end;break end while 2247==(n)/((0x420+-117))do local n;l[e[k]]=l[e[O]];o=o+d;e=a[o];n=e[c]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];l[e[c]]=f[e[O]];o=o+d;e=a[o];l[e[r]]=l[e[O]];o=o+d;e=a[o];l[e[h]]=l[e[N]];break end;break;end break;end while 2642==(n)/((-#"test"+(6589-0xcf6)))do n=(8540126)while x<=(-0x37+(50457/0x79))do n-= n l[e[c]]=l[e[t]]/l[e[u]];break;end while 3974==(n)/((4377-(4543-0x90b)))do n=(10474570)while x>(((92350-0xb491)/0x7b)+-#"deobfuscated")do n-= n local c;local n;l[e[b]]=l[e[O]][e[M]];o=o+d;e=a[o];l[e[i]]=l[e[w]];o=o+d;e=a[o];n=e[r]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[b]]=l[e[N]];o=o+d;e=a[o];c=l[e[B]];if c then o=o+D;else l[e[i]]=c;o=e[w];end;break end while 3665==(n)/((0xae704/250))do l[e[i]][e[N]]=l[e[_]];o=o+d;e=a[o];l[e[r]]=f[e[t]];o=o+d;e=a[o];l[e[h]]=f[e[s]];o=o+d;e=a[o];l[e[c]]=l[e[s]][e[M]];o=o+d;e=a[o];l[e[k]][e[t]]=l[e[P]];o=o+d;e=a[o];l[e[r]]=f[e[N]];o=o+d;e=a[o];l[e[i]]=f[e[w]];o=o+d;e=a[o];l[e[i]]=l[e[O]][e[_]];o=o+d;e=a[o];l[e[h]][e[N]]=l[e[M]];break end;break;end break;end break;end break;end break;end while 440==(n)/((-#'Never gonna give u up'+(763224/0xec)))do n=(5678376)while x<=(0x2340/24)do n-= n n=(4906176)while(0x303-401)>=x do n-= n n=(9333336)while(0xce70/144)>=x do n-= n n=(1103040)while x<=(-51+0x1a0)do n-= n local i;local x;local n;n=e[c]x={l[n](C(l,n+1,e[s]))};i=0;for e=n,e[_]do i=i+d;l[e]=x[i];end o=o+d;e=a[o];l[e[c]]=f[e[t]];o=o+d;e=a[o];l[e[h]]=f[e[U]];o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];l[e[b]]=l[e[O]][e[_]];o=o+d;e=a[o];l[e[k]]=l[e[N]][e[P]];o=o+d;e=a[o];l[e[h]]=-l[e[w]];o=o+d;e=a[o];l[e[r]]=l[e[t]][e[B]];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[c]]=l[e[s]]*l[e[P]];break;end while 960==(n)/(((0x99b-1289)+-#"Two trucks having sex"))do n=(4602590)while(840-0x1da)<x do n-= n local x;local n;l[e[c]]=e[s];o=o+d;e=a[o];l[e[r]]={};o=o+d;e=a[o];l[e[i]]=f[e[t]];o=o+d;e=a[o];l[e[k]]=f[e[s]];o=o+d;e=a[o];l[e[b]]=l[e[w]][e[_]];o=o+d;e=a[o];l[e[r]]=f[e[s]];o=o+d;e=a[o];l[e[i]]=l[e[O]][e[u]];o=o+d;e=a[o];n={e,l};n[m][n[D][k]]=n[m][n[d][O]]+n[D][M];o=o+d;e=a[o];x=e[h]l[x]=l[x](C(l,x+d,e[U]))o=o+d;e=a[o];l[e[b]][e[O]]=l[e[u]];break end while(n)/((-0x7d+2815))==1711 do local n;local w;local x;l[e[k]]=f[e[t]];o=o+d;e=a[o];l[e[k]]=l[e[U]][e[u]];o=o+d;e=a[o];l[e[b]]=f[e[U]];o=o+d;e=a[o];l[e[b]]=l[e[t]][e[_]];o=o+d;e=a[o];l[e[c]]=l[e[s]]*l[e[_]];o=o+d;e=a[o];l[e[i]]=l[e[N]][e[P]];o=o+d;e=a[o];x=e[c]w={l[x](C(l,x+1,e[O]))};n=0;for e=x,e[B]do n=n+d;l[e]=w[n];end o=o+d;e=a[o];l[e[h]]=f[e[N]];o=o+d;e=a[o];l[e[b]]=l[e[O]][l[e[u]]];o=o+d;e=a[o];if(l[e[r]]==e[_])then o=o+D;else o=e[s];end;break end;break;end break;end while 3768==(n)/(((0x85068/219)+-#[[Little kids]]))do n=(2692377)while(769-0x191)>=x do n-= n l[e[i]]();break;end while(n)/((-#[[Cock and ball torture]]+((-#'notbelugafan was here'+(31104/0x10))-1023)))==3063 do n=(365148)while x>(421+-0x34)do n-= n local x;local n;n=e[h]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];l[e[c]]=e[O];o=o+d;e=a[o];n=e[r];x=l[e[U]];l[n+1]=x;l[n]=x[l[e[M]]];o=o+d;e=a[o];l[e[k]]={};o=o+d;e=a[o];l[e[c]]=e[O];o=o+d;e=a[o];l[e[k]]=e[w];o=o+d;e=a[o];l[e[r]][l[e[s]]]=l[e[_]];o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[h]]=e[w];o=o+d;e=a[o];n=e[i];x=l[e[s]];l[n+1]=x;l[n]=x[l[e[u]]];break end while(n)/((0xf76e/153))==882 do local n;local f;local x;l[e[r]]=l[e[s]];o=o+d;e=a[o];l[e[k]]=e[O];o=o+d;e=a[o];x=e[c]f={l[x](C(l,x+1,e[w]))};n=0;for e=x,e[g]do n=n+d;l[e]=f[n];end o=o+d;e=a[o];l[e[h]]=l[e[t]];o=o+d;e=a[o];l[e[b]]=l[e[w]];o=o+d;e=a[o];l[e[k]]=l[e[O]];o=o+d;e=a[o];l[e[b]]=l[e[N]];o=o+d;e=a[o];l[e[r]]=l[e[s]];o=o+d;e=a[o];l[e[c]]=l[e[w]];o=o+d;e=a[o];l[e[i]]=l[e[w]];o=o+d;e=a[o];l[e[k]]=l[e[w]];o=o+d;e=a[o];l[e[h]]=l[e[N]];o=o+d;e=a[o];l[e[i]]=l[e[s]];o=o+d;e=a[o];l[e[i]]=l[e[s]];o=o+d;e=a[o];l[e[r]]=l[e[N]];o=o+d;e=a[o];o=e[U];break end;break;end break;end break;end while 2112==(n)/((2408+-0x55))do n=(2908800)while x<=(-#[[test]]+(0x75d/(95+-0x5a)))do n-= n n=(2556897)while(-#'require'+(0x372-504))>=x do n-= n local n;l[e[h]]=f[e[O]];o=o+d;e=a[o];l[e[c]][e[U]]=l[e[u]];o=o+d;e=a[o];l[e[k]]=p[e[N]];o=o+d;e=a[o];l[e[i]]=e[O];o=o+d;e=a[o];n=e[r]l[n](l[n+D])o=o+d;e=a[o];l[e[b]]=f[e[s]];o=o+d;e=a[o];l[e[k]]=f[e[U]];o=o+d;e=a[o];l[e[h]]=l[e[O]][e[P]];o=o+d;e=a[o];if l[e[b]]then o=o+d;else o=e[O];end;break;end while 1167==(n)/((517076/0xec))do n=(4969485)while(-#'fish was here'+(-26+(894-0x1e3)))<x do n-= n local i;local n;n=e[k]l[n](C(l,n+D,e[O]))o=o+d;e=a[o];l[e[h]]=e[O];o=o+d;e=a[o];n=e[k];i=l[e[N]];l[n+1]=i;l[n]=i[l[e[B]]];o=o+d;e=a[o];l[e[h]]={};o=o+d;e=a[o];l[e[h]]=e[N];o=o+d;e=a[o];l[e[r]]=e[O];o=o+d;e=a[o];l[e[c]][l[e[O]]]=l[e[_]];o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];l[e[c]]=e[O];o=o+d;e=a[o];n=e[b];i=l[e[w]];l[n+1]=i;l[n]=i[e[M]];break end while(n)/((3973-0x7d8))==2529 do local x;local n;n=e[k]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[h]]=e[w];o=o+d;e=a[o];n=e[h];x=l[e[U]];l[n+1]=x;l[n]=x[l[e[g]]];o=o+d;e=a[o];l[e[r]]={};o=o+d;e=a[o];l[e[c]]=e[w];o=o+d;e=a[o];l[e[i]]=e[U];o=o+d;e=a[o];l[e[c]][l[e[t]]]=l[e[B]];o=o+d;e=a[o];l[e[c]]=e[O];o=o+d;e=a[o];l[e[h]]=l[e[O]][e[B]];o=o+d;e=a[o];l[e[r]][l[e[s]]]=l[e[B]];break end;break;end break;end while(n)/((3140+-0x6e))==960 do n=(1860882)while(807-0x1b1)>=x do n-= n local x;local n;n=e[c]l[n](C(l,n+D,e[s]))o=o+d;e=a[o];l[e[i]]=e[O];o=o+d;e=a[o];n=e[r];x=l[e[w]];l[n+1]=x;l[n]=x[l[e[M]]];o=o+d;e=a[o];l[e[h]]={};o=o+d;e=a[o];l[e[r]]=e[N];o=o+d;e=a[o];l[e[b]]=e[t];o=o+d;e=a[o];l[e[c]][l[e[O]]]=l[e[P]];o=o+d;e=a[o];l[e[h]]=e[w];o=o+d;e=a[o];l[e[k]]=l[e[N]][e[P]];o=o+d;e=a[o];l[e[k]][l[e[t]]]=l[e[P]];break;end while 937==(n)/(((0xff1+-33)-2062))do n=(5936200)while x>((0x365-489)+-#'print')do n-= n local r;local n;l[e[h]]=f[e[U]];o=o+d;e=a[o];n=e[c];r=l[e[U]];l[n+1]=r;l[n]=r[e[P]];o=o+d;e=a[o];n=e[c]l[n](l[n+D])o=o+d;e=a[o];l[e[i]]=f[e[w]];o=o+d;e=a[o];l[e[i]]();o=o+d;e=a[o];do return end;break end while(n)/(((0x719+-24)+-#"Two trucks having sex"))==3350 do local o=e[k]l[o](C(l,o+D,e[U]))break end;break;end break;end break;end break;end while 3288==(n)/((1810+-0x53))do n=(4122976)while x<=(((-#[[big hard cock]]+(1803-0x39a))-0x1db)+-#'looadstring')do n-= n n=(7155361)while x<=(-#"Fuck nigger wank shit dipshit cunt bullshit fuckyou hoe lol"+(50370/0x73))do n-= n n=(2910994)while(-62+0x1b7)>=x do n-= n l[e[i]]=e[w];break;end while 1409==(n)/((2187+-0x79))do n=(1555130)while x>(-0x6b+485)do n-= n local i;local n;l[e[r]]=f[e[N]];o=o+d;e=a[o];n=e[r];i=l[e[t]];l[n+1]=i;l[n]=i[e[B]];o=o+d;e=a[o];l[e[h]]=l[e[N]];o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];if not l[e[h]]then o=o+D;else o=e[t];end;break end while 410==(n)/((0xef6+-37))do if(l[e[r]]==e[_])then o=o+D;else o=e[O];end;break end;break;end break;end while 2861==(n)/(((-0x47+2581)+-#"no thanks"))do n=(1030080)while(-24+0x194)>=x do n-= n do return l[e[r]]end break;end while 1392==(n)/((0x643-863))do n=(5265348)while(0x1aa+-45)<x do n-= n local n;l[e[c]]=f[e[N]];o=o+d;e=a[o];l[e[h]]=l[e[U]];o=o+d;e=a[o];n=e[r]l[n]=l[n](l[n+D])o=o+d;e=a[o];l[e[c]]=f[e[w]];o=o+d;e=a[o];l[e[h]]=l[e[U]];o=o+d;e=a[o];n=e[k]l[n]=l[n](l[n+D])o=o+d;e=a[o];for e=e[b],e[O]do l[e]=nil;end;o=o+d;e=a[o];if(l[e[b]]==e[M])then o=o+D;else o=e[t];end;break end while(n)/((((0x21e8-4383)-0x870)+-#'dont use it anymore'))==2486 do f[e[s]]=l[e[i]];break end;break;end break;end break;end while 1496==(n)/(((2900+-0x7d)+-#[[dont use it anymore]]))do n=(1705735)while x<=(-84+0x1d5)do n-= n n=(4090625)while x<=(0x34f-464)do n-= n l[e[c]]=l[e[U]]%l[e[u]];break;end while 2975==(n)/((324500/0xec))do n=(2249678)while(789-0x195)<x do n-= n local n;n=e[i]l[n]=l[n](C(l,n+d,S))o=o+d;e=a[o];n=e[i]l[n]=l[n]()o=o+d;e=a[o];l[e[h]]=l[e[N]][e[g]];o=o+d;e=a[o];l[e[h]]={};o=o+d;e=a[o];l[e[k]]={};o=o+d;e=a[o];l[e[c]]={};o=o+d;e=a[o];l[e[b]]={};o=o+d;e=a[o];l[e[b]]={};o=o+d;e=a[o];l[e[c]]={};o=o+d;e=a[o];l[e[i]]={};break end while 2159==(n)/((0x889-1143))do do return l[e[h]]();end;break end;break;end break;end while(n)/(((6187-0xc4b)+-#'Cock and ball torture'))==565 do n=(3288425)while((0x3d5+-118)-0x1dc)>=x do n-= n n=(3356970)while x>(823-0x1b5)do n-= n local n;l[e[r]]=p[e[U]];o=o+d;e=a[o];l[e[c]]=f[e[s]];o=o+d;e=a[o];l[e[i]]=l[e[O]][e[u]];o=o+d;e=a[o];l[e[h]]=f[e[t]];o=o+d;e=a[o];n=e[c]l[n](C(l,n+D,e[t]))o=o+d;e=a[o];do return end;break end while 2235==(n)/((-107+(0x6b4+-107)))do local i=L[e[N]];local n;local d={};n=I({},{__index=function(o,e)local e=d[e];return e[1][e[2]];end,__newindex=function(l,e,o)local e=d[e]e[1][e[2]]=o;end;});for n=1,e[_]do o=o+D;local e=a[o];if e[((0x6f9/51)+-#"mee6 what are you doing to my wife")]==321 then d[n-1]={l,e[t]};else d[n-1]={f,e[N]};end;v[#v+1]=d;end;l[e[r]]=z(i,n,p);break end;break;end while 4025==(n)/((909+-0x5c))do n=(4329150)while x>(-#[[guys Please proceed to translate D to Sinhala]]+(0x20a+(-0x34-37)))do n-= n local x;local n;n=e[i]l[n](l[n+D])o=o+d;e=a[o];l[e[b]]={};o=o+d;e=a[o];n=e[k];x=l[e[O]];l[n+1]=x;l[n]=x[e[B]];o=o+d;e=a[o];l[e[k]]=e[s];o=o+d;e=a[o];l[e[b]]=(e[U]~=0);o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[c]][e[w]]=l[e[B]];o=o+d;e=a[o];n=e[h];x=l[e[O]];l[n+1]=x;l[n]=x[e[g]];o=o+d;e=a[o];l[e[r]]=e[w];o=o+d;e=a[o];l[e[h]]=e[U];o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[i]][e[N]]=l[e[u]];o=o+d;e=a[o];n=e[k];x=l[e[w]];l[n+1]=x;l[n]=x[e[M]];o=o+d;e=a[o];l[e[b]]=e[N];o=o+d;e=a[o];l[e[b]]=(e[t]~=0);o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[h]][e[t]]=l[e[M]];o=o+d;e=a[o];n=e[r];x=l[e[s]];l[n+1]=x;l[n]=x[e[M]];o=o+d;e=a[o];l[e[i]]=e[s];o=o+d;e=a[o];l[e[c]]=(e[w]~=0);o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[t]))o=o+d;e=a[o];l[e[r]][e[s]]=l[e[M]];o=o+d;e=a[o];n=e[i];x=l[e[N]];l[n+1]=x;l[n]=x[e[P]];o=o+d;e=a[o];l[e[k]]=e[s];o=o+d;e=a[o];l[e[h]]=(e[t]~=0);o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[c]][e[U]]=l[e[_]];o=o+d;e=a[o];n=e[k];x=l[e[t]];l[n+1]=x;l[n]=x[e[u]];o=o+d;e=a[o];l[e[k]]=e[O];o=o+d;e=a[o];l[e[c]]=e[U];o=o+d;e=a[o];n=e[k]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];l[e[r]][e[U]]=l[e[M]];o=o+d;e=a[o];n=e[c];x=l[e[U]];l[n+1]=x;l[n]=x[e[_]];o=o+d;e=a[o];l[e[h]]=e[O];o=o+d;e=a[o];l[e[k]]=(e[s]~=0);o=o+d;e=a[o];n=e[r]l[n]=l[n](C(l,n+d,e[w]))o=o+d;e=a[o];l[e[b]][e[w]]=l[e[P]];o=o+d;e=a[o];n=e[k];x=l[e[N]];l[n+1]=x;l[n]=x[e[P]];o=o+d;e=a[o];l[e[r]]=e[U];o=o+d;e=a[o];l[e[r]]=e[s];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[k]][e[w]]=l[e[P]];o=o+d;e=a[o];n=e[c];x=l[e[N]];l[n+1]=x;l[n]=x[e[B]];o=o+d;e=a[o];l[e[h]]=e[N];o=o+d;e=a[o];l[e[b]]=(e[U]~=0);o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[h]][e[s]]=l[e[_]];o=o+d;e=a[o];n=e[b];x=l[e[s]];l[n+1]=x;l[n]=x[e[M]];o=o+d;e=a[o];l[e[c]]=e[w];o=o+d;e=a[o];l[e[b]]=e[U];o=o+d;e=a[o];n=e[h]l[n]=l[n](C(l,n+d,e[s]))o=o+d;e=a[o];l[e[b]][e[t]]=l[e[g]];o=o+d;e=a[o];n=e[h];x=l[e[U]];l[n+1]=x;l[n]=x[e[_]];o=o+d;e=a[o];l[e[i]]=e[w];o=o+d;e=a[o];l[e[i]]=(e[O]~=0);o=o+d;e=a[o];n=e[c]l[n]=l[n](C(l,n+d,e[U]))o=o+d;e=a[o];l[e[b]][e[s]]=l[e[_]];o=o+d;e=a[o];n=e[c];x=l[e[O]];l[n+1]=x;l[n]=x[e[P]];o=o+d;e=a[o];l[e[i]]=e[U];o=o+d;e=a[o];l[e[b]]=e[s];o=o+d;e=a[o];n=e[i]l[n]=l[n](C(l,n+d,e[O]))o=o+d;e=a[o];l[e[i]][e[w]]=l[e[g]];o=o+d;e=a[o];n=e[i];x=l[e[s]];l[n+1]=x;l[n]=x[e[g]];o=o+d;e=a[o];l[e[c]]=e[t];o=o+d;e=a[o];l[e[r]]=e[s];o=o+d;e=a[o];n=e[b]l[n]=l[n](C(l,n+d,e[N]))o=o+d;e=a[o];l[e[r]][e[U]]=l[e[_]];o=o+d;e=a[o];l[e[h]]=l[e[s]][e[M]];o=o+d;e=a[o];l[e[r]]=l[e[t]][e[g]];o=o+d;e=a[o];l[e[c]][e[s]]=l[e[B]];o=o+d;e=a[o];l[e[h]]=l[e[O]];o=o+d;e=a[o];l[e[h]]=l[e[s]];o=o+d;e=a[o];l[e[k]]={};break end while 3325==(n)/(((0x1536-2733)-0x573))do local n;l[e[k]]=l[e[t]][l[e[u]]];o=o+d;e=a[o];l[e[b]]=f[e[t]];o=o+d;e=a[o];l[e[r]]=l[e[U]];o=o+d;e=a[o];n=e[i]l[n]=l[n](l[n+D])o=o+d;e=a[o];if(l[e[r]]==e[P])then o=o+D;else o=e[t];end;break end;break;end break;end break;end break;end break;end break;end break;end break;end o+= D end;end);end;return z(H(),{},Q())()end)_msec({[((-0x4c+362)+-126)]='\115\116'..(function(e)return(e and'             ')or'\114\105'or'\120\58'end)((0x1fe/102)==((-#'test'+(1529-0x313))/123))..'\110g',["              "]='\108\100'..(function(e)return(e and'            ​  ​ ')or'\101\120'or'\119\111'end)(((98-(-#"Hi skid"+(16965/0xc3)))+-#'amena jumping')==(-#"Little kids"+(0x87-(331-0xd5))))..'\112',["                "]=(function(e)return(e and'  ​              ')and'\98\121'or'\100\120'end)(((4536/0x7e)+-#'black mess more like white mesa')==(565/0x71))..'\116\101',["​        "]='\99'..(function(e)return(e and'        ')and'\90\19\157'or'\104\97'end)((136-0x83)==(-#'Hi skid'+(85+-0x4b)))..'\114',[(-#"Bong"+(67830/0x72))]='\116\97'..(function(e)return(e and' ​           ')and'\64\113'or'\98\108'end)((0x67-97)==(0x249/117))..'\101',[" ​          "]=(function(e)return(e and'                 ')or'\115\117'or'\78\107'end)((-0x74+(0x5b93/197))==(0x47b/(-120+0x9d)))..'\98',["         ​    "]='\99\111'..(function(e)return(e and'     ​    ​       ')and'\110\99'or'\110\105\103\97'end)((-#'edp445 what are you doing to my 3 year old son'+(261-0xb8))==(81-0x32))..'\97\116',[(-#[[cum fuck]]+(0x1e98c/194))]=(function(e,o)return(e and' ​          ​      ')and'\48\159\158\188\10'or'\109\97'end)((0x4d-72)==(0x24-(4260/0x8e)))..'\116\104',[(-0x15+1383)]=(function(o,e)return((-#[[looadstring]]+(97-0x51))==(49-0x2e)and'\48'..'\195'or o..((not'\20\95\69'and'\90'..'\180'or e)))or'\199\203\95'end),["    ​    ​​       "]='\105\110'..(function(e,o)return(e and'   ​          ')and'\90\115\138\115\15'or'\115\101'end)((108-0x67)==(0x26c/20))..'\114\116',["           "]='\117\110'..(function(e,o)return(e and'    ​       ​     ')or'\112\97'or'\20\38\154'end)((69+-0x40)==(149-0x76))..'\99\107',["    ​       "]='\115\101'..(function(e)return(e and'             ')and'\110\112\99\104'or'\108\101'end)((-#"dont use it anymore"+(174-0x96))==((-0x63+145)+-#"Nitro Activated"))..'\99\116',["                "]='\116\111\110'..(function(e,o)return(e and'          ')and'\117\109\98'or'\100\97\120\122'end)(((-0x76+134)+-#"looadstring")==((0x3180/198)+-#"Fuck nigger wank shit dipshit cunt bullshit fuckyou hoe lol"))..'\101\114'},{["          "]=((getfenv))},((getfenv))()) end)()
+		local ti = TweenInfo.new(options.Length, options.Style, options.Direction)
+		options.Length = nil
+		options.Style = nil 
+		options.Direction = nil
 
+		local tween = TweenService:Create(localObject, ti, options); tween:Play()
+
+		tween.Completed:Connect(function()
+			callback()
+		end)
+
+		return tween
+	end
+
+	function methods:round(radius)
+		radius = radius or 6
+		Library:object("UICorner", {
+			Parent = localObject,
+			CornerRadius = UDim.new(0, radius)
+		})
+		return methods
+	end
+
+	function methods:object(class, properties)
+		local properties = properties or {}
+		properties.Parent = localObject
+		return Library:object(class, properties)
+	end
+
+	function methods:crossfade(p2, length)
+		length = length or .2
+		self:tween({ImageTransparency = 1})
+		p2:tween({ImageTransparency = 0})
+	end
+
+	function methods:fade(state, colorOverride, length, instant)
+		length = length or 0.2
+		if not rawget(self, "fadeFrame") then
+			local frame = self:object("Frame", {
+				BackgroundColor3 = colorOverride or self.BackgroundColor3,
+				BackgroundTransparency = (state and 1) or 0,
+				Size = UDim2.fromScale(1, 1),
+				Centered = true,
+				ZIndex = 999
+			}):round(self.AbsoluteObject:FindFirstChildOfClass("UICorner") and self.AbsoluteObject:FindFirstChildOfClass("UICorner").CornerRadius.Offset or 0)
+			rawset(self, "fadeFrame", frame)
+		else
+			self.fadeFrame.BackgroundColor3 = colorOverride or self.BackgroundColor3
+		end
+
+		if instant then
+			if state then
+				self.fadeFrame.BackgroundTransparency = 0
+				self.fadeFrame.Visible = true
+			else
+				self.fadeFrame.BackgroundTransparency = 1
+				self.fadeFrame.Visible = false
+			end
+		else
+			if state then
+				self.fadeFrame.BackgroundTransparency = 1
+				self.fadeFrame.Visible = true
+				self.fadeFrame:tween{BackgroundTransparency = 0, Length = length}
+			else
+				self.fadeFrame.BackgroundTransparency = 0
+				self.fadeFrame:tween({BackgroundTransparency = 1, Length = length}, function()
+					self.fadeFrame.Visible = false
+				end)
+			end
+		end	
+	end
+
+	function methods:stroke(color, thickness, strokeMode)
+
+		thickness = thickness or 1
+		strokeMode = strokeMode or Enum.ApplyStrokeMode.Border
+		local stroke = self:object("UIStroke", {
+			ApplyStrokeMode = strokeMode,
+			Thickness = thickness
+		})
+
+		if type(color) == "table" then
+			local theme, colorAlter = color[1], color[2] or 0
+			local themeColor = Library.CurrentTheme[theme]
+			local modifiedColor = themeColor
+			if colorAlter < 0 then
+				modifiedColor = Library:darken(themeColor, -1 * colorAlter)
+			elseif colorAlter > 0 then
+				modifiedColor = Library:lighten(themeColor, colorAlter)
+			end
+			stroke.Color = modifiedColor
+			table.insert(Library.ThemeObjects[theme], {stroke, "Color", theme, colorAlter})
+		elseif type(color) == "string" then
+			local themeColor = Library.CurrentTheme[color]
+			stroke.Color = themeColor
+			table.insert(Library.ThemeObjects[color], {stroke, "Color", color, 0})
+		else
+			stroke.Color = color
+		end
+
+		return methods
+	end
+
+	function methods:tooltip(text)
+		local tooltipContainer = methods:object("TextLabel", {
+			Theme = {
+				BackgroundColor3 = {"Main", 10},
+				TextColor3 = {"WeakText"}
+			},
+			TextSize = 16,
+			Text = text,
+			Position = UDim2.new(0.5, 0, 0, -8),
+			TextXAlignment = Enum.TextXAlignment.Center,
+			TextYAlignment = Enum.TextYAlignment.Center,
+			AnchorPoint = Vector2.new(0.5, 1),
+			BackgroundTransparency = 1,
+			TextTransparency = 1
+		}):round(5)
+		tooltipContainer.Size = UDim2.fromOffset(tooltipContainer.TextBounds.X + 16, tooltipContainer.TextBounds.Y + 8)
+
+		local tooltipArrow = tooltipContainer:object("ImageLabel", {
+			Image = "http://www.roblox.com/asset/?id=4292970642",
+			Theme = {ImageColor3 = {"Main", 10}},
+			AnchorPoint = Vector2.new(0.5, 0),
+			Rotation = 180,
+			Position = UDim2.fromScale(0.5, 1),
+			Size = UDim2.fromOffset(10, 6),
+			BackgroundTransparency = 1,
+			ImageTransparency = 1
+		})
+
+		local hovered = false
+
+		methods.MouseEnter:connect(function()
+			hovered = true
+			wait(0.2)
+			if hovered then
+				tooltipContainer:tween{BackgroundTransparency = 0.2, TextTransparency = 0.2}
+				tooltipArrow:tween{ImageTransparency = 0.2}
+			end
+		end)
+
+		methods.MouseLeave:connect(function()
+			hovered = false
+			tooltipContainer:tween{BackgroundTransparency = 1, TextTransparency = 1}
+			tooltipArrow:tween{ImageTransparency = 1}
+		end)
+
+		return methods
+	end
+
+	local customHandlers = {
+		Centered = function(value)
+			if value then
+				localObject.AnchorPoint = Vector2.new(0.5, 0.5)
+				localObject.Position = UDim2.fromScale(0.5, 0.5)
+			end	
+		end,
+		Theme = function(value)
+			for property, obj in next, value do
+				if type(obj) == "table" then
+					local theme, colorAlter = obj[1], obj[2] or 0
+					local themeColor = Library.CurrentTheme[theme]
+					local modifiedColor = themeColor
+					if colorAlter < 0 then
+						modifiedColor = Library:darken(themeColor, -1 * colorAlter)
+					elseif colorAlter > 0 then
+						modifiedColor = Library:lighten(themeColor, colorAlter)
+					end
+					localObject[property] = modifiedColor
+					table.insert(self.ThemeObjects[theme], {methods, property, theme, colorAlter})
+				else
+					local themeColor = Library.CurrentTheme[obj]
+					localObject[property] = themeColor
+					table.insert(self.ThemeObjects[obj], {methods, property, obj, 0})
+				end
+			end
+		end,
+	}
+
+	for property, value in next, properties do
+		if customHandlers[property] then
+			customHandlers[property](value)
+		else
+			localObject[property] = value
+		end
+	end
+
+	return setmetatable(methods, {
+		__index = function(_, property)
+			return localObject[property]
+		end,
+		__newindex = function(_, property, value)
+			localObject[property] = value
+		end,
+	})
+end
+
+function Library:show(state)
+	self.Toggled = state
+	self.mainFrame.ClipsDescendants = true
+	if state then
+		self.mainFrame:tween({Size = self.mainFrame.oldSize, Length = 0.25}, function()
+			rawset(self.mainFrame, "oldSize", (state and self.mainFrame.oldSize) or self.mainFrame.Size)
+			self.mainFrame.ClipsDescendants = false
+		end)
+		wait(0.15)
+		self.mainFrame:fade(not state, self.mainFrame.BackgroundColor3, 0.15)
+	else		
+		self.mainFrame:fade(not state, self.mainFrame.BackgroundColor3, 0.15)
+		wait(0.1)
+		self.mainFrame:tween{Size = UDim2.new(), Length = 0.25}
+	end
+end
+
+function Library:darken(color, f)
+	local h, s, v = Color3.toHSV(color)
+	f = 1 - ((f or 15) / 80)
+	return Color3.fromHSV(h, math.clamp(s/f, 0, 1), math.clamp(v*f, 0, 1))
+end
+
+function Library:lighten(color, f)
+	local h, s, v = Color3.toHSV(color)
+	f = 1 - ((f or 15) / 80)
+	return Color3.fromHSV(h, math.clamp(s*f, 0, 1), math.clamp(v/f, 0, 1))
+end
+
+--[[ old lighten/darken functions, may revert if contrast gets fucked up
+
+	function Library:darken(color, f)
+		local h, s, v = Color3.toHSV(color)
+		f = f or 15
+		return Color3.fromHSV(h, s, math.clamp(v - (f/255), 0, 1))
+	end
+
+	function Library:lighten(color, f)
+		local h, s, v = Color3.toHSV(color)
+		f = f or 15
+		return Color3.fromHSV(h, s, math.clamp(v + (f/255), 0, 1))
+	end
+	
+]]
+
+function Library:set_status(txt)
+	self.statusText.Text = "Status | " .. txt
+end
+
+function Library:set_button_functions(button, default, hover, down)
+
+end
+
+function Library:create(options)
+	options = self:set_defaults({
+		Name = "Mercury",
+		Size = UDim2.fromOffset(600, 400),
+		Theme = self.Themes.Dark,
+		Link = "https://github.com/deeeity/mercury-lib"
+	}, options)
+	if options.Link:sub(-1, -1) == "/" then
+		options.Link = options.Link:sub(1, -2)
+	end
+
+	if options.Theme.Light then
+		self.darken, self.lighten = self.lighten, self.darken
+	end
+
+	self.CurrentTheme = options.Theme
+
+	local gui = self:object("ScreenGui", {
+		Parent = (RunService:IsStudio() and LocalPlayer.PlayerGui) or game:GetService("CoreGui"),
+		ZIndexBehavior = Enum.ZIndexBehavior.Global
+	})
+
+	local core = gui:object("Frame", {
+		Size = UDim2.new(),
+		Theme = {BackgroundColor3 = "Main"},
+		Centered = true,
+		ClipsDescendants = true		
+	}):round(10)
+
+	core:fade(true, nil, 0.2, true)
+
+
+	core:fade(false, nil, 0.4)
+	core:tween({Size = options.Size, Length = 0.3}, function()
+		core.ClipsDescendants = false
+	end)
+
+	do
+		local S, Event = pcall(function()
+			return core.MouseEnter
+		end)
+
+		if S then
+			core.Active = true;
+
+			Event:connect(function()
+				local Input = core.InputBegan:connect(function(Key)
+					if Key.UserInputType == Enum.UserInputType.MouseButton1 then
+						local ObjectPosition = Vector2.new(Mouse.X - core.AbsolutePosition.X, Mouse.Y - core.AbsolutePosition.Y)
+						while RunService.RenderStepped:wait() and UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
+
+							if Library.LockDragging then
+								local FrameX, FrameY = math.clamp(Mouse.X - ObjectPosition.X, 0, gui.AbsoluteSize.X - core.AbsoluteSize.X), math.clamp(Mouse.Y - ObjectPosition.Y, 0, gui.AbsoluteSize.Y - core.AbsoluteSize.Y)
+								core:tween{
+									Position = UDim2.fromOffset(FrameX + (core.Size.X.Offset * core.AnchorPoint.X), FrameY + (core.Size.Y.Offset * core.AnchorPoint.Y)),
+									Length = Library.DragSpeed
+								}
+							else
+								core:tween{
+									Position = UDim2.fromOffset(Mouse.X - ObjectPosition.X + (core.Size.X.Offset * core.AnchorPoint.X), Mouse.Y - ObjectPosition.Y + (core.Size.Y.Offset * core.AnchorPoint.Y)),
+									Length = Library.DragSpeed	
+								}
+							end	
+							--[[core.AbsoluteObject:TweenPosition(
+								UDim2.new(0, Mouse.X - ObjectPosition.X + (core.Size.X.Offset * core.AnchorPoint.X), 0, Mouse.Y - ObjectPosition.Y + (core.Size.Y.Offset * core.AnchorPoint.Y)),           
+								Enum.EasingDirection.In,
+								Enum.EasingStyle.Sine,
+								Library.DragSpeed,
+								true
+								
+								--
+								core:tween{
+								Position = UDim2.new(0, Mouse.X - ObjectPosition.X + (core.Size.X.Offset * core.AnchorPoint.X), 0, Mouse.Y - ObjectPosition.Y + (core.Size.Y.Offset * core.AnchorPoint.Y)),
+								Direction = Enum.EasingDirection.Out,
+								Style = Enum.EasingStyle.Quad,
+								Length = Library.DragSpeed
+							}
+							)]]
+						end
+					end
+				end)
+
+				local Leave
+				Leave = core.MouseLeave:connect(function()
+					Input:disconnect()
+					Leave:disconnect()
+				end)
+			end)
+		end
+	end
+
+	rawset(core, "oldSize", options.Size)
+
+	self.mainFrame = core
+
+	local tabButtons = core:object("ScrollingFrame", {
+		Size = UDim2.new(1, -40, 0, 25),
+		Position = UDim2.fromOffset(5, 5),
+		BackgroundTransparency = 1,
+		ClipsDescendants = true,
+		ScrollBarThickness = 0,
+		ScrollingDirection = Enum.ScrollingDirection.X,
+		AutomaticCanvasSize = Enum.AutomaticSize.X
+	})
+
+	tabButtons:object("UIListLayout", {
+		FillDirection = Enum.FillDirection.Horizontal,
+		HorizontalAlignment = Enum.HorizontalAlignment.Left,
+		SortOrder = Enum.SortOrder.LayoutOrder,
+		Padding = UDim.new(0, 4)
+	})
+
+	local closeButton = core:object("ImageButton", {
+		BackgroundTransparency = 1,
+		Size = UDim2.fromOffset(14, 14),
+		Position = UDim2.new(1, -11, 0, 11),
+		Theme = {ImageColor3 = "StrongText"},
+		Image = "http://www.roblox.com/asset/?id=8497487650",
+		AnchorPoint = Vector2.new(1)
+	})
+
+	closeButton.MouseEnter:connect(function()
+		closeButton:tween{ImageColor3 = Color3.fromRGB(255, 124, 142)}
+	end)
+
+	closeButton.MouseLeave:connect(function()
+		closeButton:tween{ImageColor3 = Library.CurrentTheme.StrongText}
+	end)
+
+	closeButton.MouseButton1Click:connect(function()
+		core.ClipsDescendants = true
+		core:fade(true)
+		wait(0.1)
+		core:tween({Size = UDim2.new()}, function()
+			gui.AbsoluteObject:Destroy()
+		end)
+	end)
+
+	local urlBar = core:object("Frame", {
+		Size = UDim2.new(1, -10, 0, 25),
+		Position = UDim2.new(0, 5,0, 35),
+		Theme = {BackgroundColor3 = "Secondary"}
+	}):round(5)
+
+	local searchIcon = urlBar:object("ImageLabel", {
+		AnchorPoint = Vector2.new(0, .5),
+		Position = UDim2.new(0, 5,0.5, 0);
+		Theme = {ImageColor3 = "Tertiary"},
+		Size = UDim2.fromOffset(16, 16),
+		Image = "http://www.roblox.com/asset/?id=8497489946",
+		BackgroundTransparency = 1
+	})
+
+	local link = urlBar:object("TextLabel", {
+		AnchorPoint = Vector2.new(0, 0.5),
+		Position = UDim2.new(0, 26, 0.5, 0),
+		BackgroundTransparency = 1,
+		Size = UDim2.new(1, -30, .6, 0),
+		Text = options.Link .. "/home",
+		Theme = {TextColor3 = "WeakText"},
+		TextSize = 14,
+		TextScaled = false,
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
+
+	Library.UrlLabel = link
+	Library.Url = options.Link
+
+	local shadowHolder = core:object("Frame", {
+		BackgroundTransparency = 1,
+		Size = UDim2.fromScale(1, 1),
+		ZIndex = 0
+	})
+
+	local shadow = shadowHolder:object("ImageLabel", {
+		Centered = true,
+		BackgroundTransparency = 1,
+		Size = UDim2.new(1, 47,1, 47),
+		ZIndex = 0,
+		Image = "rbxassetid://6015897843",
+		ImageColor3 = Color3.new(0, 0, 0),
+		ImageTransparency = .6,
+		SliceCenter = Rect.new(47, 47, 450, 450),
+		ScaleType = Enum.ScaleType.Slice,
+		SliceScale = 1
+	})
+
+	local content = core:object("Frame", {
+		Theme = {BackgroundColor3 = {"Secondary", -10}},
+		AnchorPoint = Vector2.new(0.5, 1),
+		Position = UDim2.new(0.5, 0, 1, -20),
+		Size = UDim2.new(1, -10, 1, -86)
+	}):round(7) -- Sept
+
+	local status = core:object("TextLabel", {
+		AnchorPoint = Vector2.new(0, 1),
+		BackgroundTransparency = 1,
+		Position = UDim2.new(0, 5, 1, -6),
+		Size = UDim2.new(0.2, 0, 0, 10),
+		Font = Enum.Font.SourceSans,
+		Text = "Status | Idle",
+		Theme = {TextColor3 = "Tertiary"},
+		TextSize = 14,
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
+
+	local homeButton = tabButtons:object("TextButton", {
+		Name = "hehehe siuuuuuuuuu",
+		BackgroundTransparency = 0,
+		Theme = {BackgroundColor3 = "Secondary"},
+		Size = UDim2.new(0, 125, 0, 25)
+	}):round(5)
+
+	local homeButtonText = homeButton:object("TextLabel", {
+		Theme = {TextColor3 = "StrongText"},
+		AnchorPoint = Vector2.new(0, .5),
+		BackgroundTransparency = 1,
+		TextSize = 14,
+		Text = options.Name,
+		Position = UDim2.new(0, 25, 0.5, 0),
+		TextXAlignment = Enum.TextXAlignment.Left,
+		Size = UDim2.new(1, -45, 0.5, 0),
+		Font = Enum.Font.SourceSans,
+		TextTruncate = Enum.TextTruncate.AtEnd
+	})
+
+	local homeButtonIcon = homeButton:object("ImageLabel", {
+		AnchorPoint = Vector2.new(0, 0.5),
+		BackgroundTransparency = 1,
+		Position = UDim2.new(0, 5, 0.5, 0),
+		Size = UDim2.new(0, 15, 0, 15),
+		Image = "http://www.roblox.com/asset/?id=8569322835",
+		Theme = {ImageColor3 = "StrongText"}
+	})
+
+	local homePage = content:object("Frame", {
+		Size = UDim2.fromScale(1, 1),
+		Centered = true,
+		BackgroundTransparency = 1
+	})
+
+	local tabs = {}
+
+	-- size handling lol 
+--[[ 	setmetatable(tabs, {
+		__newindex = function(self, i, v)
+			rawset(self, i, v)
+			local absoluteSize = tabButtons.AbsoluteSize.X
+			local newSize = #self + 1
+			for _, t in next, self do
+				local tab = t[2]
+				tab.Size = UDim2.new(0, absoluteSize/newSize, 1, 0)
+			end
+		end
+	}) ]]
+	selectedTab = homeButton
+
+	tabs[#tabs+1] = {homePage, homeButton}
+
+	do
+		local down = false
+		local hovered = false
+
+		homeButton.MouseEnter:connect(function()
+			hovered = true
+			homeButton:tween{BackgroundTransparency = ((selectedTab == homeButton) and 0.15) or 0.3}
+		end)
+
+		homeButton.MouseLeave:connect(function()
+			hovered = false
+			homeButton:tween{BackgroundTransparency = ((selectedTab == homeButton) and 0.15) or 1}
+		end)
+
+		homeButton.MouseButton1Down:connect(function()
+			down = true
+			homeButton:tween{BackgroundTransparency = 0}
+		end)
+
+		UserInputService.InputEnded:connect(function(key)
+			if key.UserInputType == Enum.UserInputType.MouseButton1 then
+				down = false
+				homeButton:tween{BackgroundTransparency = ((selectedTab == homeButton) and 0.15) or (hovered and 0.3) or 1}
+			end
+
+		end)
+
+		homeButton.MouseButton1Click:Connect(function()
+			for _, tabInfo in next, tabs do
+				local page = tabInfo[1]
+				local button = tabInfo[2]
+				page.Visible = false
+			end
+			selectedTab:tween{BackgroundTransparency = ((selectedTab == homeButton) and 0.15) or 1}
+			selectedTab = homeButton
+			homePage.Visible = true
+			homeButton.BackgroundTransparency = 0
+			Library.UrlLabel.Text = Library.Url .. "/home"
+		end)
+	end
+
+	self.SelectedTabButton = homeButton
+
+	local homePageLayout = homePage:object("UIListLayout", {
+		Padding = UDim.new(0, 10),
+		FillDirection = Enum.FillDirection.Vertical,
+		HorizontalAlignment = Enum.HorizontalAlignment.Center
+	})
+
+	local homePagePadding = homePage:object("UIPadding", {
+		PaddingTop = UDim.new(0, 10)
+	})
+
+	local profile = homePage:object("Frame", {
+		AnchorPoint = Vector2.new(0, .5),
+		Theme = {BackgroundColor3 = "Secondary"},
+		Size = UDim2.new(1, -20, 0, 100)
+	}):round(7)
+
+	local profilePictureContainer = profile:object("ImageLabel", {
+		Image = Players:GetUserThumbnailAsync(LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100),
+		Theme = {BackgroundColor3 = {"Secondary", 10}},
+		AnchorPoint = Vector2.new(0, 0.5),
+		Position = UDim2.new(0, 10, 0.5),
+		Size = UDim2.fromOffset(80, 80)
+	}):round(100)
+
+	local displayName; do
+		local h, s, v = Color3.toHSV(options.Theme.Tertiary)
+		local c = self:lighten(options.Theme.Tertiary, 20)
+
+		local displayName = profile:object("TextLabel", {
+			RichText = true,
+			Text = "Welcome, <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>",
+			TextScaled = true,
+			Position = UDim2.new(0, 105,0, 10),
+			Theme = {TextColor3 = {"Tertiary", 10}},
+			Size = UDim2.new(0, 400,0, 40),
+			BackgroundTransparency = 1,
+			TextXAlignment = Enum.TextXAlignment.Left
+		})
+		Library.DisplayName = displayName
+	end
+
+	local profileName = profile:object("TextLabel", {
+		Text = "@" .. LocalPlayer.Name,
+		TextScaled = true,
+		Position = UDim2.new(0, 105,0, 47),
+		Theme = {TextColor3 = "Tertiary"},
+		Size = UDim2.new(0, 400,0, 20),
+		BackgroundTransparency = 1,
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
+
+	local timeDisplay = profile:object("TextLabel", {
+		BackgroundTransparency = 1,
+		Position = UDim2.new(0, 105, 1, -10),
+		Size = UDim2.new(0, 400,0, 20),
+		AnchorPoint = Vector2.new(0, 1),
+		Theme = {TextColor3 = {"WeakText", -20}},
+		TextScaled = true,
+		TextXAlignment = Enum.TextXAlignment.Left,
+		Text = tostring(os.date("%X")):sub(1, os.date("%X"):len()-3)
+	})
+
+	do
+		local desiredInterval = 1
+		local counter = 0
+		RunService.Heartbeat:Connect(function(step)
+			counter += step  
+			if counter >= desiredInterval then
+				counter -= desiredInterval
+				local date = tostring(os.date("%X"))
+				timeDisplay.Text = date:sub(1, date:len()-3)
+			end
+		end)
+	end
+
+	local settingsTabIcon = profile:object("ImageButton", {
+		BackgroundTransparency = 1,
+		Theme = {ImageColor3 = "WeakText"},
+		Size = UDim2.fromOffset(24, 24),
+		Position = UDim2.new(1, -10, 1, -10),
+		AnchorPoint = Vector2.new(1, 1),
+		Image = "http://www.roblox.com/asset/?id=8559790237"
+	}):tooltip("settings")
+
+	local creditsTabIcon = profile:object("ImageButton", {
+		BackgroundTransparency = 1,
+		Theme = {ImageColor3 = "WeakText"},
+		Size = UDim2.fromOffset(24, 24),
+		Position = UDim2.new(1, -44, 1, -10),
+		AnchorPoint = Vector2.new(1, 1),
+		Image = "http://www.roblox.com/asset/?id=8577523456"
+	}):tooltip("credits")
+
+	local quickAccess = homePage:object("Frame", {
+		BackgroundTransparency = 1,
+		Size = UDim2.new(1, -20, 0, 180)
+	})
+
+	quickAccess:object("UIGridLayout", {
+		CellPadding = UDim2.fromOffset(10, 10),
+		CellSize = UDim2.fromOffset(55, 55),
+		HorizontalAlignment = Enum.HorizontalAlignment.Center,
+		VerticalAlignment = Enum.VerticalAlignment.Center
+	})
+
+	quickAccess:object("UIPadding", {
+		PaddingBottom = UDim.new(0, 10),
+		PaddingLeft = UDim.new(0, 70),
+		PaddingRight = UDim.new(0, 70),
+		PaddingTop = UDim.new(0, 5)
+	})
+
+
+	local mt = setmetatable({
+		core = core,
+		statusText = status,
+		container = content,
+		navigation = tabButtons,
+		Theme = options.Theme,
+		Tabs = tabs,
+		quickAccess = quickAccess,
+		homeButton = homeButton,
+		homePage = homePage,
+		nilFolder = core:object("Folder")
+	}, Library)
+
+	local settingsTab = Library.tab(mt, {
+		Name = "Settings",
+		Internal = settingsTabIcon,
+		Icon = "rbxassetid://8559790237"
+	})
+
+	settingsTab:_theme_selector()
+
+	settingsTab:keybind{
+		Name = "Toggle Key",
+		Description = "Key to show/hide the UI.",
+		Keybind = Enum.KeyCode.Delete,
+		Callback = function()
+			self.Toggled = not self.Toggled
+			Library:show(self.Toggled)
+		end,
+	}
+
+	settingsTab:toggle{
+		Name = "Lock Dragging",
+		Description = "Makes sure you can't drag the UI outside of the window.",
+		StartingState = true,
+		Callback = function(state)
+			Library.LockDragging = state
+		end,
+	}
+
+	settingsTab:slider{
+		Name = "UI Drag Speed",
+		Description = "How smooth the dragging looks.",
+		Max = 20,
+		Default = 14,
+		Callback = function(value)
+			Library.DragSpeed = (20 - value)/100
+		end,
+	}
+
+	local creditsTab = Library.tab(mt, {
+		Name = "Credits",
+		Internal = creditsTabIcon,
+		Icon = "http://www.roblox.com/asset/?id=8577523456"
+	})
+	
+	rawset(mt, "creditsContainer", creditsTab.container)
+	
+	creditsTab:credit{Name = "Abstract", Description = "UI Library Developer", Discord = "Abstract#8007", V3rmillion = "AbstractPoo"}
+	creditsTab:credit{Name = "Deity", Description = "UI Library Developer", Discord = "Deity#0228", V3rmillion = "0xDEITY"}
+	
+	return mt
+end
+
+function Library:tab(options)
+	options = self:set_defaults({
+		Name = "New Tab",
+		Icon = "rbxassetid://8569322835"
+	}, options)
+
+	local tab = self.container:object("ScrollingFrame", {
+		AnchorPoint = Vector2.new(0, 1),
+		Visible = false,
+		BackgroundTransparency = 1,
+		Position = UDim2.fromScale(0, 1),
+		Size = UDim2.fromScale(1, 1),
+		ScrollBarThickness = 0,
+		ScrollingDirection = Enum.ScrollingDirection.Y
+	})
+
+	local quickAccessButton
+	local quickAccessIcon
+
+	if not options.Internal then
+		quickAccessButton = self.quickAccess:object("TextButton", {
+			Theme = {BackgroundColor3 = "Secondary"}
+		}):round(5):tooltip(options.Name)
+
+		quickAccessIcon = quickAccessButton:object("ImageLabel", {
+			BackgroundTransparency = 1,
+			Theme = {ImageColor3 = "StrongText"},
+			Image = options.Icon,
+			Size = UDim2.fromScale(0.5, 0.5),
+			Centered = true
+		})
+	else
+		quickAccessButton = options.Internal
+	end
+
+	local layout = tab:object("UIListLayout", {
+		Padding = UDim.new(0, 10),
+		HorizontalAlignment = Enum.HorizontalAlignment.Center
+	})
+
+	tab:object("UIPadding", {
+		PaddingTop = UDim.new(0, 10)
+	})
+
+	local tabButton = Library:object("TextButton", {
+		BackgroundTransparency = 1,
+		Parent = self.nilFolder.AbsoluteObject,
+		Theme = {BackgroundColor3 = "Secondary"},
+		Size = UDim2.new(0, 125, 0, 25),
+		Visible = false
+	}):round(5)
+
+	self.Tabs[#self.Tabs+1] = {tab, tabButton, options.Name}
+
+	do
+		local down = false
+		local hovered = false
+
+		tabButton.MouseEnter:connect(function()
+			hovered = true
+			tabButton:tween{BackgroundTransparency = ((selectedTab == tabButton) and 0.15) or 0.3}
+		end)
+
+		tabButton.MouseLeave:connect(function()
+			hovered = false
+			tabButton:tween{BackgroundTransparency = ((selectedTab == tabButton) and 0.15) or 1}
+		end)
+
+		tabButton.MouseButton1Down:connect(function()
+			down = true
+			tabButton:tween{BackgroundTransparency = 0}
+		end)
+
+		UserInputService.InputEnded:connect(function(key)
+			if key.UserInputType == Enum.UserInputType.MouseButton1 then
+				down = false
+				tabButton:tween{BackgroundTransparency = ((selectedTab == tabButton) and 0.15) or (hovered and 0.3) or 1}
+			end
+
+		end)
+
+		tabButton.MouseButton1Click:Connect(function()
+			for _, tabInfo in next, self.Tabs do
+				local page = tabInfo[1]
+				local button = tabInfo[2]
+				page.Visible = false
+			end
+			selectedTab:tween{BackgroundTransparency = ((selectedTab == tabButton) and 0.15) or 1}
+			selectedTab = tabButton
+			tab.Visible = true
+			tabButton.BackgroundTransparency = 0
+			Library.UrlLabel.Text = Library.Url .. "/" .. options.Name:lower()
+		end)
+
+		quickAccessButton.MouseEnter:connect(function()
+			quickAccessButton:tween{BackgroundColor3 = Library.CurrentTheme.Tertiary}
+		end)
+
+		quickAccessButton.MouseLeave:connect(function()
+			quickAccessButton:tween{BackgroundColor3 = Library.CurrentTheme.Secondary}
+		end)
+
+		quickAccessButton.MouseButton1Click:connect(function()
+			if not tabButton.Visible then
+				tabButton.Parent = self.navigation.AbsoluteObject
+				tabButton.Size = UDim2.new(0, 50, tabButton.Size.Y.Scale, tabButton.Size.Y.Offset)
+				tabButton.Visible = true
+				tabButton:fade(false, Library.CurrentTheme.Main, 0.1)			
+				tabButton:tween({Size = UDim2.new(0, 125, tabButton.Size.Y.Scale, tabButton.Size.Y.Offset), Length = 0.1})
+				for _, tabInfo in next, self.Tabs do
+					local page = tabInfo[1]
+					local button = tabInfo[2]
+					page.Visible = false
+				end
+				selectedTab:tween{BackgroundTransparency = ((selectedTab == tabButton) and 0.15) or 1}
+				selectedTab = tabButton
+				tab.Visible = true
+				tabButton.BackgroundTransparency = 0
+				Library.UrlLabel.Text = Library.Url .. "/" .. options.Name:lower()
+			end
+		end)
+	end
+
+	local tabButtonText = tabButton:object("TextLabel", {
+		Theme = {TextColor3 = "StrongText"},
+		AnchorPoint = Vector2.new(0, .5),
+		BackgroundTransparency = 1,
+		TextSize = 14,
+		Text = options.Name,
+		Position = UDim2.new(0, 25, 0.5, 0),
+		TextXAlignment = Enum.TextXAlignment.Left,
+		Size = UDim2.new(1, -45, 0.5, 0),
+		Font = Enum.Font.SourceSans,
+		TextTruncate = Enum.TextTruncate.AtEnd
+	})
+
+	local tabButtonIcon = tabButton:object("ImageLabel", {
+		AnchorPoint = Vector2.new(0, 0.5),
+		BackgroundTransparency = 1,
+		Position = UDim2.new(0, 5, 0.5, 0),
+		Size = UDim2.new(0, 15, 0, 15),
+		Image = options.Icon,
+		Theme = {ImageColor3 = "StrongText"}
+	})
+
+	local tabButtonClose = tabButton:object("ImageButton", {
+		AnchorPoint = Vector2.new(1, 0.5),
+		BackgroundTransparency = 1,
+		Position = UDim2.new(1, -5, 0.5, 0),
+		Size = UDim2.fromOffset(14, 14),
+		Image = "rbxassetid://8497487650",
+		Theme = {ImageColor3 = "StrongText"}
+	})
+
+	tabButtonClose.MouseButton1Click:connect(function()
+		tabButton:fade(true, Library.CurrentTheme.Main, 0.1)
+		tabButton:tween({Size = UDim2.new(0, 50, tabButton.Size.Y.Scale, tabButton.Size.Y.Offset), Length = 0.1}, function()
+			tabButton.Visible = false
+			tab.Visible = false
+			tabButton.Parent = self.nilFolder.AbsoluteObject
+			wait()
+		end)
+
+		local visible = {}
+		for _, tab in next, self.Tabs do
+			if not tab[2] == selectedTab then tab[1].Visible = false end
+			if tab[2].Visible then
+				visible[#visible+1] = tab
+			end
+		end
+
+		local lastTab = visible[#visible]
+
+		if selectedTab == self.homeButton then
+			tab.Visible = false
+		elseif #visible == 2 then
+			selectedTab.Visible = false
+			tab.Visible = false
+			self.homePage.Visible = true
+			self.homeButton:tween{BackgroundTransparency = 0.15}
+			selectedTab = self.homeButton
+			Library.UrlLabel.Text = Library.Url .. "/home"	
+		elseif tabButton == lastTab[2] then
+			lastTab = visible[#visible-1]
+			tab.Visible = false
+			lastTab[2]:tween{BackgroundTransparency = 0.15}
+			lastTab[1].Visible = true
+			selectedTab = lastTab[2]
+			Library.UrlLabel.Text = Library.Url .. "/" .. lastTab[3]:lower()
+		else
+			tab.Visible = false
+			lastTab[2]:tween{BackgroundTransparency = 0.15}
+			lastTab[1].Visible = true
+			selectedTab = lastTab[2]
+			Library.UrlLabel.Text = Library.Url .. "/" .. lastTab[3]:lower()
+		end
+	end)
+
+	return setmetatable({
+		statusText = self.statusText,
+		container = tab,
+		Theme = self.Theme,
+		core = self.core,
+		layout = layout
+	}, Library)
+end
+
+function Library:_resize_tab()
+	self.container.CanvasSize = UDim2.fromOffset(0, self.layout.AbsoluteContentSize.Y + 20)
+end
+
+function Library:toggle(options)
+	options = self:set_defaults({
+		Name = "Toggle",
+		StartingState = false,
+		Description = nil,
+		Callback = function(state) end
+	}, options)
+
+	if options.StartingState then options.Callback(true) end
+
+	local toggleContainer = self.container:object("TextButton", {
+		Theme = {BackgroundColor3 = "Secondary"},
+		Size = UDim2.new(1, -20, 0, 52)
+	}):round(7)
+
+	local on = "http://www.roblox.com/asset/?id=8498709213"
+	local off = "http://www.roblox.com/asset/?id=8498691125"
+
+	local toggled = options.StartingState
+
+	local onIcon = toggleContainer:object("ImageLabel", {
+		AnchorPoint = Vector2.new(1, .5),
+		BackgroundTransparency = 1,
+		Position = UDim2.new(1, -11,0.5, 0),
+		Size = UDim2.new(0, 26,0, 26),
+		Image = on,
+		Theme = {ImageColor3 = "Tertiary"},
+		ImageTransparency = (toggled and 0) or 1
+	})
+
+	local offIcon = toggleContainer:object("ImageLabel", {
+		AnchorPoint = Vector2.new(1, .5),
+		BackgroundTransparency = 1,
+		Position = UDim2.new(1, -11,0.5, 0),
+		Size = UDim2.new(0, 26,0, 26),
+		Image = off,
+		Theme = {ImageColor3 = "WeakText"},
+		ImageTransparency = (toggled and 1) or 0
+	})
+
+	local text = toggleContainer:object("TextLabel", {
+		BackgroundTransparency = 1,
+		Position = UDim2.fromOffset(10, (options.Description and 5) or 0),
+		Size = (options.Description and UDim2.new(0.5, -10, 0, 22)) or UDim2.new(0.5, -10, 1, 0),
+		Text = options.Name,
+		TextSize = 22,
+		Theme = {TextColor3 = "StrongText"},
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
+
+	if options.Description then
+		local description = toggleContainer:object("TextLabel", {
+			BackgroundTransparency = 1,
+			Position = UDim2.fromOffset(10, 27),
+			Size = UDim2.new(0.5, -10, 0, 20),
+			Text = options.Description,
+			TextSize = 18,
+			Theme = {TextColor3 = "WeakText"},
+			TextXAlignment = Enum.TextXAlignment.Left
+		})
+	end
+
+	local function toggle()
+		toggled = not toggled
+		if toggled then
+			offIcon:crossfade(onIcon, 0.1)
+		else
+			onIcon:crossfade(offIcon, 0.1)
+		end
+		options.Callback(toggled)
+	end
+
+	do
+		local hovered = false
+		local down = false
+
+		toggleContainer.MouseEnter:connect(function()
+			hovered = true
+			toggleContainer:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 10)}
+		end)
+
+		toggleContainer.MouseLeave:connect(function()
+			hovered = false
+			if not down then
+				toggleContainer:tween{BackgroundColor3 = Library.CurrentTheme.Secondary}
+			end
+		end)
+
+		toggleContainer.MouseButton1Down:connect(function()
+			toggleContainer:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 20)}
+		end)
+
+		UserInputService.InputEnded:connect(function(key)
+			if key.UserInputType == Enum.UserInputType.MouseButton1 then
+				toggleContainer:tween{BackgroundColor3 = (hovered and self:lighten(Library.CurrentTheme.Secondary)) or Library.CurrentTheme.Secondary}
+			end
+		end)
+
+		toggleContainer.MouseButton1Click:connect(function()
+			toggle()
+		end)
+	end
+	self:_resize_tab()
+
+	local methods = {}
+
+	function methods:Toggle()
+		toggle()
+	end
+
+	function methods:SetState(state)
+		toggled = state
+		if toggled then
+			offIcon:crossfade(onIcon, 0.1)
+		else
+			onIcon:crossfade(offIcon, 0.1)
+		end
+		options.Callback(toggled)
+	end
+
+	return methods
+end
+
+function Library:dropdown(options)
+	options = self:set_defaults({
+		Name = "Dropdown",
+		StartingText = "Select...",
+		Items = {},
+		Callback = function(item) return end
+	}, options)
+
+
+	local newSize = 0
+	local open = false
+
+	local dropdownContainer = self.container:object("TextButton", {
+		Theme = {BackgroundColor3 = "Secondary"},
+		Size = UDim2.new(1, -20, 0, 52)
+	}):round(7)
+
+	local text = dropdownContainer:object("TextLabel", {
+		BackgroundTransparency = 1,
+		Position = UDim2.fromOffset(10, (options.Description and 5) or 15),
+		Size = UDim2.new(0.5, -10, 0, 22),
+		Text = options.Name,
+		TextSize = 22,
+		Theme = {TextColor3 = "StrongText"},
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
+
+	if options.Description then
+		local description = dropdownContainer:object("TextLabel", {
+			BackgroundTransparency = 1,
+			Position = UDim2.fromOffset(10, 27),
+			Size = UDim2.new(0.5, -10, 0, 20),
+			Text = options.Description,
+			TextSize = 18,
+			Theme = {TextColor3 = "WeakText"},
+			TextXAlignment = Enum.TextXAlignment.Left
+		})
+	end
+
+	local icon = dropdownContainer:object("ImageLabel", {
+		AnchorPoint = Vector2.new(1, 0),
+		BackgroundTransparency = 1,
+		Position = UDim2.new(1, -11, 0, 12),
+		Size = UDim2.fromOffset(26, 26),
+		Image = "rbxassetid://8498840035",
+		Theme = {ImageColor3 = "Tertiary"}
+	})
+
+	local selectedText = dropdownContainer:object("TextLabel", {
+		AnchorPoint = Vector2.new(1, 0),
+		Theme = {
+			BackgroundColor3 = {"Secondary", -20},
+			TextColor3 = "WeakText"
+		},
+		Position = UDim2.new(1, -50, 0, 16),
+		Size = UDim2.fromOffset(200, 20),
+		TextSize = 14,
+		Text = options.StartingText
+	}):round(5):stroke("Tertiary")
+
+	local itemContainer = dropdownContainer:object("Frame", {
+		BackgroundTransparency = 1,
+		Position = UDim2.new(0, 5,0, 55),
+		Size = UDim2.new(1, -10, 0, 0),
+		ClipsDescendants = true
+	})
+
+	selectedText.Size = UDim2.fromOffset(selectedText.TextBounds.X + 20, 20)
+
+	local _gridItemContainer = itemContainer:object("UIGridLayout", {
+		CellPadding = UDim2.fromOffset(0, 5),
+		CellSize = UDim2.new(1, 0, 0, 20),
+		FillDirection = Enum.FillDirection.Horizontal,
+		HorizontalAlignment = Enum.HorizontalAlignment.Left,
+		VerticalAlignment = Enum.VerticalAlignment.Top
+	})
+
+	local layout = self.layout
+	local container = self.container
+
+
+	local items = setmetatable({}, {
+		__newindex = function(self, i, v)
+			rawset(self, i, v)
+			if v ~= nil then
+				newSize = (25 * #self) + 5
+				itemContainer.Size = UDim2.new(1, -10, 0, newSize)
+			end
+		end
+	})
+
+	for i, v in next, options.Items do
+		if typeof(v) == "table" then
+			items[i] = v
+		else
+			items[i] = {tostring(v), v}
+		end
+	end
+
+	local toggle;
+
+	for i, item in next, items do
+		local label = item[1]
+		local value = item[2]
+
+		local newItem = itemContainer:object("TextButton", {
+			Theme = {
+				BackgroundColor3 = {"Secondary", 25},
+				TextColor3 = {"StrongText", 25}
+			},
+			Text = label,
+			TextSize = 14
+		}):round(5)
+
+		items[i] = {{label, value}, newItem} 
+
+		do
+			local hovered = false
+			local down = false
+
+			newItem.MouseEnter:connect(function()
+				hovered = true
+				newItem:tween{BackgroundColor3 = Library.CurrentTheme.Tertiary}
+			end)
+
+			newItem.MouseLeave:connect(function()
+				hovered = false
+				if not down then
+					newItem:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 25)}
+				end
+			end)
+
+			newItem.MouseButton1Down:connect(function()
+				newItem:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Tertiary, 10)}
+			end)
+
+			UserInputService.InputEnded:connect(function(key)
+				if key.UserInputType == Enum.UserInputType.MouseButton1 then
+					newItem:tween{BackgroundColor3 = (hovered and self:lighten(Library.CurrentTheme.Tertiary, 5)) or self:lighten(Library.CurrentTheme.Secondary, 25)}
+				end
+			end)
+
+			newItem.MouseButton1Click:connect(function()
+				toggle()
+				selectedText.Text = newItem.Text
+				selectedText:tween{Size = UDim2.fromOffset(selectedText.TextBounds.X + 20, 20), Length = 0.05}
+				options.Callback(value)
+			end)
+		end
+	end
+
+	do
+		local hovered = false
+		local down = false
+
+		newSize = (25 * #items) + 5
+		itemContainer.Size = (not open and UDim2.new(1, -10, 0, 0)) or UDim2.new(1, -10, 0, newSize)
+
+		toggle = function()
+			newSize = (25 * #items) + 5
+			open = not open
+			if open then
+				itemContainer:tween{Size = UDim2.new(1, -10, 0, newSize)}
+				dropdownContainer:tween({Size = UDim2.new(1, -20, 0, 52 + newSize)}, function()
+					self:_resize_tab()
+				end)
+				icon:tween{Rotation = 180, Position = UDim2.new(1, -11, 0, 15)}
+			else
+				itemContainer:tween{Size = UDim2.new(1, -10, 0, 0)}
+				dropdownContainer:tween({Size = UDim2.new(1, -20, 0, 52)}, function()
+					self:_resize_tab()
+				end)
+				icon:tween{Rotation = 0, Position = UDim2.new(1, -11, 0, 12)}
+			end
+		end
+
+		dropdownContainer.MouseEnter:connect(function()
+			hovered = true
+			dropdownContainer:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 10)}
+		end)
+
+		dropdownContainer.MouseLeave:connect(function()
+			hovered = false
+			if not down then
+				dropdownContainer:tween{BackgroundColor3 = Library.CurrentTheme.Secondary}
+			end
+		end)
+
+		dropdownContainer.MouseButton1Down:connect(function()
+			dropdownContainer:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 20)}
+		end)
+
+		UserInputService.InputEnded:connect(function(key)
+			if key.UserInputType == Enum.UserInputType.MouseButton1 then
+				dropdownContainer:tween{BackgroundColor3 = (hovered and self:lighten(Library.CurrentTheme.Secondary)) or Library.CurrentTheme.Secondary}
+			end
+		end)
+
+		dropdownContainer.MouseButton1Click:connect(function()
+			toggle()
+		end)
+	end
+	self:_resize_tab()
+
+	local methods = {}
+
+	function methods:Set(text)
+		selectedText.Text = text
+		selectedText:tween{Size = UDim2.fromOffset(selectedText.TextBounds.X + 20, 20), Length = 0.05}
+	end
+
+	function methods:RemoveItems(fitems)
+		for _, v in next, fitems do
+			for _2, v2 in next, items do
+				local label = v2[1][1]
+				if label:lower() == tostring(v):lower() then
+					v2[2].AbsoluteObject:Destroy()
+					items[_2] = nil
+					table.remove(items, _2)
+					newSize = (25 * #items) + 5
+					itemContainer:tween{Size = (not open and UDim2.new(1, -10, 0, 0)) or UDim2.new(1, -10, 0, newSize)}
+					dropdownContainer:tween({Size = (not open and UDim2.new(1, -20, 0, 52)) or UDim2.new(1, -20, 0, 52 + newSize)})
+				end
+			end
+		end
+	end
+
+	function methods:Clear()
+		table.clear(items)
+		itemContainer:tween{Size = UDim2.new(1, -10, 0, 0)}
+		dropdownContainer:tween({Size = UDim2.new(1, -20, 0, 52)}, function()
+			for i, v in next, itemContainer.AbsoluteObject:GetChildren() do
+				if v.ClassName == "TextButton" then
+					v:Destroy()
+				end
+			end
+		end)
+		if open then toggle() end
+	end
+
+	function methods:AddItems(fitems)
+		for i, v in next, fitems do
+			if typeof(v) == "table" then
+				items[#items+1] = v
+			else
+				items[#items+1] = {tostring(v), v}
+			end
+		end
+
+		newSize = (25 * #items) + 5
+		itemContainer:tween{Size = (not open and UDim2.new(1, -10, 0, 0)) or UDim2.new(1, -10, 0, newSize)}
+		dropdownContainer:tween({Size = (not open and UDim2.new(1, -20, 0, 52)) or UDim2.new(1, -20, 0, 52 + newSize)})
+
+		for i, item in next, items do
+			local label = item[1]
+			local value = item[2]
+
+			if type(label) == "table" then continue end
+	
+			local newItem = itemContainer:object("TextButton", {
+				Theme = {
+					BackgroundColor3 = {"Secondary", 25},
+					TextColor3 = {"StrongText", 25}
+				},
+				Text = label,
+				TextSize = 14
+			}):round(5)
+
+			items[i] = {{label, value}, newItem}
+	
+			do
+				local hovered = false
+				local down = false
+		
+				newItem.MouseEnter:connect(function()
+					hovered = true
+					newItem:tween{BackgroundColor3 = Library.CurrentTheme.Tertiary}
+				end)
+		
+				newItem.MouseLeave:connect(function()
+					hovered = false
+					if not down then
+						newItem:tween{BackgroundColor3 = Library:lighten(Library.CurrentTheme.Secondary, 25)}
+					end
+				end)
+		
+				newItem.MouseButton1Down:connect(function()
+					newItem:tween{BackgroundColor3 = Library:lighten(Library.CurrentTheme.Tertiary, 10)}
+				end)
+		
+				UserInputService.InputEnded:connect(function(key)
+					if key.UserInputType == Enum.UserInputType.MouseButton1 then
+						newItem:tween{BackgroundColor3 = (hovered and Library:lighten(Library.CurrentTheme.Tertiary, 5)) or Library:lighten(Library.CurrentTheme.Secondary, 25)}
+					end
+				end)
+		
+				newItem.MouseButton1Click:connect(function()
+					toggle()
+					selectedText.Text = newItem.Text
+					selectedText:tween{Size = UDim2.fromOffset(selectedText.TextBounds.X + 20, 20), Length = 0.05}
+					options.Callback(value)
+				end)
+			end		
+		end
+
+		Library._resize_tab({
+			container = container,
+			layout = layout
+		})
+	end
+
+	return methods
+end
+
+function Library:button(options)
+	options = self:set_defaults({
+		Name = "Button",
+		Description = nil,
+		Callback = function() end
+	}, options)
+
+	local buttonContainer = self.container:object("TextButton", {
+		Theme = {BackgroundColor3 = "Secondary"},
+		Size = UDim2.new(1, -20, 0, 52)
+	}):round(7)
+
+	local text = buttonContainer:object("TextLabel", {
+		BackgroundTransparency = 1,
+		Position = UDim2.fromOffset(10, (options.Description and 5) or 0),
+		Size = (options.Description and UDim2.new(0.5, -10, 0, 22)) or UDim2.new(0.5, -10, 1, 0),
+		Text = options.Name,
+		TextSize = 22,
+		Theme = {TextColor3 = "StrongText"},
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
+
+	if options.Description then
+		local description = buttonContainer:object("TextLabel", {
+			BackgroundTransparency = 1,
+			Position = UDim2.fromOffset(10, 27),
+			Size = UDim2.new(0.5, -10, 0, 20),
+			Text = options.Description,
+			TextSize = 18,
+			Theme = {TextColor3 = "WeakText"},
+			TextXAlignment = Enum.TextXAlignment.Left
+		})
+	end
+
+	local icon = buttonContainer:object("ImageLabel", {
+		AnchorPoint = Vector2.new(1, 0.5),
+		BackgroundTransparency = 1,
+		Position = UDim2.new(1, -11, 0.5, 0),
+		Size = UDim2.fromOffset(26, 26),
+		Image = "rbxassetid://8498776661",
+		Theme = {ImageColor3 = "Tertiary"}
+	})
+
+	do
+		local hovered = false
+		local down = false
+
+		buttonContainer.MouseEnter:connect(function()
+			hovered = true
+			buttonContainer:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 10)}
+		end)
+
+		buttonContainer.MouseLeave:connect(function()
+			hovered = false
+			if not down then
+				buttonContainer:tween{BackgroundColor3 = Library.CurrentTheme.Secondary}
+			end
+		end)
+
+		buttonContainer.MouseButton1Down:connect(function()
+			buttonContainer:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 20)}
+		end)
+
+		UserInputService.InputEnded:connect(function(key)
+			if key.UserInputType == Enum.UserInputType.MouseButton1 then
+				buttonContainer:tween{BackgroundColor3 = (hovered and self:lighten(Library.CurrentTheme.Secondary)) or Library.CurrentTheme.Secondary}
+			end
+		end)
+
+		buttonContainer.MouseButton1Click:connect(function()
+			options.Callback()
+		end)
+	end
+	self:_resize_tab()
+
+	local methods = {}
+
+	function methods:Fire()
+		options.Callback()
+	end
+
+	return methods
+end
+
+function Library:color_picker(options)
+	options = self:set_defaults({
+		Name = "Color Picker",
+		Description = nil,
+		Style = Library.ColorPickerStyles.Legacy,
+		Followup = false,
+		Callback = function(color) end
+	}, options)
+
+	if Library._colorPickerExists and not options.Followup then return end
+	Library._colorPickerExists = true
+
+	local buttonContainer = self.container:object("TextButton", {
+		Theme = {BackgroundColor3 = "Secondary"},
+		Size = UDim2.new(1, -20, 0, 52)
+	}):round(7)
+
+	local text = buttonContainer:object("TextLabel", {
+		BackgroundTransparency = 1,
+		Position = UDim2.fromOffset(10, (options.Description and 5) or 0),
+		Size = (options.Description and UDim2.new(0.5, -10, 0, 22)) or UDim2.new(0.5, -10, 1, 0),
+		Text = options.Name,
+		TextSize = 22,
+		Theme = {TextColor3 = "StrongText"},
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
+
+	if options.Description then
+		local description = buttonContainer:object("TextLabel", {
+			BackgroundTransparency = 1,
+			Position = UDim2.fromOffset(10, 27),
+			Size = UDim2.new(0.5, -10, 0, 20),
+			Text = options.Description,
+			TextSize = 18,
+			Theme = {TextColor3 = "WeakText"},
+			TextXAlignment = Enum.TextXAlignment.Left
+		})
+	end
+
+	local icon = buttonContainer:object("ImageLabel", {
+		AnchorPoint = Vector2.new(1, 0.5),
+		BackgroundTransparency = 1,
+		Position = UDim2.new(1, -11, 0.5, 0),
+		Size = UDim2.fromOffset(26, 26),
+		Image = "rbxassetid://8604555937",
+		ImageColor3 = Library.CurrentTheme.Tertiary
+	})
+
+	do
+		local hovered = false
+		local down = false
+
+		buttonContainer.MouseEnter:connect(function()
+			hovered = true
+			buttonContainer:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 10)}
+		end)
+
+		buttonContainer.MouseLeave:connect(function()
+			hovered = false
+			if not down then
+				buttonContainer:tween{BackgroundColor3 = Library.CurrentTheme.Secondary}
+			end
+		end)
+
+		buttonContainer.MouseButton1Down:connect(function()
+			buttonContainer:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 20)}
+		end)
+
+		UserInputService.InputEnded:connect(function(key)
+			if key.UserInputType == Enum.UserInputType.MouseButton1 then
+				buttonContainer:tween{BackgroundColor3 = (hovered and self:lighten(Library.CurrentTheme.Secondary)) or Library.CurrentTheme.Secondary}
+			end
+		end)
+
+		buttonContainer.MouseButton1Click:connect(function()
+			local hue, sat, val;
+			local updatePicker, updateHue;
+
+			local fadeOut;
+
+			local selectedColor = Color3.fromRGB(255, 0, 0);
+
+			local darkener = self.core:object("Frame", {
+				BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+				BackgroundTransparency = 1,
+				Size = UDim2.fromScale(1, 1),
+				ZIndex = 2
+			}):round(10)
+
+
+			if options.Style == 1 then
+				do
+					local arrow = darkener:object("ImageLabel", {
+						BackgroundTransparency = 1,
+						Position = UDim2.new(0, 365,0, 102),
+						Size = UDim2.new(0, 56,0, 48),
+						ZIndex = 10,
+						Image = "rbxassetid://8579148508",
+						ImageColor3 = selectedColor,
+						ImageTransparency = 1,
+						Rotation = 180
+					})
+
+					local text = darkener:object("ImageLabel", {
+						BackgroundTransparency = 1,
+						Position = UDim2.new(0, 364,0, 158),
+						Rotation = -4,
+						Size = UDim2.new(0, 141,0, 37),
+						ZIndex = 10,
+						Image = "rbxassetid://8579166120",
+						ImageColor3 = selectedColor,
+						ImageTransparency = 0
+					})
+
+					local cpHolder = darkener:object("Frame", {
+						AnchorPoint = Vector2.new(.5, .5),
+						BackgroundTransparency = 1,
+						Position = UDim2.new(0.5, -50,0.5, 0),
+						Size = UDim2.fromOffset(160, 240),
+						ZIndex = 12
+					})
+
+					local _cpShadowHolder = cpHolder:object("Frame", {
+						BackgroundTransparency = 1,
+						Size = UDim2.fromScale(1, 1),
+						ZIndex = 11
+					})
+
+					local _cpShadow = _cpShadowHolder:object("ImageLabel", {
+						Centered = true,
+						BackgroundTransparency = 1,
+						Size = UDim2.new(1, 47,1, 47),
+						ZIndex = 11,
+						Image = "rbxassetid://6015897843",
+						ImageColor3 = Color3.new(0, 0, 0),
+						ImageTransparency = 1,
+						SliceCenter = Rect.new(49, 49, 450, 450),
+						ScaleType = Enum.ScaleType.Slice,
+						SliceScale = 1
+					})
+
+					local btnHolder = cpHolder:object("Frame", {
+						AnchorPoint = Vector2.new(1, 1),
+						BackgroundColor3 = Color3.new(0, 0, 0),
+						BackgroundTransparency = 1,
+						Position = UDim2.fromScale(1, 1),
+						Size = UDim2.new(1, -5,0, 50),
+						ZIndex = 12
+					})
+
+					local button = btnHolder:object("TextButton", {
+						Centered = true,
+						BackgroundTransparency = 1,
+						TextTransparency = 1,
+						Size = UDim2.fromOffset(80, 20),
+						ZIndex = 12,
+						Text = "SELECT",
+						TextSize = 13,
+						Theme = {TextColor3 = {"Tertiary", -10}, BackgroundColor3 = {"Tertiary", -10}}
+					}):round(8):stroke({"Tertiary", -10})
+
+					do
+						local hovered = false
+						local down = false
+
+						button.MouseEnter:connect(function()
+							hovered = true
+							button:tween{BackgroundTransparency = 0, TextColor3 = self:lighten(Library.CurrentTheme.StrongText, 15)}
+						end)
+
+						button.MouseLeave:connect(function()
+							hovered = false
+							if not down then
+								button:tween{BackgroundTransparency = 1, TextColor3 = self:darken(Library.CurrentTheme.Tertiary, 10)}
+							end
+						end)
+
+						button.MouseButton1Down:connect(function()
+							button:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Tertiary, 20)}
+						end)
+
+						UserInputService.InputEnded:connect(function(key)
+							if key.UserInputType == Enum.UserInputType.MouseButton1 then
+								button:tween{BackgroundTransparency = (hovered and 0) or 1}
+								if hovered then
+									button:tween{BackgroundColor3 = Library.CurrentTheme.Tertiary}
+								end
+							end
+						end)
+
+						button.MouseButton1Click:connect(function()
+							fadeOut()
+							icon:tween({ImageColor3 = selectedColor})
+							options.Callback(selectedColor)
+						end)
+					end
+
+					local hueBar = cpHolder:object("TextButton", {
+						BackgroundColor3 = Color3.new(255, 255, 255),
+						BorderSizePixel = 0,
+						Text = "",
+						Size = UDim2.new(0, 5, 1, 0),
+						ZIndex = 12,
+						ClipsDescendants = true,
+						BackgroundTransparency = 1
+					})
+
+					local _hueBarGradient = hueBar:object("UIGradient", {
+						Color = ColorSequence.new{
+							ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),
+							ColorSequenceKeypoint.new(0.167, Color3.fromRGB(255, 255, 0)),
+							ColorSequenceKeypoint.new(0.333, Color3.fromRGB(0, 255, 0)),
+							ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 255)),
+							ColorSequenceKeypoint.new(0.667, Color3.fromRGB(0, 0, 255)),
+							ColorSequenceKeypoint.new(0.833, Color3.fromRGB(255, 0, 255)),
+							ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 0, 0))
+						},
+						Rotation = 90
+					})
+
+					local hueDraggable = hueBar:object("ImageButton", {
+						BackgroundTransparency = 1,
+						ImageTransparency = 1,
+						Position = UDim2.new(-2, 3,0, -10),
+						Size = UDim2.fromOffset(20, 20),
+						ZIndex = 12,
+						Image = "rbxassetid://8579244616"
+					})
+
+					local pickerArea = cpHolder:object("TextButton", {
+						Text = "",
+						AnchorPoint = Vector2.new(1, 0),
+						BackgroundTransparency = 1,
+						Position = UDim2.fromScale(1, 0),
+						Size = UDim2.new(1, -5,1, -50),
+						ZIndex = 12,
+						ClipsDescendants = true
+					})
+
+					local color = pickerArea:object("Frame", {
+						Size = UDim2.fromScale(1, 1),
+						ZIndex = 13,
+						BackgroundColor3 = selectedColor,
+						BackgroundTransparency = 1,
+						BorderSizePixel = 0
+					})
+
+					local brightness = pickerArea:object("Frame", {
+						Size = UDim2.fromScale(1, 1),
+						ZIndex = 14,
+						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+						BackgroundTransparency = 1,
+						BorderSizePixel = 0
+					})
+
+					local _brightness = brightness:object("UIGradient", {
+						Color = ColorSequence.new{
+							ColorSequenceKeypoint.new(0, Color3.fromRGB(255 ,255, 255)),
+							ColorSequenceKeypoint.new(1, Color3.fromRGB(255 ,255, 255))
+						},
+						Transparency = NumberSequence.new{
+							NumberSequenceKeypoint.new(0, 0),
+							NumberSequenceKeypoint.new(1, 1),
+						}
+					})
+
+					local black = pickerArea:object("Frame", {
+						Size = UDim2.fromScale(1, 1),
+						ZIndex = 16,
+						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+						BorderSizePixel = 0,
+						BackgroundTransparency = 1
+					})
+
+					local _black = black:object("UIGradient", {
+						Color = ColorSequence.new{
+							ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 0, 0)),
+							ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 0))
+						},
+						Transparency = NumberSequence.new{
+							NumberSequenceKeypoint.new(0, 0),
+							NumberSequenceKeypoint.new(1, 1),
+						},
+						Rotation = -90
+					})
+
+					local colorPickerDraggable = pickerArea:object("TextButton", {
+						Text = "",
+						AnchorPoint = Vector2.new(.5, .5),
+						BackgroundTransparency = 1,
+						Size = UDim2.fromOffset(6, 6),
+						Position = UDim2.new(0, 152, 0, 3),
+						ZIndex = 20
+					}):round(100)
+
+					local _colorPickerDraggableStroke = colorPickerDraggable:object("UIStroke", {
+						Color = Color3.fromRGB(255, 255 ,255),
+						Thickness = 1.6,
+						ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+						Transparency = 1
+					})
+
+					-- HUE
+					do
+						updateHue = function()
+							hue = math.clamp((Mouse.Y - hueBar.AbsolutePosition.Y) / (hueBar.AbsoluteSize.Y), 0, 1)
+							local tempVal = math.clamp((Mouse.Y - pickerArea.AbsolutePosition.Y) / (pickerArea.AbsoluteSize.Y), 0, 1)
+							local newYPos = math.clamp((Mouse.Y - hueBar.AbsolutePosition.Y) / (hueBar.AbsoluteSize.Y) * hueBar.AbsoluteSize.Y, 0, hueBar.AbsoluteSize.Y)
+							selectedColor = Color3.fromHSV(hue, sat, val)
+							color:tween({Length = 0.05, BackgroundColor3 = Color3.fromHSV(hue, 1, 1)})
+							text:tween({ImageColor3 = selectedColor, Length = 0.05})
+							arrow:tween({ImageColor3 = selectedColor, Length = 0.05})
+							hueDraggable:tween({Length = 0.05, Position = UDim2.new(-2, 3, 0, math.clamp(newYPos - 10, -10, hueBar.AbsoluteSize.Y + 10)), ImageColor3 = Color3.fromHSV(1, 0, -tempVal)})
+						end
+
+
+						local down = false
+
+						hueBar.MouseButton1Down:Connect(function()
+							down = true
+							while RunService.RenderStepped:Wait() and down do
+								updateHue()
+							end
+						end)
+
+						hueDraggable.MouseButton1Down:connect(function()
+							down = true
+							while RunService.RenderStepped:Wait() and down do
+								updateHue()
+							end
+						end)
+
+						UserInputService.InputEnded:Connect(function(key)
+							if key.UserInputType == Enum.UserInputType.MouseButton1 then
+								if down then
+									down = false
+								end
+							end
+						end)
+					end
+					-- END HUE
+
+					-- SAT & VALUE [PICKER]
+					do
+						local down = false
+
+						updatePicker = function()
+							sat = math.clamp((Mouse.X - pickerArea.AbsolutePosition.X) / (pickerArea.AbsoluteSize.X), 0, 1)
+							val = 1 - math.clamp((Mouse.Y - pickerArea.AbsolutePosition.Y) / (pickerArea.AbsoluteSize.Y), 0, 1)
+
+							local newXPos = math.clamp((Mouse.X - pickerArea.AbsolutePosition.X) / (pickerArea.AbsoluteSize.X) * pickerArea.AbsoluteSize.X, 0, pickerArea.AbsoluteSize.X)
+							local newYPos = math.clamp((Mouse.Y - pickerArea.AbsolutePosition.Y) / (pickerArea.AbsoluteSize.Y) * pickerArea.AbsoluteSize.Y, 0, pickerArea.AbsoluteSize.Y)
+
+							selectedColor = Color3.fromHSV(hue, sat, val)
+
+							colorPickerDraggable:tween({Position = UDim2.fromOffset(newXPos, newYPos), Length = 0.05})
+							text:tween({ImageColor3 = selectedColor, Length = 0.05})
+							arrow:tween({ImageColor3 = selectedColor, Length = 0.05})
+						end
+
+						pickerArea.MouseButton1Down:Connect(function()
+							down = true
+							while RunService.RenderStepped:wait() and down do
+								updatePicker()
+							end
+						end)
+
+						UserInputService.InputEnded:Connect(function(key)
+							if key.UserInputType == Enum.UserInputType.MouseButton1 then
+								if down then
+									down = false
+								end
+							end
+						end)
+					end
+					-- END SAT & VALUE
+
+					-- opening (fade in)
+					darkener:tween({BackgroundTransparency = .4, Length = 0.1})
+					arrow:tween({ImageTransparency = 0, Length = 0.1})
+					text:tween({ImageTransparency = 0, Length = 0.1})
+					_cpShadow:tween({ImageTransparency = .6, Length = 0.1})
+					btnHolder:tween({BackgroundTransparency = 0, Length = 0.1})
+					button:tween({TextTransparency = 0, Length = 0.1})
+					hueBar:tween({BackgroundTransparency = 0, Length = 0.1})
+					hueDraggable:tween({ImageTransparency = 0, Length = 0.1})
+					color:tween{BackgroundTransparency = 0, Length = 0.1}
+					brightness:tween{BackgroundTransparency = 0, Length = 0.1}
+					black:tween{BackgroundTransparency = 0, Length = 0.1}
+					_colorPickerDraggableStroke:tween{Transparency = 0, Length = 0.1}
+
+					-- closing fade in
+					fadeOut = function()
+						darkener:tween({BackgroundTransparency = 1, Length = 0.1})
+						arrow:tween({ImageTransparency = 1, Length = 0.1})
+						text:tween({ImageTransparency = 1, Length = 0.1})
+						_cpShadow:tween({ImageTransparency = 1, Length = 0.1})
+						btnHolder:tween({BackgroundTransparency = 1, Length = 0.1})
+						button:tween({TextTransparency = 1, Length = 0.1})
+						hueBar:tween({BackgroundTransparency = 1, Length = 0.1})
+						hueDraggable:tween({ImageTransparency = 1, Length = 0.1})
+						color:tween{BackgroundTransparency = 1, Length = 0.1}
+						brightness:tween{BackgroundTransparency = 1, Length = 0.1}
+						black:tween{BackgroundTransparency = 1, Length = 0.1}
+						_colorPickerDraggableStroke:tween({Transparency = 1, Length = 0.1}, function()
+							darkener.AbsoluteObject:Destroy()
+							task.delay(0.25, function()
+								Library._colorPickerExists = false
+							end)
+						end)
+					end
+				end
+			else
+				do
+					-- legacy
+					local holder = darkener:object("Frame", {
+						Centered = true,
+						Theme = {BackgroundColor3 = "Secondary"},
+						BackgroundTransparency = 1,
+						Size = UDim2.fromOffset(255, 170),
+					}):round(6)
+
+					local _holderStroke = holder:object("UIStroke", {
+						Transparency = 1,
+						Theme = {Color = "Tertiary"},
+						Thickness = 1.6
+					})
+
+					local _padding = holder:object("UIPadding", {
+						PaddingLeft = UDim.new(0, 5),
+						PaddingRight = UDim.new(0, 5),
+						PaddingTop = UDim.new(0, 5),
+						PaddingBottom = UDim.new(0, 5)
+					})
+
+					local pickerArea = holder:object("TextButton", {
+						Text = "",
+						BackgroundTransparency = 1,
+						Size = UDim2.new(0.5, -5,1, -25),
+					}):round(6)
+
+					local _pickerAreaStroke = pickerArea:object("UIStroke", {
+						Transparency = 1,
+						Theme = {Color = "Tertiary"},
+						Thickness = 1.6
+					})
+
+					local color = pickerArea:object("Frame", {
+						Size = UDim2.fromScale(1, 1),
+						BackgroundColor3 = selectedColor,
+						BackgroundTransparency = 1,
+						ZIndex = 10
+					}):round(6)
+
+					local brightness = pickerArea:object("Frame", {
+						Size = UDim2.fromScale(1, 1),
+						ZIndex = 11,
+						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+						BackgroundTransparency = 1,
+						BorderSizePixel = 0
+					}):round(6)
+
+					local _brightness = brightness:object("UIGradient", {
+						Color = ColorSequence.new{
+							ColorSequenceKeypoint.new(0, Color3.fromRGB(255 ,255, 255)),
+							ColorSequenceKeypoint.new(1, Color3.fromRGB(255 ,255, 255))
+						},
+						Transparency = NumberSequence.new{
+							NumberSequenceKeypoint.new(0, 0),
+							NumberSequenceKeypoint.new(1, 1),
+						}
+					})
+
+					local black = pickerArea:object("Frame", {
+						Size = UDim2.fromScale(1, 1),
+						ZIndex = 12,
+						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+						BorderSizePixel = 0,
+						BackgroundTransparency = 1
+					}):round(6)
+
+					local _black = black:object("UIGradient", {
+						Color = ColorSequence.new{
+							ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 0, 0)),
+							ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 0))
+						},
+						Transparency = NumberSequence.new{
+							NumberSequenceKeypoint.new(0, 0),
+							NumberSequenceKeypoint.new(1, 1),
+						},
+						Rotation = -90
+					})
+
+					local colorPickerDraggable = pickerArea:object("TextButton", {
+						Centered = true,
+						Text = "",
+						AnchorPoint = Vector2.new(.5, .5),
+						BackgroundTransparency = 1,
+						Size = UDim2.fromOffset(6, 6),
+						ZIndex = 20
+					}):round(100)
+
+					local _colorPickerDraggableStroke = colorPickerDraggable:object("UIStroke", {
+						Transparency = 1,
+						Color = Color3.fromRGB(255, 255, 255),
+						Thickness = 1.6,
+						ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+					})
+
+					local hueArea = holder:object("TextButton", {
+						Text = "",
+						AnchorPoint = Vector2.new(0, 1),
+						Position = UDim2.fromScale(0, 1),
+						Size = UDim2.new(0.5, -5,0, 20),
+						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+						BackgroundTransparency = 1,
+						ZIndex = 11
+					}):round(6)
+
+					local _hueAreaStroke = hueArea:object("UIStroke", {
+						Transparency = 1,
+						Theme = {Color = "Tertiary"},
+						Thickness = 1.6
+					})
+
+					local _hueAreaGradient = hueArea:object("UIGradient", {
+						Color = ColorSequence.new{
+							ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),
+							ColorSequenceKeypoint.new(0.167, Color3.fromRGB(255, 255, 0)),
+							ColorSequenceKeypoint.new(0.333, Color3.fromRGB(0, 255, 0)),
+							ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 255)),
+							ColorSequenceKeypoint.new(0.667, Color3.fromRGB(0, 0, 255)),
+							ColorSequenceKeypoint.new(0.833, Color3.fromRGB(255, 0, 255)),
+							ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 0, 0))
+						}
+					})
+
+					local hueDraggable = hueArea:object("TextButton", {
+						Centered = true,
+						Text = "",
+						BackgroundTransparency = 1,
+						Size = UDim2.new(0, 3, 1, 0),
+						ZIndex = 20
+					})
+
+					local _hueDraggableStroke = hueDraggable:object("UIStroke", {
+						Transparency = 1,
+						Color = Color3.fromRGB(255, 255, 255),
+						Thickness = 1.6,
+						ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+					})
+
+					local label = holder:object("TextLabel", {
+						Text = "Color Picker",
+						Font = Enum.Font.SourceSansBold,
+						AnchorPoint = Vector2.new(1,0),
+						BackgroundTransparency = 1,
+						Position = UDim2.fromScale(1, 0),
+						Size = UDim2.new(0.5, 0,0, 20),
+						Theme = {TextColor3 = {"Tertiary", 15}},
+						TextSize = 15,
+						TextTransparency = 1
+					})
+
+					local infos = holder:object("Frame", {
+						AnchorPoint = Vector2.new(1, 0),
+						BackgroundTransparency = 1,
+						Position = UDim2.new(1, 0,0, 25),
+						Size = UDim2.new(0.5, 0,0, 60)
+					})
+
+					local _infosList = infos:object("UIListLayout", {
+						Padding = UDim.new(0, 4),
+						HorizontalAlignment = Enum.HorizontalAlignment.Center,
+						SortOrder = Enum.SortOrder.Name
+					})
+
+					local r = infos:object("TextLabel", {
+						AnchorPoint = Vector2.new(0.5, 0),
+						Name = "1",
+						Text = tostring(selectedColor.R * 255),
+						Theme = {BackgroundColor3 = {"Secondary", 12}},
+						Size = UDim2.new(1, -10,0, 18),
+						TextColor3 = Color3.fromHSV(0, 0.8, 1),
+						TextSize = 14,
+						BackgroundTransparency = 1,
+						TextTransparency = 1
+					}):round(4)
+
+					local g = infos:object("TextLabel", {
+						AnchorPoint = Vector2.new(0.5, 0),
+						Name = "2",
+						Text = tostring(selectedColor.G * 255),
+						Theme = {BackgroundColor3 = {"Secondary", 12}},
+						Size = UDim2.new(1, -10,0, 18),
+						TextColor3 = Color3.fromHSV(120/360, 0.8, 1),
+						TextSize = 14,
+						BackgroundTransparency = 1,
+						TextTransparency = 1
+					}):round(4)
+
+					local b = infos:object("TextLabel", {
+						AnchorPoint = Vector2.new(0.5, 0),
+						Text = tostring(selectedColor.B * 255),
+						Name = "3",
+						Theme = {BackgroundColor3 = {"Secondary", 12}},
+						Size = UDim2.new(1, -10,0, 18),
+						TextColor3 = Color3.fromHSV(240/360, 0.8, 1),
+						TextSize = 14,
+						BackgroundTransparency = 1,
+						TextTransparency = 1
+					}):round(4)
+
+					local pickBtn = holder:object("ImageButton", {
+						AnchorPoint = Vector2.new(1, 1),
+						Theme = {BackgroundColor3 = "Tertiary"},
+						Position = UDim2.fromScale(1, 1),
+						Size = UDim2.new(0.5, 0,0, 20),
+						Image = "rbxassetid://8593962406",
+						ScaleType = Enum.ScaleType.Fit,
+						BackgroundTransparency = 1,
+						ImageTransparency = 1
+					}):round(6)
+
+					local previewLight = holder:object("Frame", {
+						AnchorPoint = Vector2.new(1, 1),
+						BackgroundColor3 = selectedColor,
+						Position = UDim2.new(1, -65,1, -25),
+						Size = UDim2.fromOffset(40, 40),
+						BackgroundTransparency = 1
+					}):round(5)
+
+					local _previewLightIcon = previewLight:object("ImageLabel", {
+						Centered = true,
+						BackgroundTransparency = 1,
+						Size = UDim2.fromScale(.6, .6),
+						Image = "rbxassetid://8593995344",
+						ImageColor3 = Color3.fromRGB(255, 255, 255),
+						ImageTransparency = 1
+					})
+
+					local previewDark = holder:object("Frame", {
+						AnchorPoint = Vector2.new(1, 1),
+						BackgroundColor3 = selectedColor,
+						Position = UDim2.new(1, -15,1, -25),
+						Size = UDim2.fromOffset(40, 40),
+						BackgroundTransparency = 1
+					}):round(5)
+
+					local _previewDarkIcon = previewDark:object("ImageLabel", {
+						Centered = true,
+						BackgroundTransparency = 1,
+						Size = UDim2.fromScale(.6, .6),
+						Image = "rbxassetid://8593995344",
+						ImageColor3 = Color3.fromRGB(0, 0, 0),
+						ImageTransparency = 1
+					})
+
+
+					-- hacky fix for zindex issue
+					for _, v in next, darkener.AbsoluteObject:GetDescendants() do
+						pcall(function()
+							v.ZIndex += 3
+						end)
+					end
+
+					local function globalUpdate()
+						r.Text = tostring(math.floor(selectedColor.R * 255))
+						g.Text = tostring(math.floor(selectedColor.G * 255))
+						b.Text = tostring(math.floor(selectedColor.B * 255))
+						previewDark:tween({BackgroundColor3 = selectedColor})
+						previewLight:tween({BackgroundColor3 = selectedColor})
+					end
+					-- HUE
+					do
+						updateHue = function()
+							hue = math.clamp((Mouse.X - hueArea.AbsolutePosition.X) / (hueArea.AbsoluteSize.X), 0, 1)
+							local newXPos = math.clamp((Mouse.X - hueArea.AbsolutePosition.X) / (hueArea.AbsoluteSize.X) * hueArea.AbsoluteSize.X, 0, hueArea.AbsoluteSize.X)
+							selectedColor = Color3.fromHSV(hue, sat, val)
+							color:tween({Length = 0.05, BackgroundColor3 = Color3.fromHSV(hue, 1, 1)})
+							hueDraggable:tween({Length = 0.05, Position = UDim2.new(0, math.clamp(newXPos, 0, hueArea.AbsoluteSize.X), .5, 0)})
+
+							globalUpdate()
+						end
+
+
+						local down = false
+
+						hueArea.MouseButton1Down:Connect(function()
+							down = true
+							while RunService.RenderStepped:Wait() and down do
+								updateHue()
+							end
+						end)
+
+						hueDraggable.MouseButton1Down:connect(function()
+							down = true
+							while RunService.RenderStepped:Wait() and down do
+								updateHue()
+							end
+						end)
+
+						UserInputService.InputEnded:Connect(function(key)
+							if key.UserInputType == Enum.UserInputType.MouseButton1 then
+								if down then
+									down = false
+								end
+							end
+						end)
+					end
+
+
+					-- SAT & VALUE [PICKER]
+					do
+						local down = false
+
+						updatePicker = function()
+							sat = math.clamp((Mouse.X - pickerArea.AbsolutePosition.X) / (pickerArea.AbsoluteSize.X), 0, 1)
+							val = 1 - math.clamp((Mouse.Y - pickerArea.AbsolutePosition.Y) / (pickerArea.AbsoluteSize.Y), 0, 1)
+
+							local newXPos = math.clamp((Mouse.X - pickerArea.AbsolutePosition.X) / (pickerArea.AbsoluteSize.X) * pickerArea.AbsoluteSize.X, 0, pickerArea.AbsoluteSize.X)
+							local newYPos = math.clamp((Mouse.Y - pickerArea.AbsolutePosition.Y) / (pickerArea.AbsoluteSize.Y) * pickerArea.AbsoluteSize.Y, 0, pickerArea.AbsoluteSize.Y)
+
+							selectedColor = Color3.fromHSV(hue, sat, val)
+
+							globalUpdate()
+
+							colorPickerDraggable:tween({Position = UDim2.fromOffset(newXPos, newYPos), Length = 0.05})
+						end
+
+						pickerArea.MouseButton1Down:Connect(function()
+							down = true
+							while RunService.RenderStepped:wait() and down do
+								updatePicker()
+							end
+						end)
+
+						UserInputService.InputEnded:Connect(function(key)
+							if key.UserInputType == Enum.UserInputType.MouseButton1 then
+								if down then
+									down = false
+								end
+							end
+						end)
+					end
+
+					-- input n shit
+					do
+						local down = false
+						local hovered = false
+
+						pickBtn.MouseEnter:connect(function()
+							hovered = true
+							pickBtn:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Tertiary, 10)}
+						end)
+
+						pickBtn.MouseLeave:connect(function()
+							hovered = false
+							if not down then
+								pickBtn:tween{BackgroundColor3 = Library.CurrentTheme.Tertiary}
+							end
+						end)
+
+						pickBtn.MouseButton1Down:connect(function()
+							pickBtn:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Tertiary, 20)}
+						end)
+
+						UserInputService.InputEnded:connect(function(key)
+							if key.UserInputType == Enum.UserInputType.MouseButton1 then
+								pickBtn:tween{BackgroundColor3 = (hovered and self:lighten(Library.CurrentTheme.Tertiary)) or Library.CurrentTheme.Tertiary}
+							end
+						end)
+
+						pickBtn.MouseButton1Click:connect(function()
+							fadeOut()
+							icon:tween({ImageColor3 = selectedColor})
+							options.Callback(selectedColor)
+						end)
+					end
+
+					--show fade in
+					holder:tween({BackgroundTransparency = 0, Length = 0.1})
+					_holderStroke:tween({Transparency = 0, Length = 0.1})
+					pickerArea:tween({BackgroundTransparency = 0, Length = 0.1})
+					_pickerAreaStroke:tween({Transparency = 0, Length = 0.1})
+					color:tween({BackgroundTransparency = 0, Length = 0.1})
+					brightness:tween({BackgroundTransparency = 0, Length = 0.1})
+					black:tween({BackgroundTransparency = 0, Length = 0.1})
+					_colorPickerDraggableStroke:tween({Transparency = 0, Length = 0.1})
+					hueArea:tween({BackgroundTransparency = 0, Length = 0.1})
+					_hueAreaStroke:tween({Transparency = 0, Length = 0.1})
+					_hueDraggableStroke:tween({Transparency = 0, Length = 0.1})
+					label:tween{TextTransparency = 0, Length = 0.1}
+					r:tween({
+						BackgroundTransparency = 0,
+						TextTransparency = 0,
+						Length = 0.1
+					})
+					g:tween({
+						BackgroundTransparency = 0,
+						TextTransparency = 0,
+						Length = 0.1
+					})
+					b:tween({
+						BackgroundTransparency = 0,
+						TextTransparency = 0,
+						Length = 0.1
+					})
+					pickBtn:tween({
+						BackgroundTransparency = 0,
+						ImageTransparency = 0,
+						Length = 0.1
+					})
+					previewLight:tween({BackgroundTransparency = 0, Length = 0.1})
+					_previewLightIcon:tween({ImageTransparency = 0, Length = 0.1})
+					previewDark:tween({BackgroundTransparency = 0, Length = 0.1})
+					_previewDarkIcon:tween({ImageTransparency = 0, Length = 0.1})
+					darkener:tween({BackgroundTransparency = 0.5, Length = 0.1})
+					-- fade out
+					-- closing fade in
+					fadeOut = function()
+						holder:tween({BackgroundTransparency = 1, Length = 0.1})
+						_holderStroke:tween({Transparency = 1, Length = 0.1})
+						pickerArea:tween({BackgroundTransparency = 1, Length = 0.1})
+						_pickerAreaStroke:tween({Transparency = 1, Length = 0.1})
+						color:tween({BackgroundTransparency = 1, Length = 0.1})
+						brightness:tween({BackgroundTransparency = 1, Length = 0.1})
+						black:tween({BackgroundTransparency = 1, Length = 0.1})
+						_colorPickerDraggableStroke:tween({Transparency = 1, Length = 0.1})
+						hueArea:tween({BackgroundTransparency = 1, Length = 0.1})
+						_hueAreaStroke:tween({Transparency = 1, Length = 0.1})
+						_hueDraggableStroke:tween({Transparency = 1, Length = 0.1})
+						label:tween{TextTransparency = 1, Length = 0.1}
+						r:tween({
+							BackgroundTransparency = 0,
+							TextTransparency = 0,
+							Length = 0.1
+						})
+						g:tween({
+							BackgroundTransparency = 0,
+							TextTransparency = 0,
+							Length = 0.1
+						})
+						b:tween({
+							BackgroundTransparency = 0,
+							TextTransparency = 0,
+							Length = 0.1
+						})
+						pickBtn:tween({
+							BackgroundTransparency = 0,
+							ImageTransparency = 0,
+							Length = 0.1
+						})
+						previewLight:tween({BackgroundTransparency = 1, Length = 0.1})
+						_previewLightIcon:tween({ImageTransparency = 1, Length = 0.1})
+						previewDark:tween({BackgroundTransparency = 1, Length = 0.1})
+						_previewDarkIcon:tween({ImageTransparency = 1, Length = 0.1})
+
+						darkener:tween({BackgroundTransparency = 1, Length = 0.1}, function()
+							darkener.AbsoluteObject:Destroy()
+							task.delay(0.25, function()
+								Library._colorPickerExists = false
+							end)
+						end)
+					end
+				end
+			end
+		end)
+	end
+	self:_resize_tab()
+end
+
+function Library:credit(options)
+	options = self:set_defaults({
+		Name = "Creditor",
+		Description = nil
+	}, options)
+	options.V3rmillion = options.V3rmillion or options.V3rm
+
+	local creditContainer = (self.creditsContainer or self.container):object("Frame", {
+		Theme = {BackgroundColor3 = "Secondary"},
+		Size = UDim2.new(1, -20, 0, 52)
+	}):round(7)
+
+	local name = creditContainer:object("TextLabel", {
+		BackgroundTransparency = 1,
+		Position = UDim2.fromOffset(10, (options.Description and 5) or 0),
+		Size = (options.Description and UDim2.new(0.5, -10, 0, 22)) or UDim2.new(0.5, -10, 1, 0),
+		Text = options.Name,
+		TextSize = 22,
+		Theme = {TextColor3 = "StrongText"},
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
+
+	if options.Description then
+		local description = creditContainer:object("TextLabel", {
+			BackgroundTransparency = 1,
+			Position = UDim2.fromOffset(10, 27),
+			Size = UDim2.new(0.5, -10, 0, 20),
+			Text = options.Description,
+			TextSize = 18,
+			Theme = {TextColor3 = "WeakText"},
+			TextXAlignment = Enum.TextXAlignment.Left
+		})
+	end
+
+	if setclipboard then
+		if options.Discord then
+			local discordContainer = creditContainer:object("TextButton", {
+				AnchorPoint = Vector2.new(1, 1),
+				Size = UDim2.fromOffset(24, 24),
+				Position = UDim2.new(1, -8, 1, -8),
+				BackgroundColor3 = Color3.fromRGB(88, 101, 242)
+			}):round(5):tooltip("copy discord")
+			local discord = discordContainer:object("Frame", {
+				Size = UDim2.new(1, -6, 1, -6),
+				Centered = true,
+				BackgroundTransparency = 1
+			})
+
+			local tr = discord:object("ImageLabel", {
+				BackgroundTransparency = 1,
+				AnchorPoint = Vector2.new(1, 0),
+				Size = UDim2.new(0.5, 0, 0.5, 0),
+				Position = UDim2.new(1, 0, 0, -0),
+				ImageColor3 = Color3.fromRGB(255, 255, 255),
+				Image = "http://www.roblox.com/asset/?id=8594150191",
+				ScaleType = Enum.ScaleType.Crop
+			})
+
+			local tl = discord:object("ImageLabel", {
+				BackgroundTransparency = 1,
+				AnchorPoint = Vector2.new(0, 0),
+				Size = UDim2.new(0.5, 0, 0.5, 0),
+				Position = UDim2.new(0, 0, 0, -0),
+				ImageColor3 = Color3.fromRGB(255, 255, 255),
+				Image = "http://www.roblox.com/asset/?id=8594187532",
+				ScaleType = Enum.ScaleType.Crop
+			})
+
+			local bl = discord:object("ImageLabel", {
+				BackgroundTransparency = 1,
+				AnchorPoint = Vector2.new(0, 1),
+				Size = UDim2.new(0.5, 0, 0.5, 0),
+				Position = UDim2.new(0, 0, 1, 0),
+				ImageColor3 = Color3.fromRGB(255, 255, 255),
+				Image = "http://www.roblox.com/asset/?id=8594194954",
+				ScaleType = Enum.ScaleType.Crop
+			})
+
+			local br = discord:object("ImageLabel", {
+				BackgroundTransparency = 1,
+				AnchorPoint = Vector2.new(1, 1),
+				Size = UDim2.new(0.5, 0, 0.5, 0),
+				Position = UDim2.new(1, 0, 1, 0),
+				ImageColor3 = Color3.fromRGB(255, 255, 255),
+				Image = "http://www.roblox.com/asset/?id=8594206483",
+				ScaleType = Enum.ScaleType.Crop
+			})
+
+			discordContainer.MouseButton1Click:connect(function()
+				setclipboard(options.Discord)
+			end)
+		end
+
+		if options.V3rmillion then
+			local v3rmillionContainer = creditContainer:object("TextButton", {
+				AnchorPoint = Vector2.new(1, 1),
+				Size = UDim2.fromOffset(24, 24),
+				Position = UDim2.new(1, -40, 1, -8),
+				Theme = {BackgroundColor3 = {"Main", 10}}
+			}):round(5):tooltip("copy v3rm")
+			local v3rmillion = v3rmillionContainer:object("ImageLabel", {
+				Image = "http://www.roblox.com/asset/?id=8594086769",
+				Size = UDim2.new(1, -4, 1, -4),
+				Centered = true,
+				BackgroundTransparency = 1
+			})
+
+			v3rmillionContainer.MouseButton1Click:connect(function()
+				setclipboard(options.V3rmillion)
+			end)
+		end
+	end
+	
+	
+	self._resize_tab({
+		container = self.creditsContainer or self.container,
+		layout = (self.creditsContainer and self.creditsContainer.AbsoluteObject.UIListLayout) or self.layout
+	})
+end
+
+function Library:_theme_selector()
+
+	local themesCount = 0
+
+	for _ in next, Library.Themes do
+		themesCount += 1
+	end
+
+	local themeContainer = self.container:object("Frame", {
+		Theme = {BackgroundColor3 = "Secondary"},
+		Size = UDim2.new(1, -20, 0, 127)
+	}):round(7)
+
+	local text = themeContainer:object("TextLabel", {
+		BackgroundTransparency = 1,
+		Position = UDim2.fromOffset(10, 5),
+		Size = UDim2.new(0.5, -10, 0, 22),
+		Text = "Theme",
+		TextSize = 22,
+		Theme = {TextColor3 = "StrongText"},
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
+
+	local colorThemesContainer = themeContainer:object("Frame", {
+		Size = UDim2.new(1, 0, 1, -32),
+		BackgroundTransparency = 1,
+		Position = UDim2.new(0.5, 0, 1, -5),
+		AnchorPoint = Vector2.new(0.5, 1)
+	})
+
+	local grid = colorThemesContainer:object("UIGridLayout", {
+		CellPadding = UDim2.fromOffset(10, 10),
+		CellSize = UDim2.fromOffset(102, 83),
+		VerticalAlignment = Enum.VerticalAlignment.Center
+	})
+
+	colorThemesContainer:object("UIPadding", {
+		PaddingLeft = UDim.new(0, 10),
+		PaddingTop = UDim.new(0, 5)
+	})
+
+	for themeName, themeColors in next, Library.Themes do
+		local count = 0
+
+		for _, color in next, themeColors do
+			if not (type(color) == "boolean") then
+				count += 1
+			end
+		end
+
+		if count >= 5 then
+			local theme = colorThemesContainer:object("TextButton", {
+				BackgroundTransparency = 1
+			})
+
+			local themeColorsContainer = theme:object("Frame", {
+				Size = UDim2.new(1, 0, 1, -20),
+				BackgroundTransparency = 1
+			}):round(5):stroke("WeakText", 1)
+
+			local themeNameLabel = theme:object("TextLabel", {
+				BackgroundTransparency = 1,
+				Text = themeName,
+				TextSize = 16,
+				Theme = {TextColor3 = "StrongText"},
+				Size = UDim2.new(1, 0, 0, 20),
+				Position = UDim2.fromScale(0, 1),
+				AnchorPoint = Vector2.new(0, 1)
+			})
+
+			local colorMain = themeColorsContainer:object("Frame", {
+				Centered = true,
+				Size = UDim2.fromScale(1, 1),
+				BackgroundColor3 = themeColors.Main
+			}):round(4)
+
+			local colorSecondary = colorMain:object("Frame", {
+				Centered = true,
+				Size = UDim2.new(1, -16, 1, -16),
+				BackgroundColor3 = themeColors.Secondary
+			}):round(4)
+
+			colorSecondary:object("UIListLayout", {
+				Padding = UDim.new(0, 5)
+			})
+
+			colorSecondary:object("UIPadding", {
+				PaddingTop = UDim.new(0, 5),
+				PaddingLeft = UDim.new(0, 5)
+			})
+
+			local colorTertiary = colorSecondary:object("Frame", {
+				Size = UDim2.new(1, -20, 0, 9),
+				BackgroundColor3 = themeColors.Tertiary
+			}):round(100)
+
+			local colorStrong = colorSecondary:object("Frame", {
+				Size = UDim2.new(1, -30, 0, 9),
+				BackgroundColor3 = themeColors.StrongText
+			}):round(100)
+
+			local colorTertiary = colorSecondary:object("Frame", {
+				Size = UDim2.new(1, -40, 0, 9),
+				BackgroundColor3 = themeColors.WeakText
+			}):round(100)
+
+			theme.MouseButton1Click:connect(function()
+				Library:change_theme(Library.Themes[themeName])
+			end)
+		end
+	end
+	self:_resize_tab()
+end
+
+
+function Library:keybind(options)
+	options = self:set_defaults({
+		Name = "Keybind",
+		Keybind = nil,
+		Description = nil,
+		Callback = function() end
+	}, options)
+
+	local keybindContainer = self.container:object("TextButton", {
+		Theme = {BackgroundColor3 = "Secondary"},
+		Size = UDim2.new(1, -20, 0, 52)
+	}):round(7)
+
+	local text = keybindContainer:object("TextLabel", {
+		BackgroundTransparency = 1,
+		Position = UDim2.fromOffset(10, (options.Description and 5) or 0),
+		Size = (options.Description and UDim2.new(0.5, -10, 0, 22)) or UDim2.new(0.5, -10, 1, 0),
+		Text = options.Name,
+		TextSize = 22,
+		Theme = {TextColor3 = "StrongText"},
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
+
+	if options.Description then
+		local description = keybindContainer:object("TextLabel", {
+			BackgroundTransparency = 1,
+			Position = UDim2.fromOffset(10, 27),
+			Size = UDim2.new(0.5, -10, 0, 20),
+			Text = options.Description,
+			TextSize = 18,
+			Theme = {TextColor3 = "WeakText"},
+			TextXAlignment = Enum.TextXAlignment.Left
+		})
+	end
+
+
+	local keybindDisplay = keybindContainer:object("TextLabel", {
+		AnchorPoint = Vector2.new(1, 0),
+		Theme = {
+			BackgroundColor3 = {"Secondary", -20},
+			TextColor3 = "WeakText"
+		},
+		Position = UDim2.new(1, -20,0, 16),
+		Size = UDim2.new(0, 50,0, 20),
+		TextSize = 12,
+		Text = (options.Keybind and tostring(options.Keybind.Name):upper()) or "?"
+	}):round(5):stroke("Tertiary")
+
+	keybindDisplay.Size = UDim2.fromOffset(keybindDisplay.TextBounds.X + 20, 20)
+
+	do
+		local hovered = false
+		local down = false
+		local listening = false
+
+		keybindContainer.MouseEnter:connect(function()
+			hovered = true
+			keybindContainer:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 10)}
+		end)
+
+		keybindContainer.MouseLeave:connect(function()
+			hovered = false
+			if not down then
+				keybindContainer:tween{BackgroundColor3 = Library.CurrentTheme.Secondary}
+			end
+		end)
+
+		keybindContainer.MouseButton1Down:connect(function()
+			keybindContainer:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 20)}
+		end)
+
+		UserInputService.InputEnded:connect(function(key)
+			if key.UserInputType == Enum.UserInputType.MouseButton1 then
+				keybindContainer:tween{BackgroundColor3 = (hovered and self:lighten(Library.CurrentTheme.Secondary)) or Library.CurrentTheme.Secondary}
+			end
+		end)
+
+		UserInputService.InputBegan:Connect(function(key)
+			if listening then
+				if key.UserInputType == Enum.UserInputType.Keyboard then
+					if key.KeyCode ~= Enum.KeyCode.Escape then
+						options.Keybind = key.KeyCode
+					end
+					keybindDisplay.Text = (options.Keybind and tostring(options.Keybind.Name):upper()) or "?"
+					keybindDisplay:tween{Size = UDim2.fromOffset(keybindDisplay.TextBounds.X + 20, 20), Length = 0.05}
+					listening = false
+				end
+			else
+				if key.KeyCode == options.Keybind then
+					options.Callback()
+				end
+			end
+		end)
+
+		keybindContainer.MouseButton1Click:connect(function()
+			if not listening then listening = true; keybindDisplay.Text = "..." end
+		end)
+	end
+	self:_resize_tab()
+
+	local methods = {}
+
+	function methods:Set(keycode)
+		options.Keybind = keycode
+		keybindDisplay.Text = (options.Keybind and tostring(options.Keybind.Name):upper()) or "?"
+		keybindDisplay:tween{Size = UDim2.fromOffset(keybindDisplay.TextBounds.X + 20, 20), Length = 0.05}
+	end
+
+	return methods
+end
+
+function Library:prompt(options)
+	options = self:set_defaults({
+		Followup = false,
+		Title = "Prompt",
+		Text = "yo momma dead",
+		Buttons = {
+			ok = function()
+				return true
+			end
+		}
+	}, options)
+
+	if Library._promptExists and not options.Followup then return end
+	Library._promptExists = true
+
+	local count = 0; for a, _ in next, options.Buttons do
+		count += 1
+	end
+
+	local darkener = self.core:object("Frame", {
+		BackgroundColor3 = Color3.new(0, 0, 0),
+		BackgroundTransparency = 1,
+		Size = UDim2.fromScale(1, 1)
+	}):round(10)
+
+	local promptContainer = darkener:object("Frame", {
+		Theme = {BackgroundColor3 = "Main"},
+		BackgroundTransparency = 1,
+		Centered = true,
+		Size = UDim2.fromOffset(200, 120)
+	}):round(6)
+
+	local _promptContainerStroke = promptContainer:object("UIStroke", {
+		Theme = {Color = "Tertiary"},
+		ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+		Transparency = 1
+	})
+
+	local _padding = promptContainer:object("UIPadding", {
+		PaddingTop = UDim.new(0, 5),
+		PaddingLeft = UDim.new(0, 5),
+		PaddingBottom = UDim.new(0, 5),
+		PaddingRight = UDim.new(0, 5)
+	})
+
+	local promptTitle = promptContainer:object("TextLabel", {
+		BackgroundTransparency = 1,
+		Size = UDim2.new(1, 0, 0, 20),
+		TextXAlignment = Enum.TextXAlignment.Center,
+		Font = Enum.Font.SourceSansBold,
+		Text = options.Title,
+		Theme = {TextColor3 = {"Tertiary", 15}},
+		TextSize = 16,
+		TextTransparency = 1
+	})
+
+	local promptText = promptContainer:object("TextLabel", {
+		AnchorPoint = Vector2.new(0.5, 0),
+		BackgroundTransparency = 1,
+		Position = UDim2.new(0.5, 0,0, 26),
+		Size = UDim2.new(1, -20,1, -60),
+		TextSize = 14,
+		Theme = {TextColor3 = "StrongText"},
+
+		Text = options.Text,
+		TextTransparency = 1,
+		TextYAlignment = Enum.TextYAlignment.Top,
+		TextXAlignment = Enum.TextXAlignment.Center,
+		TextWrapped = true,
+		TextTruncate = Enum.TextTruncate.AtEnd
+	})
+
+	local buttonHolder = promptContainer:object("Frame", {
+		BackgroundTransparency = 1,
+		AnchorPoint = Vector2.new(0, 1),
+		Position = UDim2.new(0, 0,1, -5),
+		Size = UDim2.new(1, 0,0, 20)
+	})
+
+	local _gridButtonHolder = buttonHolder:object("UIGridLayout", {
+		CellPadding = UDim2.new(0, 10,0, 5),
+		CellSize = UDim2.new(1/count, -10, 1, 0),
+		FillDirection = Enum.FillDirection.Horizontal,
+		HorizontalAlignment = Enum.HorizontalAlignment.Center
+	})
+
+	darkener:tween({BackgroundTransparency = 0.4, Length = 0.1})
+	promptContainer:tween({BackgroundTransparency = 0, Length = 0.1})
+	promptTitle:tween({TextTransparency = 0, Length = 0.1})
+	_promptContainerStroke:tween({Transparency = 0, Length = 0.1})
+	promptText:tween({TextTransparency = 0, Length = 0.1})
+
+	local _temporaryPromptButtons = {}
+
+	for text, callback in next, options.Buttons do
+		local button = buttonHolder:object("TextButton", {
+			AnchorPoint = Vector2.new(1, 1),
+			Theme = {BackgroundColor3 = "Tertiary"},
+			Text = tostring(text):upper(),
+			TextSize = 13,
+			Font = Enum.Font.SourceSansBold,
+			BackgroundTransparency = 1,
+			TextTransparency = 1
+		}):round(4)
+
+		table.insert(_temporaryPromptButtons, button)
+
+		do
+			button:tween({TextTransparency = 0, BackgroundTransparency = 0})
+
+			local hovered = false
+			local down = false
+
+			button.MouseEnter:connect(function()
+				hovered = true
+				button:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Tertiary, 10)}
+			end)
+
+			button.MouseLeave:connect(function()
+				hovered = false
+				if not down then
+					button:tween{BackgroundColor3 = Library.CurrentTheme.Tertiary}
+				end
+			end)
+
+			button.MouseButton1Down:connect(function()
+				button:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Tertiary, 20)}
+			end)
+
+			UserInputService.InputEnded:connect(function(key)
+				if key.UserInputType == Enum.UserInputType.MouseButton1 then
+					button:tween{BackgroundColor3 = (hovered and self:lighten(Library.CurrentTheme.Tertiary)) or Library.CurrentTheme.Tertiary}
+				end
+			end)
+
+			button.MouseButton1Click:connect(function()
+				promptContainer:tween({BackgroundTransparency = 1, Length = 0.1})
+				promptTitle:tween({TextTransparency = 1, Length = 0.1})
+				_promptContainerStroke:tween({Transparency = 1, Length = 0.1})
+				promptText:tween({TextTransparency = 1, Length = 0.1})
+				for i, b in next, _temporaryPromptButtons do
+					b:tween({TextTransparency = 1, BackgroundTransparency = 1, Length = 0.1})
+				end
+				darkener:tween({BackgroundTransparency = 1, Length = 0.1}, function()
+					darkener.AbsoluteObject:Destroy()
+					task.delay(0.25, function()
+						Library._promptExists = false
+					end)
+					callback()
+				end)
+			end)
+		end
+	end
+end
+
+function Library:cp(options)
+	return Library.color_picker(self, options)
+end
+function Library:colorpicker(options)
+	return Library.color_picker(self, options)
+end
+
+function Library:slider(options)
+	options = self:set_defaults({
+		Name = "Slider",
+		Default = 50,
+		Min = 0,
+		Max = 100,
+		Callback = function() end
+	}, options)
+
+
+	local sliderContainer = self.container:object("TextButton", {
+		Theme = {BackgroundColor3 = "Secondary"},
+		Size = UDim2.new(1, -20, 0, 56)
+	}):round(7)
+
+	local text = sliderContainer:object("TextLabel", {
+		BackgroundTransparency = 1,
+		Position = UDim2.fromOffset(10, 5),
+		Size = UDim2.new(0.5, -10, 0, 22),
+		Text = options.Name,
+		TextSize = 22,
+		Theme = {TextColor3 = "StrongText"},
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
+
+	if options.Description then
+		local description = sliderContainer:object("TextLabel", {
+			BackgroundTransparency = 1,
+			Position = UDim2.fromOffset(10, 27),
+			Size = UDim2.new(0.5, -10, 0, 20),
+			Text = options.Description,
+			TextSize = 18,
+			Theme = {TextColor3 = "WeakText"},
+			TextXAlignment = Enum.TextXAlignment.Left
+		})
+		sliderContainer.Size = UDim2.new(1, -20, 0, 76)
+	end
+
+	local valueText = sliderContainer:object("TextLabel", {
+		AnchorPoint = Vector2.new(1, 0),
+
+		Theme = {
+			BackgroundColor3 = {"Secondary", -20},
+			TextColor3 = "WeakText"
+		},
+		Position = UDim2.new(1, -10, 0, 10),
+		Size = UDim2.new(0, 50,0, 20),
+		TextSize = 12,
+		Text = options.Default
+	}):round(5):stroke("Tertiary")
+
+	valueText.Size = UDim2.fromOffset(valueText.TextBounds.X + 20, 20)
+
+	local sliderBar = sliderContainer:object("Frame", {
+		Theme = {BackgroundColor3 = {"Secondary", -20}},
+		AnchorPoint = Vector2.new(0.5, 1),
+		Size = UDim2.new(1, -20, 0, 5),
+		Position = UDim2.new(0.5, 0, 1, -12)
+	}):round(100)
+
+	local sliderLine = sliderBar:object("Frame", {
+		Size = UDim2.fromScale(((options.Default - options.Min) / (options.Max - options.Min)), 1),
+		Theme = {BackgroundColor3 = "Tertiary"}
+
+	}):round(100)
+
+	local sliderBall = sliderLine:object("Frame", {
+		AnchorPoint = Vector2.new(0.5, 0.5),
+		Position = UDim2.fromScale(1, 0.5),
+		Size = UDim2.fromOffset(14, 14),
+		Theme = {BackgroundColor3 = {"Tertiary", 20}}
+	}):round(100)
+
+	do
+		local hovered = false
+		local down = false
+
+		sliderContainer.MouseEnter:connect(function()
+			hovered = true
+			sliderContainer:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 10)}
+		end)
+
+		sliderContainer.MouseLeave:connect(function()
+			hovered = false
+			if not down then
+				sliderContainer:tween{BackgroundColor3 = Library.CurrentTheme.Secondary}
+			end
+		end)
+
+		UserInputService.InputEnded:connect(function(key)
+			if key.UserInputType == Enum.UserInputType.MouseButton1 then
+				down = false
+				sliderContainer:tween{BackgroundColor3 = (hovered and self:lighten(Library.CurrentTheme.Secondary)) or Library.CurrentTheme.Secondary}
+			end
+		end)
+
+		sliderContainer.MouseButton1Down:connect(function()
+			sliderContainer:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 20)}
+			down = true
+			local tween = valueText:tween{Size = UDim2.fromOffset(valueText.TextBounds.X + 20, 20)}
+			while RunService.RenderStepped:wait() and down do
+				local percentage = math.clamp((Mouse.X - sliderBar.AbsolutePosition.X) / (sliderBar.AbsoluteSize.X), 0, 1)
+				local value = ((options.Max - options.Min) * percentage) + options.Min
+				value = math.floor(value)
+				valueText.Text = value
+				if tween.PlaybackState == Enum.PlaybackState.Completed then
+					tween = valueText:tween{Size = UDim2.fromOffset(valueText.TextBounds.X + 20, 20)}
+				end
+				sliderLine:tween{
+					Length = 0.06,
+					Size = UDim2.fromScale(percentage, 1)
+				}
+				options.Callback(value)
+			end
+		end)
+	end
+	self:_resize_tab()
+
+	local methods = {}
+
+	function methods:Set(value)
+		sliderLine:tween{Size = UDim2.fromScale(((value - options.Min) / (options.Max - options.Min)), 1)}
+	end
+
+	return methods
+end
+
+function Library:textbox(options)
+	options = self:set_defaults({
+		Name = "Text Box",
+		Placeholder = "Type something..",
+		Description = nil,
+		Default = "Type here",
+		Callback = function(t) end
+	}, options)
+
+	local textboxContainer = self.container:object("TextButton", {
+		Theme = {BackgroundColor3 = "Secondary"},
+		Size = UDim2.new(1, -20, 0, 52)
+	}):round(7)
+
+	local text = textboxContainer:object("TextLabel", {
+		BackgroundTransparency = 1,
+		Position = UDim2.fromOffset(10, (options.Description and 5) or 0),
+		Size = (options.Description and UDim2.new(0.5, -10, 0, 22)) or UDim2.new(0.5, -10, 1, 0),
+		Text = options.Name,
+		TextSize = 22,
+		Theme = {TextColor3 = "StrongText"},
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
+
+	if options.Description then
+		local description = textboxContainer:object("TextLabel", {
+			BackgroundTransparency = 1,
+			Position = UDim2.fromOffset(10, 27),
+			Size = UDim2.new(0.5, -10, 0, 20),
+			Text = options.Description,
+			TextSize = 18,
+			Theme = {TextColor3 = "WeakText"},
+			TextXAlignment = Enum.TextXAlignment.Left
+		})
+	end
+
+
+	local textBox = textboxContainer:object("TextBox", {
+		AnchorPoint = Vector2.new(1, 0),
+		Theme = {
+			BackgroundColor3 = {"Secondary", -20},
+			TextColor3 = "WeakText"
+		},
+		Position = UDim2.new(1, -50,0, 16),
+		Size = UDim2.new(0, 50,0, 20),
+		TextSize = 12,
+		PlaceholderText = options.Placeholder,
+		ClipsDescendants = true,
+		Text = options.Default
+	}):round(5):stroke("Tertiary")
+
+	local writeIcon = textboxContainer:object("ImageLabel", {
+		Image = "http://www.roblox.com/asset/?id=8569329416",
+		AnchorPoint = Vector2.new(1, 0.5),
+		BackgroundTransparency = 1,
+		Position = UDim2.new(1, -13, 0.5, 0),
+		Size = UDim2.new(0, 16, 0, 16),
+		Theme = {ImageColor3 = "StrongText"}
+	})
+
+
+
+	textBox.Size = UDim2.fromOffset(textBox.TextBounds.X + 20, 20)
+
+	do
+		local hovered = false
+		local down = false
+		local focused = false
+
+		textboxContainer.MouseEnter:connect(function()
+			textboxContainer:tween{BackgroundColor3 = self:lighten(Library.CurrentTheme.Secondary, 10)}
+		end)
+
+		textboxContainer.MouseLeave:connect(function()
+			hovered = false
+			if not down then
+				textboxContainer:tween{BackgroundColor3 = Library.CurrentTheme.Secondary}
+			end
+		end)
+
+		textBox.Focused:connect(function()
+			focused = true
+			while RunService.RenderStepped:wait() and focused do
+				textBox.AbsoluteObject:TweenSize(
+					UDim2.fromOffset(math.clamp(textBox.TextBounds.X + 20, 0, 0.5 * textboxContainer.AbsoluteSize.X), 20),
+					Enum.EasingDirection.InOut,
+					Enum.EasingStyle.Linear,
+					0.1,
+					true
+				)
+			end
+		end)
+
+		textBox.FocusLost:connect(function()
+			focused = false
+			textBox.AbsoluteObject:TweenSize(
+				UDim2.fromOffset(math.clamp(textBox.TextBounds.X + 20, 0, 0.5 * textboxContainer.AbsoluteSize.X), 20),
+				Enum.EasingDirection.InOut,
+				Enum.EasingStyle.Linear,
+				0.1,
+				true
+			)
+			options.Callback(textBox.Text)
+		end)
+	end
+	self:_resize_tab()
+
+	local methods = {}
+
+	function methods:Set(text)
+		textBox.Text = text
+	end
+
+	return methods
+end
+
+
+return setmetatable(Library, {
+	__index = function(_, i)
+		return rawget(Library, i:lower())
+	end
+})
